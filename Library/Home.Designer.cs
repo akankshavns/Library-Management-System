@@ -554,11 +554,10 @@
             // dashboard1
             // 
             this.dashboard1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dashboard1.Location = new System.Drawing.Point(194, 84);
+            this.dashboard1.Location = new System.Drawing.Point(194, 82);
             this.dashboard1.Name = "dashboard1";
             this.dashboard1.Size = new System.Drawing.Size(1231, 667);
             this.dashboard1.TabIndex = 16;
-            this.dashboard1.Visible = false;
             // 
             // bookBoard1
             // 

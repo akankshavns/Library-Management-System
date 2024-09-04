@@ -110,11 +110,14 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
             this.label8.Location = new System.Drawing.Point(1014, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(16, 15);
+            this.label8.Size = new System.Drawing.Size(28, 27);
             this.label8.TabIndex = 5;
             this.label8.Text = "X";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // searchBox
             // 

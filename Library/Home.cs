@@ -99,13 +99,6 @@ namespace Library
         }
 
 
-
-
-
-
-
-       
-
         private void Student_Click(object sender, EventArgs e)
         {
             studentBoard1.Show();

@@ -53,6 +53,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.issuePage.SuspendLayout();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -61,6 +62,7 @@
             // issuePage
             // 
             this.issuePage.BackColor = System.Drawing.Color.White;
+            this.issuePage.Controls.Add(this.label1);
             this.issuePage.Controls.Add(this.InfoPanel);
             this.issuePage.Controls.Add(this.panel5);
             this.issuePage.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -321,6 +323,18 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Student Enrollmentno.";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(1204, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "x";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // ReturnBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,6 +343,7 @@
             this.Name = "ReturnBook";
             this.Size = new System.Drawing.Size(1231, 667);
             this.issuePage.ResumeLayout(false);
+            this.issuePage.PerformLayout();
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -364,5 +379,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label1;
     }
 }

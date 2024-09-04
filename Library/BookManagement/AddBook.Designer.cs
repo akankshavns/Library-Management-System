@@ -66,7 +66,7 @@
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(34, 14);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1073, 623);
+            this.panel1.Size = new System.Drawing.Size(957, 515);
             this.panel1.TabIndex = 20;
             // 
             // button1
@@ -201,7 +201,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(1206, 5);
+            this.label7.Location = new System.Drawing.Point(3, 14);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(22, 25);
             this.label7.TabIndex = 21;
@@ -215,7 +215,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Name = "AddBook";
-            this.Size = new System.Drawing.Size(1231, 667);
+            this.Size = new System.Drawing.Size(994, 532);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
