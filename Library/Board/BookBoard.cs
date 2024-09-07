@@ -31,8 +31,8 @@ namespace Library.Board
 
         private void update_Click(object sender, EventArgs e)
         {
-            update.Show();
-            update.BringToFront();
+            update1.Show();
+            update1.BringToFront();
         }
     }
 }

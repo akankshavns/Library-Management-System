@@ -132,6 +132,12 @@
     <Compile Include="TransactionManagement\issueBook.Designer.cs">
       <DependentUpon>issueBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransactionManagement\issueFormDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TransactionManagement\issueFormDetails.Designer.cs">
+      <DependentUpon>issueFormDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionManagement\ReturnBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <EmbeddedResource Include="TransactionManagement\issueBook.resx">
       <DependentUpon>issueBook.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManagement\issueFormDetails.resx">
+      <DependentUpon>issueFormDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransactionManagement\ReturnBook.resx">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,6 +266,8 @@
   <ItemGroup>
     <None Include="Resources\Logout Rounded.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

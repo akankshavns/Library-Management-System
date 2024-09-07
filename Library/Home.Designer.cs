@@ -39,6 +39,7 @@
             this.view = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.Add = new System.Windows.Forms.Button();
             this.AddBook = new System.Windows.Forms.Label();
             this.Heading = new System.Windows.Forms.Label();
@@ -69,10 +70,11 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
             this.menuBar = new System.Windows.Forms.Panel();
+            this.panel15 = new System.Windows.Forms.Panel();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
-            this.bookBoard1 = new Library.Board.BookBoard();
             this.transactionBoard1 = new Library.Board.TransactionBoard();
             this.studentBoard1 = new Library.Board.StudentBoard();
+            this.bookBoard1 = new Library.Board.BookBoard();
             this.panel2.SuspendLayout();
             this.BookBoard.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -88,6 +90,7 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.menuBar.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -104,7 +107,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
             this.panel2.Controls.Add(this.BookBoard);
             this.panel2.Controls.Add(this.Heading);
             this.panel2.Controls.Add(this.panel1);
@@ -191,12 +194,20 @@
             // panel12
             // 
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel12.Controls.Add(this.panel7);
             this.panel12.Controls.Add(this.Add);
             this.panel12.Controls.Add(this.AddBook);
             this.panel12.Location = new System.Drawing.Point(148, 60);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(200, 161);
             this.panel12.TabIndex = 0;
+            // 
+            // panel7
+            // 
+            this.panel7.Location = new System.Drawing.Point(76, 114);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(200, 100);
+            this.panel7.TabIndex = 3;
             // 
             // Add
             // 
@@ -548,52 +559,70 @@
             this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuBar.Location = new System.Drawing.Point(0, 82);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(56, 600);
+            this.menuBar.Size = new System.Drawing.Size(56, 643);
             this.menuBar.TabIndex = 9;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.dashboard1);
+            this.panel15.Controls.Add(this.transactionBoard1);
+            this.panel15.Controls.Add(this.studentBoard1);
+            this.panel15.Controls.Add(this.bookBoard1);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(56, 82);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1314, 643);
+            this.panel15.TabIndex = 10;
             // 
             // dashboard1
             // 
+            this.dashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboard1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dashboard1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dashboard1.Location = new System.Drawing.Point(194, 82);
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1231, 667);
-            this.dashboard1.TabIndex = 16;
-            // 
-            // bookBoard1
-            // 
-            this.bookBoard1.Location = new System.Drawing.Point(194, 84);
-            this.bookBoard1.Name = "bookBoard1";
-            this.bookBoard1.Size = new System.Drawing.Size(1231, 667);
-            this.bookBoard1.TabIndex = 15;
-            this.bookBoard1.Visible = false;
+            this.dashboard1.Size = new System.Drawing.Size(1314, 640);
+            this.dashboard1.TabIndex = 3;
             // 
             // transactionBoard1
             // 
-            this.transactionBoard1.Location = new System.Drawing.Point(194, 84);
+            this.transactionBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.transactionBoard1.Location = new System.Drawing.Point(1, -3);
             this.transactionBoard1.Name = "transactionBoard1";
-            this.transactionBoard1.Size = new System.Drawing.Size(1231, 667);
-            this.transactionBoard1.TabIndex = 14;
+            this.transactionBoard1.Size = new System.Drawing.Size(1313, 667);
+            this.transactionBoard1.TabIndex = 2;
             this.transactionBoard1.Visible = false;
             // 
             // studentBoard1
             // 
-            this.studentBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.studentBoard1.Location = new System.Drawing.Point(194, 83);
+            this.studentBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.studentBoard1.Location = new System.Drawing.Point(3, 0);
             this.studentBoard1.Name = "studentBoard1";
-            this.studentBoard1.Size = new System.Drawing.Size(1148, 600);
-            this.studentBoard1.TabIndex = 13;
+            this.studentBoard1.Size = new System.Drawing.Size(1313, 667);
+            this.studentBoard1.TabIndex = 1;
             this.studentBoard1.Visible = false;
+            // 
+            // bookBoard1
+            // 
+            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookBoard1.Location = new System.Drawing.Point(1, -3);
+            this.bookBoard1.Name = "bookBoard1";
+            this.bookBoard1.Size = new System.Drawing.Size(1315, 667);
+            this.bookBoard1.TabIndex = 0;
+            this.bookBoard1.Visible = false;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1370, 682);
-            this.Controls.Add(this.dashboard1);
-            this.Controls.Add(this.bookBoard1);
-            this.Controls.Add(this.transactionBoard1);
-            this.Controls.Add(this.studentBoard1);
+            this.ClientSize = new System.Drawing.Size(1370, 725);
+            this.Controls.Add(this.panel15);
             this.Controls.Add(this.menuBar);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -627,6 +656,7 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.menuBar.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -673,10 +703,11 @@
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label AddBook;
-        private Board.StudentBoard studentBoard1;
-       
-        private Board.TransactionBoard transactionBoard1;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Panel panel15;
         private Board.BookBoard bookBoard1;
         private FrontScreen.Dashboard dashboard1;
+        private Board.TransactionBoard transactionBoard1;
+        private Board.StudentBoard studentBoard1;
     }
 }

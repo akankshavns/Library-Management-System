@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Library.FrontScreen
+namespace Library.TransactionManagement
 {
-    public partial class Dashboard : UserControl
+    public partial class issueFormDetails : UserControl
     {
-        public Dashboard()
+        public issueFormDetails()
         {
             InitializeComponent();
         }
 
-        private void Dashboard_Load(object sender, EventArgs e)
+        private void issueFormDetails_Load(object sender, EventArgs e)
         {
 
         }

@@ -16,7 +16,7 @@ namespace Library
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new opening());
+            Application.Run(new Home());
         }
     }
 }

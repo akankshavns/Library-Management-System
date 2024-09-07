@@ -43,10 +43,10 @@
             // 
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(120, 291);
+            this.dataGridView1.Location = new System.Drawing.Point(199, 306);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(884, 256);
+            this.dataGridView1.Size = new System.Drawing.Size(827, 256);
             this.dataGridView1.TabIndex = 4;
             // 
             // label1

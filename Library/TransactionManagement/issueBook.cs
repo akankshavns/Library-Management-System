@@ -22,5 +22,7 @@ namespace Library.TransactionManagement
             this.Hide();
             this.Visible = false;
         }
+
+       
     }
 }
