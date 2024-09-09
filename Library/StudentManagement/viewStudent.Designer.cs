@@ -86,6 +86,7 @@
             // 
             // image
             // 
+            this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.image.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.image.Location = new System.Drawing.Point(486, 33);
             this.image.Name = "image";
@@ -259,6 +260,7 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Information";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox2
             // 

@@ -34,7 +34,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.image1 = new System.Windows.Forms.PictureBox();
+            this.AddBook_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -51,7 +51,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBook_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -61,7 +61,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.image1);
+            this.panel1.Controls.Add(this.AddBook_picture);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox5);
@@ -98,6 +98,7 @@
             this.upload.TabIndex = 16;
             this.upload.Text = "Upload Image";
             this.upload.UseVisualStyleBackColor = true;
+            this.upload.Click += new System.EventHandler(this.upload_Click);
             // 
             // label9
             // 
@@ -118,6 +119,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox7
             // 
@@ -127,15 +129,15 @@
             this.textBox7.Size = new System.Drawing.Size(272, 23);
             this.textBox7.TabIndex = 2;
             // 
-            // image1
+            // AddBook_picture
             // 
-            this.image1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.image1.Location = new System.Drawing.Point(755, 20);
-            this.image1.Name = "image1";
-            this.image1.Size = new System.Drawing.Size(159, 176);
-            this.image1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.image1.TabIndex = 13;
-            this.image1.TabStop = false;
+            this.AddBook_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddBook_picture.Location = new System.Drawing.Point(755, 20);
+            this.AddBook_picture.Name = "AddBook_picture";
+            this.AddBook_picture.Size = new System.Drawing.Size(159, 176);
+            this.AddBook_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddBook_picture.TabIndex = 13;
+            this.AddBook_picture.TabStop = false;
             // 
             // label4
             // 
@@ -286,7 +288,7 @@
             this.Size = new System.Drawing.Size(1231, 667);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.image1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddBook_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,7 +302,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.PictureBox image1;
+        private System.Windows.Forms.PictureBox AddBook_picture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
