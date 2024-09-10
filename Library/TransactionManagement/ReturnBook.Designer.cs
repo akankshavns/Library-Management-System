@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.issuePage = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.issueDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -53,7 +54,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.issuePage.SuspendLayout();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -70,6 +70,18 @@
             this.issuePage.Name = "issuePage";
             this.issuePage.Size = new System.Drawing.Size(1231, 667);
             this.issuePage.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(1204, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(22, 25);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "x";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // InfoPanel
             // 
@@ -144,6 +156,7 @@
             this.Return.TabIndex = 21;
             this.Return.Text = "Return";
             this.Return.UseVisualStyleBackColor = true;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // mail
             // 
@@ -283,6 +296,7 @@
             this.Search.TabIndex = 22;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // BookID
             // 
@@ -322,18 +336,6 @@
             this.label4.Size = new System.Drawing.Size(238, 20);
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Student Enrollmentno.";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(1204, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "x";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // ReturnBook
             // 

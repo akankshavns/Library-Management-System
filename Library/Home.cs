@@ -16,7 +16,7 @@ namespace Library
     public partial class Home : Form
     {
         SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;Pooling=False;");
-        bool isDashBoardShow = true;
+        //bool isDashBoardShow = true;
         public Home()
         {
             InitializeComponent();
