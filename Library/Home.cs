@@ -15,14 +15,11 @@ namespace Library
 
     public partial class Home : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;Pooling=False;");
-        //bool isDashBoardShow = true;
+        
         public Home()
         {
             InitializeComponent();
-            //studentBoard1 = new StudentBoard();
-            //this.Controls.Add(studentBoard1);
-            //studentBoard1.Hide();
+           
         }
 
         
@@ -116,5 +113,7 @@ namespace Library
             transactionBoard1.Show();
             transactionBoard1.BringToFront();
         }
+
+        
     }
 }

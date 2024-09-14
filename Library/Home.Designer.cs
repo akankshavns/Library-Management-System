@@ -107,12 +107,13 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(140)))), ((int)(((byte)(142)))));
             this.panel2.Controls.Add(this.BookBoard);
             this.panel2.Controls.Add(this.Heading);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1370, 82);
@@ -234,7 +235,7 @@
             // 
             this.Heading.AutoSize = true;
             this.Heading.Font = new System.Drawing.Font("Monotype Corsiva", 45F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Heading.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Heading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(78)))), ((int)(((byte)(105)))));
             this.Heading.Location = new System.Drawing.Point(104, 7);
             this.Heading.Name = "Heading";
             this.Heading.Size = new System.Drawing.Size(536, 72);
@@ -569,6 +570,7 @@
             this.panel15.Controls.Add(this.studentBoard1);
             this.panel15.Controls.Add(this.bookBoard1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel15.Location = new System.Drawing.Point(56, 82);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1314, 643);
@@ -576,31 +578,24 @@
             // 
             // dashboard1
             // 
-            this.dashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dashboard1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dashboard1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
+            this.dashboard1.Location = new System.Drawing.Point(1, 0);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1314, 640);
+            this.dashboard1.Size = new System.Drawing.Size(1310, 667);
             this.dashboard1.TabIndex = 3;
             // 
             // transactionBoard1
             // 
-            this.transactionBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transactionBoard1.Location = new System.Drawing.Point(1, -3);
+            this.transactionBoard1.Location = new System.Drawing.Point(3, -3);
             this.transactionBoard1.Name = "transactionBoard1";
-            this.transactionBoard1.Size = new System.Drawing.Size(1313, 667);
+            this.transactionBoard1.Size = new System.Drawing.Size(1231, 667);
             this.transactionBoard1.TabIndex = 2;
-            this.transactionBoard1.Visible = false;
             // 
             // studentBoard1
             // 
             this.studentBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.studentBoard1.Location = new System.Drawing.Point(3, 0);
+            this.studentBoard1.Location = new System.Drawing.Point(4, 0);
             this.studentBoard1.Name = "studentBoard1";
             this.studentBoard1.Size = new System.Drawing.Size(1313, 667);
             this.studentBoard1.TabIndex = 1;
@@ -610,7 +605,7 @@
             // 
             this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookBoard1.Location = new System.Drawing.Point(1, -3);
+            this.bookBoard1.Location = new System.Drawing.Point(74, -6);
             this.bookBoard1.Name = "bookBoard1";
             this.bookBoard1.Size = new System.Drawing.Size(1315, 667);
             this.bookBoard1.TabIndex = 0;
@@ -706,8 +701,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel15;
         private Board.BookBoard bookBoard1;
-        private FrontScreen.Dashboard dashboard1;
-        private Board.TransactionBoard transactionBoard1;
         private Board.StudentBoard studentBoard1;
+        private Board.TransactionBoard transactionBoard1;
+        private FrontScreen.Dashboard dashboard1;
     }
 }
