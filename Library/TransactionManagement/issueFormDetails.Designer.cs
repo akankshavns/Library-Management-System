@@ -131,6 +131,7 @@
             this.issueDate.Name = "issueDate";
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
+            this.issueDate.ValueChanged += new System.EventHandler(this.issueDate_ValueChanged);
             // 
             // button1
             // 
@@ -141,6 +142,7 @@
             this.button1.TabIndex = 21;
             this.button1.Text = "Issue";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Addre
             // 
