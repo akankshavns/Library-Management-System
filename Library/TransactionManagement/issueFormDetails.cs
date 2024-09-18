@@ -17,6 +17,9 @@ namespace Library.TransactionManagement
             InitializeComponent();
         }
 
-      
+        private void EnrollBox_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }

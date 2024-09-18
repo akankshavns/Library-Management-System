@@ -362,6 +362,7 @@
             this.EnrollBox.Name = "EnrollBox";
             this.EnrollBox.Size = new System.Drawing.Size(247, 23);
             this.EnrollBox.TabIndex = 13;
+            this.EnrollBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.EnrollBox_KeyDown);
             // 
             // label4
             // 
@@ -383,7 +384,6 @@
             this.Controls.Add(this.panel5);
             this.Name = "issueFormDetails";
             this.Size = new System.Drawing.Size(1066, 618);
-           
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);

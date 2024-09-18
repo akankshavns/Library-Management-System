@@ -14,7 +14,8 @@ namespace Library.TransactionManagement
 {
     public partial class issueBook : UserControl
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+        
+        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;");
         public issueBook()
         {
             InitializeComponent();
@@ -24,7 +25,30 @@ namespace Library.TransactionManagement
             this.Hide();
             this.Visible = false;
         }
-        private void yes_Click_1(object sender, EventArgs e)
+        private void searchBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            string searchQuery = "SELECT Accession_No, BookName FROM AddBooks WHERE BookName LIKE @searchText OR AuthorName LIKE @searchText";
+            try
+            {
+                //using (con)
+                //{
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(searchQuery, con);
+                    cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                con.Close();
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "key up");
+            }
+        }
+
+        private void yes_Click(object sender, EventArgs e)
         {
             issueFormDetails1.Show();
             issueFormDetails1.BringToFront();
@@ -50,8 +74,8 @@ namespace Library.TransactionManagement
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
+                //using (con)
+                //{
                     con.Open();
                     string querry = "select Accession_No,BookName From AddBooks";
                     SqlCommand cmd = new SqlCommand(querry, con);
@@ -61,54 +85,35 @@ namespace Library.TransactionManagement
                     adapter.SelectCommand = cmd;
                     adapter.Fill(dt);
                     dataGridView1.DataSource = dt;
-                }
+                    con.Close();
+                //}
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message,"issuealosd");
+                MessageBox.Show(ex.Message, "issuealosd");
             }
             finally
             {
-                //con.Close();
-            }
-        }
-        private void searchBox_KeyUp_1(object sender, KeyEventArgs e)
-        {
-            string searchQuery = "SELECT Accession_No, BookName FROM AddBooks WHERE BookName LIKE @searchText OR AuthorName LIKE @searchText";
-            try
-            {
-                using (SqlConnection con = new SqlConnection(connectionString))
-                {
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(searchQuery, con);
-                    cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message,"key up");
+                con.Close();
             }
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)  
+            if (e.RowIndex >= 0)
             {
-                string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(); 
+                string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
                 int num = 0;
                 try
                 {
-                    using (SqlConnection con = new SqlConnection(connectionString))
-                    {
+                    //using (con)
+                    //{
                         SqlCommand cmd = new SqlCommand(query, con);
                         cmd.Parameters.AddWithValue("@BookId", id);
                         con.Open();
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        //using ()
+                        //{
                             if (reader.Read())
                             {
                                 num = reader.GetInt32(0);
@@ -118,8 +123,9 @@ namespace Library.TransactionManagement
                                 MessageBox.Show("No record found.");
                                 return;
                             }
-                        }
-                    }
+                            con.Close() ;   
+                        //}
+                    //}
                 }
                 catch (Exception ex)
                 {
@@ -132,7 +138,7 @@ namespace Library.TransactionManagement
                 }
                 else
                 {
-                    aivalableMessageBox.Visible = true; 
+                    aivalableMessageBox.Visible = true;
                 }
             }
         }

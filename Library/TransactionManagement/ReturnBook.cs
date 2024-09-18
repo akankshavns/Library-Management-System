@@ -51,6 +51,7 @@ namespace Library.TransactionManagement
                 }
 
                 reader.Close();
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -64,18 +65,21 @@ namespace Library.TransactionManagement
 
         private void Return_Click(object sender, EventArgs e)
         {
-
+            string updateAvalable = "update AddBooks set AvailableBook = AvailableBook + 1 Where Accession_No = '" + BookID.Text + "'";
+            string changeReturn = "update IssueBookList set isReturnBook='yes'";
             try
             {
                 con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                //if((ReturnDate.Text - issueDate.Text)> 7)
-                cmd.CommandText = "update Book set AvailableBook = AvailableBook + 1 Where BookId = '" + BookID.Text + "'";
-                cmd.CommandText = "update IssueBookList set isReturnBook='yes'";
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Book Return succesfully");
-
+                SqlCommand cmd =new SqlCommand(updateAvalable, con);
+                SqlCommand comm = new SqlCommand(changeReturn, con);
+                int  i = cmd.ExecuteNonQuery();
+                if (i == 0)
+                {
+                    MessageBox.Show("Book not Return succesfully");
+                }
+                else {
+                    MessageBox.Show("Book Return succesfully");
+                }
                 BookName.Text = "";
                 AuthorName.Text = "";
                 EnrollBox.Text = "";
