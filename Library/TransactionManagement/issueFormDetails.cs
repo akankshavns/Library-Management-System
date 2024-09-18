@@ -17,9 +17,6 @@ namespace Library.TransactionManagement
             InitializeComponent();
         }
 
-        private void issueFormDetails_Load(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

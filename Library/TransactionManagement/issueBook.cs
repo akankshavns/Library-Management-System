@@ -8,40 +8,36 @@ using System.Text;
 using System.Data.SqlClient;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 
 namespace Library.TransactionManagement
 {
     public partial class issueBook : UserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;Pooling=False;");
+        string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
         public issueBook()
         {
             InitializeComponent();
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Visible = false;
         }
-
-        private void yes_Click(object sender, EventArgs e)
+        private void yes_Click_1(object sender, EventArgs e)
         {
             issueFormDetails1.Show();
             issueFormDetails1.BringToFront();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void No_button_Click(object sender, EventArgs e)
         {
             aivalableMessageBox.Visible = false;
         }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void Close_Click(object sender, EventArgs e)
         {
             aivalableMessageBox.Visible = false;
         }
-
-        private void searchBox_Click(object sender, EventArgs e)
+        private void searchBox_Click_1(object sender, EventArgs e)
         {
             gridpanel.Visible = true;
             if (searchBox.Text == "Search Book...")
@@ -50,112 +46,95 @@ namespace Library.TransactionManagement
                 searchBox.ForeColor = Color.Black;
             }
         }
-
-        private void issueFormDetails1_Load(object sender, EventArgs e)
+        private void issueBook_Load(object sender, EventArgs e)
         {
             try
             {
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select sN0=id,BookId,BookName From Book";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(dt);
-                dataGridView1.DataSource = dt;
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                con.Close() ;
-            }
-        }
-
-        private void searchBox_KeyUp(object sender, KeyEventArgs e)
-        {
-            try
-            {
-                int i = 0;
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select id,BookId, BookName From Book where BookName like('%" + searchBox.Text + "%') or AuthorName like ('%" + searchBox.Text + "%') ";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter adapter = new SqlDataAdapter();
-                adapter.SelectCommand = cmd;
-                adapter.Fill(dt);
-                i = Convert.ToInt32(dt.Rows.Count.ToString());
-                dataGridView1.DataSource = dt;
-                con.Close();
-
-                if (i == 0)
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    MessageBox.Show("Book not found.");
+                    con.Open();
+                    string querry = "select Accession_No,BookName From AddBooks";
+                    SqlCommand cmd = new SqlCommand(querry, con);
+                    cmd.ExecuteNonQuery();
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.SelectCommand = cmd;
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message,"issuealosd");
+            }
+            finally
+            {
+                //con.Close();
             }
         }
-        int SNO;
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void searchBox_KeyUp_1(object sender, KeyEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            string searchQuery = "SELECT Accession_No, BookName FROM AddBooks WHERE BookName LIKE @searchText OR AuthorName LIKE @searchText";
+            try
             {
-                int Id = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-                SNO = Id;
-                string query = "SELECT AvailableBook FROM Book WHERE id = '" + Id + "'";
-
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand(searchQuery, con);
+                    cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
+                    DataTable dt = new DataTable();
+                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                    adapter.Fill(dt);
+                    dataGridView1.DataSource = dt;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"key up");
+            }
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)  
+            {
+                string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString(); 
+                string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
                 int num = 0;
                 try
                 {
-
-                    SqlCommand cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@BookId", Id);
-                    con.Open();
-                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        if (reader.Read())
+                        SqlCommand cmd = new SqlCommand(query, con);
+                        cmd.Parameters.AddWithValue("@BookId", id);
+                        con.Open();
+                        using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            // Store the result in the variable `num`
-                            num = reader.GetInt32(0);
-                        }
-                        else
-                        {
-                            MessageBox.Show("No record found.");
-                            return;
+                            if (reader.Read())
+                            {
+                                num = reader.GetInt32(0);
+                            }
+                            else
+                            {
+                                MessageBox.Show("No record found.");
+                                return;
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("An error occurred: " + ex.Message);
+                    MessageBox.Show("An error cell click " + ex.Message);
                     return;
                 }
-                con.Close();
                 if (num == 0)
                 {
                     MessageBox.Show("Book is not available at present.");
                 }
                 else
                 {
-                    aivalableMessageBox.Visible = true;
+                    aivalableMessageBox.Visible = true; 
                 }
-
             }
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

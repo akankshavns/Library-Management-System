@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
@@ -18,7 +12,6 @@ namespace Library
         {
             InitializeComponent();
         }
-
         private void open_Tick(object sender, EventArgs e)
         {
             load.Width += 6;
@@ -30,7 +23,6 @@ namespace Library
                 this.Hide();
             }
         }
-
         private void opening_MouseMove(object sender, MouseEventArgs e)
         {
             if (drag)
@@ -39,12 +31,10 @@ namespace Library
                 this.Location = new Point(p.X - StartPoint.X, p.Y - StartPoint.Y);
             }
         }
-
         private void opening_MouseUp(object sender, MouseEventArgs e)
         {
             drag = false;
         }
-
         private void opening_MouseDown(object sender, MouseEventArgs e)
         {
             drag = true;

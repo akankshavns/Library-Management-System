@@ -108,6 +108,11 @@ namespace Library.BookManagement
             this.Hide();
             this.Visible = false;
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     
 }

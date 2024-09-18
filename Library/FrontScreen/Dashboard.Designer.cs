@@ -69,6 +69,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(926, 563);
             this.panel1.TabIndex = 0;
+            
             // 
             // panel7
             // 
@@ -262,8 +263,6 @@
             this.TotalBook.Size = new System.Drawing.Size(42, 46);
             this.TotalBook.TabIndex = 0;
             this.TotalBook.Text = "0";
-            this.TotalBook.Click += new System.EventHandler(this.TotalBook_Click);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

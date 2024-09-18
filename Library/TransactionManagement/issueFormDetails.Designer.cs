@@ -383,7 +383,7 @@
             this.Controls.Add(this.panel5);
             this.Name = "issueFormDetails";
             this.Size = new System.Drawing.Size(1066, 618);
-            this.Load += new System.EventHandler(this.issueFormDetails_Load);
+           
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);

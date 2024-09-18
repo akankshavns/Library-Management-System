@@ -28,194 +28,163 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.update = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
+            this.view = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.addBook1 = new Library.BookManagement.AddBook();
             this.viewBook1 = new Library.BookManagement.ViewBook();
             this.update1 = new Library.BookManagement.update();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.update = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.Add = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.view = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // addBook1
-            // 
-            this.addBook1.Location = new System.Drawing.Point(3, 3);
-            this.addBook1.Name = "addBook1";
-            this.addBook1.Size = new System.Drawing.Size(1228, 661);
-            this.addBook1.TabIndex = 0;
-            this.addBook1.Visible = false;
-            // 
-            // viewBook1
-            // 
-            this.viewBook1.Location = new System.Drawing.Point(3, 3);
-            this.viewBook1.Name = "viewBook1";
-            this.viewBook1.Size = new System.Drawing.Size(1231, 667);
-            this.viewBook1.TabIndex = 1;
-            this.viewBook1.Visible = false;
-            // 
-            // update1
-            // 
-            this.update1.Location = new System.Drawing.Point(3, 0);
-            this.update1.Name = "update1";
-            this.update1.Size = new System.Drawing.Size(1231, 667);
-            this.update1.TabIndex = 2;
-            this.update1.Visible = false;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel17);
-            this.panel2.Controls.Add(this.panel7);
-            this.panel2.Controls.Add(this.panel15);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(196)))), ((int)(((byte)(204)))));
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.update);
+            this.panel2.Controls.Add(this.Add);
+            this.panel2.Controls.Add(this.view);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1231, 667);
+            this.panel2.Size = new System.Drawing.Size(1257, 81);
             this.panel2.TabIndex = 4;
             // 
-            // panel17
+            // label1
             // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.update);
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Location = new System.Drawing.Point(838, 86);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(257, 237);
-            this.panel17.TabIndex = 4;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 24.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(293, 44);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Book Management";
             // 
             // update
             // 
             this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.update.Location = new System.Drawing.Point(78, 145);
+            this.update.Location = new System.Drawing.Point(738, 15);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(95, 38);
-            this.update.TabIndex = 2;
+            this.update.Size = new System.Drawing.Size(125, 56);
+            this.update.TabIndex = 7;
             this.update.Text = "update";
             this.update.UseVisualStyleBackColor = true;
-            this.update.Click += new System.EventHandler(this.update_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(58, 28);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 25);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Update Book";
-            // 
-            // panel7
-            // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.Add);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Location = new System.Drawing.Point(76, 86);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(257, 237);
-            this.panel7.TabIndex = 6;
+            this.update.Click += new System.EventHandler(this.update_Click_1);
             // 
             // Add
             // 
             this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Add.Location = new System.Drawing.Point(73, 150);
+            this.Add.Location = new System.Drawing.Point(381, 15);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(95, 38);
-            this.Add.TabIndex = 1;
+            this.Add.Size = new System.Drawing.Size(128, 56);
+            this.Add.TabIndex = 5;
             this.Add.Text = "Add";
             this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(68, 33);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(98, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Add Book";
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.view);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Location = new System.Drawing.Point(434, 86);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(257, 237);
-            this.panel15.TabIndex = 5;
+            this.Add.Click += new System.EventHandler(this.Add_Click_1);
             // 
             // view
             // 
             this.view.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.view.Location = new System.Drawing.Point(75, 146);
+            this.view.Location = new System.Drawing.Point(556, 15);
             this.view.Name = "view";
-            this.view.Size = new System.Drawing.Size(95, 38);
-            this.view.TabIndex = 2;
+            this.view.Size = new System.Drawing.Size(133, 56);
+            this.view.TabIndex = 6;
             this.view.Text = "view\r\n";
             this.view.UseVisualStyleBackColor = true;
-            this.view.Click += new System.EventHandler(this.view_Click);
+            this.view.Click += new System.EventHandler(this.view_Click_1);
             // 
-            // label11
+            // button1
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(70, 29);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(101, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "view Book";
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::Library.Properties.Resources.book;
+            this.button1.Location = new System.Drawing.Point(355, 117);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(398, 294);
+            this.button1.TabIndex = 5;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.addBook1);
+            this.panel1.Controls.Add(this.viewBook1);
+            this.panel1.Controls.Add(this.update1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1260, 763);
+            this.panel1.TabIndex = 5;
+            // 
+            // addBook1
+            // 
+            this.addBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addBook1.Location = new System.Drawing.Point(3, 0);
+            this.addBook1.Name = "addBook1";
+            this.addBook1.Size = new System.Drawing.Size(1257, 763);
+            this.addBook1.TabIndex = 9;
+            this.addBook1.Visible = false;
+            this.addBook1.Load += new System.EventHandler(this.addBook1_Load);
+            // 
+            // viewBook1
+            // 
+            this.viewBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewBook1.Location = new System.Drawing.Point(3, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1254, 683);
+            this.viewBook1.TabIndex = 8;
+            this.viewBook1.Visible = false;
+            // 
+            // update1
+            // 
+            this.update1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.update1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(59)))));
+            this.update1.Location = new System.Drawing.Point(0, 0);
+            this.update1.Name = "update1";
+            this.update1.Size = new System.Drawing.Size(1260, 766);
+            this.update1.TabIndex = 7;
+            this.update1.Visible = false;
+            this.update1.Load += new System.EventHandler(this.update1_Load);
             // 
             // BookBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.update1);
-            this.Controls.Add(this.viewBook1);
-            this.Controls.Add(this.addBook1);
             this.Name = "BookBoard";
-            this.Size = new System.Drawing.Size(1231, 667);
+            this.Size = new System.Drawing.Size(1257, 847);
             this.panel2.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private BookManagement.AddBook addBook1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button Add;
+        private System.Windows.Forms.Button view;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel1;
         private BookManagement.ViewBook viewBook1;
         private BookManagement.update update1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button update;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button Add;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button view;
-        private System.Windows.Forms.Label label11;
+        private BookManagement.AddBook addBook1;
     }
 }

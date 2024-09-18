@@ -16,23 +16,30 @@ namespace Library.Board
         {
             InitializeComponent();
         }
-
-        private void Add_Click(object sender, EventArgs e)
+        private void Add_Click_1(object sender, EventArgs e)
         {
             addBook1.Show();
             addBook1.BringToFront();
         }
-
-        private void view_Click(object sender, EventArgs e)
+        private void view_Click_1(object sender, EventArgs e)
         {
             viewBook1.Show();
             viewBook1.BringToFront();
         }
-
-        private void update_Click(object sender, EventArgs e)
+        private void update_Click_1(object sender, EventArgs e)
         {
             update1.Show();
             update1.BringToFront();
+        }
+
+        private void update1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addBook1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
