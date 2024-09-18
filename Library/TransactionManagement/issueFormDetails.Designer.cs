@@ -31,7 +31,6 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.issueDate = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.Addre = new System.Windows.Forms.TextBox();
@@ -57,6 +56,7 @@
             this.Semester = new System.Windows.Forms.ComboBox();
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.ReturnDate = new System.Windows.Forms.TextBox();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +65,9 @@
             // 
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
-            this.InfoPanel.Controls.Add(this.ReturnDate);
             this.InfoPanel.Controls.Add(this.issueDate);
             this.InfoPanel.Controls.Add(this.button1);
+            this.InfoPanel.Controls.Add(this.ReturnDate);
             this.InfoPanel.Controls.Add(this.Addre);
             this.InfoPanel.Controls.Add(this.mail);
             this.InfoPanel.Controls.Add(this.Cont);
@@ -115,15 +115,6 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Return Date";
             // 
-            // ReturnDate
-            // 
-            this.ReturnDate.Checked = false;
-            this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnDate.Location = new System.Drawing.Point(209, 437);
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.Size = new System.Drawing.Size(224, 26);
-            this.ReturnDate.TabIndex = 23;
-            // 
             // issueDate
             // 
             this.issueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,7 +122,7 @@
             this.issueDate.Name = "issueDate";
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
-            this.issueDate.ValueChanged += new System.EventHandler(this.issueDate_ValueChanged);
+            
             // 
             // button1
             // 
@@ -377,6 +368,15 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Student Enrollmentno.";
             // 
+            // ReturnDate
+            // 
+            this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnDate.Location = new System.Drawing.Point(209, 436);
+            this.ReturnDate.Name = "ReturnDate";
+            this.ReturnDate.Size = new System.Drawing.Size(224, 26);
+            this.ReturnDate.TabIndex = 20;
+            this.ReturnDate.TextChanged += new System.EventHandler(this.ReturnDate_TextChanged);
+            // 
             // issueFormDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -399,7 +399,6 @@
         private System.Windows.Forms.Panel InfoPanel;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker ReturnDate;
         private System.Windows.Forms.DateTimePicker issueDate;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Addre;
@@ -425,5 +424,6 @@
         private System.Windows.Forms.ComboBox Semester;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox ReturnDate;
     }
 }

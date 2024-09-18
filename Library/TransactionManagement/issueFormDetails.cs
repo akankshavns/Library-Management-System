@@ -54,23 +54,22 @@ namespace Library.TransactionManagement
 
             }
         }
-
-        private void issueDate_ValueChanged(object sender, EventArgs e)
-        {
-            DateTime newdate=issueDate.Value.AddDays(7);
-            ReturnDate.Value = newdate;
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
+            string issueQuerry = "Insert into IssueBookList values('" + BookId.Text + "','" + BookName.Text + "','" + AuthorName.Text + "','" + EnrollBox.Text + "','" + StudentName.Text + "','" + Dep.Text + "','" + Semester.Text + "','" + Cont.Text + "','" + mail.Text + "','" + Addre.Text + "','" + issueDate.Text + "','" + ReturnDate.Text + "','No')";
+            //string updateAvailable = "update Book set AvailableBook = AvailableBook - 1 Where id = '" + SNO + "'";
             try
             {
                 con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "Insert into IssueBookList values('" + BookId.Text + "','" + BookName.Text + "','" + AuthorName.Text + "','" + EnrollBox.Text + "','" + StudentName.Text + "','" + Dep.Text + "','" + Semester.Text + "','" + Cont.Text + "','" + mail.Text + "','" + Addre.Text + "','" + issueDate.Text + "','" + ReturnDate.Text + "','No')";
-                cmd.ExecuteNonQuery();
-
+                SqlCommand cmd = new SqlCommand(issueQuerry, con);
+                //SqlCommand comm = new SqlCommand(updateAvailable, con);
+                cmd.ExecuteNonQuery(); con.Close();
+                MessageBox.Show("Book Issue successfully");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
                 BookId.Text = "";
                 BookName.Text = "";
@@ -84,17 +83,15 @@ namespace Library.TransactionManagement
                 ReturnDate.Text = "";
                 Dep.Text = "";
                 Cont.Text = "";
-                cmd.CommandText = "update Book set AvailableBook = AvailableBook - 1 Where id = '" + SNO + "'";
-                cmd.ExecuteNonQuery();
-                con.Close();
-
-                MessageBox.Show("Book Issue successfully");
-                
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
+
+       
+
+        private void ReturnDate_TextChanged(object sender, EventArgs e)
+        {
+            DateTime newdate = issueDate.Value.AddDays(7);
+            ReturnDate.Text = newdate.ToString("yyyy-MM-dd");
+        }
+        *
     }
 }
