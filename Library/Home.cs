@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace Library
 {
     public partial class Home : Form
-    { 
+    {
         public Home()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace Library
             else
             {
                 menuBar.Width += 10;
-                if (menuBar.Width >= 182)
+                if (menuBar.Width >= 236)
                 {
                     sidebarExpand = true;
                     MenuSlider.Stop();
@@ -84,5 +84,13 @@ namespace Library
         {
 
         }
+        private void Setting_Click(object sender, EventArgs e)
+        {
+            settingBoard1.Show();
+            settingBoard1.BringToFront();
+        }
+
+
+
     }
 }

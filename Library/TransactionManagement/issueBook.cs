@@ -14,8 +14,12 @@ namespace Library.TransactionManagement
 {
     public partial class issueBook : UserControl
     {
-        
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;");
+        public string availableBookId_issueBook { get; set; }
+
+        private string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
+        }
         public issueBook()
         {
             InitializeComponent();
@@ -30,17 +34,21 @@ namespace Library.TransactionManagement
             string searchQuery = "SELECT Accession_No, BookName FROM AddBooks WHERE BookName LIKE @searchText OR AuthorName LIKE @searchText";
             try
             {
-                //using (con)
-                //{
-                    con.Open();
-                    SqlCommand cmd = new SqlCommand(searchQuery, con);
-                    cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                con.Close();
-                //}
+                string connectionString = GetConnectionString();
+                if (connectionString != null) 
+                {
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(searchQuery, con);
+                        cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
+                        DataTable dt = new DataTable();
+                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
+                   
             }
             catch (Exception ex)
             {
@@ -50,6 +58,7 @@ namespace Library.TransactionManagement
 
         private void yes_Click(object sender, EventArgs e)
         {
+            issueFormDetails1.availableBookId = availableBookId_issueBook;
             issueFormDetails1.Show();
             issueFormDetails1.BringToFront();
         }
@@ -74,29 +83,28 @@ namespace Library.TransactionManagement
         {
             try
             {
-                //using (con)
-                //{
-                    con.Open();
-                    string querry = "select Accession_No,BookName From AddBooks";
-                    SqlCommand cmd = new SqlCommand(querry, con);
-                    cmd.ExecuteNonQuery();
-                    DataTable dt = new DataTable();
-                    SqlDataAdapter adapter = new SqlDataAdapter();
-                    adapter.SelectCommand = cmd;
-                    adapter.Fill(dt);
-                    dataGridView1.DataSource = dt;
-                    con.Close();
-                //}
+                string connectionString = GetConnectionString();
+                if (connectionString != null)
+                {
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        con.Open();
+                        string querry = "select Accession_No,BookName From AddBooks";
+                        SqlCommand cmd = new SqlCommand(querry, con);
+                        cmd.ExecuteNonQuery();
+                        DataTable dt = new DataTable();
+                        SqlDataAdapter adapter = new SqlDataAdapter();
+                        adapter.SelectCommand = cmd;
+                        adapter.Fill(dt);
+                        dataGridView1.DataSource = dt;
+                    }
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "issuealosd");
             }
-            finally
-            {
-                con.Close();
             }
-        }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -106,14 +114,16 @@ namespace Library.TransactionManagement
                 int num = 0;
                 try
                 {
-                    //using (con)
-                    //{
-                        SqlCommand cmd = new SqlCommand(query, con);
+                    string connectionString = GetConnectionString();
+                    if (connectionString != null)
+                    {
+                        using (SqlConnection con = new SqlConnection(connectionString))
+                        {
+                            SqlCommand cmd = new SqlCommand(query, con);
                         cmd.Parameters.AddWithValue("@BookId", id);
                         con.Open();
                         SqlDataReader reader = cmd.ExecuteReader();
-                        //using ()
-                        //{
+                        
                             if (reader.Read())
                             {
                                 num = reader.GetInt32(0);
@@ -123,9 +133,8 @@ namespace Library.TransactionManagement
                                 MessageBox.Show("No record found.");
                                 return;
                             }
-                            con.Close() ;   
-                        //}
-                    //}
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -138,6 +147,7 @@ namespace Library.TransactionManagement
                 }
                 else
                 {
+                    availableBookId_issueBook = id;
                     aivalableMessageBox.Visible = true;
                 }
             }

@@ -34,7 +34,7 @@
             this.issueDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.ActualReturnDate = new System.Windows.Forms.DateTimePicker();
             this.Return = new System.Windows.Forms.Button();
             this.mail = new System.Windows.Forms.TextBox();
             this.Dep = new System.Windows.Forms.TextBox();
@@ -88,7 +88,7 @@
             this.InfoPanel.Controls.Add(this.issueDate);
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
-            this.InfoPanel.Controls.Add(this.ReturnDate);
+            this.InfoPanel.Controls.Add(this.ActualReturnDate);
             this.InfoPanel.Controls.Add(this.Return);
             this.InfoPanel.Controls.Add(this.mail);
             this.InfoPanel.Controls.Add(this.Dep);
@@ -138,14 +138,14 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Return Date";
             // 
-            // ReturnDate
+            // ActualReturnDate
             // 
-            this.ReturnDate.Checked = false;
-            this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnDate.Location = new System.Drawing.Point(161, 349);
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.Size = new System.Drawing.Size(224, 23);
-            this.ReturnDate.TabIndex = 23;
+            this.ActualReturnDate.Checked = false;
+            this.ActualReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ActualReturnDate.Location = new System.Drawing.Point(161, 349);
+            this.ActualReturnDate.Name = "ActualReturnDate";
+            this.ActualReturnDate.Size = new System.Drawing.Size(224, 23);
+            this.ActualReturnDate.TabIndex = 23;
             // 
             // Return
             // 
@@ -361,7 +361,7 @@
         private System.Windows.Forms.TextBox issueDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker ReturnDate;
+        private System.Windows.Forms.DateTimePicker ActualReturnDate;
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox Dep;

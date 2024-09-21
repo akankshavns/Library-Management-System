@@ -9,8 +9,10 @@ namespace Library
 {
     public partial class LoginForm : Form
     {
-        string cs = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
-        SqlConnection con = null;
+        private string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
+        }
         private bool isPasswordVisible = false;
         public LoginForm()
         {
@@ -27,22 +29,20 @@ namespace Library
         }
         private void LoginLogic()
         {
-           
-                try
+            try
+            {
+                string connectionString = GetConnectionString();
+                if (connectionString != null)
                 {
-                    using (con = new SqlConnection(cs))
+                    using (SqlConnection con = new SqlConnection(connectionString))
                     {
                         string login = "Select * From Librarian where UserName=@username and Password = @password";
                         SqlCommand cmd = new SqlCommand(login, con);
                         cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
                         cmd.Parameters.AddWithValue("@password", text_password.Text);
-                        cmd.CommandType = CommandType.Text;
                         con.Open();
-                        cmd.ExecuteNonQuery();
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        DataTable dt = new DataTable();
-                        adapter.Fill(dt);
-                        if (dt.Rows.Count >= 1)
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.Read())
                         {
                             this.Hide();
                             Home hp = new Home();
@@ -60,12 +60,11 @@ namespace Library
 
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                finally { con.Close(); }
-            
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }    
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {

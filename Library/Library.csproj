@@ -56,6 +56,12 @@
     <Compile Include="Board\BookBoard.Designer.cs">
       <DependentUpon>BookBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Board\SettingBoard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Board\SettingBoard.Designer.cs">
+      <DependentUpon>SettingBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Board\StudentBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </Compile>
     <EmbeddedResource Include="Board\BookBoard.resx">
       <DependentUpon>BookBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Board\SettingBoard.resx">
+      <DependentUpon>SettingBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Board\StudentBoard.resx">
       <DependentUpon>StudentBoard.cs</DependentUpon>
@@ -276,6 +285,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BookDirectory\" />
+    <Folder Include="SettingManagement\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\book.gif" />

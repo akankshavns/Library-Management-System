@@ -65,30 +65,56 @@ namespace Library.TransactionManagement
 
         private void Return_Click(object sender, EventArgs e)
         {
+            DateTime actualReturnDate = ActualReturnDate.Value;
+            string finequerry = "select ReturnDate from IssueBookList where BookId= '" + BookID.Text + "' ";
             string updateAvalable = "update AddBooks set AvailableBook = AvailableBook + 1 Where Accession_No = '" + BookID.Text + "'";
             string changeReturn = "update IssueBookList set isReturnBook='yes'";
             try
             {
                 con.Open();
-                SqlCommand cmd =new SqlCommand(updateAvalable, con);
-                SqlCommand comm = new SqlCommand(changeReturn, con);
-                int  i = cmd.ExecuteNonQuery();
-                if (i == 0)
+                SqlCommand finecmd = new SqlCommand(finequerry,con);
+                SqlDataReader reader = finecmd.ExecuteReader();
+                DateTime returnDate = DateTime.MinValue;
+                if (reader.Read())
                 {
-                    MessageBox.Show("Book not Return succesfully");
+                    returnDate=reader.GetDateTime(0);
                 }
-                else {
-                    MessageBox.Show("Book Return succesfully");
+                reader.Close();
+                con.Close();
+                if (actualReturnDate > returnDate)
+                {
+                    TimeSpan difference = actualReturnDate - returnDate;
+                    int daysLate = difference.Days;
+                    double fine = daysLate * 5;  // $5 fine per day
+                    MessageBox.Show($"Book is returned late. You have to pay a fine of ${fine}.");
                 }
-                BookName.Text = "";
-                AuthorName.Text = "";
-                EnrollBox.Text = "";
-                StudentName.Text = "";
-                mail.Text = "";
-                issueDate.Text = "";
-                ReturnDate.Text = "";
-                Dep.Text = "";
+                else
+                {
+                    SqlCommand cmd = new SqlCommand(updateAvalable, con);
+                    SqlCommand comm = new SqlCommand(changeReturn, con);
+                    int i = cmd.ExecuteNonQuery();
+                    if (i == 0)
+                    {
+                        MessageBox.Show("Book not Return succesfully");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Book Return succesfully");
+                    }
+                    con.Close();
 
+                    BookName.Text = "";
+                    AuthorName.Text = "";
+                    EnrollBox.Text = "";
+                    StudentName.Text = "";
+                    mail.Text = "";
+                    issueDate.Text = "";
+                    ActualReturnDate.Text = "";
+                    Dep.Text = "";
+
+                }
+            
+                    
             }
             catch (Exception ex)
             {

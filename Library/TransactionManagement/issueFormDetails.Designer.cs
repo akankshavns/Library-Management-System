@@ -56,7 +56,7 @@
             this.Semester = new System.Windows.Forms.ComboBox();
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.ReturnDate = new System.Windows.Forms.TextBox();
+            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -65,9 +65,9 @@
             // 
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
+            this.InfoPanel.Controls.Add(this.ReturnDate);
             this.InfoPanel.Controls.Add(this.issueDate);
             this.InfoPanel.Controls.Add(this.button1);
-            this.InfoPanel.Controls.Add(this.ReturnDate);
             this.InfoPanel.Controls.Add(this.Addre);
             this.InfoPanel.Controls.Add(this.mail);
             this.InfoPanel.Controls.Add(this.Cont);
@@ -122,7 +122,6 @@
             this.issueDate.Name = "issueDate";
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
-            
             // 
             // button1
             // 
@@ -371,11 +370,10 @@
             // ReturnDate
             // 
             this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnDate.Location = new System.Drawing.Point(209, 436);
+            this.ReturnDate.Location = new System.Drawing.Point(209, 437);
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(224, 26);
-            this.ReturnDate.TabIndex = 20;
-            this.ReturnDate.TextChanged += new System.EventHandler(this.ReturnDate_TextChanged);
+            this.ReturnDate.TabIndex = 22;
             // 
             // issueFormDetails
             // 
@@ -424,6 +422,6 @@
         private System.Windows.Forms.ComboBox Semester;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ReturnDate;
+        private System.Windows.Forms.DateTimePicker ReturnDate;
     }
 }
