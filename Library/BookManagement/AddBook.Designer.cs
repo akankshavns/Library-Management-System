@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBook));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.OPTION = new System.Windows.Forms.Panel();
+            this.English = new System.Windows.Forms.RadioButton();
+            this.other = new System.Windows.Forms.RadioButton();
+            this.Hindi = new System.Windows.Forms.RadioButton();
             this.label15 = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.Publication = new System.Windows.Forms.TextBox();
@@ -39,6 +43,7 @@
             this.Quantity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.AvailableBook = new System.Windows.Forms.TextBox();
+            this.OtherLanguage = new System.Windows.Forms.TextBox();
             this.pages = new System.Windows.Forms.TextBox();
             this.volume = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -51,9 +56,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.Language = new System.Windows.Forms.TextBox();
             this.BookDate = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
+            this.Return = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.errorInID = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorInName = new System.Windows.Forms.ErrorProvider(this.components);
@@ -66,6 +71,7 @@
             this.errorProviderPrice = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
+            this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorInName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).BeginInit();
@@ -83,6 +89,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.OPTION);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Controls.Add(this.Publication);
@@ -91,6 +98,7 @@
             this.panel1.Controls.Add(this.Quantity);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.AvailableBook);
+            this.panel1.Controls.Add(this.OtherLanguage);
             this.panel1.Controls.Add(this.pages);
             this.panel1.Controls.Add(this.volume);
             this.panel1.Controls.Add(this.label10);
@@ -103,13 +111,62 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.Language);
             this.panel1.Controls.Add(this.BookDate);
             this.panel1.Controls.Add(this.BName);
+            this.panel1.Controls.Add(this.Return);
             this.panel1.Location = new System.Drawing.Point(95, 17);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(832, 575);
             this.panel1.TabIndex = 20;
+            // 
+            // OPTION
+            // 
+            this.OPTION.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.OPTION.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OPTION.Controls.Add(this.English);
+            this.OPTION.Controls.Add(this.other);
+            this.OPTION.Controls.Add(this.Hindi);
+            this.OPTION.Location = new System.Drawing.Point(453, 271);
+            this.OPTION.Name = "OPTION";
+            this.OPTION.Size = new System.Drawing.Size(201, 26);
+            this.OPTION.TabIndex = 81;
+            // 
+            // English
+            // 
+            this.English.AutoSize = true;
+            this.English.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.English.Location = new System.Drawing.Point(2, 3);
+            this.English.Name = "English";
+            this.English.Size = new System.Drawing.Size(72, 21);
+            this.English.TabIndex = 78;
+            this.English.TabStop = true;
+            this.English.Text = "English";
+            this.English.UseVisualStyleBackColor = true;
+            // 
+            // other
+            // 
+            this.other.AutoSize = true;
+            this.other.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.other.Location = new System.Drawing.Point(142, 2);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(62, 21);
+            this.other.TabIndex = 79;
+            this.other.TabStop = true;
+            this.other.Text = "Other";
+            this.other.UseVisualStyleBackColor = true;
+            this.other.CheckedChanged += new System.EventHandler(this.other_CheckedChanged_1);
+            // 
+            // Hindi
+            // 
+            this.Hindi.AutoSize = true;
+            this.Hindi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hindi.Location = new System.Drawing.Point(78, 3);
+            this.Hindi.Name = "Hindi";
+            this.Hindi.Size = new System.Drawing.Size(58, 21);
+            this.Hindi.TabIndex = 79;
+            this.Hindi.TabStop = true;
+            this.Hindi.Text = "Hindi";
+            this.Hindi.UseVisualStyleBackColor = true;
             // 
             // label15
             // 
@@ -127,7 +184,7 @@
             // 
             this.AddButton.BackColor = System.Drawing.Color.Green;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.Location = new System.Drawing.Point(360, 493);
+            this.AddButton.Location = new System.Drawing.Point(359, 480);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(116, 50);
             this.AddButton.TabIndex = 68;
@@ -173,7 +230,7 @@
             // 
             this.Quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quantity.Location = new System.Drawing.Point(453, 365);
+            this.Quantity.Location = new System.Drawing.Point(453, 370);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(201, 26);
             this.Quantity.TabIndex = 62;
@@ -200,6 +257,20 @@
             this.AvailableBook.Size = new System.Drawing.Size(201, 26);
             this.AvailableBook.TabIndex = 67;
             this.AvailableBook.TextChanged += new System.EventHandler(this.AvailableBook_TextChanged);
+            // 
+            // OtherLanguage
+            // 
+            this.OtherLanguage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.OtherLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OtherLanguage.ForeColor = System.Drawing.Color.Silver;
+            this.OtherLanguage.Location = new System.Drawing.Point(453, 271);
+            this.OtherLanguage.Name = "OtherLanguage";
+            this.OtherLanguage.Size = new System.Drawing.Size(178, 26);
+            this.OtherLanguage.TabIndex = 55;
+            this.OtherLanguage.Text = "Enter Other Language";
+            this.OtherLanguage.Visible = false;
+            this.OtherLanguage.Click += new System.EventHandler(this.OtherLanguage_Click);
+            this.OtherLanguage.TextChanged += new System.EventHandler(this.pages_TextChanged);
             // 
             // pages
             // 
@@ -252,6 +323,7 @@
             this.ID.Size = new System.Drawing.Size(201, 26);
             this.ID.TabIndex = 56;
             this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
+          
             // 
             // label2
             // 
@@ -335,19 +407,11 @@
             this.label5.TabIndex = 53;
             this.label5.Text = "Price";
             // 
-            // Language
-            // 
-            this.Language.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.Language.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Language.Location = new System.Drawing.Point(453, 269);
-            this.Language.Name = "Language";
-            this.Language.Size = new System.Drawing.Size(201, 26);
-            this.Language.TabIndex = 57;
-            this.Language.TextChanged += new System.EventHandler(this.Language_TextChanged);
-            // 
             // BookDate
             // 
+            this.BookDate.CalendarFont = new System.Drawing.Font("Sitka Text", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.BookDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.BookDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookDate.Location = new System.Drawing.Point(453, 301);
             this.BookDate.Name = "BookDate";
@@ -364,6 +428,19 @@
             this.BName.Size = new System.Drawing.Size(201, 26);
             this.BName.TabIndex = 58;
             this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
+            // 
+            // Return
+            // 
+            this.Return.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.Return.FlatAppearance.BorderSize = 0;
+            this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Return.Image = global::Library.Properties.Resources.Undo;
+            this.Return.Location = new System.Drawing.Point(631, 271);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(23, 26);
+            this.Return.TabIndex = 82;
+            this.Return.UseVisualStyleBackColor = false;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // label7
             // 
@@ -435,9 +512,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddBook";
             this.Size = new System.Drawing.Size(1020, 629);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddBook_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.OPTION.ResumeLayout(false);
+            this.OPTION.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorInName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).EndInit();
@@ -477,7 +555,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox Language;
         private System.Windows.Forms.DateTimePicker BookDate;
         private System.Windows.Forms.TextBox BName;
         private System.Windows.Forms.ErrorProvider errorInID;
@@ -490,5 +567,11 @@
         private System.Windows.Forms.ErrorProvider errorProviderAvailableBook;
         private System.Windows.Forms.ErrorProvider errorProviderPrice;
         private System.Windows.Forms.ErrorProvider errorProviderQuantity;
+        private System.Windows.Forms.Button Return;
+        private System.Windows.Forms.Panel OPTION;
+        private System.Windows.Forms.RadioButton English;
+        private System.Windows.Forms.RadioButton other;
+        private System.Windows.Forms.RadioButton Hindi;
+        private System.Windows.Forms.TextBox OtherLanguage;
     }
 }
