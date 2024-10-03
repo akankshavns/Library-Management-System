@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library.BookManagement
 {
@@ -31,13 +32,13 @@ namespace Library.BookManagement
             errorInName.Clear();
             errorProviderPublicatioin.Clear();
             errorProviderQuantity.Clear();
-            
+
         }
         string Language;
         public void AddKitab()
         {
-           
-            if (English.Checked) 
+
+            if (English.Checked)
             {
                 Language = "English";
             }
@@ -50,54 +51,44 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string idExist = "select Accession_No from AddBooks where Accession_No=@Id";
                     string addBook = "Insert into AddBooks values(@Id,@Name,@Author,@page,@Valume,@Language,@Publication,@BookDate,@Price,@quantity,@availableBook)";
                     try
                     {
                         con.Open();
-                        SqlCommand comm = new SqlCommand(idExist, con);
-                        comm.Parameters.AddWithValue("@Id", ID.Text);                       
-                        SqlDataReader reader = comm.ExecuteReader();
-                        if (reader.Read())
+                        SqlCommand cmd = new SqlCommand(addBook, con);
+                        cmd.Parameters.AddWithValue("@Id", ID.Text);
+                        cmd.Parameters.AddWithValue("@Name", BName.Text);
+                        cmd.Parameters.AddWithValue("@Author", Author.Text);
+                        cmd.Parameters.AddWithValue("@Publication", Publication.Text);
+                        cmd.Parameters.AddWithValue("@Valume", volume.Text);
+                        cmd.Parameters.AddWithValue("@Language", Language);
+                        cmd.Parameters.AddWithValue("@page", pages.Text);
+                        cmd.Parameters.AddWithValue("@BookDate", BookDate.Text);
+                        cmd.Parameters.AddWithValue("@Price", price.Text);
+                        cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
+                        cmd.Parameters.AddWithValue("@availableBook", AvailableBook.Text);
+                        int i = cmd.ExecuteNonQuery();
+                        if (i >= 1)
                         {
-                            MessageBox.Show("This book is already exist in the library.");
+                            MessageBox.Show("Book added successfully");
+                            clearText();
                         }
                         else
                         {
-                            reader.Close();
-                            SqlCommand cmd = new SqlCommand(addBook, con);
-                            cmd.Parameters.AddWithValue("@Id", ID.Text);
-                            cmd.Parameters.AddWithValue("@Name", BName.Text);
-                            cmd.Parameters.AddWithValue("@Author", Author.Text);
-                            cmd.Parameters.AddWithValue("@Publication", Publication.Text);
-                            cmd.Parameters.AddWithValue("@Valume", volume.Text);
-                            cmd.Parameters.AddWithValue("@Language", Language);
-                            cmd.Parameters.AddWithValue("@page", pages.Text);
-                            cmd.Parameters.AddWithValue("@BookDate", BookDate.Text);
-                            cmd.Parameters.AddWithValue("@Price", price.Text);
-                            cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
-                            cmd.Parameters.AddWithValue("@availableBook", AvailableBook.Text);
-                            int i = cmd.ExecuteNonQuery();
-                            if (i >= 1)
-                            {
-                                MessageBox.Show("Book added successfully");
-                                clearText();
-                            }
-                            else
-                            {
-                                MessageBox.Show("Please fill the Information properly.");
-                            }
+                            MessageBox.Show("Please fill the Information properly.");
                         }
+                        
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show( ex.Message);
+                        MessageBox.Show(ex.Message);
+
                     }
                 }
             }
-            
+
         }
-        bool hasErrors= false;
+        bool hasErrors = false;
         private void AddButton_Click(object sender, EventArgs e)
         {
             Error();
@@ -105,7 +96,7 @@ namespace Library.BookManagement
             {
                 AddKitab();
             }
-           
+
         }
         void Error()
         {
@@ -154,7 +145,7 @@ namespace Library.BookManagement
                 errorProviderPrice.SetError(price, "This Field is required.");
                 hasErrors = true;
             }
-        
+
         }
 
         private void AddBook_KeyDown(object sender, KeyEventArgs e)
@@ -163,8 +154,8 @@ namespace Library.BookManagement
             {
                 Error();
                 if (hasErrors == false)
-                { 
-                    AddKitab(); 
+                {
+                    AddKitab();
                 }
             }
         }
@@ -206,12 +197,6 @@ namespace Library.BookManagement
             hasErrors = false;
 
         }
-
-        private void Language_TextChanged(object sender, EventArgs e)
-        {
-            //errorProviderLanguage.SetError(Language, "");
-        }
-
         private void price_TextChanged(object sender, EventArgs e)
         {
             errorProviderPrice.SetError(price, "");
@@ -263,10 +248,165 @@ namespace Library.BookManagement
             price.Clear();
             AvailableBook.Clear();
         }
+        public void Enable()
+        {
+            BName.Enabled = false;
+            Author.Enabled = false;
+            Publication.Enabled = false;
+            pages.Enabled = false;
+            volume.Enabled = false;
+            Quantity.Enabled = false;
+            price.Enabled = false;
+            AvailableBook.Enabled = false;
+        }
+        public void disable()
+        {
+            BName.Enabled = true;
+            Author.Enabled = true;
+            Publication.Enabled =true;
+            pages.Enabled = true;
+            volume.Enabled = true;
+            Quantity.Enabled = true;
+            price.Enabled = true;
+            AvailableBook.Enabled = true;
+        }
+        private void ID_KeyUp(object sender, KeyEventArgs e)
+        {
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string idExist = "select Accession_No from AddBooks where Accession_No like @Id";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand comm = new SqlCommand(idExist, con);
+                        comm.Parameters.AddWithValue("@Id", ID.Text);
+                        SqlDataReader reader = comm.ExecuteReader();
+                        if (reader.Read())
+                        {
+                            Enable();
+                            block.SetError(ID, "This book is already exist in the library.");
+                        }
+                        else
+                        {
+                            block.SetError(ID, "");
+                            disable();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    
+                }
+            }
+        }
 
-        
+        private void volume_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderVolume.SetError(volume, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
 
-      
+        private void BName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorInName.SetError(BName, "This text box only accepts alphabets characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void Author_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderAuthor.SetError(Author, "This text box only accepts  alphabets characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void Publication_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderPublicatioin.SetError(Publication, "This text box only accepts alphabets characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void pages_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderPages.SetError(pages, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+              errorProviderPrice.SetError(price, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void Quantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderQuantity.SetError(Quantity, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
+
+        private void AvailableBook_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorProviderAvailableBook.SetError(AvailableBook, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+                errorProviderVolume.SetError(volume, "");
+            }
+        }
     }
 
 }

@@ -112,5 +112,10 @@ namespace Library.BookManagement
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -70,6 +70,7 @@
             this.errorProviderAvailableBook = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPrice = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.block = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
@@ -82,6 +83,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -201,6 +203,7 @@
             this.Publication.Size = new System.Drawing.Size(201, 26);
             this.Publication.TabIndex = 64;
             this.Publication.TextChanged += new System.EventHandler(this.Publication_TextChanged);
+            this.Publication.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Publication_KeyPress);
             // 
             // label14
             // 
@@ -235,6 +238,7 @@
             this.Quantity.Size = new System.Drawing.Size(201, 26);
             this.Quantity.TabIndex = 62;
             this.Quantity.TextChanged += new System.EventHandler(this.Quantity_TextChanged);
+            this.Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Quantity_KeyPress);
             // 
             // label4
             // 
@@ -257,6 +261,7 @@
             this.AvailableBook.Size = new System.Drawing.Size(201, 26);
             this.AvailableBook.TabIndex = 67;
             this.AvailableBook.TextChanged += new System.EventHandler(this.AvailableBook_TextChanged);
+            this.AvailableBook.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AvailableBook_KeyPress);
             // 
             // OtherLanguage
             // 
@@ -281,6 +286,7 @@
             this.pages.Size = new System.Drawing.Size(201, 26);
             this.pages.TabIndex = 55;
             this.pages.TextChanged += new System.EventHandler(this.pages_TextChanged);
+            this.pages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pages_KeyPress);
             // 
             // volume
             // 
@@ -291,6 +297,7 @@
             this.volume.Size = new System.Drawing.Size(201, 26);
             this.volume.TabIndex = 66;
             this.volume.TextChanged += new System.EventHandler(this.volume_TextChanged);
+            this.volume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.volume_KeyPress);
             // 
             // label10
             // 
@@ -313,6 +320,7 @@
             this.Author.Size = new System.Drawing.Size(201, 26);
             this.Author.TabIndex = 60;
             this.Author.TextChanged += new System.EventHandler(this.Author_TextChanged);
+            this.Author.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Author_KeyPress);
             // 
             // ID
             // 
@@ -323,7 +331,7 @@
             this.ID.Size = new System.Drawing.Size(201, 26);
             this.ID.TabIndex = 56;
             this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
-          
+            this.ID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ID_KeyUp);
             // 
             // label2
             // 
@@ -358,6 +366,7 @@
             this.price.Size = new System.Drawing.Size(201, 26);
             this.price.TabIndex = 59;
             this.price.TextChanged += new System.EventHandler(this.price_TextChanged);
+            this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // label6
             // 
@@ -428,6 +437,7 @@
             this.BName.Size = new System.Drawing.Size(201, 26);
             this.BName.TabIndex = 58;
             this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
+            this.BName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BName_KeyPress);
             // 
             // Return
             // 
@@ -504,6 +514,10 @@
             this.errorProviderQuantity.ContainerControl = this;
             this.errorProviderQuantity.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderQuantity.Icon")));
             // 
+            // block
+            // 
+            this.block.ContainerControl = this;
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -526,6 +540,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,5 +588,6 @@
         private System.Windows.Forms.RadioButton other;
         private System.Windows.Forms.RadioButton Hindi;
         private System.Windows.Forms.TextBox OtherLanguage;
+        private System.Windows.Forms.ErrorProvider block;
     }
 }
