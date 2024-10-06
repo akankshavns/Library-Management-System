@@ -12,7 +12,7 @@ using System.Configuration;
 
 namespace Library.TransactionManagement
 {
-    public partial class issueBook : UserControl
+    public partial class SearchBooks : UserControl
     {
         public string availableBookId_issueBook { get; set; }
 
@@ -20,7 +20,7 @@ namespace Library.TransactionManagement
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
-        public issueBook()
+        public SearchBooks()
         {
             InitializeComponent();
         }
@@ -29,32 +29,7 @@ namespace Library.TransactionManagement
             this.Hide();
             this.Visible = false;
         }
-        private void searchBox_KeyUp(object sender, KeyEventArgs e)
-        {
-            string searchQuery = "SELECT Accession_No, BookName FROM AddBooks WHERE BookName LIKE @searchText OR AuthorName LIKE @searchText";
-            try
-            {
-                string connectionString = GetConnectionString();
-                if (connectionString != null) 
-                {
-                    using (SqlConnection con = new SqlConnection(connectionString))
-                    {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand(searchQuery, con);
-                        cmd.Parameters.AddWithValue("@searchText", "%" + searchBox.Text + "%");
-                        DataTable dt = new DataTable();
-                        SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-                        adapter.Fill(dt);
-                        dataGridView1.DataSource = dt;
-                    }
-                }
-                   
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "key up");
-            }
-        }
+       
 
         private void yes_Click(object sender, EventArgs e)
         {
@@ -73,43 +48,46 @@ namespace Library.TransactionManagement
         private void searchBox_Click_1(object sender, EventArgs e)
         {
             gridpanel.Visible = true;
-            if (searchBox.Text == "Search Book...")
-            {
-                searchBox.Text = "";
-                searchBox.ForeColor = Color.Black;
-            }
+            searchBox.Clear();
+            searchBox.ForeColor = Color.Black;
         }
+        DataTable booksTable = new DataTable();
         private void issueBook_Load(object sender, EventArgs e)
         {
-            try
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
             {
-                string connectionString = GetConnectionString();
-                if (connectionString != null)
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlConnection con = new SqlConnection(connectionString))
+                    string viewdata = "SELECT SNO, Accession_No, BookName, AUTHORNAME, VOLUME FROM AddBooks";
+                    try
                     {
                         con.Open();
-                        string querry = "select Accession_No,BookName From AddBooks";
-                        SqlCommand cmd = new SqlCommand(querry, con);
-                        cmd.ExecuteNonQuery();
-                        DataTable dt = new DataTable();
-                        SqlDataAdapter adapter = new SqlDataAdapter();
-                        adapter.SelectCommand = cmd;
-                        adapter.Fill(dt);
-                        dataGridView1.DataSource = dt;
+                        SqlCommand cmd = new SqlCommand(viewdata, con);
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        booksTable.Load(reader);
+                        dataGridView.DataSource = booksTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "issuealosd");
-            }
-            }
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+           
+        }
+        private void searchBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            DataView dv = booksTable.DefaultView;
+            dv.RowFilter = $"BookName LIKE '%{searchBox.Text}%' OR AuthorName LIKE '%{searchBox.Text}%'";
+            dataGridView.DataSource = dv.ToTable();
+           
+        }
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                string id = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string id = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
                 string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
                 int num = 0;
                 try
@@ -120,10 +98,10 @@ namespace Library.TransactionManagement
                         using (SqlConnection con = new SqlConnection(connectionString))
                         {
                             SqlCommand cmd = new SqlCommand(query, con);
-                        cmd.Parameters.AddWithValue("@BookId", id);
-                        con.Open();
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        
+                            cmd.Parameters.AddWithValue("@BookId", id);
+                            con.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+
                             if (reader.Read())
                             {
                                 num = reader.GetInt32(0);

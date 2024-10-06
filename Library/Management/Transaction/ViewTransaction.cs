@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Library.TransactionManagement
 {
-    public partial class viewTransaction : UserControl
+    public partial class ViewTransaction : UserControl
     {
-        public viewTransaction()
+        public ViewTransaction()
         {
             InitializeComponent();
         }

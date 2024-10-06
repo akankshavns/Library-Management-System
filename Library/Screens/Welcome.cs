@@ -4,11 +4,11 @@ using System.Windows.Forms;
 
 namespace Library
 {
-    public partial class opening : Form
+    public partial class Welcome : Form
     {
         bool drag = false;
         Point StartPoint = new Point(0, 0);
-        public opening()
+        public Welcome()
         {
             InitializeComponent();
         }

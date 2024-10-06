@@ -34,10 +34,10 @@
             this.issue = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.viewTransaction1 = new Library.TransactionManagement.viewTransaction();
+            this.viewTransaction1 = new Library.TransactionManagement.ViewTransaction();
             this.returnBook1 = new Library.TransactionManagement.ReturnBook();
-            this.issueFormDetails1 = new Library.TransactionManagement.issueFormDetails();
-            this.issueBook1 = new Library.TransactionManagement.issueBook();
+            this.issueFormDetails1 = new Library.TransactionManagement.ShowBookDetail();
+            this.issueBook1 = new Library.TransactionManagement.SearchBooks();
             this.button1 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -186,9 +186,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button1;
-        private TransactionManagement.issueBook issueBook1;
-        private TransactionManagement.viewTransaction viewTransaction1;
+        private TransactionManagement.SearchBooks issueBook1;
+        private TransactionManagement.ViewTransaction viewTransaction1;
         private TransactionManagement.ReturnBook returnBook1;
-        private TransactionManagement.issueFormDetails issueFormDetails1;
+        private TransactionManagement.ShowBookDetail issueFormDetails1;
     }
 }

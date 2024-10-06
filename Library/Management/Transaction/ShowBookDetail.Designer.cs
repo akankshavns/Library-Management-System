@@ -1,6 +1,6 @@
 ﻿namespace Library.TransactionManagement
 {
-    partial class issueFormDetails
+    partial class ShowBookDetail
     {
         /// <summary> 
         /// Required designer variable.

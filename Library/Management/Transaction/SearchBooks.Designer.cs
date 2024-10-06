@@ -1,6 +1,6 @@
 ﻿namespace Library.TransactionManagement
 {
-    partial class issueBook
+    partial class SearchBooks
     {
         /// <summary> 
         /// Required designer variable.
@@ -36,18 +36,18 @@
             this.No_button = new System.Windows.Forms.Button();
             this.yes = new System.Windows.Forms.Button();
             this.gridpanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.searchBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.issueFormDetails1 = new Library.TransactionManagement.issueFormDetails();
+            this.issueFormDetails1 = new Library.TransactionManagement.ShowBookDetail();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.aivalableMessageBox.SuspendLayout();
             this.gridpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -134,22 +134,23 @@
             // 
             // gridpanel
             // 
-            this.gridpanel.Controls.Add(this.dataGridView1);
+            this.gridpanel.Controls.Add(this.dataGridView);
             this.gridpanel.Location = new System.Drawing.Point(118, 17);
             this.gridpanel.Name = "gridpanel";
-            this.gridpanel.Size = new System.Drawing.Size(350, 531);
+            this.gridpanel.Size = new System.Drawing.Size(591, 531);
             this.gridpanel.TabIndex = 3;
             this.gridpanel.Visible = false;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 18);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(314, 504);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(25, 18);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView.Size = new System.Drawing.Size(542, 504);
+            this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            
             // 
             // panel2
             // 
@@ -211,19 +212,20 @@
             // 
             // issueFormDetails1
             // 
+            this.issueFormDetails1.availableBookId = null;
             this.issueFormDetails1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.issueFormDetails1.Location = new System.Drawing.Point(0, 0);
             this.issueFormDetails1.Name = "issueFormDetails1";
             this.issueFormDetails1.Size = new System.Drawing.Size(1228, 607);
             this.issueFormDetails1.TabIndex = 3;
             // 
-            // issueBook
+            // SearchBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.issueFormDetails1);
-            this.Name = "issueBook";
+            this.Name = "SearchBooks";
             this.Size = new System.Drawing.Size(1278, 629);
             this.Load += new System.EventHandler(this.issueBook_Load);
             this.panel1.ResumeLayout(false);
@@ -231,7 +233,7 @@
             this.aivalableMessageBox.ResumeLayout(false);
             this.aivalableMessageBox.PerformLayout();
             this.gridpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -241,7 +243,7 @@
 
         #endregion
 
-        private issueFormDetails issueFormDetails1;
+        private ShowBookDetail issueFormDetails1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel aivalableMessageBox;
@@ -250,7 +252,7 @@
         private System.Windows.Forms.Button No_button;
         private System.Windows.Forms.Button yes;
         private System.Windows.Forms.Panel gridpanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox searchBox;

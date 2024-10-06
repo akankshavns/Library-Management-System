@@ -1,6 +1,6 @@
 ﻿namespace Library.TransactionManagement
 {
-    partial class viewTransaction
+    partial class ViewTransaction
     {
         /// <summary> 
         /// Required designer variable.

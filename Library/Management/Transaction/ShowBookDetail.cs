@@ -12,14 +12,14 @@ using System.Windows.Forms;
 
 namespace Library.TransactionManagement
 {
-    public partial class issueFormDetails : UserControl
+    public partial class ShowBookDetail : UserControl
     {
          public string availableBookId {  get; set; }
         private string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
-        public issueFormDetails()
+        public ShowBookDetail()
         {
             InitializeComponent();
         }

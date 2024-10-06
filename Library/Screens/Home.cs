@@ -29,7 +29,7 @@ namespace Library
             else
             {
                 menuBar.Width += 10;
-                if (menuBar.Width >= 213)
+                if (menuBar.Width >= 165)
                 {
                     sidebarExpand = true;
                     MenuSlider.Stop();
@@ -90,6 +90,6 @@ namespace Library
             settingBoard1.BringToFront();
         }
 
-        
+       
     }
 }

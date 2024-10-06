@@ -1,6 +1,6 @@
 ﻿namespace Library
 {
-    partial class opening
+    partial class Welcome
     {
         /// <summary>
         /// Required designer variable.

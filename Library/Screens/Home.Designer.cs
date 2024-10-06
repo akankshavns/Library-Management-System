@@ -64,11 +64,11 @@
             this.menuButton = new System.Windows.Forms.Button();
             this.menuBar = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.settingBoard1 = new Library.Board.SettingBoard();
-            this.bookBoard1 = new Library.Board.BookBoard();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
             this.transactionBoard1 = new Library.Board.TransactionBoard();
             this.studentBoard1 = new Library.Board.StudentBoard();
+            this.settingBoard1 = new Library.Board.SettingBoard();
+            this.bookBoard1 = new Library.Board.BookBoard();
             this.panel2.SuspendLayout();
             this.BookBoard.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -261,9 +261,9 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.Trsnsaction);
-            this.panel9.Location = new System.Drawing.Point(3, 245);
+            this.panel9.Location = new System.Drawing.Point(3, 278);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(210, 60);
+            this.panel9.Size = new System.Drawing.Size(158, 60);
             this.panel9.TabIndex = 7;
             // 
             // Trsnsaction
@@ -278,9 +278,10 @@
             this.Trsnsaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Trsnsaction.Location = new System.Drawing.Point(4, 5);
             this.Trsnsaction.Name = "Trsnsaction";
-            this.Trsnsaction.Size = new System.Drawing.Size(192, 52);
+            this.Trsnsaction.Size = new System.Drawing.Size(157, 52);
             this.Trsnsaction.TabIndex = 9;
-            this.Trsnsaction.Text = "   Transaction  Management";
+            this.Trsnsaction.Text = "   Transaction\r\n   Management";
+            this.Trsnsaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Trsnsaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Trsnsaction.UseVisualStyleBackColor = false;
             this.Trsnsaction.Click += new System.EventHandler(this.Trsnsaction_Click);
@@ -291,7 +292,7 @@
             this.panel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel11.Location = new System.Drawing.Point(6, 517);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(204, 48);
+            this.panel11.Size = new System.Drawing.Size(158, 48);
             this.panel11.TabIndex = 7;
             // 
             // Bin
@@ -306,7 +307,7 @@
             this.Bin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Bin.Location = new System.Drawing.Point(6, 5);
             this.Bin.Name = "Bin";
-            this.Bin.Size = new System.Drawing.Size(187, 38);
+            this.Bin.Size = new System.Drawing.Size(146, 38);
             this.Bin.TabIndex = 9;
             this.Bin.Text = "  Bin";
             this.Bin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -317,7 +318,7 @@
             this.panel3.Controls.Add(this.Books);
             this.panel3.Location = new System.Drawing.Point(3, 125);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(207, 48);
+            this.panel3.Size = new System.Drawing.Size(158, 63);
             this.panel3.TabIndex = 6;
             // 
             // Books
@@ -332,9 +333,10 @@
             this.Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Books.Location = new System.Drawing.Point(6, 6);
             this.Books.Name = "Books";
-            this.Books.Size = new System.Drawing.Size(190, 38);
+            this.Books.Size = new System.Drawing.Size(151, 51);
             this.Books.TabIndex = 7;
-            this.Books.Text = "  Book Management";
+            this.Books.Text = "  Book\r\n  Management\r\n";
+            this.Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Books.UseVisualStyleBackColor = false;
             this.Books.Click += new System.EventHandler(this.Books_Click_1);
@@ -345,7 +347,7 @@
             this.panel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel8.Location = new System.Drawing.Point(6, 571);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(204, 48);
+            this.panel8.Size = new System.Drawing.Size(158, 48);
             this.panel8.TabIndex = 7;
             // 
             // logOut
@@ -360,9 +362,9 @@
             this.logOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.logOut.Location = new System.Drawing.Point(7, 5);
             this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(186, 38);
+            this.logOut.Size = new System.Drawing.Size(146, 38);
             this.logOut.TabIndex = 10;
-            this.logOut.Text = "  Logout";
+            this.logOut.Text = "   Logout";
             this.logOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.logOut.UseCompatibleTextRendering = true;
             this.logOut.UseVisualStyleBackColor = false;
@@ -375,7 +377,7 @@
             this.panel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel4.Location = new System.Drawing.Point(6, 463);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(204, 48);
+            this.panel4.Size = new System.Drawing.Size(158, 48);
             this.panel4.TabIndex = 7;
             // 
             // Setting
@@ -390,7 +392,7 @@
             this.Setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Setting.Location = new System.Drawing.Point(6, 5);
             this.Setting.Name = "Setting";
-            this.Setting.Size = new System.Drawing.Size(187, 38);
+            this.Setting.Size = new System.Drawing.Size(146, 38);
             this.Setting.TabIndex = 11;
             this.Setting.Text = "  Setting";
             this.Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -400,9 +402,9 @@
             // panel10
             // 
             this.panel10.Controls.Add(this.Dashboard);
-            this.panel10.Location = new System.Drawing.Point(3, 60);
+            this.panel10.Location = new System.Drawing.Point(3, 62);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(210, 48);
+            this.panel10.Size = new System.Drawing.Size(158, 48);
             this.panel10.TabIndex = 7;
             // 
             // Dashboard
@@ -417,7 +419,7 @@
             this.Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Dashboard.Location = new System.Drawing.Point(6, 5);
             this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(190, 38);
+            this.Dashboard.Size = new System.Drawing.Size(149, 38);
             this.Dashboard.TabIndex = 8;
             this.Dashboard.Text = "   DashBoard";
             this.Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -427,9 +429,9 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.Student);
-            this.panel5.Location = new System.Drawing.Point(3, 188);
+            this.panel5.Location = new System.Drawing.Point(3, 204);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(210, 48);
+            this.panel5.Size = new System.Drawing.Size(158, 63);
             this.panel5.TabIndex = 7;
             // 
             // Student
@@ -444,9 +446,10 @@
             this.Student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Student.Location = new System.Drawing.Point(6, 5);
             this.Student.Name = "Student";
-            this.Student.Size = new System.Drawing.Size(190, 38);
+            this.Student.Size = new System.Drawing.Size(155, 53);
             this.Student.TabIndex = 8;
-            this.Student.Text = "  Student Management";
+            this.Student.Text = "  Student\r\n  Management";
+            this.Student.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Student.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Student.UseVisualStyleBackColor = false;
             this.Student.Click += new System.EventHandler(this.Student_Click);
@@ -491,45 +494,22 @@
             this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuBar.Location = new System.Drawing.Point(0, 67);
             this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(213, 658);
+            this.menuBar.Size = new System.Drawing.Size(165, 658);
             this.menuBar.TabIndex = 9;
             // 
             // panel15
             // 
-            this.panel15.Controls.Add(this.settingBoard1);
-            this.panel15.Controls.Add(this.bookBoard1);
             this.panel15.Controls.Add(this.dashboard1);
             this.panel15.Controls.Add(this.transactionBoard1);
             this.panel15.Controls.Add(this.studentBoard1);
+            this.panel15.Controls.Add(this.settingBoard1);
+            this.panel15.Controls.Add(this.bookBoard1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Location = new System.Drawing.Point(213, 67);
+            this.panel15.Location = new System.Drawing.Point(165, 67);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1157, 658);
+            this.panel15.Size = new System.Drawing.Size(1205, 658);
             this.panel15.TabIndex = 10;
-            // 
-            // settingBoard1
-            // 
-            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBoard1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.settingBoard1.Location = new System.Drawing.Point(1, 1);
-            this.settingBoard1.Name = "settingBoard1";
-            this.settingBoard1.Size = new System.Drawing.Size(1132, 652);
-            this.settingBoard1.TabIndex = 5;
-            this.settingBoard1.Visible = false;
-            // 
-            // bookBoard1
-            // 
-            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
-            this.bookBoard1.Name = "bookBoard1";
-            this.bookBoard1.Size = new System.Drawing.Size(1205, 667);
-            this.bookBoard1.TabIndex = 4;
-            this.bookBoard1.Visible = false;
             // 
             // dashboard1
             // 
@@ -539,7 +519,7 @@
             this.dashboard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.dashboard1.Location = new System.Drawing.Point(0, 0);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1159, 658);
+            this.dashboard1.Size = new System.Drawing.Size(1207, 658);
             this.dashboard1.TabIndex = 3;
             this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load);
             // 
@@ -550,7 +530,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.transactionBoard1.Location = new System.Drawing.Point(1, 0);
             this.transactionBoard1.Name = "transactionBoard1";
-            this.transactionBoard1.Size = new System.Drawing.Size(1205, 667);
+            this.transactionBoard1.Size = new System.Drawing.Size(1253, 667);
             this.transactionBoard1.TabIndex = 2;
             // 
             // studentBoard1
@@ -560,9 +540,32 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.studentBoard1.Location = new System.Drawing.Point(1, 0);
             this.studentBoard1.Name = "studentBoard1";
-            this.studentBoard1.Size = new System.Drawing.Size(1158, 658);
+            this.studentBoard1.Size = new System.Drawing.Size(1206, 658);
             this.studentBoard1.TabIndex = 1;
             this.studentBoard1.Visible = false;
+            // 
+            // settingBoard1
+            // 
+            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingBoard1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.settingBoard1.Location = new System.Drawing.Point(1, 1);
+            this.settingBoard1.Name = "settingBoard1";
+            this.settingBoard1.Size = new System.Drawing.Size(1180, 652);
+            this.settingBoard1.TabIndex = 5;
+            this.settingBoard1.Visible = false;
+            // 
+            // bookBoard1
+            // 
+            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
+            this.bookBoard1.Name = "bookBoard1";
+            this.bookBoard1.Size = new System.Drawing.Size(1253, 667);
+            this.bookBoard1.TabIndex = 4;
+            this.bookBoard1.Visible = false;
             // 
             // Home
             // 

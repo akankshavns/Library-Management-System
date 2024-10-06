@@ -61,29 +61,31 @@
             this.Return = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.errorInID = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorInName = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderAuthor = new System.Windows.Forms.ErrorProvider(this.components);
+            this.block = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderPages = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAvailableBook = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPublicatioin = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderVolume = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderPages = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderLanguage = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderAvailableBook = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider6 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorInName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProviderAuthor = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPrice = new System.Windows.Forms.ErrorProvider(this.components);
-            this.errorProviderQuantity = new System.Windows.Forms.ErrorProvider(this.components);
-            this.block = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorInName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPages)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPublicatioin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVolume)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPages)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLanguage)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -203,7 +205,6 @@
             this.Publication.Size = new System.Drawing.Size(201, 26);
             this.Publication.TabIndex = 64;
             this.Publication.TextChanged += new System.EventHandler(this.Publication_TextChanged);
-            this.Publication.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Publication_KeyPress);
             // 
             // label14
             // 
@@ -320,7 +321,6 @@
             this.Author.Size = new System.Drawing.Size(201, 26);
             this.Author.TabIndex = 60;
             this.Author.TextChanged += new System.EventHandler(this.Author_TextChanged);
-            this.Author.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Author_KeyPress);
             // 
             // ID
             // 
@@ -437,7 +437,6 @@
             this.BName.Size = new System.Drawing.Size(201, 26);
             this.BName.TabIndex = 58;
             this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
-            this.BName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BName_KeyPress);
             // 
             // Return
             // 
@@ -466,57 +465,53 @@
             // 
             // errorInID
             // 
+            this.errorInID.BlinkRate = 2;
             this.errorInID.ContainerControl = this;
             this.errorInID.Icon = ((System.Drawing.Icon)(resources.GetObject("errorInID.Icon")));
-            // 
-            // errorInName
-            // 
-            this.errorInName.ContainerControl = this;
-            this.errorInName.Icon = ((System.Drawing.Icon)(resources.GetObject("errorInName.Icon")));
-            // 
-            // errorProviderAuthor
-            // 
-            this.errorProviderAuthor.ContainerControl = this;
-            this.errorProviderAuthor.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderAuthor.Icon")));
-            // 
-            // errorProviderPublicatioin
-            // 
-            this.errorProviderPublicatioin.ContainerControl = this;
-            this.errorProviderPublicatioin.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderPublicatioin.Icon")));
-            // 
-            // errorProviderVolume
-            // 
-            this.errorProviderVolume.ContainerControl = this;
-            this.errorProviderVolume.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderVolume.Icon")));
-            // 
-            // errorProviderPages
-            // 
-            this.errorProviderPages.ContainerControl = this;
-            this.errorProviderPages.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderPages.Icon")));
-            // 
-            // errorProviderLanguage
-            // 
-            this.errorProviderLanguage.ContainerControl = this;
-            this.errorProviderLanguage.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderLanguage.Icon")));
-            // 
-            // errorProviderAvailableBook
-            // 
-            this.errorProviderAvailableBook.ContainerControl = this;
-            this.errorProviderAvailableBook.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderAvailableBook.Icon")));
-            // 
-            // errorProviderPrice
-            // 
-            this.errorProviderPrice.ContainerControl = this;
-            this.errorProviderPrice.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderPrice.Icon")));
-            // 
-            // errorProviderQuantity
-            // 
-            this.errorProviderQuantity.ContainerControl = this;
-            this.errorProviderQuantity.Icon = ((System.Drawing.Icon)(resources.GetObject("errorProviderQuantity.Icon")));
             // 
             // block
             // 
             this.block.ContainerControl = this;
+            // 
+            // errorProviderPages
+            // 
+            this.errorProviderPages.ContainerControl = this;
+            // 
+            // errorProviderQuantity
+            // 
+            this.errorProviderQuantity.ContainerControl = this;
+            // 
+            // errorProviderAvailableBook
+            // 
+            this.errorProviderAvailableBook.ContainerControl = this;
+            // 
+            // errorProviderPublicatioin
+            // 
+            this.errorProviderPublicatioin.ContainerControl = this;
+            // 
+            // errorProviderVolume
+            // 
+            this.errorProviderVolume.ContainerControl = this;
+            // 
+            // errorProvider6
+            // 
+            this.errorProvider6.ContainerControl = this;
+            // 
+            // errorInName
+            // 
+            this.errorInName.ContainerControl = this;
+            // 
+            // errorProviderAuthor
+            // 
+            this.errorProviderAuthor.ContainerControl = this;
+            // 
+            // errorProviderPrice
+            // 
+            this.errorProviderPrice.ContainerControl = this;
+            // 
+            // errorProvider10
+            // 
+            this.errorProvider10.ContainerControl = this;
             // 
             // AddBook
             // 
@@ -531,16 +526,17 @@
             this.OPTION.ResumeLayout(false);
             this.OPTION.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorInName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.block)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPages)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPublicatioin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderVolume)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderPages)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderLanguage)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAvailableBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorProviderQuantity)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.block)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -573,15 +569,6 @@
         private System.Windows.Forms.DateTimePicker BookDate;
         private System.Windows.Forms.TextBox BName;
         private System.Windows.Forms.ErrorProvider errorInID;
-        private System.Windows.Forms.ErrorProvider errorInName;
-        private System.Windows.Forms.ErrorProvider errorProviderAuthor;
-        private System.Windows.Forms.ErrorProvider errorProviderPublicatioin;
-        private System.Windows.Forms.ErrorProvider errorProviderVolume;
-        private System.Windows.Forms.ErrorProvider errorProviderPages;
-        private System.Windows.Forms.ErrorProvider errorProviderLanguage;
-        private System.Windows.Forms.ErrorProvider errorProviderAvailableBook;
-        private System.Windows.Forms.ErrorProvider errorProviderPrice;
-        private System.Windows.Forms.ErrorProvider errorProviderQuantity;
         private System.Windows.Forms.Button Return;
         private System.Windows.Forms.Panel OPTION;
         private System.Windows.Forms.RadioButton English;
@@ -589,5 +576,15 @@
         private System.Windows.Forms.RadioButton Hindi;
         private System.Windows.Forms.TextBox OtherLanguage;
         private System.Windows.Forms.ErrorProvider block;
+        private System.Windows.Forms.ErrorProvider errorProviderPages;
+        private System.Windows.Forms.ErrorProvider errorProviderQuantity;
+        private System.Windows.Forms.ErrorProvider errorProviderAvailableBook;
+        private System.Windows.Forms.ErrorProvider errorProviderPublicatioin;
+        private System.Windows.Forms.ErrorProvider errorProviderVolume;
+        private System.Windows.Forms.ErrorProvider errorProvider6;
+        private System.Windows.Forms.ErrorProvider errorInName;
+        private System.Windows.Forms.ErrorProvider errorProviderAuthor;
+        private System.Windows.Forms.ErrorProvider errorProviderPrice;
+        private System.Windows.Forms.ErrorProvider errorProvider10;
     }
 }
