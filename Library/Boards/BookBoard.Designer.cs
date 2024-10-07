@@ -33,11 +33,11 @@
             this.update = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.Button();
             this.view = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.viewBook1 = new Library.BookManagement.ViewBook();
             this.update1 = new Library.BookManagement.update();
             this.addBook1 = new Library.BookManagement.AddBook();
-            this.viewBook1 = new Library.BookManagement.ViewBook();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,17 @@
             this.view.UseVisualStyleBackColor = true;
             this.view.Click += new System.EventHandler(this.view_Click_1);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.viewBook1);
+            this.panel1.Controls.Add(this.update1);
+            this.panel1.Controls.Add(this.addBook1);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(0, 81);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1384, 714);
+            this.panel1.TabIndex = 5;
+            // 
             // button1
             // 
             this.button1.FlatAppearance.BorderSize = 0;
@@ -113,16 +124,15 @@
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // viewBook1
             // 
-            this.panel1.Controls.Add(this.update1);
-            this.panel1.Controls.Add(this.addBook1);
-            this.panel1.Controls.Add(this.viewBook1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(0, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1384, 714);
-            this.panel1.TabIndex = 5;
+            this.viewBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewBook1.Location = new System.Drawing.Point(2, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1378, 634);
+            this.viewBook1.TabIndex = 8;
             // 
             // update1
             // 
@@ -137,7 +147,6 @@
             this.update1.Size = new System.Drawing.Size(1384, 717);
             this.update1.TabIndex = 7;
             this.update1.Visible = false;
-            this.update1.Load += new System.EventHandler(this.update1_Load);
             // 
             // addBook1
             // 
@@ -150,18 +159,6 @@
             this.addBook1.Size = new System.Drawing.Size(1381, 714);
             this.addBook1.TabIndex = 9;
             this.addBook1.Visible = false;
-            this.addBook1.Load += new System.EventHandler(this.addBook1_Load);
-            // 
-            // viewBook1
-            // 
-            this.viewBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewBook1.Location = new System.Drawing.Point(3, 0);
-            this.viewBook1.Name = "viewBook1";
-            this.viewBook1.Size = new System.Drawing.Size(1378, 634);
-            this.viewBook1.TabIndex = 8;
-            this.viewBook1.Visible = false;
             // 
             // BookBoard
             // 

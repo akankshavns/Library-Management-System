@@ -293,5 +293,17 @@
   <ItemGroup>
     <None Include="Resources\Undo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sync.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK ARROW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Counterclockwise Arrows.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

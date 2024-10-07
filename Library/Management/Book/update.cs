@@ -15,6 +15,8 @@ namespace Library.BookManagement
 {
     public partial class update : UserControl
     {
+        private string dbID { get; set; }
+
         private string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
@@ -24,11 +26,33 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
+        public int i;
         DataTable booksTable = new DataTable();
         private void label7_Click(object sender, EventArgs e)
         {
+            //bool hasUnsavedChanges = IsFormChanged();
+            //if (hasUnsavedChanges)
+            //{
+            //    DialogResult result = MessageBox.Show("You have unsaved changes. Do you want to save them ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
+            //    if (result == DialogResult.Yes)
+            //    {
+            //        Updatebutton_Click(sender, e);
+            //        dbID = ID.Text;
+            //    }
+            //    else if (result == DialogResult.No)
+            //    {
+            //        ID.Text = dbID;
+            //    }
+            //    else
+            //    {
+            //        //DialogResult.Cancel = true;
+            //    }
+            //}
             this.Hide();
             this.Visible = false;
+            ID.Clear();
+            Language.Clear();
+            addBookForm.clearText(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
         }
 
         private void update_Load(object sender, EventArgs e)
@@ -68,7 +92,9 @@ namespace Library.BookManagement
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow selectedRow = ViewDetail.Rows[e.RowIndex];
-                ID.Text = selectedRow.Cells[1].Value.ToString();
+                dbID = selectedRow.Cells[1].Value.ToString();
+                ID.Text = dbID;
+
                 BName.Text = selectedRow.Cells[2].Value.ToString();
                 Author.Text = selectedRow.Cells[3].Value.ToString();
                 Publication.Text = selectedRow.Cells[4].Value.ToString();
@@ -85,14 +111,14 @@ namespace Library.BookManagement
 
         private void Updatebutton_Click(object sender, EventArgs e)
         {
-            int i = 0;
-            i = Convert.ToInt32(ViewDetail.SelectedCells[0].Value.ToString());
+            int sno = 0;
+            sno = Convert.ToInt32(ViewDetail.SelectedCells[0].Value.ToString());
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, AVAILABLEBOOK = @availableBook WHERE SNO =" + i + "";
+                    string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, AVAILABLEBOOK = @availableBook WHERE SNO =" + sno+ "";
                     try
                     {
                         con.Open();
@@ -108,26 +134,40 @@ namespace Library.BookManagement
                         cmd.Parameters.AddWithValue("@price", price.Text);
                         cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
                         cmd.Parameters.AddWithValue("@availableBook", AvailableBook.Text);
-                        int insert = cmd.ExecuteNonQuery();
-                        if (insert >= 1)
+                         i = cmd.ExecuteNonQuery();
+                        if (i >= 1)
                         {
+                            foreach (DataGridViewRow row in ViewDetail.Rows)
+                            {
+                                if (Convert.ToInt32(row.Cells["SNO"].Value) == sno)
+                                {
+                                    // Update the corresponding cells in the selected row
+                                    row.Cells["Accession_No"].Value = ID.Text;
+                                    row.Cells["BookName"].Value = BName.Text;
+                                    row.Cells["AuthorName"].Value = Author.Text;
+                                    row.Cells["Publication"].Value = Publication.Text;
+                                    row.Cells["volume"].Value = volume.Text;
+                                    row.Cells["pages"].Value = pages.Text;
+                                    row.Cells["Language"].Value = Language.Text;
+                                    row.Cells["BookDate"].Value = dateBox.Text;
+                                    row.Cells["Price"].Value = price.Text;
+                                    row.Cells["Quantity"].Value = Quantity.Text;
+                                    row.Cells["AvailableBook"].Value = AvailableBook.Text;
+                                    break;
+                                }
+                            }
                             MessageBox.Show("updated successfully");
-                            ID.Clear();
-                            Language.Clear();
-                            addBookForm.clearText(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
-                            Selectbook();
                         }
                         else
                         {
                             MessageBox.Show("something went wrong");
                         }
-
                     } catch (Exception ex)
                     {
                         MessageBox.Show(ex.Message); 
                     }
                 }
-            }
+            } 
         }
 
         private void SearchBox_KeyUp(object sender, KeyEventArgs e)
@@ -143,6 +183,11 @@ namespace Library.BookManagement
             SearchBox.Clear();
             SearchBox.ForeColor = Color.Black;
         }
+
+        //private bool IsFormChanged()
+        //{
+        //    return dbID != ID.Text;
+        //}
     }
 }
     

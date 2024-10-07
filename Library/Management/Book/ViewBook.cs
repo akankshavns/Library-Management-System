@@ -22,7 +22,8 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
-        private void label7_Click(object sender, EventArgs e)
+     
+        private void Back_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Visible = false;
@@ -37,6 +38,7 @@ namespace Library.BookManagement
         DataTable booksTable = new DataTable();
         private void ViewBook_Load(object sender, EventArgs e)
         {
+            
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
@@ -64,6 +66,42 @@ namespace Library.BookManagement
             DataView dv = booksTable.DefaultView;
             dv.RowFilter = $"BookName LIKE '%{SearchBox.Text}%' OR AuthorName LIKE '%{SearchBox.Text}%'";
             dataGridView1.DataSource = dv.ToTable();
+        }
+        public void LoadBooks()
+        {
+            // Clear the existing data
+            booksTable.Clear();
+
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string viewdata = "SELECT * FROM ADDBOOKS";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(viewdata, con);
+                        SqlDataReader reader = cmd.ExecuteReader();
+
+                        // Load the data into the DataTable
+                        booksTable.Load(reader);
+
+                        // Bind the updated DataTable to the DataGridView
+                        dataGridView1.DataSource = booksTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+
+        private void Refresh_Click(object sender, EventArgs e)
+        {
+            //LoadBooks();
         }
     }
 

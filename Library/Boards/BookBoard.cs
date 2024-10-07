@@ -23,8 +23,10 @@ namespace Library.Board
         }
         private void view_Click_1(object sender, EventArgs e)
         {
+            viewBook1.LoadBooks();
             viewBook1.Show();
             viewBook1.BringToFront();
+           
         }
         private void update_Click_1(object sender, EventArgs e)
         {
@@ -32,14 +34,6 @@ namespace Library.Board
             update1.BringToFront();
         }
 
-        private void update1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addBook1_Load(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }
