@@ -32,6 +32,7 @@ namespace Library.Board
         {
             update1.Show();
             update1.BringToFront();
+            update1.Loadupdate();
         }
 
      

@@ -24,30 +24,13 @@ namespace Library.TransactionManagement
         {
             InitializeComponent();
         }
-        private void label3_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Visible = false;
         }
-       
-
-        private void yes_Click(object sender, EventArgs e)
-        {
-            issueFormDetails1.availableBookId = availableBookId_issueBook;
-            issueFormDetails1.Show();
-            issueFormDetails1.BringToFront();
-        }
-        private void No_button_Click(object sender, EventArgs e)
-        {
-            aivalableMessageBox.Visible = false;
-        }
-        private void Close_Click(object sender, EventArgs e)
-        {
-            aivalableMessageBox.Visible = false;
-        }
         private void searchBox_Click_1(object sender, EventArgs e)
         {
-            gridpanel.Visible = true;
             searchBox.Clear();
             searchBox.ForeColor = Color.Black;
         }
@@ -74,20 +57,20 @@ namespace Library.TransactionManagement
                     }
                 }
             }
-           
+
         }
         private void searchBox_KeyUp(object sender, KeyEventArgs e)
         {
             DataView dv = booksTable.DefaultView;
             dv.RowFilter = $"BookName LIKE '%{searchBox.Text}%' OR AuthorName LIKE '%{searchBox.Text}%'";
             dataGridView.DataSource = dv.ToTable();
-           
+
         }
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                string id = dataGridView.Rows[e.RowIndex].Cells[0].Value.ToString();
+                string id = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
                 int num = 0;
                 try
@@ -126,9 +109,20 @@ namespace Library.TransactionManagement
                 else
                 {
                     availableBookId_issueBook = id;
-                    aivalableMessageBox.Visible = true;
+                    DialogResult result = MessageBox.Show("This Book is Available in the library,do you want to issue this book ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
+                    if (result == DialogResult.Yes)
+                    {
+                        issueFormDetails1.availableBookId = availableBookId_issueBook;
+                        issueFormDetails1.Show();
+                        issueFormDetails1.BringToFront();
+                    }
                 }
             }
         }
+
+       
     }
+
+       
 }
+

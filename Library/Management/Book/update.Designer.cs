@@ -31,7 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdatePannel = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.Updatebutton = new System.Windows.Forms.Button();
             this.Publication = new System.Windows.Forms.TextBox();
@@ -56,44 +56,44 @@
             this.dateBox = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
             this.ViewDetail = new System.Windows.Forms.DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.panel1.SuspendLayout();
+            this.Back = new System.Windows.Forms.Button();
+            this.UpdatePannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // UpdatePannel
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.Updatebutton);
-            this.panel1.Controls.Add(this.Publication);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.Quantity);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.AvailableBook);
-            this.panel1.Controls.Add(this.pages);
-            this.panel1.Controls.Add(this.volume);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.Author);
-            this.panel1.Controls.Add(this.ID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.price);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.Language);
-            this.panel1.Controls.Add(this.dateBox);
-            this.panel1.Controls.Add(this.BName);
-            this.panel1.Location = new System.Drawing.Point(23, 322);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1289, 258);
-            this.panel1.TabIndex = 3;
+            this.UpdatePannel.BackColor = System.Drawing.Color.LightGray;
+            this.UpdatePannel.Controls.Add(this.label15);
+            this.UpdatePannel.Controls.Add(this.Updatebutton);
+            this.UpdatePannel.Controls.Add(this.Publication);
+            this.UpdatePannel.Controls.Add(this.label14);
+            this.UpdatePannel.Controls.Add(this.label3);
+            this.UpdatePannel.Controls.Add(this.Quantity);
+            this.UpdatePannel.Controls.Add(this.label4);
+            this.UpdatePannel.Controls.Add(this.AvailableBook);
+            this.UpdatePannel.Controls.Add(this.pages);
+            this.UpdatePannel.Controls.Add(this.volume);
+            this.UpdatePannel.Controls.Add(this.label10);
+            this.UpdatePannel.Controls.Add(this.Author);
+            this.UpdatePannel.Controls.Add(this.ID);
+            this.UpdatePannel.Controls.Add(this.label2);
+            this.UpdatePannel.Controls.Add(this.label9);
+            this.UpdatePannel.Controls.Add(this.price);
+            this.UpdatePannel.Controls.Add(this.label6);
+            this.UpdatePannel.Controls.Add(this.label1);
+            this.UpdatePannel.Controls.Add(this.label8);
+            this.UpdatePannel.Controls.Add(this.label5);
+            this.UpdatePannel.Controls.Add(this.Language);
+            this.UpdatePannel.Controls.Add(this.dateBox);
+            this.UpdatePannel.Controls.Add(this.BName);
+            this.UpdatePannel.Location = new System.Drawing.Point(40, 338);
+            this.UpdatePannel.Name = "UpdatePannel";
+            this.UpdatePannel.Size = new System.Drawing.Size(1102, 258);
+            this.UpdatePannel.TabIndex = 3;
             // 
             // label15
             // 
@@ -101,7 +101,7 @@
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label15.Location = new System.Drawing.Point(832, 106);
+            this.label15.Location = new System.Drawing.Point(745, 105);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(152, 25);
             this.label15.TabIndex = 48;
@@ -156,7 +156,7 @@
             // 
             this.Quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quantity.Location = new System.Drawing.Point(1056, 74);
+            this.Quantity.Location = new System.Drawing.Point(905, 68);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(165, 26);
             this.Quantity.TabIndex = 33;
@@ -177,7 +177,7 @@
             // 
             this.AvailableBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.AvailableBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvailableBook.Location = new System.Drawing.Point(1056, 106);
+            this.AvailableBook.Location = new System.Drawing.Point(905, 100);
             this.AvailableBook.Name = "AvailableBook";
             this.AvailableBook.Size = new System.Drawing.Size(165, 26);
             this.AvailableBook.TabIndex = 38;
@@ -186,7 +186,7 @@
             // 
             this.pages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.pages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pages.Location = new System.Drawing.Point(648, 72);
+            this.pages.Location = new System.Drawing.Point(557, 68);
             this.pages.Name = "pages";
             this.pages.Size = new System.Drawing.Size(162, 26);
             this.pages.TabIndex = 26;
@@ -195,7 +195,7 @@
             // 
             this.volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.volume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volume.Location = new System.Drawing.Point(648, 40);
+            this.volume.Location = new System.Drawing.Point(557, 36);
             this.volume.Name = "volume";
             this.volume.Size = new System.Drawing.Size(162, 26);
             this.volume.TabIndex = 37;
@@ -258,7 +258,7 @@
             // 
             this.price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(1056, 42);
+            this.price.Location = new System.Drawing.Point(905, 36);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(165, 26);
             this.price.TabIndex = 30;
@@ -269,7 +269,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label6.Location = new System.Drawing.Point(839, 71);
+            this.label6.Location = new System.Drawing.Point(752, 70);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 25);
             this.label6.TabIndex = 25;
@@ -305,7 +305,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label5.Location = new System.Drawing.Point(840, 41);
+            this.label5.Location = new System.Drawing.Point(753, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 25);
             this.label5.TabIndex = 24;
@@ -315,7 +315,7 @@
             // 
             this.Language.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.Language.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Language.Location = new System.Drawing.Point(648, 104);
+            this.Language.Location = new System.Drawing.Point(557, 100);
             this.Language.Name = "Language";
             this.Language.Size = new System.Drawing.Size(162, 26);
             this.Language.TabIndex = 28;
@@ -324,7 +324,7 @@
             // 
             this.dateBox.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.dateBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateBox.Location = new System.Drawing.Point(648, 136);
+            this.dateBox.Location = new System.Drawing.Point(557, 132);
             this.dateBox.Name = "dateBox";
             this.dateBox.Size = new System.Drawing.Size(165, 26);
             this.dateBox.TabIndex = 40;
@@ -359,7 +359,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ViewDetail.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ViewDetail.Location = new System.Drawing.Point(23, 47);
+            this.ViewDetail.Location = new System.Drawing.Point(40, 63);
             this.ViewDetail.Name = "ViewDetail";
             this.ViewDetail.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -371,21 +371,10 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ViewDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ViewDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ViewDetail.Size = new System.Drawing.Size(1289, 269);
+            this.ViewDetail.Size = new System.Drawing.Size(1102, 269);
             this.ViewDetail.TabIndex = 2;
+            this.ViewDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellClick);
             this.ViewDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellDoubleClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(3, 2);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 25);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "x";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // pictureBox1
             // 
@@ -393,7 +382,7 @@
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.TabIndex = 27;
@@ -403,7 +392,7 @@
             // 
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.SearchBox.Location = new System.Drawing.Point(65, 14);
+            this.SearchBox.Location = new System.Drawing.Point(140, 10);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(207, 27);
@@ -412,22 +401,34 @@
             this.SearchBox.Click += new System.EventHandler(this.SearchBox_Click);
             this.SearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyUp);
             // 
+            // Back
+            // 
+            this.Back.FlatAppearance.BorderSize = 0;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Back.Image = global::Library.Properties.Resources.BACK_ARROW;
+            this.Back.Location = new System.Drawing.Point(0, 3);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(39, 43);
+            this.Back.TabIndex = 28;
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
             // update
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(59)))));
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SearchBox);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.UpdatePannel);
             this.Controls.Add(this.ViewDetail);
             this.Name = "update";
             this.Size = new System.Drawing.Size(1384, 798);
             this.Load += new System.EventHandler(this.update_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.UpdatePannel.ResumeLayout(false);
+            this.UpdatePannel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -437,9 +438,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel UpdatePannel;
         private System.Windows.Forms.DataGridView ViewDetail;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label10;
@@ -465,5 +465,6 @@
         private System.Windows.Forms.TextBox BName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchBox;
+        private System.Windows.Forms.Button Back;
     }
 }

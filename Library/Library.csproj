@@ -305,5 +305,8 @@
   <ItemGroup>
     <None Include="Resources\Counterclockwise Arrows.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Left Arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

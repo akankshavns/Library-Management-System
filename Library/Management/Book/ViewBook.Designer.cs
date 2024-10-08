@@ -33,7 +33,6 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Refresh = new System.Windows.Forms.Button();
             this.Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,7 +84,6 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.Refresh);
             this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.SearchBox);
@@ -106,18 +104,10 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Library Books Recods...";
             // 
-            // Refresh
-            // 
-            this.Refresh.Image = global::Library.Properties.Resources.Counterclockwise_Arrows;
-            this.Refresh.Location = new System.Drawing.Point(58, 7);
-            this.Refresh.Name = "Refresh";
-            this.Refresh.Size = new System.Drawing.Size(41, 41);
-            this.Refresh.TabIndex = 26;
-            this.Refresh.UseVisualStyleBackColor = true;
-            this.Refresh.Click += new System.EventHandler(this.Refresh_Click);
-            // 
             // Back
             // 
+            this.Back.FlatAppearance.BorderSize = 0;
+            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Back.Image = global::Library.Properties.Resources.BACK_ARROW;
             this.Back.Location = new System.Drawing.Point(3, 3);
             this.Back.Name = "Back";
@@ -162,7 +152,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Refresh;
         private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label label1;
     }

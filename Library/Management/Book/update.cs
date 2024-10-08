@@ -27,27 +27,10 @@ namespace Library.BookManagement
             InitializeComponent();
         }
         public int i;
-        DataTable booksTable = new DataTable();
-        private void label7_Click(object sender, EventArgs e)
+       public DataTable booksTable = new DataTable();
+        
+        private void Back_Click(object sender, EventArgs e)
         {
-            //bool hasUnsavedChanges = IsFormChanged();
-            //if (hasUnsavedChanges)
-            //{
-            //    DialogResult result = MessageBox.Show("You have unsaved changes. Do you want to save them ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
-            //    if (result == DialogResult.Yes)
-            //    {
-            //        Updatebutton_Click(sender, e);
-            //        dbID = ID.Text;
-            //    }
-            //    else if (result == DialogResult.No)
-            //    {
-            //        ID.Text = dbID;
-            //    }
-            //    else
-            //    {
-            //        //DialogResult.Cancel = true;
-            //    }
-            //}
             this.Hide();
             this.Visible = false;
             ID.Clear();
@@ -84,10 +67,9 @@ namespace Library.BookManagement
                 }
             }
         }
-
-        private void ViewDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ViewDetail_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            ID.Enabled=true;
+            ID.Enabled = true;
             addBookForm.disable(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
             if (e.RowIndex >= 0)
             {
@@ -107,6 +89,10 @@ namespace Library.BookManagement
                 pages.Text = selectedRow.Cells[6].Value.ToString();
 
             }
+        }
+        private void ViewDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
 
         private void Updatebutton_Click(object sender, EventArgs e)
@@ -183,6 +169,34 @@ namespace Library.BookManagement
             SearchBox.Clear();
             SearchBox.ForeColor = Color.Black;
         }
+        public void Loadupdate()
+        {
+            booksTable.Clear();
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string viewdata = "SELECT * FROM ADDBOOKS";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(viewdata, con);
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        booksTable.Load(reader);
+                        ViewDetail.DataSource = booksTable;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+      
+
+
 
         //private bool IsFormChanged()
         //{
