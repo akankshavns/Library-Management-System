@@ -308,5 +308,8 @@
   <ItemGroup>
     <None Include="Resources\Left Arrow.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_processing20220207-786-j68tnb.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

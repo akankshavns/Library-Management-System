@@ -29,136 +29,108 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.viewStudentbutton = new System.Windows.Forms.Button();
+            this.AddStudentButton = new System.Windows.Forms.Button();
+            this.updateStudentbutton = new System.Windows.Forms.Button();
             this.updateStudent1 = new Library.StudentManagement.UpdateStudent();
             this.viewStudent1 = new Library.StudentManagement.viewStudent();
             this.addStudent1 = new Library.StudentManagement.AddStudent();
             this.panel1.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel17);
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel15);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1231, 667);
             this.panel1.TabIndex = 3;
             // 
-            // panel17
+            // pictureBox1
             // 
-            this.panel17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel17.Controls.Add(this.button3);
-            this.panel17.Controls.Add(this.label12);
-            this.panel17.Location = new System.Drawing.Point(751, 131);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(229, 220);
-            this.panel17.TabIndex = 4;
+            this.pictureBox1.Image = global::Library.Properties.Resources.image_processing20220207_786_j68tnb;
+            this.pictureBox1.Location = new System.Drawing.Point(203, 80);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(803, 578);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // panel2
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button3.Location = new System.Drawing.Point(59, 140);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(95, 38);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "update";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.viewStudentbutton);
+            this.panel2.Controls.Add(this.AddStudentButton);
+            this.panel2.Controls.Add(this.updateStudentbutton);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1231, 78);
+            this.panel2.TabIndex = 3;
             // 
-            // label12
+            // label1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label12.Location = new System.Drawing.Point(45, 19);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(148, 50);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Update Student\r\n\r\n";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Maroon;
+            this.label1.Location = new System.Drawing.Point(39, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 36);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Student Management";
             // 
-            // panel7
+            // viewStudentbutton
             // 
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Location = new System.Drawing.Point(78, 131);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(229, 220);
-            this.panel7.TabIndex = 6;
+            this.viewStudentbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewStudentbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.viewStudentbutton.Location = new System.Drawing.Point(559, 15);
+            this.viewStudentbutton.Name = "viewStudentbutton";
+            this.viewStudentbutton.Size = new System.Drawing.Size(95, 54);
+            this.viewStudentbutton.TabIndex = 2;
+            this.viewStudentbutton.Text = "view\r\n";
+            this.viewStudentbutton.UseVisualStyleBackColor = true;
+            this.viewStudentbutton.Click += new System.EventHandler(this.viewStudentbutton_Click);
             // 
-            // button1
+            // AddStudentButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(50, 145);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 38);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.AddStudentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudentButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.AddStudentButton.Location = new System.Drawing.Point(423, 15);
+            this.AddStudentButton.Name = "AddStudentButton";
+            this.AddStudentButton.Size = new System.Drawing.Size(95, 54);
+            this.AddStudentButton.TabIndex = 1;
+            this.AddStudentButton.Text = "Add";
+            this.AddStudentButton.UseVisualStyleBackColor = true;
+            this.AddStudentButton.Click += new System.EventHandler(this.AddStudentButton_Click);
             // 
-            // label10
+            // updateStudentbutton
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label10.Location = new System.Drawing.Point(45, 24);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(121, 25);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Add Student";
-            // 
-            // panel15
-            // 
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel15.Controls.Add(this.button2);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Location = new System.Drawing.Point(421, 130);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(229, 220);
-            this.panel15.TabIndex = 5;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(59, 141);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 38);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "view\r\n";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label11.Location = new System.Drawing.Point(45, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(128, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "View Student";
+            this.updateStudentbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateStudentbutton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.updateStudentbutton.Location = new System.Drawing.Point(676, 15);
+            this.updateStudentbutton.Name = "updateStudentbutton";
+            this.updateStudentbutton.Size = new System.Drawing.Size(95, 54);
+            this.updateStudentbutton.TabIndex = 2;
+            this.updateStudentbutton.Text = "update";
+            this.updateStudentbutton.UseVisualStyleBackColor = true;
+            this.updateStudentbutton.Click += new System.EventHandler(this.updateStudentbutton_Click);
             // 
             // updateStudent1
             // 
+            this.updateStudent1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateStudent1.BackColor = System.Drawing.Color.Gainsboro;
             this.updateStudent1.Location = new System.Drawing.Point(0, 3);
             this.updateStudent1.Name = "updateStudent1";
             this.updateStudent1.Size = new System.Drawing.Size(1231, 667);
@@ -167,6 +139,9 @@
             // 
             // viewStudent1
             // 
+            this.viewStudent1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.viewStudent1.Location = new System.Drawing.Point(0, 0);
             this.viewStudent1.Name = "viewStudent1";
             this.viewStudent1.Size = new System.Drawing.Size(1231, 667);
@@ -175,6 +150,9 @@
             // 
             // addStudent1
             // 
+            this.addStudent1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.addStudent1.Location = new System.Drawing.Point(3, 3);
             this.addStudent1.Name = "addStudent1";
             this.addStudent1.Size = new System.Drawing.Size(1231, 667);
@@ -192,12 +170,9 @@
             this.Name = "StudentBoard";
             this.Size = new System.Drawing.Size(1231, 667);
             this.panel1.ResumeLayout(false);
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -208,14 +183,11 @@
         private StudentManagement.viewStudent viewStudent1;
         private StudentManagement.UpdateStudent updateStudent1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button updateStudentbutton;
+        private System.Windows.Forms.Button AddStudentButton;
+        private System.Windows.Forms.Button viewStudentbutton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

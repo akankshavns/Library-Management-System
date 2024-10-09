@@ -32,20 +32,16 @@
             this.image = new System.Windows.Forms.PictureBox();
             this.Enroll = new System.Windows.Forms.TextBox();
             this.SName = new System.Windows.Forms.TextBox();
-            this.Rollno = new System.Windows.Forms.TextBox();
             this.Department = new System.Windows.Forms.TextBox();
             this.mail = new System.Windows.Forms.TextBox();
             this.contact = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.TextBox();
-            this.semester = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -64,24 +60,20 @@
             this.panel2.Controls.Add(this.image);
             this.panel2.Controls.Add(this.Enroll);
             this.panel2.Controls.Add(this.SName);
-            this.panel2.Controls.Add(this.Rollno);
             this.panel2.Controls.Add(this.Department);
             this.panel2.Controls.Add(this.mail);
             this.panel2.Controls.Add(this.contact);
             this.panel2.Controls.Add(this.Address);
-            this.panel2.Controls.Add(this.semester);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Controls.Add(this.label11);
-            this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label9);
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel2.Location = new System.Drawing.Point(408, 22);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(657, 482);
+            this.panel2.Size = new System.Drawing.Size(657, 360);
             this.panel2.TabIndex = 15;
             // 
             // image
@@ -110,18 +102,10 @@
             this.SName.Size = new System.Drawing.Size(187, 23);
             this.SName.TabIndex = 18;
             // 
-            // Rollno
-            // 
-            this.Rollno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Rollno.Location = new System.Drawing.Point(225, 125);
-            this.Rollno.Name = "Rollno";
-            this.Rollno.Size = new System.Drawing.Size(187, 23);
-            this.Rollno.TabIndex = 17;
-            // 
             // Department
             // 
             this.Department.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.Location = new System.Drawing.Point(225, 169);
+            this.Department.Location = new System.Drawing.Point(228, 125);
             this.Department.Name = "Department";
             this.Department.Size = new System.Drawing.Size(187, 23);
             this.Department.TabIndex = 16;
@@ -129,7 +113,7 @@
             // mail
             // 
             this.mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mail.Location = new System.Drawing.Point(225, 316);
+            this.mail.Location = new System.Drawing.Point(228, 226);
             this.mail.Name = "mail";
             this.mail.Size = new System.Drawing.Size(187, 23);
             this.mail.TabIndex = 15;
@@ -137,7 +121,7 @@
             // contact
             // 
             this.contact.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contact.Location = new System.Drawing.Point(225, 268);
+            this.contact.Location = new System.Drawing.Point(228, 178);
             this.contact.Name = "contact";
             this.contact.Size = new System.Drawing.Size(187, 23);
             this.contact.TabIndex = 14;
@@ -145,18 +129,10 @@
             // Address
             // 
             this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(225, 372);
+            this.Address.Location = new System.Drawing.Point(228, 282);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(187, 23);
             this.Address.TabIndex = 13;
-            // 
-            // semester
-            // 
-            this.semester.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.semester.Location = new System.Drawing.Point(225, 226);
-            this.semester.Name = "semester";
-            this.semester.Size = new System.Drawing.Size(187, 23);
-            this.semester.TabIndex = 11;
             // 
             // label4
             // 
@@ -182,27 +158,17 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(37, 372);
+            this.label11.Location = new System.Drawing.Point(40, 282);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(92, 26);
             this.label11.TabIndex = 10;
             this.label11.Text = "Address";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(37, 125);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(84, 26);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "RollNo.";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(37, 316);
+            this.label10.Location = new System.Drawing.Point(40, 226);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(68, 26);
             this.label10.TabIndex = 9;
@@ -212,7 +178,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(34, 169);
+            this.label7.Location = new System.Drawing.Point(37, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 26);
             this.label7.TabIndex = 6;
@@ -222,21 +188,11 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(34, 268);
+            this.label9.Location = new System.Drawing.Point(37, 178);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 26);
             this.label9.TabIndex = 8;
             this.label9.Text = "Contact";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(34, 223);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 26);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "Semester";
             // 
             // panel1
             // 
@@ -346,20 +302,16 @@
         private System.Windows.Forms.PictureBox image;
         private System.Windows.Forms.TextBox Enroll;
         private System.Windows.Forms.TextBox SName;
-        private System.Windows.Forms.TextBox Rollno;
         private System.Windows.Forms.TextBox Department;
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox contact;
         private System.Windows.Forms.TextBox Address;
-        private System.Windows.Forms.TextBox semester;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;

@@ -30,7 +30,19 @@ namespace Library.TransactionManagement
             if (e.KeyCode == Keys.Enter)
             {
                 ReturnDate.Value = issueDate.Value.AddDays(7);
-                ShowDetailInTextBox();
+                if (string.IsNullOrEmpty(EnrollBox.Text))
+                {
+                    CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
+
+                }
+                else if (string.IsNullOrEmpty(Semester.Text))
+                {
+                    checkSemesterBox.SetError(Semester, "This field is required");
+                }
+                else
+                {
+                    ShowDetailInTextBox();
+                }
             }
         }
         public void ShowDetailInTextBox()

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.issuePage = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.issueDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -62,26 +62,26 @@
             // issuePage
             // 
             this.issuePage.BackColor = System.Drawing.Color.White;
-            this.issuePage.Controls.Add(this.label1);
+            this.issuePage.Controls.Add(this.BackButton);
             this.issuePage.Controls.Add(this.InfoPanel);
             this.issuePage.Controls.Add(this.panel5);
-            this.issuePage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.issuePage.Location = new System.Drawing.Point(0, 0);
+            this.issuePage.Location = new System.Drawing.Point(45, 41);
             this.issuePage.Name = "issuePage";
-            this.issuePage.Size = new System.Drawing.Size(1231, 667);
+            this.issuePage.Size = new System.Drawing.Size(1186, 626);
             this.issuePage.TabIndex = 16;
             // 
-            // label1
+            // BackButton
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(1204, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(22, 25);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "x";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(0, 3);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 6;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // InfoPanel
             // 
@@ -102,9 +102,9 @@
             this.InfoPanel.Controls.Add(this.label10);
             this.InfoPanel.Controls.Add(this.label7);
             this.InfoPanel.Controls.Add(this.label6);
-            this.InfoPanel.Location = new System.Drawing.Point(364, 23);
+            this.InfoPanel.Location = new System.Drawing.Point(487, 67);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(492, 532);
+            this.InfoPanel.Size = new System.Drawing.Size(492, 499);
             this.InfoPanel.TabIndex = 1;
             this.InfoPanel.Visible = false;
             // 
@@ -143,6 +143,7 @@
             this.ActualReturnDate.Checked = false;
             this.ActualReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActualReturnDate.Location = new System.Drawing.Point(161, 349);
+            this.ActualReturnDate.MinDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
             this.ActualReturnDate.Name = "ActualReturnDate";
             this.ActualReturnDate.Size = new System.Drawing.Size(224, 23);
             this.ActualReturnDate.TabIndex = 23;
@@ -282,9 +283,9 @@
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.EnrollBox);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(30, 23);
+            this.panel5.Location = new System.Drawing.Point(153, 67);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(297, 267);
+            this.panel5.Size = new System.Drawing.Size(297, 257);
             this.panel5.TabIndex = 0;
             // 
             // Search
@@ -344,8 +345,8 @@
             this.Controls.Add(this.issuePage);
             this.Name = "ReturnBook";
             this.Size = new System.Drawing.Size(1231, 667);
+            this.Load += new System.EventHandler(this.ReturnBook_Load);
             this.issuePage.ResumeLayout(false);
-            this.issuePage.PerformLayout();
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -381,6 +382,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }

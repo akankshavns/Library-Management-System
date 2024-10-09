@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -16,25 +17,17 @@ namespace Library.Board
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
+        private void AddStudentButton_Click(object sender, EventArgs e)
         {
             addStudent1.Show();
             addStudent1.BringToFront();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void viewStudentbutton_Click(object sender, EventArgs e)
         {
             viewStudent1.Show();
             viewStudent1.BringToFront();
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void updateStudentbutton_Click(object sender, EventArgs e)
         {
             updateStudent1.Show();
             updateStudent1.BringToFront();

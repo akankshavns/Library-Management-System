@@ -127,9 +127,12 @@
             // 
             this.issueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issueDate.Location = new System.Drawing.Point(209, 234);
+            this.issueDate.MaxDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
+            this.issueDate.MinDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
             this.issueDate.Name = "issueDate";
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
+            this.issueDate.Value = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
             // 
             // IssueButton
             // 

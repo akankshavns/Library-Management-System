@@ -69,7 +69,6 @@ namespace Library.BookManagement
         }
         public void LoadBooks()
         {
-            // Clear the existing data
             booksTable.Clear();
 
             string connectionString = GetConnectionString();
@@ -83,11 +82,7 @@ namespace Library.BookManagement
                         con.Open();
                         SqlCommand cmd = new SqlCommand(viewdata, con);
                         SqlDataReader reader = cmd.ExecuteReader();
-
-                        // Load the data into the DataTable
                         booksTable.Load(reader);
-
-                        // Bind the updated DataTable to the DataGridView
                         dataGridView1.DataSource = booksTable;
                     }
                     catch (Exception ex)

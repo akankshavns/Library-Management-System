@@ -423,6 +423,7 @@
             this.BookDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.BookDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookDate.Location = new System.Drawing.Point(453, 301);
+            this.BookDate.MaxDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
             this.BookDate.Name = "BookDate";
             this.BookDate.Size = new System.Drawing.Size(201, 26);
             this.BookDate.TabIndex = 69;

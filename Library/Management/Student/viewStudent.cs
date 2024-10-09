@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -13,7 +14,10 @@ namespace Library.StudentManagement
 {
     public partial class viewStudent : UserControl
     {
-        SqlConnection con = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LibraryDB;Integrated Security=True;Pooling=False;");
+        private string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
+        }
         public viewStudent()
         {
             InitializeComponent();
