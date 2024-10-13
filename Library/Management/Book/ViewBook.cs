@@ -22,13 +22,11 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
-     
-        private void Back_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Visible = false;
         }
-
         private void SearchBox_Click(object sender, EventArgs e)
         {
             SearchBox.Clear();
@@ -98,6 +96,8 @@ namespace Library.BookManagement
         {
             //LoadBooks();
         }
+
+       
     }
 
 }

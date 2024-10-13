@@ -54,17 +54,17 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.Info;
-            this.panel3.Location = new System.Drawing.Point(0, 417);
+            this.panel3.Location = new System.Drawing.Point(0, 438);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(830, 45);
+            this.panel3.Size = new System.Drawing.Size(830, 24);
             this.panel3.TabIndex = 8;
             // 
             // load
             // 
             this.load.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.load.Location = new System.Drawing.Point(0, 417);
+            this.load.Location = new System.Drawing.Point(0, 438);
             this.load.Name = "load";
-            this.load.Size = new System.Drawing.Size(36, 45);
+            this.load.Size = new System.Drawing.Size(36, 24);
             this.load.TabIndex = 4;
             // 
             // Heading
@@ -103,7 +103,7 @@
             this.open.Interval = 40;
             this.open.Tick += new System.EventHandler(this.open_Tick);
             // 
-            // opening
+            // Welcome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -116,7 +116,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "opening";
+            this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "opening";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.opening_MouseDown);

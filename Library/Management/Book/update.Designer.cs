@@ -58,7 +58,7 @@
             this.ViewDetail = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.Back = new System.Windows.Forms.Button();
+            this.BackButton = new System.Windows.Forms.Button();
             this.UpdatePannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -374,7 +374,7 @@
             this.ViewDetail.Size = new System.Drawing.Size(1102, 269);
             this.ViewDetail.TabIndex = 2;
             this.ViewDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellClick);
-            this.ViewDetail.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellDoubleClick);
+           
             // 
             // pictureBox1
             // 
@@ -401,17 +401,17 @@
             this.SearchBox.Click += new System.EventHandler(this.SearchBox_Click);
             this.SearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyUp);
             // 
-            // Back
+            // BackButton
             // 
-            this.Back.FlatAppearance.BorderSize = 0;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Image = global::Library.Properties.Resources.BACK_ARROW;
-            this.Back.Location = new System.Drawing.Point(0, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(39, 43);
-            this.Back.TabIndex = 28;
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(-4, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 84;
+            this.BackButton.UseVisualStyleBackColor = false;
             // 
             // update
             // 
@@ -419,7 +419,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(59)))));
-            this.Controls.Add(this.Back);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.UpdatePannel);
@@ -465,6 +465,6 @@
         private System.Windows.Forms.TextBox BName;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchBox;
-        private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button BackButton;
     }
 }

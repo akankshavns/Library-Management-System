@@ -19,13 +19,14 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
-        private void label7_Click(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.Hide();
             this.Visible = false;
             clearText(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
             ClearErrorProvider();
         }
+        
         bool hasErrors = false;
         string Language;
         private void AddButton_Click(object sender, EventArgs e)
@@ -360,6 +361,8 @@ namespace Library.BookManagement
             errorProviderPublicatioin.Clear();
             errorProviderQuantity.Clear();
         }
+
+   
     }
 
 }

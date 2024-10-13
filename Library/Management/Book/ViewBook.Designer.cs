@@ -33,8 +33,8 @@
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.Back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BackButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -83,8 +83,8 @@
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.BackButton);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.Back);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.SearchBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -104,18 +104,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Library Books Recods...";
             // 
-            // Back
-            // 
-            this.Back.FlatAppearance.BorderSize = 0;
-            this.Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Back.Image = global::Library.Properties.Resources.BACK_ARROW;
-            this.Back.Location = new System.Drawing.Point(3, 3);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(39, 43);
-            this.Back.TabIndex = 26;
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Search;
@@ -126,6 +114,19 @@
             this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
+            // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(-5, -1);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 84;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // ViewBook
             // 
@@ -152,7 +153,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox SearchBox;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button Back;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BackButton;
     }
 }

@@ -74,6 +74,9 @@
     <Compile Include="Boards\TransactionBoard.Designer.cs">
       <DependentUpon>TransactionBoard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Design\RoundPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Management\Book\AddBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +100,30 @@
     </Compile>
     <Compile Include="Boards\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Setting\About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Setting\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Setting\Account.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Setting\Account.Designer.cs">
+      <DependentUpon>Account.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Setting\Library.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Setting\Library.Designer.cs">
+      <DependentUpon>Library.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Setting\Transaction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Setting\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Screens\Home.cs">
       <SubType>Form</SubType>
@@ -183,6 +210,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boards\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Setting\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Setting\Account.resx">
+      <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Setting\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -310,6 +346,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\image_processing20220207-786-j68tnb.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Homework1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

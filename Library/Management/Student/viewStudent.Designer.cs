@@ -45,11 +45,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Enrollment = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.BackButton = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.panel1.SuspendLayout();
@@ -198,7 +198,7 @@
             // 
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.Enrollment);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -226,13 +226,13 @@
             this.textBox2.Size = new System.Drawing.Size(187, 23);
             this.textBox2.TabIndex = 4;
             // 
-            // textBox1
+            // Enrollment
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(137, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(187, 23);
-            this.textBox1.TabIndex = 3;
+            this.Enrollment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Enrollment.Location = new System.Drawing.Point(137, 35);
+            this.Enrollment.Name = "Enrollment";
+            this.Enrollment.Size = new System.Drawing.Size(187, 23);
+            this.Enrollment.TabIndex = 3;
             // 
             // label2
             // 
@@ -264,23 +264,24 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Search Box";
             // 
-            // label12
+            // BackButton
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(3, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(22, 25);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "x";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(-3, 2);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 84;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // viewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -315,10 +316,10 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Enrollment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button BackButton;
     }
 }

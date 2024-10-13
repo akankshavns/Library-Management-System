@@ -59,7 +59,6 @@
             this.BookDate = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
             this.Return = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.errorInID = new System.Windows.Forms.ErrorProvider(this.components);
             this.block = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPages = new System.Windows.Forms.ErrorProvider(this.components);
@@ -72,6 +71,7 @@
             this.errorProviderAuthor = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPrice = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BackButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
@@ -452,18 +452,6 @@
             this.Return.UseVisualStyleBackColor = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Red;
-            this.label7.Location = new System.Drawing.Point(4, 4);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(22, 25);
-            this.label7.TabIndex = 21;
-            this.label7.Text = "x";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
             // errorInID
             // 
             this.errorInID.BlinkRate = 2;
@@ -514,11 +502,24 @@
             // 
             this.errorProvider10.ContainerControl = this;
             // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(-3, 0);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 83;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
             this.Name = "AddBook";
             this.Size = new System.Drawing.Size(1020, 629);
@@ -539,14 +540,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.TextBox Publication;
@@ -587,5 +586,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderAuthor;
         private System.Windows.Forms.ErrorProvider errorProviderPrice;
         private System.Windows.Forms.ErrorProvider errorProvider10;
+        private System.Windows.Forms.Button BackButton;
     }
 }

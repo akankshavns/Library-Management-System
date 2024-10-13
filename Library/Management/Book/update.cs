@@ -90,11 +90,6 @@ namespace Library.BookManagement
 
             }
         }
-        private void ViewDetail_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
-
         private void Updatebutton_Click(object sender, EventArgs e)
         {
             int sno = 0;

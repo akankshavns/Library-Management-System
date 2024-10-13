@@ -43,38 +43,37 @@
             this.Add = new System.Windows.Forms.Button();
             this.AddBook = new System.Windows.Forms.Label();
             this.Heading = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MenuSlider = new System.Windows.Forms.Timer(this.components);
             this.close = new System.Windows.Forms.Timer(this.components);
             this.panel9 = new System.Windows.Forms.Panel();
-            this.Trsnsaction = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.Bin = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Books = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.logOut = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.Setting = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.Dashboard = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.Student = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.menuButton = new System.Windows.Forms.Button();
             this.menuBar = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
+            this.menuButton = new System.Windows.Forms.Button();
+            this.Student = new System.Windows.Forms.Button();
+            this.Dashboard = new System.Windows.Forms.Button();
+            this.Setting = new System.Windows.Forms.Button();
+            this.logOut = new System.Windows.Forms.Button();
+            this.Books = new System.Windows.Forms.Button();
+            this.Bin = new System.Windows.Forms.Button();
+            this.Trsnsaction = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.settingBoard1 = new Library.Board.SettingBoard();
+            this.bookBoard1 = new Library.Board.BookBoard();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
             this.transactionBoard1 = new Library.Board.TransactionBoard();
             this.studentBoard1 = new Library.Board.StudentBoard();
-            this.settingBoard1 = new Library.Board.SettingBoard();
-            this.bookBoard1 = new Library.Board.BookBoard();
             this.panel2.SuspendLayout();
             this.BookBoard.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -85,6 +84,7 @@
             this.panel6.SuspendLayout();
             this.menuBar.SuspendLayout();
             this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -237,17 +237,6 @@
             this.Heading.Text = "Welcome To the library";
             this.Heading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Homework;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(68, 62);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // MenuSlider
             // 
             this.MenuSlider.Interval = 1;
@@ -266,26 +255,6 @@
             this.panel9.Size = new System.Drawing.Size(158, 60);
             this.panel9.TabIndex = 7;
             // 
-            // Trsnsaction
-            // 
-            this.Trsnsaction.BackColor = System.Drawing.Color.Black;
-            this.Trsnsaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Trsnsaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Trsnsaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Trsnsaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Trsnsaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Trsnsaction.Image = global::Library.Properties.Resources.Return_Book;
-            this.Trsnsaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Trsnsaction.Location = new System.Drawing.Point(4, 5);
-            this.Trsnsaction.Name = "Trsnsaction";
-            this.Trsnsaction.Size = new System.Drawing.Size(157, 52);
-            this.Trsnsaction.TabIndex = 9;
-            this.Trsnsaction.Text = "   Transaction\r\n   Management";
-            this.Trsnsaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Trsnsaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Trsnsaction.UseVisualStyleBackColor = false;
-            this.Trsnsaction.Click += new System.EventHandler(this.Trsnsaction_Click);
-            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.Bin);
@@ -295,24 +264,6 @@
             this.panel11.Size = new System.Drawing.Size(158, 48);
             this.panel11.TabIndex = 7;
             // 
-            // Bin
-            // 
-            this.Bin.BackColor = System.Drawing.Color.Black;
-            this.Bin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bin.Image = global::Library.Properties.Resources.Recycle_Bin;
-            this.Bin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Bin.Location = new System.Drawing.Point(6, 5);
-            this.Bin.Name = "Bin";
-            this.Bin.Size = new System.Drawing.Size(146, 38);
-            this.Bin.TabIndex = 9;
-            this.Bin.Text = "  Bin";
-            this.Bin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Bin.UseVisualStyleBackColor = false;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.Books);
@@ -320,26 +271,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(158, 63);
             this.panel3.TabIndex = 6;
-            // 
-            // Books
-            // 
-            this.Books.BackColor = System.Drawing.Color.Black;
-            this.Books.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Books.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Books.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Books.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Books.Image = global::Library.Properties.Resources.Open_Book_Emoji;
-            this.Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Books.Location = new System.Drawing.Point(6, 6);
-            this.Books.Name = "Books";
-            this.Books.Size = new System.Drawing.Size(151, 51);
-            this.Books.TabIndex = 7;
-            this.Books.Text = "  Book\r\n  Management\r\n";
-            this.Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Books.UseVisualStyleBackColor = false;
-            this.Books.Click += new System.EventHandler(this.Books_Click_1);
             // 
             // panel8
             // 
@@ -349,26 +280,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(158, 48);
             this.panel8.TabIndex = 7;
-            // 
-            // logOut
-            // 
-            this.logOut.BackColor = System.Drawing.Color.Black;
-            this.logOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logOut.Image = global::Library.Properties.Resources.Logout_Rounded;
-            this.logOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.logOut.Location = new System.Drawing.Point(7, 5);
-            this.logOut.Name = "logOut";
-            this.logOut.Size = new System.Drawing.Size(146, 38);
-            this.logOut.TabIndex = 10;
-            this.logOut.Text = "   Logout";
-            this.logOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.logOut.UseCompatibleTextRendering = true;
-            this.logOut.UseVisualStyleBackColor = false;
-            this.logOut.Click += new System.EventHandler(this.logOut_Click_1);
             // 
             // panel4
             // 
@@ -380,25 +291,6 @@
             this.panel4.Size = new System.Drawing.Size(158, 48);
             this.panel4.TabIndex = 7;
             // 
-            // Setting
-            // 
-            this.Setting.BackColor = System.Drawing.Color.Black;
-            this.Setting.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Setting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Setting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Setting.Image = global::Library.Properties.Resources.Settings;
-            this.Setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Setting.Location = new System.Drawing.Point(6, 5);
-            this.Setting.Name = "Setting";
-            this.Setting.Size = new System.Drawing.Size(146, 38);
-            this.Setting.TabIndex = 11;
-            this.Setting.Text = "  Setting";
-            this.Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Setting.UseVisualStyleBackColor = false;
-            this.Setting.Click += new System.EventHandler(this.Setting_Click);
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.Dashboard);
@@ -407,25 +299,6 @@
             this.panel10.Size = new System.Drawing.Size(158, 48);
             this.panel10.TabIndex = 7;
             // 
-            // Dashboard
-            // 
-            this.Dashboard.BackColor = System.Drawing.Color.Transparent;
-            this.Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Dashboard.Image = global::Library.Properties.Resources.Performance_Macbook;
-            this.Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Dashboard.Location = new System.Drawing.Point(6, 5);
-            this.Dashboard.Name = "Dashboard";
-            this.Dashboard.Size = new System.Drawing.Size(149, 38);
-            this.Dashboard.TabIndex = 8;
-            this.Dashboard.Text = "   DashBoard";
-            this.Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Dashboard.UseVisualStyleBackColor = false;
-            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
-            // 
             // panel5
             // 
             this.panel5.Controls.Add(this.Student);
@@ -433,6 +306,63 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(158, 63);
             this.panel5.TabIndex = 7;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.menuButton);
+            this.panel6.Location = new System.Drawing.Point(6, 6);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(52, 48);
+            this.panel6.TabIndex = 7;
+            // 
+            // menuBar
+            // 
+            this.menuBar.BackColor = System.Drawing.Color.Black;
+            this.menuBar.Controls.Add(this.panel6);
+            this.menuBar.Controls.Add(this.panel5);
+            this.menuBar.Controls.Add(this.panel10);
+            this.menuBar.Controls.Add(this.panel4);
+            this.menuBar.Controls.Add(this.panel8);
+            this.menuBar.Controls.Add(this.panel3);
+            this.menuBar.Controls.Add(this.panel11);
+            this.menuBar.Controls.Add(this.panel9);
+            this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuBar.Location = new System.Drawing.Point(0, 67);
+            this.menuBar.Name = "menuBar";
+            this.menuBar.Size = new System.Drawing.Size(165, 658);
+            this.menuBar.TabIndex = 9;
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.settingBoard1);
+            this.panel15.Controls.Add(this.bookBoard1);
+            this.panel15.Controls.Add(this.dashboard1);
+            this.panel15.Controls.Add(this.transactionBoard1);
+            this.panel15.Controls.Add(this.studentBoard1);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel15.Location = new System.Drawing.Point(165, 67);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(1205, 658);
+            this.panel15.TabIndex = 10;
+            // 
+            // menuButton
+            // 
+            this.menuButton.BackColor = System.Drawing.Color.Black;
+            this.menuButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuButton.Image = global::Library.Properties.Resources.Menu;
+            this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuButton.Location = new System.Drawing.Point(6, 5);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(39, 38);
+            this.menuButton.TabIndex = 2;
+            this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // Student
             // 
@@ -454,62 +384,157 @@
             this.Student.UseVisualStyleBackColor = false;
             this.Student.Click += new System.EventHandler(this.Student_Click);
             // 
-            // panel6
+            // Dashboard
             // 
-            this.panel6.Controls.Add(this.menuButton);
-            this.panel6.Location = new System.Drawing.Point(6, 6);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(52, 48);
-            this.panel6.TabIndex = 7;
+            this.Dashboard.BackColor = System.Drawing.Color.Transparent;
+            this.Dashboard.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Image = global::Library.Properties.Resources.Performance_Macbook;
+            this.Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Dashboard.Location = new System.Drawing.Point(6, 5);
+            this.Dashboard.Name = "Dashboard";
+            this.Dashboard.Size = new System.Drawing.Size(149, 38);
+            this.Dashboard.TabIndex = 8;
+            this.Dashboard.Text = "   DashBoard";
+            this.Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Dashboard.UseVisualStyleBackColor = false;
+            this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
             // 
-            // menuButton
+            // Setting
             // 
-            this.menuButton.BackColor = System.Drawing.Color.Black;
-            this.menuButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.menuButton.Image = global::Library.Properties.Resources.Menu;
-            this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuButton.Location = new System.Drawing.Point(6, 5);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(39, 38);
-            this.menuButton.TabIndex = 2;
-            this.menuButton.UseVisualStyleBackColor = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            this.Setting.BackColor = System.Drawing.Color.Black;
+            this.Setting.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Setting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Setting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Setting.Image = global::Library.Properties.Resources.Settings;
+            this.Setting.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Setting.Location = new System.Drawing.Point(6, 5);
+            this.Setting.Name = "Setting";
+            this.Setting.Size = new System.Drawing.Size(146, 38);
+            this.Setting.TabIndex = 11;
+            this.Setting.Text = "  Setting";
+            this.Setting.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Setting.UseVisualStyleBackColor = false;
+            this.Setting.Click += new System.EventHandler(this.Setting_Click);
             // 
-            // menuBar
+            // logOut
             // 
-            this.menuBar.BackColor = System.Drawing.Color.Black;
-            this.menuBar.Controls.Add(this.panel6);
-            this.menuBar.Controls.Add(this.panel5);
-            this.menuBar.Controls.Add(this.panel10);
-            this.menuBar.Controls.Add(this.panel4);
-            this.menuBar.Controls.Add(this.panel8);
-            this.menuBar.Controls.Add(this.panel3);
-            this.menuBar.Controls.Add(this.panel11);
-            this.menuBar.Controls.Add(this.panel9);
-            this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuBar.Location = new System.Drawing.Point(0, 67);
-            this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(165, 658);
-            this.menuBar.TabIndex = 9;
+            this.logOut.BackColor = System.Drawing.Color.Black;
+            this.logOut.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.logOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.logOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.logOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logOut.Image = global::Library.Properties.Resources.Logout_Rounded;
+            this.logOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.logOut.Location = new System.Drawing.Point(7, 5);
+            this.logOut.Name = "logOut";
+            this.logOut.Size = new System.Drawing.Size(146, 38);
+            this.logOut.TabIndex = 10;
+            this.logOut.Text = "   Logout";
+            this.logOut.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.logOut.UseCompatibleTextRendering = true;
+            this.logOut.UseVisualStyleBackColor = false;
+            this.logOut.Click += new System.EventHandler(this.logOut_Click_1);
             // 
-            // panel15
+            // Books
             // 
-            this.panel15.Controls.Add(this.dashboard1);
-            this.panel15.Controls.Add(this.transactionBoard1);
-            this.panel15.Controls.Add(this.studentBoard1);
-            this.panel15.Controls.Add(this.settingBoard1);
-            this.panel15.Controls.Add(this.bookBoard1);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel15.Location = new System.Drawing.Point(165, 67);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(1205, 658);
-            this.panel15.TabIndex = 10;
+            this.Books.BackColor = System.Drawing.Color.Black;
+            this.Books.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Books.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Books.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Books.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Books.Image = global::Library.Properties.Resources.Open_Book_Emoji;
+            this.Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Books.Location = new System.Drawing.Point(6, 6);
+            this.Books.Name = "Books";
+            this.Books.Size = new System.Drawing.Size(151, 51);
+            this.Books.TabIndex = 7;
+            this.Books.Text = "  Book\r\n  Management\r\n";
+            this.Books.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Books.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Books.UseVisualStyleBackColor = false;
+            this.Books.Click += new System.EventHandler(this.Books_Click_1);
+            // 
+            // Bin
+            // 
+            this.Bin.BackColor = System.Drawing.Color.Black;
+            this.Bin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin.Image = global::Library.Properties.Resources.Recycle_Bin;
+            this.Bin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Bin.Location = new System.Drawing.Point(6, 5);
+            this.Bin.Name = "Bin";
+            this.Bin.Size = new System.Drawing.Size(146, 38);
+            this.Bin.TabIndex = 9;
+            this.Bin.Text = "  Bin";
+            this.Bin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Bin.UseVisualStyleBackColor = false;
+            // 
+            // Trsnsaction
+            // 
+            this.Trsnsaction.BackColor = System.Drawing.Color.Black;
+            this.Trsnsaction.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Trsnsaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Trsnsaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Trsnsaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Trsnsaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Trsnsaction.Image = global::Library.Properties.Resources.Return_Book;
+            this.Trsnsaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Trsnsaction.Location = new System.Drawing.Point(4, 5);
+            this.Trsnsaction.Name = "Trsnsaction";
+            this.Trsnsaction.Size = new System.Drawing.Size(157, 52);
+            this.Trsnsaction.TabIndex = 9;
+            this.Trsnsaction.Text = "   Transaction\r\n   Management";
+            this.Trsnsaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Trsnsaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.Trsnsaction.UseVisualStyleBackColor = false;
+            this.Trsnsaction.Click += new System.EventHandler(this.Trsnsaction_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Homework;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(68, 62);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // settingBoard1
+            // 
+            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingBoard1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.settingBoard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingBoard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settingBoard1.Location = new System.Drawing.Point(-1, 0);
+            this.settingBoard1.Name = "settingBoard1";
+            this.settingBoard1.Size = new System.Drawing.Size(1211, 667);
+            this.settingBoard1.TabIndex = 5;
+            this.settingBoard1.Visible = false;
+            // 
+            // bookBoard1
+            // 
+            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
+            this.bookBoard1.Name = "bookBoard1";
+            this.bookBoard1.Size = new System.Drawing.Size(1253, 667);
+            this.bookBoard1.TabIndex = 4;
+            this.bookBoard1.Visible = false;
             // 
             // dashboard1
             // 
@@ -544,29 +569,6 @@
             this.studentBoard1.TabIndex = 1;
             this.studentBoard1.Visible = false;
             // 
-            // settingBoard1
-            // 
-            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBoard1.BackColor = System.Drawing.SystemColors.Desktop;
-            this.settingBoard1.Location = new System.Drawing.Point(1, 1);
-            this.settingBoard1.Name = "settingBoard1";
-            this.settingBoard1.Size = new System.Drawing.Size(1180, 652);
-            this.settingBoard1.TabIndex = 5;
-            this.settingBoard1.Visible = false;
-            // 
-            // bookBoard1
-            // 
-            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
-            this.bookBoard1.Name = "bookBoard1";
-            this.bookBoard1.Size = new System.Drawing.Size(1253, 667);
-            this.bookBoard1.TabIndex = 4;
-            this.bookBoard1.Visible = false;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -590,7 +592,6 @@
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
@@ -601,6 +602,7 @@
             this.panel6.ResumeLayout(false);
             this.menuBar.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
