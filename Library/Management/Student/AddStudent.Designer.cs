@@ -36,7 +36,7 @@
             this.upload = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.AddStudentInDBO = new System.Windows.Forms.Button();
-            this.AddBook_picture = new System.Windows.Forms.PictureBox();
+            this.AddStudent_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Department = new System.Windows.Forms.TextBox();
             this.MotherName = new System.Windows.Forms.TextBox();
@@ -61,7 +61,7 @@
             this.EmailCheck = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderimageUpload = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBook_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FatherNameCheck)).BeginInit();
@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.upload);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.AddStudentInDBO);
-            this.panel1.Controls.Add(this.AddBook_picture);
+            this.panel1.Controls.Add(this.AddStudent_picture);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.Department);
             this.panel1.Controls.Add(this.MotherName);
@@ -162,15 +162,15 @@
             this.AddStudentInDBO.UseVisualStyleBackColor = true;
             this.AddStudentInDBO.Click += new System.EventHandler(this.AddStudentInDBO_Click);
             // 
-            // AddBook_picture
+            // AddStudent_picture
             // 
-            this.AddBook_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddBook_picture.Location = new System.Drawing.Point(648, 34);
-            this.AddBook_picture.Name = "AddBook_picture";
-            this.AddBook_picture.Size = new System.Drawing.Size(159, 176);
-            this.AddBook_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AddBook_picture.TabIndex = 13;
-            this.AddBook_picture.TabStop = false;
+            this.AddStudent_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddStudent_picture.Location = new System.Drawing.Point(648, 34);
+            this.AddStudent_picture.Name = "AddStudent_picture";
+            this.AddStudent_picture.Size = new System.Drawing.Size(159, 176);
+            this.AddStudent_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddStudent_picture.TabIndex = 13;
+            this.AddStudent_picture.TabStop = false;
             // 
             // label4
             // 
@@ -350,7 +350,7 @@
             this.Size = new System.Drawing.Size(1231, 667);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AddBook_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FatherNameCheck)).EndInit();
@@ -372,7 +372,7 @@
         private System.Windows.Forms.Button upload;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button AddStudentInDBO;
-        private System.Windows.Forms.PictureBox AddBook_picture;
+        private System.Windows.Forms.PictureBox AddStudent_picture;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox Department;
         private System.Windows.Forms.TextBox MotherName;

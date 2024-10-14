@@ -199,6 +199,9 @@
     <EmbeddedResource Include="Boards\TransactionBoard.resx">
       <DependentUpon>TransactionBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Design\RoundPictureBox.resx">
+      <DependentUpon>RoundPictureBox.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management\Book\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Account.resx">
       <DependentUpon>Account.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Setting\Library.resx">
+      <DependentUpon>Library.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
@@ -320,7 +326,6 @@
     <None Include="Resources\Search.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BookDirectory\" />
     <Folder Include="Settings\" />
   </ItemGroup>
   <ItemGroup>

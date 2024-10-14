@@ -49,7 +49,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.EnrollBox = new System.Windows.Forms.TextBox();
-            this.Update = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BackButton = new System.Windows.Forms.Button();
@@ -110,7 +110,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.EnrollBox);
-            this.panel3.Controls.Add(this.Update);
+            this.panel3.Controls.Add(this.UpdateButton);
             this.panel3.ForeColor = System.Drawing.Color.Red;
             this.panel3.Location = new System.Drawing.Point(18, 31);
             this.panel3.Name = "panel3";
@@ -259,18 +259,18 @@
             this.EnrollBox.Size = new System.Drawing.Size(186, 23);
             this.EnrollBox.TabIndex = 18;
             // 
-            // Update
+            // UpdateButton
             // 
-            this.Update.BackColor = System.Drawing.Color.RosyBrown;
-            this.Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Update.ForeColor = System.Drawing.Color.Black;
-            this.Update.Location = new System.Drawing.Point(111, 440);
-            this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(108, 49);
-            this.Update.TabIndex = 8;
-            this.Update.Text = "Update";
-            this.Update.UseVisualStyleBackColor = false;
-            this.Update.Click += new System.EventHandler(this.Update_Click);
+            this.UpdateButton.BackColor = System.Drawing.Color.RosyBrown;
+            this.UpdateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateButton.ForeColor = System.Drawing.Color.Black;
+            this.UpdateButton.Location = new System.Drawing.Point(111, 440);
+            this.UpdateButton.Name = "Update";
+            this.UpdateButton.Size = new System.Drawing.Size(108, 49);
+            this.UpdateButton.TabIndex = 8;
+            this.UpdateButton.Text = "Update";
+            this.UpdateButton.UseVisualStyleBackColor = false;
+            this.UpdateButton.Click += new System.EventHandler(this.Update_Click);
             // 
             // dataGridView1
             // 
@@ -435,7 +435,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox EnrollBox;
-        private System.Windows.Forms.Button Update;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;

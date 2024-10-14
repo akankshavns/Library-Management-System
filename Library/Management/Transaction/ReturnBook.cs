@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Management.Setting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -19,6 +20,7 @@ namespace Library.TransactionManagement
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
+        int fineCharge, perStudentIssueBook;
         public ReturnBook()
         {
             InitializeComponent();
@@ -70,6 +72,8 @@ namespace Library.TransactionManagement
 
         private void Return_Click(object sender, EventArgs e)
         {
+           
+                
             DateTime actualReturnDate = ActualReturnDate.Value;
             string connectionString = GetConnectionString();
             if (connectionString != null)
@@ -95,7 +99,7 @@ namespace Library.TransactionManagement
                         {
                             TimeSpan difference = actualReturnDate - returnDate;
                             int daysLate = difference.Days;
-                            double fine = daysLate * 5;  // $5 fine per day
+                            double fine = daysLate * fineCharge;  // $5 fine per day
                             MessageBox.Show($"Book is returned late. You have to pay a fine of ${fine}.");
                             //How to collect fine.
                         }
@@ -133,8 +137,41 @@ namespace Library.TransactionManagement
 
         private void ReturnBook_Load(object sender, EventArgs e)
         {
-            ActualReturnDate.MaxDate = DateTime.Today.AddDays(7);
-        }
-    }
+           int Fine, issuedBook, returnDays;
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                   
+                    string setValue = "Select * from TransactionSetting";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(setValue, con);
+                        SqlDataReader rdr = cmd.ExecuteReader();
+                        if (rdr.Read())
+                        {
+                            Fine = Convert.ToInt32(rdr.GetValue(1));
+                            issuedBook = Convert.ToInt32(rdr.GetValue(2));
+                            returnDays = Convert.ToInt32(rdr.GetValue(3));
+                            ActualReturnDate.MaxDate = DateTime.Today.AddDays(returnDays);
+                            fineCharge = Fine;
+                            perStudentIssueBook=issuedBook; 
+
+
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+
+
+            }
+            
+        } 
+    } 
     
 }

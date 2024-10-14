@@ -5,6 +5,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,6 +51,7 @@ namespace Library.StudentManagement
                             mail.Text = dr["Email"].ToString();
                             Address.Text = dr["Address"].ToString();
                             string photoPath = dr["StudentPhoto"].ToString();
+                            string absPath = Path.GetFullPath(photoPath);
                             if (!string.IsNullOrEmpty(photoPath) && System.IO.File.Exists(photoPath))
                             {
                                 image.Image = Image.FromFile(photoPath);

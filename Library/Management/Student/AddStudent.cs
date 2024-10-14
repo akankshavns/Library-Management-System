@@ -18,6 +18,7 @@ namespace Library.StudentManagement
 {
     public partial class AddStudent : UserControl
     {
+        public string studentImgPath = string.Empty;
         private string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
@@ -34,15 +35,14 @@ namespace Library.StudentManagement
         }
         private void upload_Click(object sender, EventArgs e)
         {
-            String imagePath = "";
             try
             {
                 OpenFileDialog fileDilog = new OpenFileDialog();
                 fileDilog.Filter = "Image Files(*.jpg;*.png)|*.jpg;*.png";
                 if (fileDilog.ShowDialog() == DialogResult.OK)
                 {
-                    imagePath = fileDilog.FileName;
-                    AddBook_picture.ImageLocation = imagePath;
+                    studentImgPath = fileDilog.FileName;
+                    AddStudent_picture.ImageLocation = studentImgPath;
                 }
             }
             catch (Exception ex)
@@ -64,20 +64,22 @@ namespace Library.StudentManagement
                     try
                     {
                         con.Open();
-                        string path = Path.Combine(@"C:\Users\HP\source\repos\Library\Library\BookDirectory\" + EnrollmentNo.Text + "_" + StudentName.Text + "_" + ".jpg");
+
+                        //---/Uploads/Student/Enrollno_Ayush_Mishra.jpg
+                        string path = Path.Combine("Uploads", "Student", EnrollmentNo.Text + "_" + StudentName.Text.Replace(" ", "_") + "_" + ".jpg");
 
                         string directoryPath = Path.GetDirectoryName(path);
                         if (!Directory.Exists(directoryPath))
                         {
                             Directory.CreateDirectory(directoryPath);
                         }
-                        File.Copy(AddBook_picture.ImageLocation, path, true);
+                        File.Copy(studentImgPath, path, true);
                         SqlCommand cmd = new SqlCommand(AddStudent, con);
                         cmd.Parameters.AddWithValue("@Enrollment",EnrollmentNo.Text);
                         cmd.Parameters.AddWithValue("@StudentName",StudentName.Text);
                         cmd.Parameters.AddWithValue("@FatherName",FatherName.Text);
                         cmd.Parameters.AddWithValue("@MotherName",MotherName.Text);
-                        cmd.Parameters.AddWithValue("@StudentImage", AddBook_picture.ImageLocation);
+                        cmd.Parameters.AddWithValue("@StudentImage", path);
                         cmd.Parameters.AddWithValue("@Department",Department.Text);
                         cmd.Parameters.AddWithValue("@Contact",Contact.Text);
                         cmd.Parameters.AddWithValue("@Email",Email.Text);
@@ -86,7 +88,7 @@ namespace Library.StudentManagement
                         if (isValueInsert >= 1)
                         {
                             MessageBox.Show("Student information added successfully");
-                            AddBook_picture.ImageLocation = "";
+                            AddStudent_picture.ImageLocation = "";
                             EnrollmentNo.Clear();
                             StudentName.Clear();
                             FatherName.Clear();
@@ -177,7 +179,7 @@ namespace Library.StudentManagement
             EmailCheck.SetError(Email, "");
             DepartmentCheck.SetError(Department, "");
 
-            AddBook_picture.ImageLocation = "";
+            AddStudent_picture.ImageLocation = "";
             EnrollmentNo.Clear();
             StudentName.Clear();
             FatherName.Clear();
