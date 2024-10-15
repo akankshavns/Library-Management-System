@@ -28,34 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.StudentDeletedItem = new System.Windows.Forms.CheckBox();
+            this.BookDeletedItem = new System.Windows.Forms.CheckBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // checkBox2
+            // StudentDeletedItem
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox2.Location = new System.Drawing.Point(6, 183);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(238, 29);
-            this.checkBox2.TabIndex = 7;
-            this.checkBox2.Text = "Student Deleted Items...";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.StudentDeletedItem.AutoSize = true;
+            this.StudentDeletedItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentDeletedItem.Location = new System.Drawing.Point(6, 183);
+            this.StudentDeletedItem.Name = "StudentDeletedItem";
+            this.StudentDeletedItem.Size = new System.Drawing.Size(238, 29);
+            this.StudentDeletedItem.TabIndex = 7;
+            this.StudentDeletedItem.Text = "Student Deleted Items...";
+            this.StudentDeletedItem.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // BookDeletedItem
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(6, 105);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(215, 29);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Book Deleted Items...";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.BookDeletedItem.AutoSize = true;
+            this.BookDeletedItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookDeletedItem.Location = new System.Drawing.Point(6, 105);
+            this.BookDeletedItem.Name = "BookDeletedItem";
+            this.BookDeletedItem.Size = new System.Drawing.Size(215, 29);
+            this.BookDeletedItem.TabIndex = 6;
+            this.BookDeletedItem.Text = "Book Deleted Items...";
+            this.BookDeletedItem.UseVisualStyleBackColor = true;
+            this.BookDeletedItem.CheckedChanged += new System.EventHandler(this.BookDeletedItem_CheckedChanged);
             // 
             // dataGridView1
             // 
@@ -79,8 +80,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.StudentDeletedItem);
+            this.Controls.Add(this.BookDeletedItem);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "Bin";
@@ -93,8 +94,8 @@
 
         #endregion
 
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox StudentDeletedItem;
+        private System.Windows.Forms.CheckBox BookDeletedItem;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
     }
