@@ -68,22 +68,26 @@ namespace Library
         }
         private void Books_Click_1(object sender, EventArgs e)
         {
+            bookBoard1.notshow();
             bookBoard1.Show();
             bookBoard1.BringToFront();
 
         }
         private void Student_Click(object sender, EventArgs e)
         {
+            studentBoard1.notshow();
             studentBoard1.Show();
             studentBoard1.BringToFront();
         }
         private void Dashboard_Click(object sender, EventArgs e)
         {
+            dashboard1.countOfAllrecods();
             dashboard1.Show();
             dashboard1.BringToFront();
         }
         private void Trsnsaction_Click(object sender, EventArgs e)
         {
+            transactionBoard1.notshow();
             transactionBoard1.Show();
             transactionBoard1.BringToFront();
         }
@@ -94,6 +98,7 @@ namespace Library
         }
         private void Setting_Click(object sender, EventArgs e)
         {
+            settingBoard1.notshow();
             settingBoard1.Show();
             settingBoard1.BringToFront();
         }
@@ -140,6 +145,12 @@ namespace Library
                 }
                 
             }
+        }
+
+        private void Bin_Click(object sender, EventArgs e)
+        {
+            bin1.Show();
+            bin1.BringToFront();
         }
     }
 }

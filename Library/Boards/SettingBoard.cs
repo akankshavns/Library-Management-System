@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,38 +14,25 @@ namespace Library.Board
 {
     public partial class SettingBoard : UserControl
     {
+       
+        private string GetConnectionString()
+        {
+            return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
+        }
         public SettingBoard()
         {
             InitializeComponent();
+           
         }
-        private void AboutButton_Click(object sender, EventArgs e)
+        public void notshow()
         {
-            about1.Visible = true;
-            about1.BringToFront();
+            library1.Visible = false;
+            transaction1.Visible = false;
         }
-
-        private void AboutDetail_Click(object sender, EventArgs e)
-        {
-            about1.Visible = true;
-            about1.BringToFront();
-        }
-
-        private void Account_Click(object sender, EventArgs e)
-        {
-           //account1.Visible = true;
-           //account1.BringToFront();
-        }
-
-        private void AccountDetail_Click(object sender, EventArgs e)
-        {
-          //account1.Visible = true;
-          // account1.BringToFront();
-        }
-
-      
-
+       
         private void Transaction_Click(object sender, EventArgs e)
         {
+            library1.Visible = false;
            transaction1.getValueFromDB();
             transaction1.Visible = true;
             transaction1.BringToFront();
@@ -51,18 +40,21 @@ namespace Library.Board
 
         private void TransactionDetail_Click(object sender, EventArgs e)
         {
+            library1.Visible = false;
             transaction1.Visible = true;
             transaction1.BringToFront();
         }
 
         private void LibraryDetail_Click(object sender, EventArgs e)
         {
+            transaction1.Visible=false;
             library1.Visible = true;
             library1.BringToFront();
         }
 
         private void Library_Click(object sender, EventArgs e)
         {
+            transaction1.Visible = false;
             library1.Visible = true;
             library1.BringToFront();
         }

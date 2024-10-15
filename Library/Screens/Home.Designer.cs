@@ -64,11 +64,12 @@
             this.menuButton = new System.Windows.Forms.Button();
             this.menuBar = new System.Windows.Forms.Panel();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.settingBoard1 = new Library.Board.SettingBoard();
-            this.bookBoard1 = new Library.Board.BookBoard();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
             this.transactionBoard1 = new Library.Board.TransactionBoard();
             this.studentBoard1 = new Library.Board.StudentBoard();
+            this.settingBoard1 = new Library.Board.SettingBoard();
+            this.bookBoard1 = new Library.Board.BookBoard();
+            this.bin1 = new Library.Boards.Bin();
             this.panel2.SuspendLayout();
             this.BookBoard.SuspendLayout();
             this.panel14.SuspendLayout();
@@ -312,6 +313,7 @@
             this.Bin.Text = "  Bin";
             this.Bin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Bin.UseVisualStyleBackColor = false;
+            this.Bin.Click += new System.EventHandler(this.Bin_Click);
             // 
             // panel3
             // 
@@ -504,37 +506,13 @@
             this.panel15.Controls.Add(this.studentBoard1);
             this.panel15.Controls.Add(this.settingBoard1);
             this.panel15.Controls.Add(this.bookBoard1);
+            this.panel15.Controls.Add(this.bin1);
             this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel15.Location = new System.Drawing.Point(168, 67);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(1202, 658);
             this.panel15.TabIndex = 10;
-            // 
-            // settingBoard1
-            // 
-            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.settingBoard1.BackColor = System.Drawing.Color.LightSlateGray;
-            this.settingBoard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.settingBoard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.settingBoard1.Location = new System.Drawing.Point(-1, 0);
-            this.settingBoard1.Name = "settingBoard1";
-            this.settingBoard1.Size = new System.Drawing.Size(1208, 658);
-            this.settingBoard1.TabIndex = 5;
-            this.settingBoard1.Visible = false;
-            // 
-            // bookBoard1
-            // 
-            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
-            this.bookBoard1.Name = "bookBoard1";
-            this.bookBoard1.Size = new System.Drawing.Size(1250, 614);
-            this.bookBoard1.TabIndex = 4;
-            this.bookBoard1.Visible = false;
             // 
             // dashboard1
             // 
@@ -568,6 +546,42 @@
             this.studentBoard1.Size = new System.Drawing.Size(1203, 614);
             this.studentBoard1.TabIndex = 1;
             this.studentBoard1.Visible = false;
+            // 
+            // settingBoard1
+            // 
+            this.settingBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.settingBoard1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.settingBoard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingBoard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settingBoard1.Location = new System.Drawing.Point(-1, 0);
+            this.settingBoard1.Name = "settingBoard1";
+            this.settingBoard1.Size = new System.Drawing.Size(1208, 658);
+            this.settingBoard1.TabIndex = 5;
+            this.settingBoard1.Visible = false;
+            // 
+            // bookBoard1
+            // 
+            this.bookBoard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bookBoard1.Location = new System.Drawing.Point(0, 0);
+            this.bookBoard1.Name = "bookBoard1";
+            this.bookBoard1.Size = new System.Drawing.Size(1250, 614);
+            this.bookBoard1.TabIndex = 4;
+            this.bookBoard1.Visible = false;
+            // 
+            // bin1
+            // 
+            this.bin1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bin1.Location = new System.Drawing.Point(1, 0);
+            this.bin1.Name = "bin1";
+            this.bin1.Size = new System.Drawing.Size(1206, 655);
+            this.bin1.TabIndex = 6;
+            this.bin1.Visible = false;
             // 
             // Home
             // 
@@ -611,7 +625,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        public static System.Windows.Forms.PictureBox HomeLogo;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label Heading;
         private System.Windows.Forms.Timer MenuSlider;
@@ -651,5 +664,7 @@
         private FrontScreen.Dashboard dashboard1;
         private Board.BookBoard bookBoard1;
         private Board.SettingBoard settingBoard1;
+        private Boards.Bin bin1;
+        public static System.Windows.Forms.PictureBox HomeLogo;
     }
 }

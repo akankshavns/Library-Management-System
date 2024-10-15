@@ -69,7 +69,7 @@
             this.issuePage.Name = "issuePage";
             this.issuePage.Size = new System.Drawing.Size(1186, 626);
             this.issuePage.TabIndex = 16;
-           
+         
             // 
             // BackButton
             // 

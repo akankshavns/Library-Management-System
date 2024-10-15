@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.BookManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Configuration;
@@ -16,6 +17,12 @@ namespace Library.Board
         public StudentBoard()
         {
             InitializeComponent();
+        }
+        public void notshow()
+        {
+            addStudent1.Visible = false;
+            viewStudent1.Visible = false;
+            updateStudent1.Visible = false;
         }
         private void AddStudentButton_Click(object sender, EventArgs e)
         {

@@ -16,6 +16,12 @@ namespace Library.Board
         {
             InitializeComponent();
         }
+        public void notshow()
+        {
+            addBook1.Visible = false;
+            viewBook1.Visible = false;
+            update1.Visible = false;
+        }
         private void Add_Click_1(object sender, EventArgs e)
         {
             addBook1.Show();

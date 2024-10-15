@@ -44,7 +44,7 @@
             this.EnterFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EnterFine.Location = new System.Drawing.Point(318, 135);
             this.EnterFine.Name = "EnterFine";
-            this.EnterFine.Size = new System.Drawing.Size(196, 26);
+            this.EnterFine.Size = new System.Drawing.Size(118, 26);
             this.EnterFine.TabIndex = 3;
             // 
             // label1
@@ -73,7 +73,7 @@
             this.IssuedBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IssuedBook.Location = new System.Drawing.Point(553, 225);
             this.IssuedBook.Name = "IssuedBook";
-            this.IssuedBook.Size = new System.Drawing.Size(173, 26);
+            this.IssuedBook.Size = new System.Drawing.Size(112, 26);
             this.IssuedBook.TabIndex = 3;
             // 
             // label2
@@ -91,7 +91,7 @@
             this.ReturnDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnDays.Location = new System.Drawing.Point(318, 332);
             this.ReturnDays.Name = "ReturnDays";
-            this.ReturnDays.Size = new System.Drawing.Size(161, 26);
+            this.ReturnDays.Size = new System.Drawing.Size(118, 26);
             this.ReturnDays.TabIndex = 3;
             // 
             // label3
@@ -108,7 +108,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(549, 26);
+            this.label4.Location = new System.Drawing.Point(194, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(268, 31);
             this.label4.TabIndex = 2;

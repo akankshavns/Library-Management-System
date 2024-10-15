@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Library.Management.Setting
+namespace Library.Boards
 {
-    public partial class Account : UserControl
+    public partial class Bin : UserControl
     {
-        public Account()
+        public Bin()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

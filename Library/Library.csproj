@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boards\Bin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Boards\Bin.Designer.cs">
+      <DependentUpon>Bin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boards\BookBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -100,18 +106,6 @@
     </Compile>
     <Compile Include="Boards\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Management\Setting\About.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Management\Setting\About.Designer.cs">
-      <DependentUpon>About.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Management\Setting\Account.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Management\Setting\Account.Designer.cs">
-      <DependentUpon>Account.cs</DependentUpon>
     </Compile>
     <Compile Include="Management\Setting\Library.cs">
       <SubType>UserControl</SubType>
@@ -187,6 +181,9 @@
     <Compile Include="Management\Transaction\ViewTransaction.Designer.cs">
       <DependentUpon>ViewTransaction.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Boards\Bin.resx">
+      <DependentUpon>Bin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boards\BookBoard.resx">
       <DependentUpon>BookBoard.cs</DependentUpon>
     </EmbeddedResource>
@@ -213,12 +210,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boards\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Management\Setting\About.resx">
-      <DependentUpon>About.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Management\Setting\Account.resx">
-      <DependentUpon>Account.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Library.resx">
       <DependentUpon>Library.cs</DependentUpon>

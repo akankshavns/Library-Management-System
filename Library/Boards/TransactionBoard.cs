@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.BookManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Library.Board
 {
     public partial class TransactionBoard : UserControl
     {
+        
         public TransactionBoard()
         {
             InitializeComponent();
+        }
+        public void notshow()
+        {
+            issueBook1.Visible = false;
+            returnBook1.Visible = false;
+            viewTransaction1.Visible = false;
         }
 
         private void issue_Click_1(object sender, EventArgs e)
