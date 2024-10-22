@@ -362,7 +362,13 @@ namespace Library.BookManagement
             errorProviderQuantity.Clear();
         }
 
-   
+        private void AddBook_Load(object sender, EventArgs e)
+        {
+            BookDate.MaxDate = DateTime.Now;
+            BookDate.Value = DateTime.Now;
+        }
+
+       
     }
 
 }

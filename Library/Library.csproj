@@ -370,5 +370,29 @@
   <ItemGroup>
     <None Include="Resources\Homework1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_awtmgfawtmgfawtm.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageslibrary.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output-onlinepngtools.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus Math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus 30Math.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EyeVIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Сlockwise Vertical Arrows.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh Shield.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -94,8 +94,8 @@ namespace Library.Management.Setting
                             using (MemoryStream ms = new MemoryStream(imageBytes))
                             {
 
-                                Home.HomeLogo.BackgroundImage = Image.FromStream(ms);
-                                Home.HomeLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+                                //Home.HomeLogo.BackgroundImage = Image.FromStream(ms);
+                                //Home.HomeLogo.SizeMode = PictureBoxSizeMode.StretchImage;
                             }
                         }
                     }

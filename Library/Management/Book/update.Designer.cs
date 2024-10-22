@@ -90,9 +90,9 @@
             this.UpdatePannel.Controls.Add(this.Language);
             this.UpdatePannel.Controls.Add(this.dateBox);
             this.UpdatePannel.Controls.Add(this.BName);
-            this.UpdatePannel.Location = new System.Drawing.Point(40, 338);
+            this.UpdatePannel.Location = new System.Drawing.Point(40, 300);
             this.UpdatePannel.Name = "UpdatePannel";
-            this.UpdatePannel.Size = new System.Drawing.Size(1102, 258);
+            this.UpdatePannel.Size = new System.Drawing.Size(1102, 277);
             this.UpdatePannel.TabIndex = 3;
             // 
             // label15
@@ -359,7 +359,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ViewDetail.DefaultCellStyle = dataGridViewCellStyle2;
-            this.ViewDetail.Location = new System.Drawing.Point(40, 63);
+            this.ViewDetail.Location = new System.Drawing.Point(40, 43);
             this.ViewDetail.Name = "ViewDetail";
             this.ViewDetail.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -371,10 +371,9 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ViewDetail.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.ViewDetail.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ViewDetail.Size = new System.Drawing.Size(1102, 269);
+            this.ViewDetail.Size = new System.Drawing.Size(1102, 251);
             this.ViewDetail.TabIndex = 2;
             this.ViewDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellClick);
-           
             // 
             // pictureBox1
             // 

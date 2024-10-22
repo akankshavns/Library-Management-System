@@ -112,6 +112,7 @@ namespace Library.TransactionManagement
                     DialogResult result = MessageBox.Show("This Book is Available in the library,do you want to issue this book ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes)
                     {
+                        issueFormDetails1.newupdatedreturndays();
                         issueFormDetails1.availableBookId = availableBookId_issueBook;
                         issueFormDetails1.Show();
                         issueFormDetails1.BringToFront();

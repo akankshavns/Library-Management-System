@@ -15,7 +15,8 @@ namespace Library.TransactionManagement
 {
     public partial class ShowBookDetail : UserControl
     {
-         public string availableBookId {  get; set; }
+        public string availableBookId { get; set; }
+        public int returnDays;
         private string GetConnectionString()
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
@@ -29,7 +30,8 @@ namespace Library.TransactionManagement
         {
             if (e.KeyCode == Keys.Enter)
             {
-                ReturnDate.Value = issueDate.Value.AddDays(7);
+                newupdatedreturndays();
+                ReturnDate.Value = issueDate.Value.AddDays(returnDays);
                 if (string.IsNullOrEmpty(EnrollBox.Text))
                 {
                     CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
@@ -103,7 +105,7 @@ namespace Library.TransactionManagement
         private void IssueButton_Click_1(object sender, EventArgs e)
         {
             string issueQuerry = "Insert into IssueBookList values(@BookId, @BookName,  @AuthorName, @EnrollBox, @StudentName, @Dep, @Semester, @Cont,@mail, @Addre, @issueDate, @ReturnDate,'No')";
-           
+
             try
             {
                 string connectionString = GetConnectionString();
@@ -117,13 +119,13 @@ namespace Library.TransactionManagement
                         cmd.Parameters.AddWithValue("BookName", BookName.Text);
                         cmd.Parameters.AddWithValue("@AuthorName", AuthorName.Text);
                         cmd.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
-                        cmd.Parameters.AddWithValue("@StudentName",StudentName.Text);
+                        cmd.Parameters.AddWithValue("@StudentName", StudentName.Text);
                         cmd.Parameters.AddWithValue("@Dep", Dep.Text);
                         cmd.Parameters.AddWithValue("@Semester", Semester.Text);
                         cmd.Parameters.AddWithValue("@Cont", Cont.Text);
                         cmd.Parameters.AddWithValue("@ReturnDate", ReturnDate.Text);
                         cmd.Parameters.AddWithValue("@issueDate", issueDate.Text);
-                        cmd.Parameters.AddWithValue("@mail",mail.Text);
+                        cmd.Parameters.AddWithValue("@mail", mail.Text);
                         cmd.Parameters.AddWithValue("@Addre", Addre.Text);
                         int isInsert = cmd.ExecuteNonQuery();
                         if (isInsert >= 1)
@@ -139,25 +141,26 @@ namespace Library.TransactionManagement
                 MessageBox.Show(ex.Message);
             }
 
-                BookId.Clear();
-                BookName.Clear();
-                AuthorName.Clear();
-                EnrollBox.Clear();
-                StudentName.Clear();
-                Semester.Text = "";
-                mail.Clear();
-                Addre.Clear();
-                Dep.Clear();
-                Cont.Clear();
+            BookId.Clear();
+            BookName.Clear();
+            AuthorName.Clear();
+            EnrollBox.Clear();
+            StudentName.Clear();
+            Semester.Text = "";
+            mail.Clear();
+            Addre.Clear();
+            Dep.Clear();
+            Cont.Clear();
         }
         private void Semester_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter) 
+            if (e.KeyCode == Keys.Enter)
             {
+                newupdatedreturndays();
                 if (string.IsNullOrEmpty(EnrollBox.Text))
                 {
                     CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
-                    
+
                 }
                 else if (string.IsNullOrEmpty(Semester.Text))
                 {
@@ -177,6 +180,45 @@ namespace Library.TransactionManagement
         private void Semester_SelectedIndexChanged(object sender, EventArgs e)
         {
             checkSemesterBox.SetError(Semester, "");
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            this.Visible = false;
+        }
+
+        private void ShowBookDetail_Load(object sender, EventArgs e)
+        {
+            issueDate.MaxDate = DateTime.Now;
+            issueDate.Value = DateTime.Now;
+            newupdatedreturndays();
+        }
+        public void newupdatedreturndays()
+        {
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+
+                    string setValue = "Select Returndays from TransactionSetting";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(setValue, con);
+                        SqlDataReader rdr = cmd.ExecuteReader();
+                        if (rdr.Read())
+                        {
+                            returnDays = Convert.ToInt32(rdr.GetValue(0));
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
         }
     }
 }

@@ -68,28 +68,31 @@ namespace Library
         }
         private void Books_Click_1(object sender, EventArgs e)
         {
-            bookBoard1.notshow();
-            bookBoard1.Show();
-            bookBoard1.BringToFront();
+            BookManagementMenuSlider.Start();
+            //bookBoard1.notshow();
+            //bookBoard1.Show();
+            //bookBoard1.BringToFront();
 
         }
         private void Student_Click(object sender, EventArgs e)
         {
-            studentBoard1.notshow();
-            studentBoard1.Show();
-            studentBoard1.BringToFront();
+            StudentManagementMenuSlider.Start();
+            //studentBoard1.notshow();
+            //studentBoard1.Show();
+            //studentBoard1.BringToFront();
         }
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            dashboard1.countOfAllrecods();
-            dashboard1.Show();
-            dashboard1.BringToFront();
+            //dashboard1.countOfAllrecods();
+            //dashboard1.Show();
+            //dashboard1.BringToFront();
         }
         private void Trsnsaction_Click(object sender, EventArgs e)
         {
-            transactionBoard1.notshow();
-            transactionBoard1.Show();
-            transactionBoard1.BringToFront();
+            TransactionManagementMenuSlider.Start();
+            //transactionBoard1.notshow();
+            //transactionBoard1.Show();
+            //transactionBoard1.BringToFront();
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
@@ -98,9 +101,9 @@ namespace Library
         }
         private void Setting_Click(object sender, EventArgs e)
         {
-            settingBoard1.notshow();
-            settingBoard1.Show();
-            settingBoard1.BringToFront();
+            //settingBoard1.notshow();
+            //settingBoard1.Show();
+            //settingBoard1.BringToFront();
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -149,8 +152,89 @@ namespace Library
 
         private void Bin_Click(object sender, EventArgs e)
         {
-            bin1.Show();
-            bin1.BringToFront();
+            //bin1.Show();
+            //bin1.BringToFront();
+        }
+        bool MenuButtonExpand=false;
+     
+
+        private void BookManagementMenuSlider_Tick_1(object sender, EventArgs e)
+        {
+            if (MenuButtonExpand == false)
+            {
+                Abc.Height += 10;
+                if (Abc.Height >= 219)
+                {
+                    TransactionManagementMenuSlider.Enabled = true;
+                    StudentManagementMenuSlider.Enabled = true;
+                    BookManagementMenuSlider.Stop();
+                    MenuButtonExpand = true;
+                }
+            }
+            else
+            {
+                Abc.Height -= 10;
+                if (Abc.Height <= 65)
+                {
+                    //TransactionManagementMenuSlider.Enabled = true;
+                    //StudentManagementMenuSlider.Enabled = true;
+                    BookManagementMenuSlider.Stop();
+                    MenuButtonExpand = false;
+                }
+            }
+        }
+
+        private void StudentManagementMenuSlider_Tick(object sender, EventArgs e)
+        {
+            if (MenuButtonExpand == false)
+            {
+                StudentMenuPanel.Height += 10;
+                if (StudentMenuPanel.Height >= 219)
+                {
+                    BookManagementMenuSlider.Enabled= true;
+                    TransactionManagementMenuSlider.Enabled = true;
+                    StudentManagementMenuSlider.Stop();
+                    MenuButtonExpand = true;
+                }
+            }
+            else
+            {
+                StudentMenuPanel.Height -= 10;
+                if (StudentMenuPanel.Height <= 65)
+                {
+                    //BookManagementMenuSlider.Enabled = true;
+                    //TransactionManagementMenuSlider.Enabled = true;
+                    StudentManagementMenuSlider.Stop();
+                    MenuButtonExpand = false;
+                }
+            }
+        }
+
+        private void TransactionManagementMenuSlider_Tick(object sender, EventArgs e)
+        {
+            if (MenuButtonExpand == false)
+            {
+                BookManagementMenuSlider.Enabled = true;
+                StudentManagementMenuSlider.Enabled = true;
+                TransactionMenuePanel.Height += 10;
+                if (TransactionMenuePanel.Height >= 219)
+                {
+                   
+                    TransactionManagementMenuSlider.Stop();
+                    MenuButtonExpand = true;
+                }
+            }
+            else
+            {
+               TransactionMenuePanel.Height -= 10;
+                if (TransactionMenuePanel.Height <= 65)
+                {
+                    //BookManagementMenuSlider.Enabled = true;
+                    //StudentManagementMenuSlider.Enabled = true;
+                    TransactionManagementMenuSlider.Stop();
+                    MenuButtonExpand = false;
+                }
+            }
         }
     }
 }

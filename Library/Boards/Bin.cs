@@ -22,33 +22,63 @@ namespace Library.Boards
         {
             InitializeComponent();
         }
-
-        private void BookDeletedItem_CheckedChanged(object sender, EventArgs e)
+        DataTable BookTable = new DataTable();
+        
+        public void showBookRelatedDeletedItem()
         {
-            if (BookDeletedItem.Checked)
-            {
 
-                string connectionString = GetConnectionString();
-                if (connectionString != null)
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlConnection con = new SqlConnection(connectionString))
+                    string viewdata = "SELECT * FROM BookDeletedItems";
+                    try
                     {
-                        //string viewdata = "SELECT * FROM ADDBOOKS";
-                        //try
-                        //{
-                        //    con.Open();
-                        //    SqlCommand cmd = new SqlCommand(viewdata, con);
-                        //    SqlDataReader reader = cmd.ExecuteReader();
-                        //    booksTable.Load(reader);
-                        //    dataGridView1.DataSource = booksTable;
-                        //}
-                        //catch (Exception ex)
-                        //{
-                        //    MessageBox.Show(ex.Message);
-                        //}
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(viewdata, con);
+                        BookGridView1.DataSource = BookTable;
+                            SqlDataReader reader = cmd.ExecuteReader();
+                        BookTable.Load(reader);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
+        }
+
+
+        public void showStudentRelatedDeletedItem()
+        {
+
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string viewdata = "SELECT * FROM StudentDeletedItems";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(viewdata, con);
+                       StudentGridView2.DataSource = BookTable;
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        BookTable.Load(reader);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+        private void Bin_Load(object sender, EventArgs e)
+        {
+            showBookRelatedDeletedItem();
+            showStudentRelatedDeletedItem();
         }
     }
 }

@@ -423,11 +423,11 @@
             this.BookDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.BookDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookDate.Location = new System.Drawing.Point(453, 301);
-            this.BookDate.MaxDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
+            this.BookDate.MaxDate = new System.DateTime(2024, 10, 16, 0, 0, 0, 0);
             this.BookDate.Name = "BookDate";
             this.BookDate.Size = new System.Drawing.Size(201, 26);
             this.BookDate.TabIndex = 69;
-            this.BookDate.Value = new System.DateTime(2024, 9, 21, 0, 0, 0, 0);
+            this.BookDate.Value = new System.DateTime(2024, 10, 16, 0, 0, 0, 0);
             // 
             // BName
             // 
@@ -523,6 +523,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddBook";
             this.Size = new System.Drawing.Size(1020, 629);
+            this.Load += new System.EventHandler(this.AddBook_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.OPTION.ResumeLayout(false);

@@ -61,6 +61,7 @@
             this.BookInfo = new System.Windows.Forms.Panel();
             this.CheckEnrollBox = new System.Windows.Forms.ErrorProvider(this.components);
             this.checkSemesterBox = new System.Windows.Forms.ErrorProvider(this.components);
+            this.BackButton = new System.Windows.Forms.Button();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.BookInfo.SuspendLayout();
@@ -351,7 +352,7 @@
             // EnrollBox
             // 
             this.EnrollBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnrollBox.ForeColor = System.Drawing.Color.Silver;
+            this.EnrollBox.ForeColor = System.Drawing.Color.Black;
             this.EnrollBox.Location = new System.Drawing.Point(24, 119);
             this.EnrollBox.Name = "EnrollBox";
             this.EnrollBox.Size = new System.Drawing.Size(247, 23);
@@ -404,16 +405,31 @@
             // 
             this.checkSemesterBox.ContainerControl = this;
             // 
+            // BackButton
+            // 
+            this.BackButton.BackColor = System.Drawing.Color.Transparent;
+            this.BackButton.FlatAppearance.BorderSize = 0;
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
+            this.BackButton.Location = new System.Drawing.Point(3, 3);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(41, 16);
+            this.BackButton.TabIndex = 12;
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // ShowBookDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.BackButton);
             this.Controls.Add(this.BookInfo);
             this.Controls.Add(this.InfoPanel);
             this.Controls.Add(this.panel5);
             this.Name = "ShowBookDetail";
             this.Size = new System.Drawing.Size(1066, 618);
+            this.Load += new System.EventHandler(this.ShowBookDetail_Load);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -460,5 +476,6 @@
         private System.Windows.Forms.Panel BookInfo;
         private System.Windows.Forms.ErrorProvider CheckEnrollBox;
         private System.Windows.Forms.ErrorProvider checkSemesterBox;
+        private System.Windows.Forms.Button BackButton;
     }
 }

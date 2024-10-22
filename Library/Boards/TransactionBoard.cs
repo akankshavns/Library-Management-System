@@ -27,6 +27,7 @@ namespace Library.Board
 
         private void issue_Click_1(object sender, EventArgs e)
         {
+           
             issueBook1.Show();
             issueBook1.BringToFront();
         }
