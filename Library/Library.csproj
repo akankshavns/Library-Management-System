@@ -119,6 +119,11 @@
     <Compile Include="Management\Setting\Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,14 +233,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Management\Student\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,9 +278,6 @@
     <None Include="Resources\Eyeline.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Male User.png" />
   </ItemGroup>
   <ItemGroup>
@@ -290,25 +287,7 @@
     <None Include="Resources\Homework.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Menu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Performance Macbook.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Open Book Emoji.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Student Male.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Return Book.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Settings.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Recycle Bin.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Logout Rounded.png" />
@@ -320,19 +299,10 @@
     <Folder Include="Settings\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\book.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Undo.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sync.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Left.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BACK ARROW.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Counterclockwise Arrows.png" />
@@ -344,16 +314,7 @@
     <None Include="Resources\image_processing20220207-786-j68tnb.gif" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Settings1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Male User1.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Customer.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\About.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User.png" />
@@ -362,37 +323,103 @@
     <None Include="Resources\Bill.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Library.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\About1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Homework1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gemini_Generated_Image_awtmgfawtmgfawtm.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageslibrary.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\output-onlinepngtools.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Plus Math.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Plus 30Math.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\EyeVIEW.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Сlockwise Vertical Arrows.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Refresh Shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedDAshboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedBook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedstudent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedBook1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedADD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedView.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedUpdate.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedStudent Registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\used Check Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedStudent Registration1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedStreet View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usedFemale User Update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\used Check Book1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\used issue View.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\used Return Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Squared Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Waste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty Trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Empty Trash1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Double-J-Design-Ravenna-3d-Books.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Student Exchange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book Shelf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check Book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Book Adaptation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2024-10-23 at 12.09.51_3e164d1b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abcde.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

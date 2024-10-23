@@ -28,255 +28,250 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.TodayReturnBooklabel = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.TotalFine = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.issuedlabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TodayIssueBook = new System.Windows.Forms.Label();
+            this.ReturnBooklabel = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TotalStudentLabel = new System.Windows.Forms.Label();
+            this.Studentlabel = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TotalBookLabel = new System.Windows.Forms.Label();
+            this.BookLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(154)))), ((int)(((byte)(140)))), ((int)(((byte)(152)))));
-            this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(127, 59);
+            this.panel1.Location = new System.Drawing.Point(157, 91);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(926, 563);
+            this.panel1.Size = new System.Drawing.Size(805, 355);
             this.panel1.TabIndex = 0;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Controls.Add(this.label11);
-            this.panel7.Controls.Add(this.TodayReturnBooklabel);
-            this.panel7.Location = new System.Drawing.Point(365, 311);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(200, 165);
-            this.panel7.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Firebrick;
-            this.label11.Location = new System.Drawing.Point(-2, 20);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(197, 25);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Today Return Book\r\n";
-            // 
-            // TodayReturnBooklabel
-            // 
-            this.TodayReturnBooklabel.AutoSize = true;
-            this.TodayReturnBooklabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TodayReturnBooklabel.Location = new System.Drawing.Point(81, 75);
-            this.TodayReturnBooklabel.Name = "TodayReturnBooklabel";
-            this.TodayReturnBooklabel.Size = new System.Drawing.Size(42, 46);
-            this.TodayReturnBooklabel.TabIndex = 1;
-            this.TodayReturnBooklabel.Text = "0";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.label9);
-            this.panel6.Controls.Add(this.TotalFine);
-            this.panel6.Location = new System.Drawing.Point(79, 311);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 165);
-            this.panel6.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Firebrick;
-            this.label9.Location = new System.Drawing.Point(10, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 25);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Today Total Fine";
-            // 
-            // TotalFine
-            // 
-            this.TotalFine.AutoSize = true;
-            this.TotalFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalFine.Location = new System.Drawing.Point(81, 75);
-            this.TotalFine.Name = "TotalFine";
-            this.TotalFine.Size = new System.Drawing.Size(42, 46);
-            this.TotalFine.TabIndex = 1;
-            this.TotalFine.Text = "0";
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.panel5.BackColor = System.Drawing.Color.Silver;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.issuedlabel);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(646, 311);
+            this.panel5.Controls.Add(this.pictureBox4);
+            this.panel5.Location = new System.Drawing.Point(95, 195);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(200, 165);
+            this.panel5.Size = new System.Drawing.Size(294, 81);
             this.panel5.TabIndex = 0;
             // 
-            // label8
+            // issuedlabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Firebrick;
-            this.label8.Location = new System.Drawing.Point(-2, 20);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(197, 25);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Today Return Book\r\n";
+            this.issuedlabel.AutoSize = true;
+            this.issuedlabel.Font = new System.Drawing.Font("Sitka Subheading", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.issuedlabel.ForeColor = System.Drawing.Color.DarkViolet;
+            this.issuedlabel.Location = new System.Drawing.Point(131, 29);
+            this.issuedlabel.Name = "issuedlabel";
+            this.issuedlabel.Size = new System.Drawing.Size(33, 39);
+            this.issuedlabel.TabIndex = 1;
+            this.issuedlabel.Text = "0";
+            this.issuedlabel.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(70, 75);
+            this.label4.Font = new System.Drawing.Font("Sitka Subheading", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(88, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 46);
+            this.label4.Size = new System.Drawing.Size(189, 29);
             this.label4.TabIndex = 1;
-            this.label4.Text = "0";
+            this.label4.Text = "Today\'s Issued Book";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.panel4.BackColor = System.Drawing.Color.Silver;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.label7);
-            this.panel4.Controls.Add(this.TodayIssueBook);
-            this.panel4.Location = new System.Drawing.Point(646, 75);
+            this.panel4.Controls.Add(this.ReturnBooklabel);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.pictureBox3);
+            this.panel4.Location = new System.Drawing.Point(445, 195);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 165);
+            this.panel4.Size = new System.Drawing.Size(285, 81);
             this.panel4.TabIndex = 0;
             // 
-            // label7
+            // ReturnBooklabel
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Firebrick;
-            this.label7.Location = new System.Drawing.Point(8, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 25);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Today IssueBook";
+            this.ReturnBooklabel.AutoSize = true;
+            this.ReturnBooklabel.Font = new System.Drawing.Font("Sitka Subheading", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnBooklabel.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.ReturnBooklabel.Location = new System.Drawing.Point(144, 29);
+            this.ReturnBooklabel.Name = "ReturnBooklabel";
+            this.ReturnBooklabel.Size = new System.Drawing.Size(33, 39);
+            this.ReturnBooklabel.TabIndex = 1;
+            this.ReturnBooklabel.Text = "0";
+            this.ReturnBooklabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // TodayIssueBook
+            // label3
             // 
-            this.TodayIssueBook.AutoSize = true;
-            this.TodayIssueBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TodayIssueBook.Location = new System.Drawing.Point(79, 75);
-            this.TodayIssueBook.Name = "TodayIssueBook";
-            this.TodayIssueBook.Size = new System.Drawing.Size(42, 46);
-            this.TodayIssueBook.TabIndex = 1;
-            this.TodayIssueBook.Text = "0";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Sitka Subheading", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(84, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 29);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Today\'s Return Book";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.panel3.BackColor = System.Drawing.Color.Silver;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.TotalStudentLabel);
-            this.panel3.Location = new System.Drawing.Point(365, 75);
+            this.panel3.Controls.Add(this.Studentlabel);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Location = new System.Drawing.Point(445, 51);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(200, 165);
+            this.panel3.Size = new System.Drawing.Size(285, 81);
             this.panel3.TabIndex = 0;
             // 
-            // label6
+            // Studentlabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Firebrick;
-            this.label6.Location = new System.Drawing.Point(23, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 25);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Total Student";
+            this.Studentlabel.AutoSize = true;
+            this.Studentlabel.Font = new System.Drawing.Font("Sitka Subheading", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Studentlabel.ForeColor = System.Drawing.Color.DarkGreen;
+            this.Studentlabel.Location = new System.Drawing.Point(155, 30);
+            this.Studentlabel.Name = "Studentlabel";
+            this.Studentlabel.Size = new System.Drawing.Size(33, 39);
+            this.Studentlabel.TabIndex = 1;
+            this.Studentlabel.Text = "0";
+            this.Studentlabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // TotalStudentLabel
+            // label2
             // 
-            this.TotalStudentLabel.AutoSize = true;
-            this.TotalStudentLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalStudentLabel.Location = new System.Drawing.Point(75, 75);
-            this.TotalStudentLabel.Name = "TotalStudentLabel";
-            this.TotalStudentLabel.Size = new System.Drawing.Size(42, 46);
-            this.TotalStudentLabel.TabIndex = 1;
-            this.TotalStudentLabel.Text = "0";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sitka Subheading", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(101, 1);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 29);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Total Student";
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.panel2.BackColor = System.Drawing.Color.Silver;
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.TotalBookLabel);
-            this.panel2.Location = new System.Drawing.Point(79, 75);
+            this.panel2.Controls.Add(this.BookLabel);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(95, 51);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 165);
+            this.panel2.Padding = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.panel2.Size = new System.Drawing.Size(294, 81);
             this.panel2.TabIndex = 0;
             // 
-            // label5
+            // BookLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Firebrick;
-            this.label5.Location = new System.Drawing.Point(37, 20);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 25);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Total Book";
+            this.BookLabel.AutoSize = true;
+            this.BookLabel.Font = new System.Drawing.Font("Sitka Subheading", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookLabel.ForeColor = System.Drawing.Color.DarkRed;
+            this.BookLabel.Location = new System.Drawing.Point(131, 30);
+            this.BookLabel.Name = "BookLabel";
+            this.BookLabel.Size = new System.Drawing.Size(33, 39);
+            this.BookLabel.TabIndex = 1;
+            this.BookLabel.Text = "0";
+            this.BookLabel.Click += new System.EventHandler(this.label5_Click);
             // 
-            // TotalBookLabel
+            // label1
             // 
-            this.TotalBookLabel.AutoSize = true;
-            this.TotalBookLabel.BackColor = System.Drawing.Color.Transparent;
-            this.TotalBookLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalBookLabel.Location = new System.Drawing.Point(69, 75);
-            this.TotalBookLabel.Name = "TotalBookLabel";
-            this.TotalBookLabel.Size = new System.Drawing.Size(42, 46);
-            this.TotalBookLabel.TabIndex = 0;
-            this.TotalBookLabel.Text = "0";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Subheading", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(98, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(105, 29);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Total Book";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.BackgroundImage = global::Library.Properties.Resources.abcde;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 534);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(1231, 133);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(84, 81);
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(84, 81);
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(84, 81);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 81);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
             this.Size = new System.Drawing.Size(1231, 667);
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -285,6 +280,11 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,21 +294,20 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label TodayIssueBook;
-        private System.Windows.Forms.Label TotalBookLabel;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label TotalStudentLabel;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label TotalFine;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label TodayReturnBooklabel;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label ReturnBooklabel;
+        private System.Windows.Forms.Label issuedlabel;
+        private System.Windows.Forms.Label Studentlabel;
+        private System.Windows.Forms.Label BookLabel;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }

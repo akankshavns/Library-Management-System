@@ -28,19 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingBoard));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TransactionDetail = new System.Windows.Forms.Label();
             this.LibraryDetail = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Transaction = new System.Windows.Forms.Button();
             this.Library = new System.Windows.Forms.Button();
-            this.transaction1 = new Library.Management.Setting.Transaction();
-            this.library1 = new Library.Management.Setting.Library();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,15 +62,6 @@
             this.panel1.Size = new System.Drawing.Size(176, 37);
             this.panel1.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Library.Properties.Resources.Settings1;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(31, 32);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -82,8 +72,6 @@
             this.panel2.Controls.Add(this.LibraryDetail);
             this.panel2.Controls.Add(this.Transaction);
             this.panel2.Controls.Add(this.Library);
-            this.panel2.Controls.Add(this.transaction1);
-            this.panel2.Controls.Add(this.library1);
             this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1314, 652);
@@ -112,6 +100,15 @@
             this.LibraryDetail.TabIndex = 12;
             this.LibraryDetail.Text = "Logo, Library Name";
             this.LibraryDetail.Click += new System.EventHandler(this.LibraryDetail_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(31, 32);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Transaction
             // 
@@ -151,29 +148,6 @@
             this.Library.UseVisualStyleBackColor = false;
             this.Library.Click += new System.EventHandler(this.Library_Click);
             // 
-            // transaction1
-            // 
-            this.transaction1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.transaction1.BackColor = System.Drawing.Color.Snow;
-            this.transaction1.Location = new System.Drawing.Point(443, 0);
-            this.transaction1.Name = "transaction1";
-            this.transaction1.Size = new System.Drawing.Size(826, 635);
-            this.transaction1.TabIndex = 14;
-            this.transaction1.Visible = false;
-            // 
-            // library1
-            // 
-            this.library1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.library1.BackColor = System.Drawing.Color.Ivory;
-            this.library1.Location = new System.Drawing.Point(522, 0);
-            this.library1.Name = "library1";
-            this.library1.Size = new System.Drawing.Size(747, 637);
-            this.library1.TabIndex = 13;
-            this.library1.Visible = false;
-            // 
             // SettingBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,9 +160,9 @@
             this.Size = new System.Drawing.Size(1312, 651);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,7 +177,5 @@
         private System.Windows.Forms.Label LibraryDetail;
         private System.Windows.Forms.Button Transaction;
         private System.Windows.Forms.Button Library;
-        private Management.Setting.Transaction transaction1;
-        private Management.Setting.Library library1;
     }
 }

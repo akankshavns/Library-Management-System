@@ -27,9 +27,6 @@ namespace Library.FrontScreen
         private void Dashboard_Load(object sender, EventArgs e)
         {
             countOfAllrecods();
-
-           
-
         }
 
         public void countOfAllrecods()
@@ -48,16 +45,16 @@ namespace Library.FrontScreen
                         con.Open();
                         SqlCommand TotalBook = new SqlCommand(TBook, con);
                         int totalBook = (int)TotalBook.ExecuteScalar();
-                        TotalBookLabel.Text = totalBook.ToString();
+                        BookLabel.Text = totalBook.ToString();
                         SqlCommand TotalStudent = new SqlCommand(TStudent, con);
                         int totalStudent = (int)TotalStudent.ExecuteScalar();
-                        TotalStudentLabel.Text = totalStudent.ToString();
+                        Studentlabel.Text = totalStudent.ToString();
                         SqlCommand todayIssue = new SqlCommand(IssueBook, con);
                         int issueBook = (int)todayIssue.ExecuteScalar();
-                        TodayIssueBook.Text = issueBook.ToString();
+                        issuedlabel.Text = issueBook.ToString();
                         SqlCommand todayReturn = new SqlCommand(ReturnBook, con);
                         int returnBook = (int)todayReturn.ExecuteScalar();
-                        TodayReturnBooklabel.Text = issueBook.ToString();
+                        ReturnBooklabel.Text = issueBook.ToString();
 
 
                     }
@@ -71,6 +68,14 @@ namespace Library.FrontScreen
 
         }
 
-       
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

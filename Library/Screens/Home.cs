@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Management.Setting;
+using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -37,7 +38,7 @@ namespace Library
             else
             {
                 menuBar.Width += 10;
-                if (menuBar.Width >= 165)
+                if (menuBar.Width >=229)
                 {
                     sidebarExpand = true;
                     MenuSlider.Stop();
@@ -68,7 +69,9 @@ namespace Library
         }
         private void Books_Click_1(object sender, EventArgs e)
         {
+            
             BookManagementMenuSlider.Start();
+            Books.FlatAppearance.BorderColor = Color.Red;
             //bookBoard1.notshow();
             //bookBoard1.Show();
             //bookBoard1.BringToFront();
@@ -76,20 +79,25 @@ namespace Library
         }
         private void Student_Click(object sender, EventArgs e)
         {
+            
             StudentManagementMenuSlider.Start();
+            Student.FlatAppearance.BorderColor = Color.Red;
             //studentBoard1.notshow();
             //studentBoard1.Show();
             //studentBoard1.BringToFront();
         }
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            //dashboard1.countOfAllrecods();
-            //dashboard1.Show();
-            //dashboard1.BringToFront();
+            dashboard1.countOfAllrecods();
+            dashboard1.Show();
+            dashboard1.BringToFront();
         }
         private void Trsnsaction_Click(object sender, EventArgs e)
         {
+           
             TransactionManagementMenuSlider.Start();
+            Transaction.FlatAppearance.BorderColor = Color.Red;
+
             //transactionBoard1.notshow();
             //transactionBoard1.Show();
             //transactionBoard1.BringToFront();
@@ -101,6 +109,7 @@ namespace Library
         }
         private void Setting_Click(object sender, EventArgs e)
         {
+
             //settingBoard1.notshow();
             //settingBoard1.Show();
             //settingBoard1.BringToFront();
@@ -155,9 +164,9 @@ namespace Library
             //bin1.Show();
             //bin1.BringToFront();
         }
-        bool MenuButtonExpand=false;
-     
 
+        bool MenuButtonExpand=false;
+        
         private void BookManagementMenuSlider_Tick_1(object sender, EventArgs e)
         {
             if (MenuButtonExpand == false)
@@ -165,19 +174,17 @@ namespace Library
                 Abc.Height += 10;
                 if (Abc.Height >= 219)
                 {
-                    TransactionManagementMenuSlider.Enabled = true;
-                    StudentManagementMenuSlider.Enabled = true;
+                   
                     BookManagementMenuSlider.Stop();
                     MenuButtonExpand = true;
                 }
             }
             else
             {
+                Books.FlatAppearance.BorderColor = Color.Black;
                 Abc.Height -= 10;
                 if (Abc.Height <= 65)
                 {
-                    //TransactionManagementMenuSlider.Enabled = true;
-                    //StudentManagementMenuSlider.Enabled = true;
                     BookManagementMenuSlider.Stop();
                     MenuButtonExpand = false;
                 }
@@ -191,19 +198,17 @@ namespace Library
                 StudentMenuPanel.Height += 10;
                 if (StudentMenuPanel.Height >= 219)
                 {
-                    BookManagementMenuSlider.Enabled= true;
-                    TransactionManagementMenuSlider.Enabled = true;
+                    
                     StudentManagementMenuSlider.Stop();
                     MenuButtonExpand = true;
                 }
             }
             else
             {
+                Student.FlatAppearance.BorderColor = Color.Black;
                 StudentMenuPanel.Height -= 10;
                 if (StudentMenuPanel.Height <= 65)
                 {
-                    //BookManagementMenuSlider.Enabled = true;
-                    //TransactionManagementMenuSlider.Enabled = true;
                     StudentManagementMenuSlider.Stop();
                     MenuButtonExpand = false;
                 }
@@ -214,8 +219,7 @@ namespace Library
         {
             if (MenuButtonExpand == false)
             {
-                BookManagementMenuSlider.Enabled = true;
-                StudentManagementMenuSlider.Enabled = true;
+                
                 TransactionMenuePanel.Height += 10;
                 if (TransactionMenuePanel.Height >= 219)
                 {
@@ -226,15 +230,75 @@ namespace Library
             }
             else
             {
-               TransactionMenuePanel.Height -= 10;
+                Transaction.FlatAppearance.BorderColor = Color.Black;
+                TransactionMenuePanel.Height -= 10;
                 if (TransactionMenuePanel.Height <= 65)
                 {
-                    //BookManagementMenuSlider.Enabled = true;
-                    //StudentManagementMenuSlider.Enabled = true;
+                    
                     TransactionManagementMenuSlider.Stop();
                     MenuButtonExpand = false;
                 }
             }
+        }
+
+        private void AddBookPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewBookPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void updateBookPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddStudentPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewStudentPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdateStudentPageopen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReturnPageOpen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void issuePageopen_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dashboard1_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dashboard1_Load_2(object sender, EventArgs e)
+        {
+
         }
     }
 }
