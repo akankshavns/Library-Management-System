@@ -119,6 +119,7 @@
             this.Name = "Welcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "opening";
+            this.Load += new System.EventHandler(this.Welcome_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.opening_MouseDown);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.opening_MouseMove);
             this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.opening_MouseUp);

@@ -56,9 +56,9 @@
             this.dateBox = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
             this.ViewDetail = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.BackButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UpdatePannel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ViewDetail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,7 +66,7 @@
             // 
             // UpdatePannel
             // 
-            this.UpdatePannel.BackColor = System.Drawing.Color.LightGray;
+            this.UpdatePannel.BackColor = System.Drawing.Color.Gainsboro;
             this.UpdatePannel.Controls.Add(this.label15);
             this.UpdatePannel.Controls.Add(this.Updatebutton);
             this.UpdatePannel.Controls.Add(this.Publication);
@@ -109,11 +109,12 @@
             // 
             // Updatebutton
             // 
-            this.Updatebutton.BackColor = System.Drawing.Color.Green;
-            this.Updatebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Updatebutton.Location = new System.Drawing.Point(436, 185);
+            this.Updatebutton.BackColor = System.Drawing.Color.Teal;
+            this.Updatebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Updatebutton.ForeColor = System.Drawing.Color.White;
+            this.Updatebutton.Location = new System.Drawing.Point(436, 191);
             this.Updatebutton.Name = "Updatebutton";
-            this.Updatebutton.Size = new System.Drawing.Size(116, 62);
+            this.Updatebutton.Size = new System.Drawing.Size(131, 44);
             this.Updatebutton.TabIndex = 39;
             this.Updatebutton.Text = "Update";
             this.Updatebutton.UseVisualStyleBackColor = false;
@@ -121,7 +122,7 @@
             // 
             // Publication
             // 
-            this.Publication.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.Publication.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Publication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Publication.Location = new System.Drawing.Point(227, 134);
             this.Publication.Name = "Publication";
@@ -154,7 +155,7 @@
             // 
             // Quantity
             // 
-            this.Quantity.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.Quantity.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Quantity.Location = new System.Drawing.Point(905, 68);
             this.Quantity.Name = "Quantity";
@@ -175,7 +176,7 @@
             // 
             // AvailableBook
             // 
-            this.AvailableBook.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.AvailableBook.BackColor = System.Drawing.Color.WhiteSmoke;
             this.AvailableBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvailableBook.Location = new System.Drawing.Point(905, 100);
             this.AvailableBook.Name = "AvailableBook";
@@ -184,7 +185,7 @@
             // 
             // pages
             // 
-            this.pages.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.pages.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pages.Location = new System.Drawing.Point(557, 68);
             this.pages.Name = "pages";
@@ -193,7 +194,7 @@
             // 
             // volume
             // 
-            this.volume.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.volume.BackColor = System.Drawing.Color.WhiteSmoke;
             this.volume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.volume.Location = new System.Drawing.Point(557, 36);
             this.volume.Name = "volume";
@@ -214,7 +215,7 @@
             // 
             // Author
             // 
-            this.Author.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.Author.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Author.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Author.Location = new System.Drawing.Point(227, 102);
             this.Author.Name = "Author";
@@ -223,7 +224,7 @@
             // 
             // ID
             // 
-            this.ID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.ID.BackColor = System.Drawing.Color.White;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ID.Location = new System.Drawing.Point(227, 38);
             this.ID.Name = "ID";
@@ -256,7 +257,7 @@
             // 
             // price
             // 
-            this.price.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.price.BackColor = System.Drawing.Color.WhiteSmoke;
             this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price.Location = new System.Drawing.Point(905, 36);
             this.price.Name = "price";
@@ -313,7 +314,7 @@
             // 
             // Language
             // 
-            this.Language.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.Language.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Language.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Language.Location = new System.Drawing.Point(557, 100);
             this.Language.Name = "Language";
@@ -332,7 +333,7 @@
             // 
             // BName
             // 
-            this.BName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
+            this.BName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.BName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BName.Location = new System.Drawing.Point(227, 70);
             this.BName.Name = "BName";
@@ -375,18 +376,6 @@
             this.ViewDetail.TabIndex = 2;
             this.ViewDetail.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewDetail_CellClick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Search;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
-            this.pictureBox1.TabIndex = 27;
-            this.pictureBox1.TabStop = false;
-            // 
             // SearchBox
             // 
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -411,6 +400,18 @@
             this.BackButton.Size = new System.Drawing.Size(41, 16);
             this.BackButton.TabIndex = 84;
             this.BackButton.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Search;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(115, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 27);
+            this.pictureBox1.TabIndex = 27;
+            this.pictureBox1.TabStop = false;
             // 
             // update
             // 

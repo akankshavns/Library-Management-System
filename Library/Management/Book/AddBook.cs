@@ -33,8 +33,8 @@ namespace Library.BookManagement
         {
             Error();
             if (hasErrors == false)
-            {
                 AddBookDetailInDB();
+            {
             }
         }
         public void AddBookDetailInDB()

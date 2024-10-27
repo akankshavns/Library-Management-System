@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Auth;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -18,9 +19,8 @@ namespace Library
             if (load.Width >= 830)
             {
                 open.Stop();
-                LoginForm loginPage = new LoginForm();
-                loginPage.Show();
-                this.Hide();
+                Authentication Auth = new Authentication();
+                Auth.Show();
             }
         }
         private void opening_MouseMove(object sender, MouseEventArgs e)
@@ -39,6 +39,11 @@ namespace Library
         {
             drag = true;
             StartPoint = new Point(e.X, e.Y);
+        }
+
+        private void Welcome_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

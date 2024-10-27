@@ -121,6 +121,9 @@
   <data name="Settings1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Settings1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="images-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Homework1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Homework1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -154,11 +157,17 @@
   <data name="Book Adaptation" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Book Adaptation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Undo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Left Arrow" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Left Arrow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gemini_Generated_Image_awtmg9awtmg9awtm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemini_Generated_Image_awtmg9awtmg9awtm.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Squared Menu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Squared Menu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,11 +187,23 @@
   <data name="About1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\About1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="image_processing20220207-786-j68tnb" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\image_processing20220207-786-j68tnb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Gemini_Generated_Image_r02mxtr02mxtr02m1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemini_Generated_Image_r02mxtr02mxtr02m1.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Empty Trash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Empty Trash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="abcde" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\abcde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gemini_Generated_Image_r02mxtr02mxtr02m2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gemini_Generated_Image_r02mxtr02mxtr02m2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Student Exchange" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Student Exchange.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="used Check Book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\used Check Book1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Books Emoji" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Books Emoji.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,14 +220,20 @@
   <data name="Check Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Check Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Homework" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Homework.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="usedStudent Registration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedStudent Registration1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="newOne" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newOne.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="used Return Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\used Return Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Eyeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Eyeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usedUpdate" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedUpdate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +241,8 @@
   <data name="used Check Book" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\used Check Book.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Empty Trash1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Empty Trash1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usedFemale User Update" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedFemale User Update.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -229,17 +256,20 @@
   <data name="abc" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abc.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="used Check Book1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\used Check Book1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="image_processing20220207-786-j68tnb" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image_processing20220207-786-j68tnb.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Eyeline" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Eyeline.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Crown" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Crown.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Search" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Search.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Recent Celebrity" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recent Celebrity.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usedStudent Registration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedStudent Registration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lessopacityImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lessopacityImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Password Keyblack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Password Keyblack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,11 +280,17 @@
   <data name="usedstudent" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedstudent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Customer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Customer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="usedStreet View" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\usedStreet View.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Recent Celebrity1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Recent Celebrity1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Homework" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Homework.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="usedView" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\usedView.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,7 +298,10 @@
   <data name="Gemini_Generated_Image_r02mxtr02mxtr02m" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gemini_Generated_Image_r02mxtr02mxtr02m.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="abcde" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\abcde.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="usedStreet View" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\usedStreet View.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

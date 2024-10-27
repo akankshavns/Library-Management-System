@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Auth\Authentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\Authentication.Designer.cs">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\CreateAnAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Auth\CreateAnAccount.Designer.cs">
+      <DependentUpon>CreateAnAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Boards\Bin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -186,6 +198,12 @@
     <Compile Include="Management\Transaction\ViewTransaction.Designer.cs">
       <DependentUpon>ViewTransaction.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Auth\Authentication.resx">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Auth\CreateAnAccount.resx">
+      <DependentUpon>CreateAnAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Boards\Bin.resx">
       <DependentUpon>Bin.cs</DependentUpon>
     </EmbeddedResource>
@@ -420,6 +438,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\abcde.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newOne.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m1.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m2.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recent Celebrity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recent Celebrity1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gemini_Generated_Image_awtmg9awtmg9awtm.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lessopacityImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.loginpanel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.CreateNewAccount = new System.Windows.Forms.LinkLabel();
+            this.ForgotPassword = new System.Windows.Forms.CheckBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -40,21 +44,25 @@
             this.LoginButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.loginpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // loginpanel
             // 
             this.loginpanel.BackColor = System.Drawing.Color.Transparent;
+            this.loginpanel.Controls.Add(this.panel3);
+            this.loginpanel.Controls.Add(this.panel2);
+            this.loginpanel.Controls.Add(this.CreateNewAccount);
+            this.loginpanel.Controls.Add(this.ForgotPassword);
             this.loginpanel.Controls.Add(this.pictureBox2);
             this.loginpanel.Controls.Add(this.pictureBox4);
             this.loginpanel.Controls.Add(this.linkLabel3);
@@ -67,17 +75,63 @@
             this.loginpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginpanel.Location = new System.Drawing.Point(206, 169);
             this.loginpanel.Name = "loginpanel";
-            this.loginpanel.Size = new System.Drawing.Size(392, 285);
+            this.loginpanel.Size = new System.Drawing.Size(392, 291);
             this.loginpanel.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(115, 140);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 1);
+            this.panel3.TabIndex = 11;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Location = new System.Drawing.Point(113, 88);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(210, 1);
+            this.panel2.TabIndex = 10;
+            // 
+            // CreateNewAccount
+            // 
+            this.CreateNewAccount.AutoSize = true;
+            this.CreateNewAccount.BackColor = System.Drawing.Color.Transparent;
+            this.CreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewAccount.Location = new System.Drawing.Point(140, 236);
+            this.CreateNewAccount.Name = "CreateNewAccount";
+            this.CreateNewAccount.Size = new System.Drawing.Size(142, 17);
+            this.CreateNewAccount.TabIndex = 9;
+            this.CreateNewAccount.TabStop = true;
+            this.CreateNewAccount.Text = "Create an Account";
+            this.CreateNewAccount.Visible = false;
+            this.CreateNewAccount.VisitedLinkColor = System.Drawing.Color.White;
+            this.CreateNewAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateAnAccount_LinkClicked);
+            // 
+            // ForgotPassword
+            // 
+            this.ForgotPassword.AutoSize = true;
+            this.ForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.ForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPassword.Location = new System.Drawing.Point(178, 160);
+            this.ForgotPassword.Name = "ForgotPassword";
+            this.ForgotPassword.Size = new System.Drawing.Size(148, 21);
+            this.ForgotPassword.TabIndex = 8;
+            this.ForgotPassword.Text = "Forgot Password";
+            this.ForgotPassword.UseVisualStyleBackColor = false;
+            this.ForgotPassword.Visible = false;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Silver;
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
             this.pictureBox2.BackgroundImage = global::Library.Properties.Resources.Eyeline;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(301, 121);
+            this.pictureBox2.Location = new System.Drawing.Point(301, 120);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 25);
+            this.pictureBox2.Size = new System.Drawing.Size(23, 19);
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
@@ -109,7 +163,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::Library.Properties.Resources.Male_User;
+            this.pictureBox3.BackgroundImage = global::Library.Properties.Resources.User1;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(67, 62);
             this.pictureBox3.Name = "pictureBox3";
@@ -132,14 +186,14 @@
             // 
             // text_password
             // 
-            this.text_password.BackColor = System.Drawing.Color.Silver;
-            this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.text_password.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold);
-            this.text_password.ForeColor = System.Drawing.Color.Gray;
+            this.text_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_password.ForeColor = System.Drawing.SystemColors.MenuText;
             this.text_password.Location = new System.Drawing.Point(116, 120);
             this.text_password.Name = "text_password";
-            this.text_password.Size = new System.Drawing.Size(210, 28);
+            this.text_password.Size = new System.Drawing.Size(210, 19);
             this.text_password.TabIndex = 5;
             this.text_password.Text = "Password";
             this.text_password.MouseClick += new System.Windows.Forms.MouseEventHandler(this.text_password_MouseClick);
@@ -148,14 +202,14 @@
             // 
             // Text_UserName
             // 
-            this.Text_UserName.BackColor = System.Drawing.Color.Silver;
-            this.Text_UserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Text_UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
+            this.Text_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Text_UserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Text_UserName.Font = new System.Drawing.Font("Sitka Banner", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_UserName.ForeColor = System.Drawing.Color.Gray;
-            this.Text_UserName.Location = new System.Drawing.Point(116, 62);
+            this.Text_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_UserName.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.Text_UserName.Location = new System.Drawing.Point(114, 68);
             this.Text_UserName.Name = "Text_UserName";
-            this.Text_UserName.Size = new System.Drawing.Size(210, 28);
+            this.Text_UserName.Size = new System.Drawing.Size(210, 19);
             this.Text_UserName.TabIndex = 4;
             this.Text_UserName.Text = "User Name";
             this.Text_UserName.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Text_UserName_MouseClick);
@@ -167,7 +221,7 @@
             this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
-            this.LoginButton.Location = new System.Drawing.Point(147, 208);
+            this.LoginButton.Location = new System.Drawing.Point(149, 187);
             this.LoginButton.Name = "LoginButton";
             this.LoginButton.Size = new System.Drawing.Size(97, 44);
             this.LoginButton.TabIndex = 0;
@@ -193,16 +247,6 @@
             this.panel1.Size = new System.Drawing.Size(830, 65);
             this.panel1.TabIndex = 7;
             // 
-            // pictureBox1
-            // 
-           
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 78);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -210,6 +254,16 @@
             // errorProvider2
             // 
             this.errorProvider2.ContainerControl = this;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.logo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(84, 78);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -231,9 +285,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +309,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.ErrorProvider errorProvider2;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.CheckBox ForgotPassword;
+        public System.Windows.Forms.LinkLabel CreateNewAccount;
     }
 }

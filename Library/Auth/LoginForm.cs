@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Library.Auth;
+using System;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
@@ -25,7 +26,7 @@ namespace Library
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            loginpanel.BackColor = Color.FromArgb(60, 0, 0, 0);
+            loginpanel.BackColor = Color.FromArgb(40, 0, 0, 0);
         }
         private void LoginLogic()
         {
@@ -36,34 +37,66 @@ namespace Library
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string login = "Select * From Librarian where UserName=@username and Password = @password";
-                        SqlCommand cmd = new SqlCommand(login, con);
-                        cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
-                        cmd.Parameters.AddWithValue("@password", text_password.Text);
-                        con.Open();
-                        SqlDataReader reader = cmd.ExecuteReader();
-                        if (reader.Read())
+                        //this condition for Admin login form
+                        if (ForgotPassword.Visible == true && CreateNewAccount.Visible == true)
                         {
-                            this.Hide();
-                            Home hp = new Home();
-                            hp.Show();
+                            string login = "Select userName,Password From AdminTable  where UserName=@username and Password = @password";
+                            SqlCommand cmd = new SqlCommand(login, con);
+                            cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
+                            cmd.Parameters.AddWithValue("@password", text_password.Text);
+                            con.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                this.Hide();
+                                Home hp = new Home();
+                                hp.Show();
+                            }
+                            else
+                            {
+                                //Text_UserName.ForeColor = SystemColors.ControlLight;
+                                //text_password.ForeColor = SystemColors.ControlLight;
+                                MessageBox.Show("Incorrect user name and password");
+                                Text_UserName.Text = "User Name";
+                                text_password.UseSystemPasswordChar = isPasswordVisible;
+                                text_password.Text = "Password";
+                            }
+                            con.Close();
+                           
                         }
+                        // this logic for user login
                         else
                         {
-                            Text_UserName.ForeColor = SystemColors.ControlLight;
-                            text_password.ForeColor = SystemColors.ControlLight;
-                            MessageBox.Show("Incorrect user name and password");
-                            Text_UserName.Text = "User Name";
-                            text_password.UseSystemPasswordChar = isPasswordVisible;
-                            text_password.Text = "Password";
+                            string login = "Select * From Librarian where UserName=@username and Password = @password";
+                            SqlCommand cmd = new SqlCommand(login, con);
+                            cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
+                            cmd.Parameters.AddWithValue("@password", text_password.Text);
+                            con.Open();
+                            SqlDataReader reader = cmd.ExecuteReader();
+                            if (reader.Read())
+                            {
+                                this.Hide();
+                                Home hp = new Home();
+                                hp.Show();
+                            }
+                            else
+                            {
+                                //Text_UserName.ForeColor = SystemColors.ControlLight;
+                                //text_password.ForeColor = SystemColors.ControlLight;
+                                MessageBox.Show("Incorrect user name and password");
+                                Text_UserName.Text = "User Name";
+                                text_password.UseSystemPasswordChar = isPasswordVisible;
+                                text_password.Text = "Password";
+                            }
+                            con.Close();
                         }
-
                     }
                 }
             }
+
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("2",ex.Message);
             }    
         }
         private void LoginButton_Click(object sender, EventArgs e)
@@ -71,12 +104,12 @@ namespace Library
             bool hasErrors = false;         
             if (string.IsNullOrEmpty(Text_UserName.Text)|| Text_UserName.Text == "User Name")
             {
-                errorProvider1.SetError(Text_UserName, "Field 1 is required.");
+                errorProvider1.SetError(Text_UserName, "Please fill the user name");
                 hasErrors = true;
             }
             if (string.IsNullOrEmpty(text_password.Text) || text_password.Text == "Password")
             {
-                errorProvider2.SetError(text_password, "Field 2 is required.");
+                errorProvider2.SetError(text_password, "Please enter the password");
                 hasErrors = true;
             }
             if (!hasErrors)
@@ -144,6 +177,13 @@ namespace Library
         private void text_password_TextChanged(object sender, EventArgs e)
         {
             errorProvider2.SetError(text_password, "");
+        }
+
+        private void CreateAnAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateAnAccount Account = new CreateAnAccount();
+            Account.Show();
+
         }
     }
 }
