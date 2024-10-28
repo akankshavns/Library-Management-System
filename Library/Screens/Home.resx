@@ -205,6 +205,16 @@
   <metadata name="BookManagementMenuSlider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>212, 17</value>
   </metadata>
+  <data name="menuButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAOZJREFUSEvl
+        lNEKwyAMRfsJ++Ptz7b/6oON9iq5ukIg96HQA0FiToaVxe25lFJeZd/ff8NqSoewwsfih9VH21M6RBeQ
+        Dvy+yiEiDSqHiDSoHCLSoHIIFL4W87+x7vkfTTsExqCdagkelbRzD3DS+XrO4K9JO4QV6nWkHwefTzEc
+        ogtIB35f5RCRBpVDRBpUDhFpUDkECunHoa7ILx0CY9BOtQSPStq5BzjpfD1n8NekHcIK9TrSj4PPpxgO
+        0QWkA7+vcohIg8ohIg0qh4g0qBwChfTjUFfklw6BMWinWoJHJe08kW07AAj5z7DoyRAGAAAAAElFTkSu
+        QmCC
+</value>
+  </data>
   <data name="Dashboard.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAcRJREFUSEvV
@@ -216,16 +226,6 @@
         QhCLmGWjNhIPLTWNQ9cjoSYK0Sj12OYaQ6O55jhOqTT7Qwp/gLDnvEzXhZEKvsTwb7WbpauRsj0y5yj/
         s4RzXdI5Mn/nkgD98cgm674WS2QwZV9DXCx8GBkxEOZMTqxB311zJE9P6iOnKXse39M+FIBu56ilfI1g
         g+20D/o2CshAoArMdgYDwhrd3Y31B8myH5myXBEPotPKAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="menuButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAOZJREFUSEvl
-        lNEKwyAMRfsJ++Ptz7b/6oON9iq5ukIg96HQA0FiToaVxe25lFJeZd/ff8NqSoewwsfih9VH21M6RBeQ
-        Dvy+yiEiDSqHiDSoHCLSoHIIFL4W87+x7vkfTTsExqCdagkelbRzD3DS+XrO4K9JO4QV6nWkHwefTzEc
-        ogtIB35f5RCRBpVDRBpUDhFpUDkECunHoa7ILx0CY9BOtQSPStq5BzjpfD1n8NekHcIK9TrSj4PPpxgO
-        0QWkA7+vcohIg8ohIg0qh4g0qBwChfTjUFfklw6BMWinWoJHJe08kW07AAj5z7DoyRAGAAAAAElFTkSu
-        QmCC
 </value>
   </data>
   <data name="updateBookPageOpen.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

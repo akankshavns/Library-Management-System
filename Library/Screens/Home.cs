@@ -72,19 +72,13 @@ namespace Library
             
             BookManagementMenuSlider.Start();
             Books.FlatAppearance.BorderColor = Color.Red;
-            //bookBoard1.notshow();
-            //bookBoard1.Show();
-            //bookBoard1.BringToFront();
-
+            
         }
         private void Student_Click(object sender, EventArgs e)
         {
             
             StudentManagementMenuSlider.Start();
             Student.FlatAppearance.BorderColor = Color.Red;
-            //studentBoard1.notshow();
-            //studentBoard1.Show();
-            //studentBoard1.BringToFront();
         }
         private void Dashboard_Click(object sender, EventArgs e)
         {
@@ -98,9 +92,6 @@ namespace Library
             TransactionManagementMenuSlider.Start();
             Transaction.FlatAppearance.BorderColor = Color.Red;
 
-            //transactionBoard1.notshow();
-            //transactionBoard1.Show();
-            //transactionBoard1.BringToFront();
         }
 
         private void dashboard1_Load(object sender, EventArgs e)
@@ -174,7 +165,8 @@ namespace Library
                 Abc.Height += 10;
                 if (Abc.Height >= 219)
                 {
-                   
+                    StudentMenuPanel.Height = 65;
+                    TransactionMenuePanel.Height = 65;
                     BookManagementMenuSlider.Stop();
                     MenuButtonExpand = true;
                 }
@@ -198,7 +190,8 @@ namespace Library
                 StudentMenuPanel.Height += 10;
                 if (StudentMenuPanel.Height >= 219)
                 {
-                    
+                    Abc.Height = 65;
+                    TransactionMenuePanel.Height = 65;
                     StudentManagementMenuSlider.Stop();
                     MenuButtonExpand = true;
                 }
@@ -223,7 +216,8 @@ namespace Library
                 TransactionMenuePanel.Height += 10;
                 if (TransactionMenuePanel.Height >= 219)
                 {
-                   
+                    Abc.Height = 65;
+                    StudentMenuPanel.Height = 65;
                     TransactionManagementMenuSlider.Stop();
                     MenuButtonExpand = true;
                 }
@@ -243,60 +237,67 @@ namespace Library
 
         private void AddBookPageOpen_Click(object sender, EventArgs e)
         {
+            addBook1.Show();
+            addBook1.BringToFront();
 
         }
 
         private void ViewBookPageOpen_Click(object sender, EventArgs e)
         {
-
+            viewBook1.Show();
+            viewBook1.BringToFront();
         }
 
         private void updateBookPageOpen_Click(object sender, EventArgs e)
         {
-
+            //update1.Show();
+            //update1.BringToFront();
         }
 
         private void AddStudentPageOpen_Click(object sender, EventArgs e)
         {
-
+            //addStudent1.Show(); 
+            //addStudent1.BringToFront();
         }
 
         private void ViewStudentPageOpen_Click(object sender, EventArgs e)
         {
+            //viewStudent1.Show();
+            //viewStudent1.BringToFront();
 
         }
 
         private void UpdateStudentPageopen_Click(object sender, EventArgs e)
         {
+            //updateStudent1.Show();
+            //updateStudent1.BringToFront();
 
         }
 
         private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
         {
-
+            //viewTransaction1.Show();
+            //viewTransaction1.BringToFront();
         }
 
         private void ReturnPageOpen_Click(object sender, EventArgs e)
         {
-
+            //returnBook1.Show();
+            //returnBook1.BringToFront();
         }
 
         private void issuePageopen_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void dashboard1_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
+            //showBookDetail1.Show();
+            //showBookDetail1.BringToFront();
         }
 
         private void dashboard1_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void update1_Load(object sender, EventArgs e)
         {
 
         }

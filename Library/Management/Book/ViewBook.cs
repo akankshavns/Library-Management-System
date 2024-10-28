@@ -20,6 +20,7 @@ namespace Library.BookManagement
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
+      
         public ViewBook()
         {
             InitializeComponent();
@@ -69,6 +70,115 @@ namespace Library.BookManagement
             }
         }
         public string pages,AvailableBook, volume,Language, Quantity, price, dateBox, Publication, Author,BName, dbID,sno;
+
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                AcccessionID.Enabled = true;
+                BookName.Enabled = true;
+                BookPrice.Enabled = true;
+                NumOfPages.Enabled = true;
+                BookPublication.Enabled = true;
+                BookQuantity.Enabled = true;
+                BValume.Enabled = true;
+                Languages.Enabled = true;
+                BookAvailable.Enabled = true;
+                AuthorName.Enabled = true;
+
+
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                AcccessionID.Text= selectedRow.Cells[1].Value.ToString();
+                BookName.Text = selectedRow.Cells[2].Value.ToString();
+                AuthorName.Text = selectedRow.Cells[3].Value.ToString();
+                BookPublication.Text = selectedRow.Cells[4].Value.ToString();
+                purchaseDate.Value = Convert.ToDateTime(selectedRow.Cells[8].Value.ToString());
+                BookPrice.Text = selectedRow.Cells[9].Value.ToString();
+                BookQuantity.Text = selectedRow.Cells[10].Value.ToString();
+                Languages.Text = selectedRow.Cells[7].Value.ToString();
+                BValume.Text = selectedRow.Cells[5].Value.ToString();
+                BookAvailable.Text = selectedRow.Cells[11].Value.ToString();
+                NumOfPages.Text = selectedRow.Cells[6].Value.ToString();
+
+            }
+        }
+        private void ViewBook_Load(object sender, EventArgs e)
+        {
+            LoadBooks();
+        }
+
+        private void Updatebutton_Click(object sender, EventArgs e)
+        {
+            int sno = 0;
+            sno = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            string connectionString = GetConnectionString();
+            if (connectionString != null)
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, AVAILABLEBOOK = @availableBook WHERE SNO =" + sno + "";
+                    try
+                    {
+                        con.Open();
+                        SqlCommand cmd = new SqlCommand(updateBookDetail, con);
+                        cmd.Parameters.AddWithValue("@id", AcccessionID.Text);
+                        cmd.Parameters.AddWithValue("@name", BookName.Text);
+                        cmd.Parameters.AddWithValue("@author", AuthorName.Text);
+                        cmd.Parameters.AddWithValue("@publication", BookPublication.Text);
+                        cmd.Parameters.AddWithValue("@volume", BValume.Text);
+                        cmd.Parameters.AddWithValue("@pages", NumOfPages.Text);
+                        cmd.Parameters.AddWithValue("@language", Languages.Text);
+                        cmd.Parameters.AddWithValue("@bookdate", purchaseDate.Value);
+                        cmd.Parameters.AddWithValue("@price", BookPrice.Text);
+                        cmd.Parameters.AddWithValue("@quantity", BookQuantity.Text);
+                        cmd.Parameters.AddWithValue("@availableBook",BookAvailable.Text);
+                        int i = cmd.ExecuteNonQuery();
+                        if (i >= 1)
+                        {
+                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            {
+                                if (Convert.ToInt32(row.Cells["SNO"].Value) == sno)
+                                {
+                                    // Update the corresponding cells in the selected row
+                                    row.Cells["Accession_No"].Value = AcccessionID.Text;
+                                    row.Cells["BookName"].Value = BookName.Text;
+                                    row.Cells["AuthorName"].Value = AuthorName.Text;
+                                    row.Cells["Publication"].Value = BookPublication.Text;
+                                    row.Cells["volume"].Value = BValume.Text;
+                                    row.Cells["pages"].Value = NumOfPages.Text;
+                                    row.Cells["Language"].Value = Languages.Text;
+                                    row.Cells["BookDate"].Value = purchaseDate.Text;
+                                    row.Cells["Price"].Value = BookPrice.Text;
+                                    row.Cells["Quantity"].Value = BookQuantity.Text;
+                                    row.Cells["AvailableBook"].Value = BookAvailable.Text;
+                                    break;
+                                }
+                            }
+                            MessageBox.Show("updated successfully");
+                        }
+                        else
+                        {
+                            MessageBox.Show("something went wrong");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                }
+            }
+        }
+
+       
+
+        private void updateSectionButton_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Width = 685;
+            updateSection.Visible = true;
+
+        }
+
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

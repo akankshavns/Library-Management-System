@@ -190,7 +190,7 @@
             this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_password.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.text_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.text_password.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.text_password.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.text_password.Location = new System.Drawing.Point(116, 120);
             this.text_password.Name = "text_password";
             this.text_password.Size = new System.Drawing.Size(210, 19);
@@ -206,7 +206,7 @@
             this.Text_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Text_UserName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.Text_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Text_UserName.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.Text_UserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Text_UserName.Location = new System.Drawing.Point(114, 68);
             this.Text_UserName.Name = "Text_UserName";
             this.Text_UserName.Size = new System.Drawing.Size(210, 19);

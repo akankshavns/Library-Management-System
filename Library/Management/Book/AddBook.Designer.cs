@@ -58,7 +58,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BookDate = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
-            this.Return = new System.Windows.Forms.Button();
             this.errorInID = new System.Windows.Forms.ErrorProvider(this.components);
             this.block = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPages = new System.Windows.Forms.ErrorProvider(this.components);
@@ -71,8 +70,9 @@
             this.errorProviderAuthor = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPrice = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.panel6 = new System.Windows.Forms.Panel();
             this.BackButton = new System.Windows.Forms.Button();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.Return = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
@@ -87,7 +87,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,7 +94,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.Controls.Add(this.OPTION);
             this.panel1.Controls.Add(this.label15);
             this.panel1.Controls.Add(this.AddButton);
@@ -123,9 +122,8 @@
             this.panel1.Controls.Add(this.Return);
             this.panel1.Location = new System.Drawing.Point(95, 31);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(832, 444);
+            this.panel1.Size = new System.Drawing.Size(851, 489);
             this.panel1.TabIndex = 20;
-          
             // 
             // OPTION
             // 
@@ -427,7 +425,7 @@
             this.BookDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.BookDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.BookDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookDate.Location = new System.Drawing.Point(453, 301);
+            this.BookDate.Location = new System.Drawing.Point(440, 246);
             this.BookDate.MaxDate = new System.DateTime(2024, 10, 16, 0, 0, 0, 0);
             this.BookDate.Name = "BookDate";
             this.BookDate.Size = new System.Drawing.Size(201, 26);
@@ -443,19 +441,6 @@
             this.BName.Size = new System.Drawing.Size(201, 26);
             this.BName.TabIndex = 58;
             this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
-            // 
-            // Return
-            // 
-            this.Return.BackColor = System.Drawing.Color.White;
-            this.Return.FlatAppearance.BorderSize = 0;
-            this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Return.Image = global::Library.Properties.Resources.Undo;
-            this.Return.Location = new System.Drawing.Point(640, 214);
-            this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(23, 26);
-            this.Return.TabIndex = 82;
-            this.Return.UseVisualStyleBackColor = false;
-            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // errorInID
             // 
@@ -507,6 +492,17 @@
             // 
             this.errorProvider10.ContainerControl = this;
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel6.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
+            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 539);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1039, 135);
+            this.panel6.TabIndex = 84;
+            // 
             // BackButton
             // 
             this.BackButton.BackColor = System.Drawing.Color.Transparent;
@@ -520,27 +516,30 @@
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // pictureBox5
+            // Return
             // 
-            this.pictureBox5.BackgroundImage = global::Library.Properties.Resources.abcde;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 506);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(1020, 133);
-            this.pictureBox5.TabIndex = 84;
-            this.pictureBox5.TabStop = false;
+            this.Return.BackColor = System.Drawing.Color.White;
+            this.Return.FlatAppearance.BorderSize = 0;
+            this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Return.Image = global::Library.Properties.Resources.Undo;
+            this.Return.Location = new System.Drawing.Point(640, 214);
+            this.Return.Name = "Return";
+            this.Return.Size = new System.Drawing.Size(23, 26);
+            this.Return.TabIndex = 82;
+            this.Return.UseVisualStyleBackColor = false;
+            this.Return.Visible = false;
+            this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.pictureBox5);
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.panel6);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
             this.Name = "AddBook";
-            this.Size = new System.Drawing.Size(1020, 629);
+            this.Size = new System.Drawing.Size(1039, 674);
             this.Load += new System.EventHandler(this.AddBook_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -558,7 +557,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderAuthor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -607,6 +605,6 @@
         private System.Windows.Forms.ErrorProvider errorProviderPrice;
         private System.Windows.Forms.ErrorProvider errorProvider10;
         private System.Windows.Forms.Button BackButton;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Panel panel6;
     }
 }

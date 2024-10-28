@@ -54,8 +54,8 @@ namespace Library
                             }
                             else
                             {
-                                //Text_UserName.ForeColor = SystemColors.ControlLight;
-                                //text_password.ForeColor = SystemColors.ControlLight;
+                                Text_UserName.ForeColor = SystemColors.ControlDarkDark;
+                                text_password.ForeColor = SystemColors.ControlDarkDark;
                                 MessageBox.Show("Incorrect user name and password");
                                 Text_UserName.Text = "User Name";
                                 text_password.UseSystemPasswordChar = isPasswordVisible;
@@ -81,8 +81,8 @@ namespace Library
                             }
                             else
                             {
-                                //Text_UserName.ForeColor = SystemColors.ControlLight;
-                                //text_password.ForeColor = SystemColors.ControlLight;
+                                Text_UserName.ForeColor = SystemColors.ControlDarkDark;
+                                text_password.ForeColor = SystemColors.ControlDarkDark;
                                 MessageBox.Show("Incorrect user name and password");
                                 Text_UserName.Text = "User Name";
                                 text_password.UseSystemPasswordChar = isPasswordVisible;

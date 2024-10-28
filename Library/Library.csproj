@@ -68,29 +68,11 @@
     <Compile Include="Boards\Bin.Designer.cs">
       <DependentUpon>Bin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Boards\BookBoard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boards\BookBoard.Designer.cs">
-      <DependentUpon>BookBoard.cs</DependentUpon>
-    </Compile>
     <Compile Include="Boards\SettingBoard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Boards\SettingBoard.Designer.cs">
       <DependentUpon>SettingBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Boards\StudentBoard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boards\StudentBoard.Designer.cs">
-      <DependentUpon>StudentBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Boards\TransactionBoard.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Boards\TransactionBoard.Designer.cs">
-      <DependentUpon>TransactionBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Design\RoundPictureBox.cs">
       <SubType>Component</SubType>
@@ -207,17 +189,8 @@
     <EmbeddedResource Include="Boards\Bin.resx">
       <DependentUpon>Bin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Boards\BookBoard.resx">
-      <DependentUpon>BookBoard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Boards\SettingBoard.resx">
       <DependentUpon>SettingBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boards\StudentBoard.resx">
-      <DependentUpon>StudentBoard.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Boards\TransactionBoard.resx">
-      <DependentUpon>TransactionBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\RoundPictureBox.resx">
       <DependentUpon>RoundPictureBox.cs</DependentUpon>
@@ -477,6 +450,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\library image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shelve.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloadreal book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\this is for Use.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\thisIsFinal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updatebutton1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

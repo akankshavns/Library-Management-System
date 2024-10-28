@@ -55,17 +55,18 @@
             this.MenuSlider = new System.Windows.Forms.Timer(this.components);
             this.close = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.Dashboard = new System.Windows.Forms.Button();
+            this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.Dashboard = new System.Windows.Forms.Button();
             this.Abc = new System.Windows.Forms.Panel();
             this.updateBookPageOpen = new System.Windows.Forms.Button();
             this.Books = new System.Windows.Forms.Button();
             this.ViewBookPageOpen = new System.Windows.Forms.Button();
             this.AddBookPageOpen = new System.Windows.Forms.Button();
-            this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
-            this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.StudentMenuPanel = new System.Windows.Forms.Panel();
             this.UpdateStudentPageopen = new System.Windows.Forms.Button();
             this.ViewStudentPageOpen = new System.Windows.Forms.Button();
@@ -79,6 +80,8 @@
             this.StudentManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.TransactionManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.dashboard1 = new Library.FrontScreen.Dashboard();
+            this.addBook1 = new Library.BookManagement.AddBook();
+            this.viewBook1 = new Library.BookManagement.ViewBook();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -89,18 +92,19 @@
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).BeginInit();
-            this.panel10.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.Abc.SuspendLayout();
             this.BookManagementMenuContainer.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.menuBar.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.Abc.SuspendLayout();
             this.StudentMenuPanel.SuspendLayout();
             this.TransactionMenuePanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(65)))));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.BookBoard);
             this.panel2.Controls.Add(this.Heading);
@@ -112,7 +116,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1370, 70);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -378,6 +381,73 @@
             this.BookManagementMenuSlider.Interval = 1;
             this.BookManagementMenuSlider.Tick += new System.EventHandler(this.BookManagementMenuSlider_Tick_1);
             // 
+            // BookManagementMenuContainer
+            // 
+            this.BookManagementMenuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            this.BookManagementMenuContainer.Controls.Add(this.panel5);
+            this.BookManagementMenuContainer.Controls.Add(this.menuBar);
+            this.BookManagementMenuContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookManagementMenuContainer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BookManagementMenuContainer.Location = new System.Drawing.Point(0, 70);
+            this.BookManagementMenuContainer.Name = "BookManagementMenuContainer";
+            this.BookManagementMenuContainer.Size = new System.Drawing.Size(1370, 679);
+            this.BookManagementMenuContainer.TabIndex = 10;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.viewBook1);
+            this.panel5.Controls.Add(this.dashboard1);
+            this.panel5.Controls.Add(this.addBook1);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(229, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1141, 679);
+            this.panel5.TabIndex = 10;
+            // 
+            // menuBar
+            // 
+            this.menuBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(1)))), ((int)(((byte)(55)))));
+            this.menuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.menuBar.Controls.Add(this.panel6);
+            this.menuBar.Controls.Add(this.panel10);
+            this.menuBar.Controls.Add(this.Abc);
+            this.menuBar.Controls.Add(this.StudentMenuPanel);
+            this.menuBar.Controls.Add(this.TransactionMenuePanel);
+            this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuBar.Location = new System.Drawing.Point(0, 0);
+            this.menuBar.Name = "menuBar";
+            this.menuBar.Size = new System.Drawing.Size(229, 679);
+            this.menuBar.TabIndex = 9;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Transparent;
+            this.panel6.Controls.Add(this.menuButton);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(52, 48);
+            this.panel6.TabIndex = 7;
+            // 
+            // menuButton
+            // 
+            this.menuButton.BackColor = System.Drawing.Color.Transparent;
+            this.menuButton.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.menuButton.FlatAppearance.BorderSize = 0;
+            this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
+            this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menuButton.Location = new System.Drawing.Point(7, 4);
+            this.menuButton.Name = "menuButton";
+            this.menuButton.Size = new System.Drawing.Size(39, 38);
+            this.menuButton.TabIndex = 2;
+            this.menuButton.UseVisualStyleBackColor = false;
+            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.Transparent;
@@ -408,34 +478,6 @@
             this.Dashboard.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.Dashboard.UseVisualStyleBackColor = false;
             this.Dashboard.Click += new System.EventHandler(this.Dashboard_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Transparent;
-            this.panel6.Controls.Add(this.menuButton);
-            this.panel6.Location = new System.Drawing.Point(3, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(52, 48);
-            this.panel6.TabIndex = 7;
-            // 
-            // menuButton
-            // 
-            this.menuButton.BackColor = System.Drawing.Color.Transparent;
-            this.menuButton.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.menuButton.FlatAppearance.BorderSize = 0;
-            this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menuButton.Location = new System.Drawing.Point(7, 4);
-            this.menuButton.Name = "menuButton";
-            this.menuButton.Size = new System.Drawing.Size(39, 38);
-            this.menuButton.TabIndex = 2;
-            this.menuButton.UseVisualStyleBackColor = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
             // 
             // Abc
             // 
@@ -533,34 +575,6 @@
             this.AddBookPageOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.AddBookPageOpen.UseVisualStyleBackColor = false;
             this.AddBookPageOpen.Click += new System.EventHandler(this.AddBookPageOpen_Click);
-            // 
-            // BookManagementMenuContainer
-            // 
-            this.BookManagementMenuContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
-            this.BookManagementMenuContainer.Controls.Add(this.dashboard1);
-            this.BookManagementMenuContainer.Controls.Add(this.menuBar);
-            this.BookManagementMenuContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BookManagementMenuContainer.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BookManagementMenuContainer.Location = new System.Drawing.Point(0, 70);
-            this.BookManagementMenuContainer.Name = "BookManagementMenuContainer";
-            this.BookManagementMenuContainer.Size = new System.Drawing.Size(1370, 655);
-            this.BookManagementMenuContainer.TabIndex = 10;
-            // 
-            // menuBar
-            // 
-            this.menuBar.BackColor = System.Drawing.Color.Gray;
-            this.menuBar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.menuBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.menuBar.Controls.Add(this.panel6);
-            this.menuBar.Controls.Add(this.panel10);
-            this.menuBar.Controls.Add(this.Abc);
-            this.menuBar.Controls.Add(this.StudentMenuPanel);
-            this.menuBar.Controls.Add(this.TransactionMenuePanel);
-            this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuBar.Location = new System.Drawing.Point(0, 0);
-            this.menuBar.Name = "menuBar";
-            this.menuBar.Size = new System.Drawing.Size(229, 655);
-            this.menuBar.TabIndex = 9;
             // 
             // StudentMenuPanel
             // 
@@ -686,7 +700,7 @@
             this.Transaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Transaction.Location = new System.Drawing.Point(6, 6);
             this.Transaction.Name = "Transaction";
-            this.Transaction.Size = new System.Drawing.Size(201, 52);
+            this.Transaction.Size = new System.Drawing.Size(201, 51);
             this.Transaction.TabIndex = 9;
             this.Transaction.Text = "   Transaction\r\n   Management";
             this.Transaction.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -769,19 +783,42 @@
             // 
             // dashboard1
             // 
-            this.dashboard1.BackColor = System.Drawing.Color.White;
-            this.dashboard1.Location = new System.Drawing.Point(231, 0);
+            this.dashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dashboard1.Location = new System.Drawing.Point(0, 4);
             this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1231, 667);
-            this.dashboard1.TabIndex = 10;
-            this.dashboard1.Load += new System.EventHandler(this.dashboard1_Load_2);
+            this.dashboard1.Size = new System.Drawing.Size(1141, 681);
+            this.dashboard1.TabIndex = 0;
+            // 
+            // addBook1
+            // 
+            this.addBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addBook1.Location = new System.Drawing.Point(-2, -2);
+            this.addBook1.Name = "addBook1";
+            this.addBook1.Size = new System.Drawing.Size(1149, 691);
+            this.addBook1.TabIndex = 1;
+            // 
+            // viewBook1
+            // 
+            this.viewBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.viewBook1.Location = new System.Drawing.Point(0, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1141, 681);
+            this.viewBook1.TabIndex = 2;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(1370, 725);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.BookManagementMenuContainer);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -804,11 +841,12 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HomeLogo)).EndInit();
-            this.panel10.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.Abc.ResumeLayout(false);
             this.BookManagementMenuContainer.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
             this.menuBar.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.Abc.ResumeLayout(false);
             this.StudentMenuPanel.ResumeLayout(false);
             this.TransactionMenuePanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -822,27 +860,7 @@
         private System.Windows.Forms.Timer close;
         public System.Windows.Forms.PictureBox HomeLogo;
         private System.Windows.Forms.Timer BookManagementMenuSlider;
-        private System.Windows.Forms.Button Student;
-        private System.Windows.Forms.Button Transaction;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Button Dashboard;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Button menuButton;
-        private System.Windows.Forms.Panel Abc;
-        private System.Windows.Forms.Button updateBookPageOpen;
-        private System.Windows.Forms.Button Books;
-        private System.Windows.Forms.Button ViewBookPageOpen;
-        private System.Windows.Forms.Button AddBookPageOpen;
         private System.Windows.Forms.Panel BookManagementMenuContainer;
-        private System.Windows.Forms.FlowLayoutPanel menuBar;
-        private System.Windows.Forms.Panel StudentMenuPanel;
-        private System.Windows.Forms.Button UpdateStudentPageopen;
-        private System.Windows.Forms.Button ViewStudentPageOpen;
-        private System.Windows.Forms.Button AddStudentPageOpen;
-        private System.Windows.Forms.Panel TransactionMenuePanel;
-        private System.Windows.Forms.Button ReturnPageOpen;
-        private System.Windows.Forms.Button ViewIssuedPageOpen;
-        private System.Windows.Forms.Button issuePageopen;
         private System.Windows.Forms.Timer StudentManagementMenuSlider;
         private System.Windows.Forms.Timer TransactionManagementMenuSlider;
         private System.Windows.Forms.Panel panel4;
@@ -864,6 +882,29 @@
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Label AddBook;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.FlowLayoutPanel menuBar;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button menuButton;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Button Dashboard;
+        private System.Windows.Forms.Panel Abc;
+        private System.Windows.Forms.Button updateBookPageOpen;
+        private System.Windows.Forms.Button Books;
+        private System.Windows.Forms.Button ViewBookPageOpen;
+        private System.Windows.Forms.Button AddBookPageOpen;
+        private System.Windows.Forms.Panel StudentMenuPanel;
+        private System.Windows.Forms.Button UpdateStudentPageopen;
+        private System.Windows.Forms.Button ViewStudentPageOpen;
+        private System.Windows.Forms.Button AddStudentPageOpen;
+        private System.Windows.Forms.Button Student;
+        private System.Windows.Forms.Panel TransactionMenuePanel;
+        private System.Windows.Forms.Button Transaction;
+        private System.Windows.Forms.Button ReturnPageOpen;
+        private System.Windows.Forms.Button ViewIssuedPageOpen;
+        private System.Windows.Forms.Button issuePageopen;
+        private System.Windows.Forms.Panel panel5;
         private FrontScreen.Dashboard dashboard1;
+        private BookManagement.AddBook addBook1;
+        private BookManagement.ViewBook viewBook1;
     }
 }

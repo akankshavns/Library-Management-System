@@ -365,7 +365,7 @@ namespace Library.BookManagement
         private void AddBook_Load(object sender, EventArgs e)
         {
             BookDate.MaxDate = DateTime.Now;
-            BookDate.Value = DateTime.Now;
+            //BookDate.Value = DateTime.Now;
         }
 
        
