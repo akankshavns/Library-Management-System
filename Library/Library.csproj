@@ -83,12 +83,6 @@
     <Compile Include="Management\Book\AddBook.Designer.cs">
       <DependentUpon>AddBook.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management\Book\update.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Management\Book\update.Designer.cs">
-      <DependentUpon>update.cs</DependentUpon>
-    </Compile>
     <Compile Include="Management\Book\ViewBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,9 +191,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Book\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Management\Book\update.resx">
-      <DependentUpon>update.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Book\ViewBook.resx">
       <DependentUpon>ViewBook.cs</DependentUpon>
@@ -465,6 +456,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\updatebutton1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\libraryWithBook.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lesscolor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

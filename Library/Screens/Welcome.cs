@@ -21,6 +21,7 @@ namespace Library
                 open.Stop();
                 Authentication Auth = new Authentication();
                 Auth.Show();
+                this.Hide();
             }
         }
         private void opening_MouseMove(object sender, MouseEventArgs e)
@@ -42,6 +43,11 @@ namespace Library
         }
 
         private void Welcome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Heading_Click(object sender, EventArgs e)
         {
 
         }

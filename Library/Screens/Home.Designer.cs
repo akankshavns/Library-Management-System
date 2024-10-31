@@ -57,6 +57,10 @@
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dashboard1 = new Library.FrontScreen.Dashboard();
+            this.addBook1 = new Library.BookManagement.AddBook();
+            this.viewBook1 = new Library.BookManagement.ViewBook();
+            this.addStudent1 = new Library.StudentManagement.AddStudent();
             this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
@@ -79,9 +83,6 @@
             this.issuePageopen = new System.Windows.Forms.Button();
             this.StudentManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.TransactionManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
-            this.dashboard1 = new Library.FrontScreen.Dashboard();
-            this.addBook1 = new Library.BookManagement.AddBook();
-            this.viewBook1 = new Library.BookManagement.ViewBook();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -395,14 +396,50 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.viewBook1);
             this.panel5.Controls.Add(this.dashboard1);
             this.panel5.Controls.Add(this.addBook1);
+            this.panel5.Controls.Add(this.viewBook1);
+            this.panel5.Controls.Add(this.addStudent1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1141, 679);
             this.panel5.TabIndex = 10;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1141, 679);
+            this.dashboard1.TabIndex = 0;
+            // 
+            // addBook1
+            // 
+            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addBook1.Location = new System.Drawing.Point(0, 0);
+            this.addBook1.Name = "addBook1";
+            this.addBook1.Size = new System.Drawing.Size(1141, 679);
+            this.addBook1.TabIndex = 1;
+            // 
+            // viewBook1
+            // 
+            this.viewBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewBook1.Location = new System.Drawing.Point(0, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1141, 679);
+            this.viewBook1.TabIndex = 2;
+            // 
+            // addStudent1
+            // 
+            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addStudent1.Location = new System.Drawing.Point(0, 0);
+            this.addStudent1.Name = "addStudent1";
+            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.addStudent1.TabIndex = 3;
             // 
             // menuBar
             // 
@@ -781,38 +818,6 @@
             this.TransactionManagementMenuSlider.Interval = 1;
             this.TransactionManagementMenuSlider.Tick += new System.EventHandler(this.TransactionManagementMenuSlider_Tick);
             // 
-            // dashboard1
-            // 
-            this.dashboard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dashboard1.Location = new System.Drawing.Point(0, 4);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1141, 681);
-            this.dashboard1.TabIndex = 0;
-            // 
-            // addBook1
-            // 
-            this.addBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addBook1.Location = new System.Drawing.Point(-2, -2);
-            this.addBook1.Name = "addBook1";
-            this.addBook1.Size = new System.Drawing.Size(1149, 691);
-            this.addBook1.TabIndex = 1;
-            // 
-            // viewBook1
-            // 
-            this.viewBook1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.viewBook1.Location = new System.Drawing.Point(0, 0);
-            this.viewBook1.Name = "viewBook1";
-            this.viewBook1.Size = new System.Drawing.Size(1141, 681);
-            this.viewBook1.TabIndex = 2;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -906,5 +911,6 @@
         private FrontScreen.Dashboard dashboard1;
         private BookManagement.AddBook addBook1;
         private BookManagement.ViewBook viewBook1;
+        private StudentManagement.AddStudent addStudent1;
     }
 }

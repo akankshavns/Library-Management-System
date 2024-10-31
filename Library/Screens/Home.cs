@@ -108,6 +108,7 @@ namespace Library
 
         private void Home_Load(object sender, EventArgs e)
         {
+
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
@@ -244,6 +245,7 @@ namespace Library
 
         private void ViewBookPageOpen_Click(object sender, EventArgs e)
         {
+            viewBook1.LoadBooks();
             viewBook1.Show();
             viewBook1.BringToFront();
         }
@@ -256,8 +258,8 @@ namespace Library
 
         private void AddStudentPageOpen_Click(object sender, EventArgs e)
         {
-            //addStudent1.Show(); 
-            //addStudent1.BringToFront();
+            addStudent1.Show();
+            addStudent1.BringToFront();
         }
 
         private void ViewStudentPageOpen_Click(object sender, EventArgs e)

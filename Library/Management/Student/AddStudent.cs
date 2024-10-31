@@ -94,7 +94,7 @@ namespace Library.StudentManagement
                             FatherName.Clear();
                             MotherName.Clear();
                             Department.Clear();
-                            Contact.Text="+91";
+                            Contact.Clear();
                             Address.Clear();
                             Email.Clear();
                         }
@@ -122,12 +122,12 @@ namespace Library.StudentManagement
             {
                 ContactNumbercheck.SetError(Contact, "Contact number must be exactly 10 digits.");
             }
-            if (Contact.Text.Length > 13)
+            if (Contact.Text.Length > 10)
             {
                 Contact.Text = Contact.Text.Substring(0, 10);
                 Contact.SelectionStart = Contact.Text.Length; 
             }
-            if(Contact.Text.Length == 13)
+            if(Contact.Text.Length == 10)
             {
                 ContactNumbercheck.SetError(Contact, "");
             }
@@ -135,7 +135,7 @@ namespace Library.StudentManagement
         public void check()
         {
             
-            if (Contact.Text=="+91")
+            if (string.IsNullOrEmpty(Contact.Text))
             {
                 CheckContact.SetError(Contact, "This field is required");
             }

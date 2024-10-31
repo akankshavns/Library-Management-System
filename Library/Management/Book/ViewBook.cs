@@ -20,16 +20,12 @@ namespace Library.BookManagement
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
-      
+
         public ViewBook()
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Visible = false;
-        }
+
         private void SearchBox_Click(object sender, EventArgs e)
         {
             SearchBox.Clear();
@@ -37,7 +33,6 @@ namespace Library.BookManagement
         }
 
         DataTable booksTable = new DataTable();
-       
         private void textBox1_KeyUp_1(object sender, KeyEventArgs e)
         {
             DataView dv = booksTable.DefaultView;
@@ -47,13 +42,12 @@ namespace Library.BookManagement
         public void LoadBooks()
         {
             booksTable.Clear();
-
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT * FROM ADDBOOKS";
+                    string viewdata = "SELECT sno ,Accession_No,BookName,AuthorName,Publication,volume,pages,Language,BookDate,Price,Quantity,catagory  FROM ADDBOOKS";
                     try
                     {
                         con.Open();
@@ -61,6 +55,18 @@ namespace Library.BookManagement
                         SqlDataReader reader = cmd.ExecuteReader();
                         booksTable.Load(reader);
                         dataGridView1.DataSource = booksTable;
+                        dataGridView1.Columns["sno"].HeaderText = "Serial No";
+                        dataGridView1.Columns["Accession_No"].HeaderText = "Accession Number";
+                        dataGridView1.Columns["BookName"].HeaderText = "Book Title";
+                        dataGridView1.Columns["AuthorName"].HeaderText = "Author";
+                        dataGridView1.Columns["Publication"].HeaderText = "Publisher";
+                        dataGridView1.Columns["volume"].HeaderText = "Volume";
+                        dataGridView1.Columns["pages"].HeaderText = "Pages";
+                        dataGridView1.Columns["Language"].HeaderText = "Language";
+                        dataGridView1.Columns["BookDate"].HeaderText = "Date Added";
+                        dataGridView1.Columns["Price"].HeaderText = "Price";
+                        dataGridView1.Columns["Quantity"].HeaderText = "Quantity";
+                        dataGridView1.Columns["catagory"].HeaderText = "Category";
                     }
                     catch (Exception ex)
                     {
@@ -71,6 +77,7 @@ namespace Library.BookManagement
         }
         public string pages,AvailableBook, volume,Language, Quantity, price, dateBox, Publication, Author,BName, dbID,sno;
 
+        
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,10 +91,8 @@ namespace Library.BookManagement
                 BookQuantity.Enabled = true;
                 BValume.Enabled = true;
                 Languages.Enabled = true;
-                BookAvailable.Enabled = true;
+               
                 AuthorName.Enabled = true;
-
-
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
                 AcccessionID.Text= selectedRow.Cells[1].Value.ToString();
                 BookName.Text = selectedRow.Cells[2].Value.ToString();
@@ -98,7 +103,7 @@ namespace Library.BookManagement
                 BookQuantity.Text = selectedRow.Cells[10].Value.ToString();
                 Languages.Text = selectedRow.Cells[7].Value.ToString();
                 BValume.Text = selectedRow.Cells[5].Value.ToString();
-                BookAvailable.Text = selectedRow.Cells[11].Value.ToString();
+                catagory.Text= selectedRow.Cells["catagory"].Value.ToString();
                 NumOfPages.Text = selectedRow.Cells[6].Value.ToString();
 
             }
@@ -111,74 +116,82 @@ namespace Library.BookManagement
         private void Updatebutton_Click(object sender, EventArgs e)
         {
             int sno = 0;
-            sno = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-            string connectionString = GetConnectionString();
-            if (connectionString != null)
+            if (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells[0].Value != null)
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                sno = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            
+                string connectionString = GetConnectionString();
+                if (connectionString != null)
                 {
-                    string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, AVAILABLEBOOK = @availableBook WHERE SNO =" + sno + "";
-                    try
+                    using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        con.Open();
-                        SqlCommand cmd = new SqlCommand(updateBookDetail, con);
-                        cmd.Parameters.AddWithValue("@id", AcccessionID.Text);
-                        cmd.Parameters.AddWithValue("@name", BookName.Text);
-                        cmd.Parameters.AddWithValue("@author", AuthorName.Text);
-                        cmd.Parameters.AddWithValue("@publication", BookPublication.Text);
-                        cmd.Parameters.AddWithValue("@volume", BValume.Text);
-                        cmd.Parameters.AddWithValue("@pages", NumOfPages.Text);
-                        cmd.Parameters.AddWithValue("@language", Languages.Text);
-                        cmd.Parameters.AddWithValue("@bookdate", purchaseDate.Value);
-                        cmd.Parameters.AddWithValue("@price", BookPrice.Text);
-                        cmd.Parameters.AddWithValue("@quantity", BookQuantity.Text);
-                        cmd.Parameters.AddWithValue("@availableBook",BookAvailable.Text);
-                        int i = cmd.ExecuteNonQuery();
-                        if (i >= 1)
+                        string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, Catagory=@catagory WHERE SNO =" + sno + "";
+                        try
                         {
-                            foreach (DataGridViewRow row in dataGridView1.Rows)
+                            con.Open();
+                            SqlCommand cmd = new SqlCommand(updateBookDetail, con);
+                            cmd.Parameters.AddWithValue("@id", AcccessionID.Text);
+                            cmd.Parameters.AddWithValue("@name", BookName.Text);
+                            cmd.Parameters.AddWithValue("@author", AuthorName.Text);
+                            cmd.Parameters.AddWithValue("@publication", BookPublication.Text);
+                            cmd.Parameters.AddWithValue("@volume", BValume.Text);
+                            cmd.Parameters.AddWithValue("@pages", NumOfPages.Text);
+                            cmd.Parameters.AddWithValue("@language", Languages.Text);
+                            cmd.Parameters.AddWithValue("@bookdate", purchaseDate.Value);
+                            cmd.Parameters.AddWithValue("@price", BookPrice.Text);
+                            cmd.Parameters.AddWithValue("@quantity", BookQuantity.Text);
+                            cmd.Parameters.AddWithValue("@catagory",catagory.Text);
+                           
+                            int i = cmd.ExecuteNonQuery();
+                            if (i >= 1)
                             {
-                                if (Convert.ToInt32(row.Cells["SNO"].Value) == sno)
+                                foreach (DataGridViewRow row in dataGridView1.Rows)
                                 {
-                                    // Update the corresponding cells in the selected row
-                                    row.Cells["Accession_No"].Value = AcccessionID.Text;
-                                    row.Cells["BookName"].Value = BookName.Text;
-                                    row.Cells["AuthorName"].Value = AuthorName.Text;
-                                    row.Cells["Publication"].Value = BookPublication.Text;
-                                    row.Cells["volume"].Value = BValume.Text;
-                                    row.Cells["pages"].Value = NumOfPages.Text;
-                                    row.Cells["Language"].Value = Languages.Text;
-                                    row.Cells["BookDate"].Value = purchaseDate.Text;
-                                    row.Cells["Price"].Value = BookPrice.Text;
-                                    row.Cells["Quantity"].Value = BookQuantity.Text;
-                                    row.Cells["AvailableBook"].Value = BookAvailable.Text;
-                                    break;
+                                    if (Convert.ToInt32(row.Cells["SNO"].Value) == sno)
+                                    {
+                                        // Update the corresponding cells in the selected row
+                                        row.Cells["Accession_No"].Value = AcccessionID.Text;
+                                        row.Cells["BookName"].Value = BookName.Text;
+                                        row.Cells["AuthorName"].Value = AuthorName.Text;
+                                        row.Cells["Publication"].Value = BookPublication.Text;
+                                        row.Cells["volume"].Value = BValume.Text;
+                                        row.Cells["pages"].Value = NumOfPages.Text;
+                                        row.Cells["Language"].Value = Languages.Text;
+                                        row.Cells["BookDate"].Value = purchaseDate.Text;
+                                        row.Cells["Price"].Value = BookPrice.Text;
+                                        row.Cells["Quantity"].Value = BookQuantity.Text;
+                                        row.Cells["catagory"].Value = catagory.Text;
+                                            
+                                       
+                                        break;
+                                    }
                                 }
+                                MessageBox.Show("updated successfully");
+                                updateSection.Visible= false;
+                                dataGridView1.Width = 1075;
                             }
-                            MessageBox.Show("updated successfully");
+                            else
+                            {
+                                MessageBox.Show("something went wrong");
+                            }
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            MessageBox.Show("something went wrong");
+                            MessageBox.Show(ex.Message);
                         }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
                     }
                 }
             }
+            else
+            {
+                MessageBox.Show("Please select any row.");
+            }
         }
-
-       
-
         private void updateSectionButton_Click(object sender, EventArgs e)
         {
             dataGridView1.Width = 685;
             updateSection.Visible = true;
-
         }
-
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -194,7 +207,7 @@ namespace Library.BookManagement
                 Quantity = selectedRow.Cells[10].Value.ToString();
                 Language = selectedRow.Cells[7].Value.ToString();
                 volume = selectedRow.Cells[5].Value.ToString();
-                AvailableBook = selectedRow.Cells[11].Value.ToString();
+                catagory.Text = selectedRow.Cells[11].Value.ToString();
                 pages = selectedRow.Cells[6].Value.ToString();
 
             }
@@ -233,6 +246,7 @@ namespace Library.BookManagement
                                 if (deleted >= 1) 
                                 {
                                     MessageBox.Show("This record deleted successfully");
+
                                 }
 
                             }

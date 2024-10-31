@@ -52,7 +52,7 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string addBook = "Insert into AddBooks values(@Id,@Name,@Author,@Publication,@Valume,@page,@Language,@BookDate,@Price,@quantity,@availableBook)";
+                    string addBook = "Insert into AddBooks values(@Id,@Name,@Author,@Publication,@Valume,@page,@Language,@BookDate,@Price,@quantity,@availableBook, @catagory,@status)";
                     try
                     {
                         con.Open();
@@ -68,6 +68,8 @@ namespace Library.BookManagement
                         cmd.Parameters.AddWithValue("@Price", price.Text);
                         cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
                         cmd.Parameters.AddWithValue("@availableBook", AvailableBook.Text);
+                        cmd.Parameters.AddWithValue("@catagory",catagory.Text);
+                        cmd.Parameters.AddWithValue("@status", "Retained");
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
                         {
@@ -364,11 +366,9 @@ namespace Library.BookManagement
 
         private void AddBook_Load(object sender, EventArgs e)
         {
-            BookDate.MaxDate = DateTime.Now;
-            //BookDate.Value = DateTime.Now;
+            BookDate.MaxDate = DateTime.Now.AddSeconds(1);
+            BookDate.Value = DateTime.Now;
         }
-
-       
     }
 
 }

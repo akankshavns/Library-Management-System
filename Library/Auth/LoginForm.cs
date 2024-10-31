@@ -75,6 +75,7 @@ namespace Library
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())
                             {
+                                
                                 this.Hide();
                                 Home hp = new Home();
                                 hp.Show();

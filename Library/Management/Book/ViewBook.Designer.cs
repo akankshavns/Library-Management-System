@@ -31,13 +31,11 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.updateSectionButton = new Library.Design.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.updateSection = new System.Windows.Forms.Panel();
             this.purchaseDate = new System.Windows.Forms.DateTimePicker();
             this.Updatebutton = new System.Windows.Forms.Button();
-            this.BookAvailable = new System.Windows.Forms.TextBox();
             this.BookQuantity = new System.Windows.Forms.TextBox();
             this.BookPrice = new System.Windows.Forms.TextBox();
             this.Languages = new System.Windows.Forms.TextBox();
@@ -60,26 +58,33 @@
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.updateSectionButton = new Library.Design.RoundPictureBox();
+            this.catagory = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.updateSection.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 6);
+            this.dataGridView1.Location = new System.Drawing.Point(48, 12);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1056, 408);
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(759, 381);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
@@ -88,7 +93,7 @@
             // 
             this.SearchBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.SystemColors.ScrollBar;
-            this.SearchBox.Location = new System.Drawing.Point(29, 36);
+            this.SearchBox.Location = new System.Drawing.Point(35, 19);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Size = new System.Drawing.Size(207, 27);
@@ -99,6 +104,7 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.updateSectionButton);
             this.panel2.Controls.Add(this.label1);
@@ -107,39 +113,27 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1086, 68);
+            this.panel2.Size = new System.Drawing.Size(1236, 68);
             this.panel2.TabIndex = 23;
-            // 
-            // updateSectionButton
-            // 
-            this.updateSectionButton.BackgroundImage = global::Library.Properties.Resources.updatebutton;
-            this.updateSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateSectionButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.updateSectionButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.updateSectionButton.Location = new System.Drawing.Point(967, 0);
-            this.updateSectionButton.Name = "updateSectionButton";
-            this.updateSectionButton.Size = new System.Drawing.Size(117, 66);
-            this.updateSectionButton.TabIndex = 28;
-            this.updateSectionButton.TabStop = false;
-            this.updateSectionButton.Click += new System.EventHandler(this.updateSectionButton_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 18.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
-            this.label1.Location = new System.Drawing.Point(438, 20);
+            this.label1.Location = new System.Drawing.Point(420, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(276, 26);
+            this.label1.Size = new System.Drawing.Size(363, 35);
             this.label1.TabIndex = 27;
             this.label1.Text = "Library Books Recods...";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.Search;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(4, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(26, 27);
             this.pictureBox1.TabIndex = 25;
@@ -147,9 +141,9 @@
             // 
             // updateSection
             // 
+            this.updateSection.Controls.Add(this.catagory);
             this.updateSection.Controls.Add(this.purchaseDate);
             this.updateSection.Controls.Add(this.Updatebutton);
-            this.updateSection.Controls.Add(this.BookAvailable);
             this.updateSection.Controls.Add(this.BookQuantity);
             this.updateSection.Controls.Add(this.BookPrice);
             this.updateSection.Controls.Add(this.Languages);
@@ -171,9 +165,9 @@
             this.updateSection.Controls.Add(this.label4);
             this.updateSection.Controls.Add(this.label8);
             this.updateSection.Dock = System.Windows.Forms.DockStyle.Right;
-            this.updateSection.Location = new System.Drawing.Point(664, 0);
+            this.updateSection.Location = new System.Drawing.Point(814, 0);
             this.updateSection.Name = "updateSection";
-            this.updateSection.Size = new System.Drawing.Size(422, 417);
+            this.updateSection.Size = new System.Drawing.Size(422, 393);
             this.updateSection.TabIndex = 24;
             this.updateSection.Visible = false;
             // 
@@ -197,15 +191,6 @@
             this.Updatebutton.Text = "Update";
             this.Updatebutton.UseVisualStyleBackColor = false;
             this.Updatebutton.Click += new System.EventHandler(this.Updatebutton_Click);
-            // 
-            // BookAvailable
-            // 
-            this.BookAvailable.Enabled = false;
-            this.BookAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookAvailable.Location = new System.Drawing.Point(232, 327);
-            this.BookAvailable.Name = "BookAvailable";
-            this.BookAvailable.Size = new System.Drawing.Size(171, 26);
-            this.BookAvailable.TabIndex = 55;
             // 
             // BookQuantity
             // 
@@ -296,9 +281,9 @@
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label15.Location = new System.Drawing.Point(16, 322);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(152, 25);
+            this.label15.Size = new System.Drawing.Size(92, 25);
             this.label15.TabIndex = 54;
-            this.label15.Text = "Available Books";
+            this.label15.Text = "Catogory";
             // 
             // label6
             // 
@@ -422,23 +407,65 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
             this.panel1.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 485);
+            this.panel1.Location = new System.Drawing.Point(0, 461);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1086, 99);
+            this.panel1.Size = new System.Drawing.Size(1236, 99);
             this.panel1.TabIndex = 25;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.updateSection);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(0, 68);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1086, 417);
+            this.panel3.Size = new System.Drawing.Size(1236, 393);
             this.panel3.TabIndex = 26;
+            // 
+            // updateSectionButton
+            // 
+            this.updateSectionButton.BackgroundImage = global::Library.Properties.Resources.updatebutton;
+            this.updateSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateSectionButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.updateSectionButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.updateSectionButton.Location = new System.Drawing.Point(1117, 0);
+            this.updateSectionButton.Name = "updateSectionButton";
+            this.updateSectionButton.Size = new System.Drawing.Size(117, 66);
+            this.updateSectionButton.TabIndex = 28;
+            this.updateSectionButton.TabStop = false;
+            this.updateSectionButton.Click += new System.EventHandler(this.updateSectionButton_Click);
+            // 
+            // catagory
+            // 
+            this.catagory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.catagory.FormattingEnabled = true;
+            this.catagory.Items.AddRange(new object[] {
+            "Subjective/Acadmic Book",
+            "Magagin",
+            "News Paper",
+            "Non-Fiction",
+            "Fiction",
+            "Comics",
+            "Children’s Books",
+            "Comics and Graphic Novels",
+            "Technology and Computers",
+            "Hobbies and Interests",
+            "Health and Wellness",
+            "Business and Economics",
+            "Religious/Spiritual",
+            "",
+            "",
+            "",
+            ""});
+            this.catagory.Location = new System.Drawing.Point(232, 327);
+            this.catagory.Name = "catagory";
+            this.catagory.Size = new System.Drawing.Size(171, 28);
+            this.catagory.TabIndex = 84;
             // 
             // ViewBook
             // 
@@ -448,16 +475,16 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Name = "ViewBook";
-            this.Size = new System.Drawing.Size(1086, 584);
+            this.Size = new System.Drawing.Size(1236, 560);
             this.Load += new System.EventHandler(this.ViewBook_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.updateSection.ResumeLayout(false);
             this.updateSection.PerformLayout();
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -481,7 +508,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox BookAvailable;
         private System.Windows.Forms.TextBox BookQuantity;
         private System.Windows.Forms.TextBox BookPrice;
         private System.Windows.Forms.TextBox Languages;
@@ -496,5 +522,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button Updatebutton;
         private System.Windows.Forms.DateTimePicker purchaseDate;
+        private System.Windows.Forms.ComboBox catagory;
     }
 }
