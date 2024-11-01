@@ -264,15 +264,15 @@ namespace Library
 
         private void ViewStudentPageOpen_Click(object sender, EventArgs e)
         {
-            //viewStudent1.Show();
-            //viewStudent1.BringToFront();
+            viewStudent1.Show();
+            viewStudent1.BringToFront();
 
         }
 
         private void UpdateStudentPageopen_Click(object sender, EventArgs e)
         {
-            //updateStudent1.Show();
-            //updateStudent1.BringToFront();
+            updateStudent1.Show();
+            updateStudent1.BringToFront();
 
         }
 
@@ -292,16 +292,6 @@ namespace Library
         {
             //showBookDetail1.Show();
             //showBookDetail1.BringToFront();
-        }
-
-        private void dashboard1_Load_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void update1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

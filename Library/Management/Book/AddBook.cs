@@ -19,13 +19,7 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Visible = false;
-            clearText(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
-            ClearErrorProvider();
-        }
+       
         
         bool hasErrors = false;
         string Language;
@@ -34,8 +28,7 @@ namespace Library.BookManagement
             Error();
             if (hasErrors == false)
                 AddBookDetailInDB();
-            {
-            }
+          
         }
         public void AddBookDetailInDB()
         {
@@ -47,6 +40,7 @@ namespace Library.BookManagement
             {
                 Language = "Hindi";
             }
+
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
@@ -67,14 +61,14 @@ namespace Library.BookManagement
                         cmd.Parameters.AddWithValue("@BookDate", BookDate.Text);
                         cmd.Parameters.AddWithValue("@Price", price.Text);
                         cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
-                        cmd.Parameters.AddWithValue("@availableBook", AvailableBook.Text);
+                        cmd.Parameters.AddWithValue("@availableBook", Quantity.Text);
                         cmd.Parameters.AddWithValue("@catagory",catagory.Text);
-                        cmd.Parameters.AddWithValue("@status", "Retained");
+                        cmd.Parameters.AddWithValue("@status", "fRetained");
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
                         {
                             MessageBox.Show("Book added successfully");
-                            clearText(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
+                            clearText(BName, Author, Publication, pages, volume, Quantity, price);
                         }
                         else
                         {
@@ -118,11 +112,12 @@ namespace Library.BookManagement
                 errorProviderPublicatioin.SetError(Publication, "This Field is required.");
                 hasErrors = true;
             }
-            if (string.IsNullOrEmpty(AvailableBook.Text))
+            if (string.IsNullOrEmpty(catagory.Text))
             {
-                errorProviderAvailableBook.SetError(AvailableBook, "This Field is required.");
+                errorProviderAvailableBook.SetError(catagory, "please select the item.");
                 hasErrors = true;
             }
+
             if (string.IsNullOrEmpty(pages.Text))
             {
                 errorProviderPages.SetError(pages, "This Field is required.");
@@ -189,11 +184,7 @@ namespace Library.BookManagement
             hasErrors = false;
         }
 
-        private void AvailableBook_TextChanged(object sender, EventArgs e)
-        {
-            errorProviderAvailableBook.SetError(AvailableBook, "");
-            hasErrors = false;
-        }
+       
         
         private void OtherLanguage_Click(object sender, EventArgs e)
         {
@@ -205,6 +196,7 @@ namespace Library.BookManagement
         {
             OPTION.Hide();
             OtherLanguage.BringToFront();
+            Return.Visible = true;
             OtherLanguage.Visible = true;
             Language = OtherLanguage.Text;
 
@@ -217,7 +209,7 @@ namespace Library.BookManagement
             OtherLanguage.Visible = false;
             other.Checked = false;
         }
-        public void clearText(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.TextBox AvailableBook)
+        public void clearText(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price)
         {
             ID.Clear();
             BName.Clear();
@@ -227,9 +219,9 @@ namespace Library.BookManagement
             volume.Clear();
             Quantity.Clear();
             price.Clear();
-            AvailableBook.Clear();
+          
         }
-        public void Enable(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.TextBox AvailableBook
+        public void Enable(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.ComboBox catogary
             )
         {
             BName.Enabled = false;
@@ -239,9 +231,9 @@ namespace Library.BookManagement
             volume.Enabled = false;
             Quantity.Enabled = false;
             price.Enabled = false;
-            AvailableBook.Enabled = false;
+            catagory.Enabled = false;
         }
-        public void disable(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.TextBox AvailableBook)
+        public void disable(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.ComboBox catogry)
         {
             BName.Enabled = true;
             Author.Enabled = true;
@@ -250,7 +242,7 @@ namespace Library.BookManagement
             volume.Enabled = true;
             Quantity.Enabled = true;
             price.Enabled = true;
-            AvailableBook.Enabled = true;
+            catagory.Enabled = true;
         }
         private void ID_KeyUp(object sender, KeyEventArgs e)
         {
@@ -268,13 +260,13 @@ namespace Library.BookManagement
                         SqlDataReader reader = comm.ExecuteReader();
                         if (reader.Read())
                         {
-                            Enable(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
+                            Enable(BName, Author, Publication, pages, volume, Quantity, price,catagory);
                             block.SetError(ID, "This book is already exist in the library.");
                         }
                         else
                         {
                             block.SetError(ID, "");
-                            disable(BName, Author, Publication, pages, volume, Quantity, price, AvailableBook);
+                            disable(BName, Author, Publication, pages, volume, Quantity, price,catagory);
                         }
                     }
                     catch (Exception )
@@ -339,18 +331,6 @@ namespace Library.BookManagement
             }
         }
 
-        private void AvailableBook_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
-            {
-                e.Handled = true;
-                errorProviderAvailableBook.SetError(AvailableBook, "This text box only accepts numeric characters.");
-            }
-            else
-            {
-                errorProviderVolume.SetError(volume, "");
-            }
-        }
         void ClearErrorProvider()
         {
             errorProviderAuthor.Clear();
@@ -368,6 +348,18 @@ namespace Library.BookManagement
         {
             BookDate.MaxDate = DateTime.Now.AddSeconds(1);
             BookDate.Value = DateTime.Now;
+        }
+
+       
+
+        private void catagory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (catagory.SelectedIndex != -1) 
+            {
+                
+                errorProviderAvailableBook.SetError(catagory, string.Empty);
+                hasErrors = false; 
+            }
         }
     }
 

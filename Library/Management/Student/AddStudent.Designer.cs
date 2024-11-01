@@ -36,6 +36,7 @@
             this.upload = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.AddStudentInDBO = new System.Windows.Forms.Button();
+            this.AddStudent_picture = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.Department = new System.Windows.Forms.TextBox();
             this.MotherName = new System.Windows.Forms.TextBox();
@@ -59,8 +60,8 @@
             this.EmailCheck = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderimageUpload = new System.Windows.Forms.ErrorProvider(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AddStudent_picture = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.FatherNameCheck)).BeginInit();
@@ -72,7 +73,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmailCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderimageUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -164,6 +164,19 @@
             this.AddStudentInDBO.Text = "Add";
             this.AddStudentInDBO.UseVisualStyleBackColor = false;
             this.AddStudentInDBO.Click += new System.EventHandler(this.AddStudentInDBO_Click);
+            // 
+            // AddStudent_picture
+            // 
+            this.AddStudent_picture.BackColor = System.Drawing.Color.Gray;
+            this.AddStudent_picture.BackgroundImage = global::Library.Properties.Resources.humanbeing1;
+            this.AddStudent_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddStudent_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.AddStudent_picture.Location = new System.Drawing.Point(741, 67);
+            this.AddStudent_picture.Name = "AddStudent_picture";
+            this.AddStudent_picture.Size = new System.Drawing.Size(159, 176);
+            this.AddStudent_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.AddStudent_picture.TabIndex = 13;
+            this.AddStudent_picture.TabStop = false;
             // 
             // label4
             // 
@@ -337,16 +350,6 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // AddStudent_picture
-            // 
-            this.AddStudent_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddStudent_picture.Location = new System.Drawing.Point(741, 67);
-            this.AddStudent_picture.Name = "AddStudent_picture";
-            this.AddStudent_picture.Size = new System.Drawing.Size(159, 176);
-            this.AddStudent_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.AddStudent_picture.TabIndex = 13;
-            this.AddStudent_picture.TabStop = false;
-            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +359,10 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(1231, 667);
+           
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.FatherNameCheck)).EndInit();
@@ -369,7 +374,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmailCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderimageUpload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).EndInit();
             this.ResumeLayout(false);
 
         }

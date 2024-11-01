@@ -27,12 +27,7 @@ namespace Library.StudentManagement
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Visible = false;
-            ClearErrorProviderAndTextBox();
-        }
+
         private void upload_Click(object sender, EventArgs e)
         {
             try
@@ -47,7 +42,7 @@ namespace Library.StudentManagement
             }
             catch (Exception ex)
             {
-                MessageBox.Show("1",ex.Message);
+                MessageBox.Show("1", ex.Message);
             }
         }
 
@@ -75,15 +70,15 @@ namespace Library.StudentManagement
                         }
                         File.Copy(studentImgPath, path, true);
                         SqlCommand cmd = new SqlCommand(AddStudent, con);
-                        cmd.Parameters.AddWithValue("@Enrollment",EnrollmentNo.Text);
-                        cmd.Parameters.AddWithValue("@StudentName",StudentName.Text);
-                        cmd.Parameters.AddWithValue("@FatherName",FatherName.Text);
-                        cmd.Parameters.AddWithValue("@MotherName",MotherName.Text);
+                        cmd.Parameters.AddWithValue("@Enrollment", EnrollmentNo.Text);
+                        cmd.Parameters.AddWithValue("@StudentName", StudentName.Text);
+                        cmd.Parameters.AddWithValue("@FatherName", FatherName.Text);
+                        cmd.Parameters.AddWithValue("@MotherName", MotherName.Text);
                         cmd.Parameters.AddWithValue("@StudentImage", path);
-                        cmd.Parameters.AddWithValue("@Department",Department.Text);
-                        cmd.Parameters.AddWithValue("@Contact",Contact.Text);
-                        cmd.Parameters.AddWithValue("@Email",Email.Text);
-                        cmd.Parameters.AddWithValue("@Address",Address.Text);
+                        cmd.Parameters.AddWithValue("@Department", Department.Text);
+                        cmd.Parameters.AddWithValue("@Contact", Contact.Text);
+                        cmd.Parameters.AddWithValue("@Email", Email.Text);
+                        cmd.Parameters.AddWithValue("@Address", Address.Text);
                         int isValueInsert = cmd.ExecuteNonQuery();
                         if (isValueInsert >= 1)
                         {
@@ -107,6 +102,8 @@ namespace Library.StudentManagement
             }
 
         }
+
+
         private void Contact_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -225,5 +222,24 @@ namespace Library.StudentManagement
         {
             AddressCheck.SetError(Address, "");
         }
+
+        //private void AddStudent_Load(object sender, EventArgs e)
+        //{
+        //    // Path to default image file
+        //    string defaultImagePath = Path.Combine(System.Windows.Forms.Application.StartupPath, "Image", "humanbeing.jpg");
+
+
+        //    // Check if the default image exists and set it
+        //    if (File.Exists(defaultImagePath))
+        //        {
+        //            AddStudent_picture.ImageLocation = defaultImagePath;
+        //        }
+        //        else
+        //        {
+        //            MessageBox.Show("Default image not found.");
+        //        }
+            
+
+        }
     }
-}
+

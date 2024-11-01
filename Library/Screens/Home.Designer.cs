@@ -57,10 +57,12 @@
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.addStudent1 = new Library.StudentManagement.AddStudent();
+            this.updateStudent1 = new Library.StudentManagement.UpdateStudent();
+            this.viewStudent1 = new Library.StudentManagement.viewStudent();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
             this.addBook1 = new Library.BookManagement.AddBook();
             this.viewBook1 = new Library.BookManagement.ViewBook();
-            this.addStudent1 = new Library.StudentManagement.AddStudent();
             this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
@@ -396,15 +398,44 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.addStudent1);
+            this.panel5.Controls.Add(this.updateStudent1);
+            this.panel5.Controls.Add(this.viewStudent1);
             this.panel5.Controls.Add(this.dashboard1);
             this.panel5.Controls.Add(this.addBook1);
             this.panel5.Controls.Add(this.viewBook1);
-            this.panel5.Controls.Add(this.addStudent1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1141, 679);
             this.panel5.TabIndex = 10;
+            // 
+            // addStudent1
+            // 
+            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addStudent1.Location = new System.Drawing.Point(0, 0);
+            this.addStudent1.Name = "addStudent1";
+            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.addStudent1.TabIndex = 3;
+           
+            // 
+            // updateStudent1
+            // 
+            this.updateStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.updateStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.updateStudent1.Location = new System.Drawing.Point(0, 0);
+            this.updateStudent1.Name = "updateStudent1";
+            this.updateStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.updateStudent1.TabIndex = 5;
+            // 
+            // viewStudent1
+            // 
+            this.viewStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewStudent1.Location = new System.Drawing.Point(0, 0);
+            this.viewStudent1.Name = "viewStudent1";
+            this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.viewStudent1.TabIndex = 4;
             // 
             // dashboard1
             // 
@@ -431,15 +462,6 @@
             this.viewBook1.Name = "viewBook1";
             this.viewBook1.Size = new System.Drawing.Size(1141, 679);
             this.viewBook1.TabIndex = 2;
-            // 
-            // addStudent1
-            // 
-            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addStudent1.Location = new System.Drawing.Point(0, 0);
-            this.addStudent1.Name = "addStudent1";
-            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.addStudent1.TabIndex = 3;
             // 
             // menuBar
             // 
@@ -912,5 +934,7 @@
         private BookManagement.AddBook addBook1;
         private BookManagement.ViewBook viewBook1;
         private StudentManagement.AddStudent addStudent1;
+        private StudentManagement.UpdateStudent updateStudent1;
+        private StudentManagement.viewStudent viewStudent1;
     }
 }
