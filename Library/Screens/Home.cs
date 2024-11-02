@@ -1,5 +1,4 @@
-﻿using Library.Management.Setting;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
@@ -38,7 +37,7 @@ namespace Library
             else
             {
                 menuBar.Width += 10;
-                if (menuBar.Width >=229)
+                if (menuBar.Width >= 229)
                 {
                     sidebarExpand = true;
                     MenuSlider.Stop();
@@ -69,14 +68,14 @@ namespace Library
         }
         private void Books_Click_1(object sender, EventArgs e)
         {
-            
+
             BookManagementMenuSlider.Start();
             Books.FlatAppearance.BorderColor = Color.Red;
-            
+
         }
         private void Student_Click(object sender, EventArgs e)
         {
-            
+
             StudentManagementMenuSlider.Start();
             Student.FlatAppearance.BorderColor = Color.Red;
         }
@@ -88,7 +87,7 @@ namespace Library
         }
         private void Trsnsaction_Click(object sender, EventArgs e)
         {
-           
+
             TransactionManagementMenuSlider.Start();
             Transaction.FlatAppearance.BorderColor = Color.Red;
 
@@ -114,7 +113,7 @@ namespace Library
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string Homepagelogo = "select logo from librarysetting where  id="+2+"";
+                    string Homepagelogo = "select logo from librarysetting where  id=" + 2 + "";
                     try
                     {
                         con.Open();
@@ -123,7 +122,7 @@ namespace Library
                         if (reader.Read())
                         {
                             string photoPath = reader["logo"].ToString();
-                            
+
                             if (!string.IsNullOrEmpty(photoPath) && File.Exists(photoPath))
                             {
                                 byte[] imageBytes = File.ReadAllBytes(photoPath);
@@ -147,7 +146,7 @@ namespace Library
 
                     }
                 }
-                
+
             }
         }
 
@@ -157,14 +156,14 @@ namespace Library
             //bin1.BringToFront();
         }
 
-        bool MenuButtonExpand=false;
-        
+        bool MenuButtonExpand = false;
+
         private void BookManagementMenuSlider_Tick_1(object sender, EventArgs e)
         {
             if (MenuButtonExpand == false)
             {
                 Abc.Height += 10;
-                if (Abc.Height >= 219)
+                if (Abc.Height >= 165)
                 {
                     StudentMenuPanel.Height = 65;
                     TransactionMenuePanel.Height = 65;
@@ -189,7 +188,7 @@ namespace Library
             if (MenuButtonExpand == false)
             {
                 StudentMenuPanel.Height += 10;
-                if (StudentMenuPanel.Height >= 219)
+                if (StudentMenuPanel.Height >= 165)
                 {
                     Abc.Height = 65;
                     TransactionMenuePanel.Height = 65;
@@ -213,7 +212,7 @@ namespace Library
         {
             if (MenuButtonExpand == false)
             {
-                
+
                 TransactionMenuePanel.Height += 10;
                 if (TransactionMenuePanel.Height >= 219)
                 {
@@ -229,7 +228,7 @@ namespace Library
                 TransactionMenuePanel.Height -= 10;
                 if (TransactionMenuePanel.Height <= 65)
                 {
-                    
+
                     TransactionManagementMenuSlider.Stop();
                     MenuButtonExpand = false;
                 }
@@ -269,12 +268,6 @@ namespace Library
 
         }
 
-        private void UpdateStudentPageopen_Click(object sender, EventArgs e)
-        {
-            updateStudent1.Show();
-            updateStudent1.BringToFront();
-
-        }
 
         private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
         {
@@ -293,5 +286,7 @@ namespace Library
             //showBookDetail1.Show();
             //showBookDetail1.BringToFront();
         }
+
+
     }
 }

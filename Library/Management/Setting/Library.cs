@@ -1,16 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Library;
 
 namespace Library.Management.Setting
 {
@@ -54,7 +46,7 @@ namespace Library.Management.Setting
                 MessageBox.Show("1", ex.Message);
             }
         }
-  
+
         private void SetChanges_Click(object sender, EventArgs e)
         {
             string connectionString = GetConnectionString();
@@ -135,14 +127,14 @@ namespace Library.Management.Setting
                             changedLogoName.Text = LibraryName;
                         }
                     }
-                    catch (Exception ex) { MessageBox.Show("3",ex.Message); }
+                    catch (Exception ex) { MessageBox.Show("3", ex.Message); }
                 }
             }
         }
 
         private void LibraryNameOption_CheckedChanged(object sender, EventArgs e)
         {
-            if (LibraryNameOption.Checked) 
+            if (LibraryNameOption.Checked)
             {
                 ChangedNamePanel.Visible = true;
             }

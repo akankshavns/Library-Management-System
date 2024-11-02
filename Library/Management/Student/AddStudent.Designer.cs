@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Address = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.TextBox();
+            this.Address = new System.Windows.Forms.TextBox();
             this.Contact = new System.Windows.Forms.TextBox();
             this.upload = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -78,8 +78,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.Address);
             this.panel1.Controls.Add(this.Email);
+            this.panel1.Controls.Add(this.Address);
             this.panel1.Controls.Add(this.Contact);
             this.panel1.Controls.Add(this.upload);
             this.panel1.Controls.Add(this.label9);
@@ -103,15 +103,6 @@
             this.panel1.Size = new System.Drawing.Size(1135, 436);
             this.panel1.TabIndex = 1;
             // 
-            // Address
-            // 
-            this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(428, 331);
-            this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(217, 23);
-            this.Address.TabIndex = 17;
-            this.Address.TextChanged += new System.EventHandler(this.Address_TextChanged);
-            // 
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +111,16 @@
             this.Email.Size = new System.Drawing.Size(217, 23);
             this.Email.TabIndex = 17;
             this.Email.TextChanged += new System.EventHandler(this.Email_TextChanged);
+            this.Email.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);
+            // 
+            // Address
+            // 
+            this.Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Address.Location = new System.Drawing.Point(428, 331);
+            this.Address.Name = "Address";
+            this.Address.Size = new System.Drawing.Size(217, 23);
+            this.Address.TabIndex = 17;
+            this.Address.TextChanged += new System.EventHandler(this.Address_TextChanged);
             // 
             // Contact
             // 
@@ -344,9 +345,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 545);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 492);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1231, 122);
+            this.pictureBox1.Size = new System.Drawing.Size(1231, 175);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
@@ -359,7 +360,6 @@
             this.Controls.Add(this.panel1);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(1231, 667);
-           
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).EndInit();

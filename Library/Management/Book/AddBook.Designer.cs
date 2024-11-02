@@ -32,17 +32,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBook));
             this.panel1 = new System.Windows.Forms.Panel();
             this.catagory = new System.Windows.Forms.ComboBox();
-            this.OPTION = new System.Windows.Forms.Panel();
-            this.English = new System.Windows.Forms.RadioButton();
-            this.other = new System.Windows.Forms.RadioButton();
-            this.Hindi = new System.Windows.Forms.RadioButton();
             this.AddButton = new System.Windows.Forms.Button();
             this.Publication = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Quantity = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.OtherLanguage = new System.Windows.Forms.TextBox();
             this.pages = new System.Windows.Forms.TextBox();
             this.volume = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -59,6 +54,11 @@
             this.BookDate = new System.Windows.Forms.DateTimePicker();
             this.BName = new System.Windows.Forms.TextBox();
             this.Return = new System.Windows.Forms.Button();
+            this.OPTION = new System.Windows.Forms.Panel();
+            this.English = new System.Windows.Forms.RadioButton();
+            this.other = new System.Windows.Forms.RadioButton();
+            this.Hindi = new System.Windows.Forms.RadioButton();
+            this.OtherLanguage = new System.Windows.Forms.TextBox();
             this.errorInID = new System.Windows.Forms.ErrorProvider(this.components);
             this.block = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderPages = new System.Windows.Forms.ErrorProvider(this.components);
@@ -152,61 +152,12 @@
             this.catagory.TabIndex = 83;
             this.catagory.SelectedIndexChanged += new System.EventHandler(this.catagory_SelectedIndexChanged);
             // 
-            // OPTION
-            // 
-            this.OPTION.BackColor = System.Drawing.Color.White;
-            this.OPTION.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.OPTION.Controls.Add(this.English);
-            this.OPTION.Controls.Add(this.other);
-            this.OPTION.Controls.Add(this.Hindi);
-            this.OPTION.Location = new System.Drawing.Point(441, 270);
-            this.OPTION.Name = "OPTION";
-            this.OPTION.Size = new System.Drawing.Size(299, 26);
-            this.OPTION.TabIndex = 81;
-            // 
-            // English
-            // 
-            this.English.AutoSize = true;
-            this.English.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.English.Location = new System.Drawing.Point(7, 3);
-            this.English.Name = "English";
-            this.English.Size = new System.Drawing.Size(72, 21);
-            this.English.TabIndex = 78;
-            this.English.TabStop = true;
-            this.English.Text = "English";
-            this.English.UseVisualStyleBackColor = true;
-            // 
-            // other
-            // 
-            this.other.AutoSize = true;
-            this.other.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.other.Location = new System.Drawing.Point(217, 0);
-            this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(62, 21);
-            this.other.TabIndex = 79;
-            this.other.TabStop = true;
-            this.other.Text = "Other";
-            this.other.UseVisualStyleBackColor = true;
-            this.other.CheckedChanged += new System.EventHandler(this.other_CheckedChanged_1);
-            // 
-            // Hindi
-            // 
-            this.Hindi.AutoSize = true;
-            this.Hindi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Hindi.Location = new System.Drawing.Point(119, 3);
-            this.Hindi.Name = "Hindi";
-            this.Hindi.Size = new System.Drawing.Size(58, 21);
-            this.Hindi.TabIndex = 79;
-            this.Hindi.TabStop = true;
-            this.Hindi.Text = "Hindi";
-            this.Hindi.UseVisualStyleBackColor = true;
-            // 
             // AddButton
             // 
             this.AddButton.BackColor = System.Drawing.Color.Teal;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(362, 456);
+            this.AddButton.Location = new System.Drawing.Point(337, 419);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(114, 43);
             this.AddButton.TabIndex = 68;
@@ -270,20 +221,6 @@
             this.label4.Size = new System.Drawing.Size(109, 29);
             this.label4.TabIndex = 52;
             this.label4.Text = "Buy Date";
-            // 
-            // OtherLanguage
-            // 
-            this.OtherLanguage.BackColor = System.Drawing.Color.White;
-            this.OtherLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OtherLanguage.ForeColor = System.Drawing.Color.Silver;
-            this.OtherLanguage.Location = new System.Drawing.Point(441, 270);
-            this.OtherLanguage.Name = "OtherLanguage";
-            this.OtherLanguage.Size = new System.Drawing.Size(299, 26);
-            this.OtherLanguage.TabIndex = 55;
-            this.OtherLanguage.Text = "Enter Other Language";
-            this.OtherLanguage.Visible = false;
-            this.OtherLanguage.Click += new System.EventHandler(this.OtherLanguage_Click);
-            this.OtherLanguage.TextChanged += new System.EventHandler(this.pages_TextChanged);
             // 
             // pages
             // 
@@ -472,6 +409,69 @@
             this.Return.Visible = false;
             this.Return.Click += new System.EventHandler(this.Return_Click);
             // 
+            // OPTION
+            // 
+            this.OPTION.BackColor = System.Drawing.Color.White;
+            this.OPTION.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.OPTION.Controls.Add(this.English);
+            this.OPTION.Controls.Add(this.other);
+            this.OPTION.Controls.Add(this.Hindi);
+            this.OPTION.Location = new System.Drawing.Point(441, 270);
+            this.OPTION.Name = "OPTION";
+            this.OPTION.Size = new System.Drawing.Size(299, 26);
+            this.OPTION.TabIndex = 81;
+            // 
+            // English
+            // 
+            this.English.AutoSize = true;
+            this.English.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.English.Location = new System.Drawing.Point(7, 3);
+            this.English.Name = "English";
+            this.English.Size = new System.Drawing.Size(72, 21);
+            this.English.TabIndex = 78;
+            this.English.TabStop = true;
+            this.English.Text = "English";
+            this.English.UseVisualStyleBackColor = true;
+            // 
+            // other
+            // 
+            this.other.AutoSize = true;
+            this.other.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.other.Location = new System.Drawing.Point(217, 0);
+            this.other.Name = "other";
+            this.other.Size = new System.Drawing.Size(62, 21);
+            this.other.TabIndex = 79;
+            this.other.TabStop = true;
+            this.other.Text = "Other";
+            this.other.UseVisualStyleBackColor = true;
+            this.other.CheckedChanged += new System.EventHandler(this.other_CheckedChanged_1);
+            // 
+            // Hindi
+            // 
+            this.Hindi.AutoSize = true;
+            this.Hindi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Hindi.Location = new System.Drawing.Point(119, 3);
+            this.Hindi.Name = "Hindi";
+            this.Hindi.Size = new System.Drawing.Size(58, 21);
+            this.Hindi.TabIndex = 79;
+            this.Hindi.TabStop = true;
+            this.Hindi.Text = "Hindi";
+            this.Hindi.UseVisualStyleBackColor = true;
+            // 
+            // OtherLanguage
+            // 
+            this.OtherLanguage.BackColor = System.Drawing.Color.White;
+            this.OtherLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OtherLanguage.ForeColor = System.Drawing.Color.Silver;
+            this.OtherLanguage.Location = new System.Drawing.Point(441, 270);
+            this.OtherLanguage.Name = "OtherLanguage";
+            this.OtherLanguage.Size = new System.Drawing.Size(299, 26);
+            this.OtherLanguage.TabIndex = 55;
+            this.OtherLanguage.Text = "Enter Other Language";
+            this.OtherLanguage.Visible = false;
+            this.OtherLanguage.Click += new System.EventHandler(this.OtherLanguage_Click);
+            this.OtherLanguage.TextChanged += new System.EventHandler(this.pages_TextChanged);
+            // 
             // errorInID
             // 
             this.errorInID.BlinkRate = 2;
@@ -526,11 +526,10 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.Gainsboro;
             this.panel6.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 539);
+            this.panel6.Location = new System.Drawing.Point(0, 499);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1039, 135);
+            this.panel6.Size = new System.Drawing.Size(1039, 175);
             this.panel6.TabIndex = 84;
             // 
             // AddBook

@@ -2,10 +2,7 @@
 using System.Configuration;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Net;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Library.BookManagement
 {
@@ -19,8 +16,8 @@ namespace Library.BookManagement
         {
             InitializeComponent();
         }
-       
-        
+
+
         bool hasErrors = false;
         string Language;
         private void AddButton_Click(object sender, EventArgs e)
@@ -28,7 +25,7 @@ namespace Library.BookManagement
             Error();
             if (hasErrors == false)
                 AddBookDetailInDB();
-          
+
         }
         public void AddBookDetailInDB()
         {
@@ -62,7 +59,7 @@ namespace Library.BookManagement
                         cmd.Parameters.AddWithValue("@Price", price.Text);
                         cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
                         cmd.Parameters.AddWithValue("@availableBook", Quantity.Text);
-                        cmd.Parameters.AddWithValue("@catagory",catagory.Text);
+                        cmd.Parameters.AddWithValue("@catagory", catagory.Text);
                         cmd.Parameters.AddWithValue("@status", "fRetained");
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
@@ -74,7 +71,7 @@ namespace Library.BookManagement
                         {
                             MessageBox.Show("Please fill the Information properly.");
                         }
-                        
+
                     }
                     catch (Exception)
                     {
@@ -184,8 +181,8 @@ namespace Library.BookManagement
             hasErrors = false;
         }
 
-       
-        
+
+
         private void OtherLanguage_Click(object sender, EventArgs e)
         {
             OtherLanguage.Clear();
@@ -219,7 +216,7 @@ namespace Library.BookManagement
             volume.Clear();
             Quantity.Clear();
             price.Clear();
-          
+
         }
         public void Enable(System.Windows.Forms.TextBox BName, System.Windows.Forms.TextBox Author, System.Windows.Forms.TextBox Publication, System.Windows.Forms.TextBox pages, System.Windows.Forms.TextBox volume, System.Windows.Forms.TextBox Quantity, System.Windows.Forms.TextBox price, System.Windows.Forms.ComboBox catogary
             )
@@ -237,7 +234,7 @@ namespace Library.BookManagement
         {
             BName.Enabled = true;
             Author.Enabled = true;
-            Publication.Enabled =true;
+            Publication.Enabled = true;
             pages.Enabled = true;
             volume.Enabled = true;
             Quantity.Enabled = true;
@@ -260,20 +257,20 @@ namespace Library.BookManagement
                         SqlDataReader reader = comm.ExecuteReader();
                         if (reader.Read())
                         {
-                            Enable(BName, Author, Publication, pages, volume, Quantity, price,catagory);
+                            Enable(BName, Author, Publication, pages, volume, Quantity, price, catagory);
                             block.SetError(ID, "This book is already exist in the library.");
                         }
                         else
                         {
                             block.SetError(ID, "");
-                            disable(BName, Author, Publication, pages, volume, Quantity, price,catagory);
+                            disable(BName, Author, Publication, pages, volume, Quantity, price, catagory);
                         }
                     }
-                    catch (Exception )
+                    catch (Exception)
                     {
                         MessageBox.Show("2.Please fill the Information properly.");
                     }
-                    
+
                 }
             }
         }
@@ -310,7 +307,7 @@ namespace Library.BookManagement
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && e.KeyChar != '.' && !char.IsSymbol(e.KeyChar))
             {
                 e.Handled = true;
-              errorProviderPrice.SetError(price, "This text box only accepts numeric characters.");
+                errorProviderPrice.SetError(price, "This text box only accepts numeric characters.");
             }
             else
             {
@@ -350,15 +347,15 @@ namespace Library.BookManagement
             BookDate.Value = DateTime.Now;
         }
 
-       
+
 
         private void catagory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (catagory.SelectedIndex != -1) 
+            if (catagory.SelectedIndex != -1)
             {
-                
+
                 errorProviderAvailableBook.SetError(catagory, string.Empty);
-                hasErrors = false; 
+                hasErrors = false;
             }
         }
     }

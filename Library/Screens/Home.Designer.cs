@@ -57,24 +57,16 @@
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.addStudent1 = new Library.StudentManagement.AddStudent();
-            this.updateStudent1 = new Library.StudentManagement.UpdateStudent();
-            this.viewStudent1 = new Library.StudentManagement.viewStudent();
-            this.dashboard1 = new Library.FrontScreen.Dashboard();
-            this.addBook1 = new Library.BookManagement.AddBook();
-            this.viewBook1 = new Library.BookManagement.ViewBook();
             this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.Dashboard = new System.Windows.Forms.Button();
             this.Abc = new System.Windows.Forms.Panel();
-            this.updateBookPageOpen = new System.Windows.Forms.Button();
             this.Books = new System.Windows.Forms.Button();
             this.ViewBookPageOpen = new System.Windows.Forms.Button();
             this.AddBookPageOpen = new System.Windows.Forms.Button();
             this.StudentMenuPanel = new System.Windows.Forms.Panel();
-            this.UpdateStudentPageopen = new System.Windows.Forms.Button();
             this.ViewStudentPageOpen = new System.Windows.Forms.Button();
             this.AddStudentPageOpen = new System.Windows.Forms.Button();
             this.Student = new System.Windows.Forms.Button();
@@ -85,6 +77,11 @@
             this.issuePageopen = new System.Windows.Forms.Button();
             this.StudentManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.TransactionManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
+            this.dashboard1 = new Library.FrontScreen.Dashboard();
+            this.addBook1 = new Library.BookManagement.AddBook();
+            this.viewBook1 = new Library.BookManagement.ViewBook();
+            this.addStudent1 = new Library.StudentManagement.AddStudent();
+            this.viewStudent1 = new Library.StudentManagement.viewStudent();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -398,70 +395,16 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.addStudent1);
-            this.panel5.Controls.Add(this.updateStudent1);
             this.panel5.Controls.Add(this.viewStudent1);
             this.panel5.Controls.Add(this.dashboard1);
             this.panel5.Controls.Add(this.addBook1);
             this.panel5.Controls.Add(this.viewBook1);
+            this.panel5.Controls.Add(this.addStudent1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1141, 679);
             this.panel5.TabIndex = 10;
-            // 
-            // addStudent1
-            // 
-            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addStudent1.Location = new System.Drawing.Point(0, 0);
-            this.addStudent1.Name = "addStudent1";
-            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.addStudent1.TabIndex = 3;
-           
-            // 
-            // updateStudent1
-            // 
-            this.updateStudent1.BackColor = System.Drawing.Color.Gainsboro;
-            this.updateStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.updateStudent1.Location = new System.Drawing.Point(0, 0);
-            this.updateStudent1.Name = "updateStudent1";
-            this.updateStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.updateStudent1.TabIndex = 5;
-            // 
-            // viewStudent1
-            // 
-            this.viewStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewStudent1.Location = new System.Drawing.Point(0, 0);
-            this.viewStudent1.Name = "viewStudent1";
-            this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.viewStudent1.TabIndex = 4;
-            // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1141, 679);
-            this.dashboard1.TabIndex = 0;
-            // 
-            // addBook1
-            // 
-            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addBook1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addBook1.Location = new System.Drawing.Point(0, 0);
-            this.addBook1.Name = "addBook1";
-            this.addBook1.Size = new System.Drawing.Size(1141, 679);
-            this.addBook1.TabIndex = 1;
-            // 
-            // viewBook1
-            // 
-            this.viewBook1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewBook1.Location = new System.Drawing.Point(0, 0);
-            this.viewBook1.Name = "viewBook1";
-            this.viewBook1.Size = new System.Drawing.Size(1141, 679);
-            this.viewBook1.TabIndex = 2;
             // 
             // menuBar
             // 
@@ -540,7 +483,6 @@
             // 
             // Abc
             // 
-            this.Abc.Controls.Add(this.updateBookPageOpen);
             this.Abc.Controls.Add(this.Books);
             this.Abc.Controls.Add(this.ViewBookPageOpen);
             this.Abc.Controls.Add(this.AddBookPageOpen);
@@ -549,27 +491,6 @@
             this.Abc.Name = "Abc";
             this.Abc.Size = new System.Drawing.Size(215, 65);
             this.Abc.TabIndex = 8;
-            // 
-            // updateBookPageOpen
-            // 
-            this.updateBookPageOpen.BackColor = System.Drawing.Color.Transparent;
-            this.updateBookPageOpen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.updateBookPageOpen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.updateBookPageOpen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.updateBookPageOpen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBookPageOpen.Font = new System.Drawing.Font("Sitka Display", 11F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBookPageOpen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.updateBookPageOpen.Image = ((System.Drawing.Image)(resources.GetObject("updateBookPageOpen.Image")));
-            this.updateBookPageOpen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateBookPageOpen.Location = new System.Drawing.Point(6, 171);
-            this.updateBookPageOpen.Name = "updateBookPageOpen";
-            this.updateBookPageOpen.Size = new System.Drawing.Size(201, 39);
-            this.updateBookPageOpen.TabIndex = 7;
-            this.updateBookPageOpen.Text = "UPDATE BOOK\r\n";
-            this.updateBookPageOpen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.updateBookPageOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.updateBookPageOpen.UseVisualStyleBackColor = false;
-            this.updateBookPageOpen.Click += new System.EventHandler(this.updateBookPageOpen_Click);
             // 
             // Books
             // 
@@ -637,7 +558,6 @@
             // 
             // StudentMenuPanel
             // 
-            this.StudentMenuPanel.Controls.Add(this.UpdateStudentPageopen);
             this.StudentMenuPanel.Controls.Add(this.ViewStudentPageOpen);
             this.StudentMenuPanel.Controls.Add(this.AddStudentPageOpen);
             this.StudentMenuPanel.Controls.Add(this.Student);
@@ -646,27 +566,6 @@
             this.StudentMenuPanel.Name = "StudentMenuPanel";
             this.StudentMenuPanel.Size = new System.Drawing.Size(215, 65);
             this.StudentMenuPanel.TabIndex = 10;
-            // 
-            // UpdateStudentPageopen
-            // 
-            this.UpdateStudentPageopen.BackColor = System.Drawing.Color.Transparent;
-            this.UpdateStudentPageopen.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.UpdateStudentPageopen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.UpdateStudentPageopen.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.UpdateStudentPageopen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.UpdateStudentPageopen.Font = new System.Drawing.Font("Sitka Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateStudentPageopen.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.UpdateStudentPageopen.Image = ((System.Drawing.Image)(resources.GetObject("UpdateStudentPageopen.Image")));
-            this.UpdateStudentPageopen.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateStudentPageopen.Location = new System.Drawing.Point(7, 170);
-            this.UpdateStudentPageopen.Name = "UpdateStudentPageopen";
-            this.UpdateStudentPageopen.Size = new System.Drawing.Size(201, 39);
-            this.UpdateStudentPageopen.TabIndex = 8;
-            this.UpdateStudentPageopen.Text = "UPDATE STUDENT";
-            this.UpdateStudentPageopen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.UpdateStudentPageopen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.UpdateStudentPageopen.UseVisualStyleBackColor = false;
-            this.UpdateStudentPageopen.Click += new System.EventHandler(this.UpdateStudentPageopen_Click);
             // 
             // ViewStudentPageOpen
             // 
@@ -840,6 +739,50 @@
             this.TransactionManagementMenuSlider.Interval = 1;
             this.TransactionManagementMenuSlider.Tick += new System.EventHandler(this.TransactionManagementMenuSlider_Tick);
             // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1141, 679);
+            this.dashboard1.TabIndex = 0;
+            // 
+            // addBook1
+            // 
+            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addBook1.Location = new System.Drawing.Point(0, 0);
+            this.addBook1.Name = "addBook1";
+            this.addBook1.Size = new System.Drawing.Size(1141, 679);
+            this.addBook1.TabIndex = 1;
+            // 
+            // viewBook1
+            // 
+            this.viewBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewBook1.Location = new System.Drawing.Point(0, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1141, 679);
+            this.viewBook1.TabIndex = 2;
+            // 
+            // addStudent1
+            // 
+            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addStudent1.Location = new System.Drawing.Point(0, 0);
+            this.addStudent1.Name = "addStudent1";
+            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.addStudent1.TabIndex = 3;
+            // 
+            // viewStudent1
+            // 
+            this.viewStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.viewStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewStudent1.Location = new System.Drawing.Point(0, 0);
+            this.viewStudent1.Name = "viewStudent1";
+            this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.viewStudent1.TabIndex = 4;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -915,12 +858,10 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Button Dashboard;
         private System.Windows.Forms.Panel Abc;
-        private System.Windows.Forms.Button updateBookPageOpen;
         private System.Windows.Forms.Button Books;
         private System.Windows.Forms.Button ViewBookPageOpen;
         private System.Windows.Forms.Button AddBookPageOpen;
         private System.Windows.Forms.Panel StudentMenuPanel;
-        private System.Windows.Forms.Button UpdateStudentPageopen;
         private System.Windows.Forms.Button ViewStudentPageOpen;
         private System.Windows.Forms.Button AddStudentPageOpen;
         private System.Windows.Forms.Button Student;
@@ -934,7 +875,6 @@
         private BookManagement.AddBook addBook1;
         private BookManagement.ViewBook viewBook1;
         private StudentManagement.AddStudent addStudent1;
-        private StudentManagement.UpdateStudent updateStudent1;
         private StudentManagement.viewStudent viewStudent1;
     }
 }

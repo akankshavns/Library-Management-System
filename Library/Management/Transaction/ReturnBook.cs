@@ -1,14 +1,6 @@
-﻿using Library.Management.Setting;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -20,7 +12,7 @@ namespace Library.TransactionManagement
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
-       public int fineCharge;
+        public int fineCharge;
         public ReturnBook()
         {
             InitializeComponent();
@@ -72,8 +64,8 @@ namespace Library.TransactionManagement
 
         private void Return_Click(object sender, EventArgs e)
         {
-           
-                
+
+
             DateTime actualReturnDate = ActualReturnDate.Value;
             string connectionString = GetConnectionString();
             if (connectionString != null)
@@ -135,17 +127,17 @@ namespace Library.TransactionManagement
             }
         }
 
-       
+
 
         private void ReturnBook_Load(object sender, EventArgs e)
         {
-           int Fine, returnDays;
+            int Fine, returnDays;
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                   
+
                     string setValue = "Select * from TransactionSetting";
                     try
                     {
@@ -159,7 +151,7 @@ namespace Library.TransactionManagement
                             returnDays = Convert.ToInt32(rdr.GetValue(3));
                             ActualReturnDate.MaxDate = DateTime.Today.AddDays(returnDays);
                             fineCharge = Fine;
-                           
+
 
 
                         }
@@ -172,8 +164,8 @@ namespace Library.TransactionManagement
 
 
             }
-            
-        } 
-    } 
-    
+
+        }
+    }
+
 }

@@ -138,12 +138,6 @@
     <Compile Include="Management\Student\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management\Student\UpdateStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Management\Student\UpdateStudent.Designer.cs">
-      <DependentUpon>UpdateStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="Management\Student\viewStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -220,9 +214,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Student\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Management\Student\UpdateStudent.resx">
-      <DependentUpon>UpdateStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Student\viewStudent.resx">
       <DependentUpon>viewStudent.cs</DependentUpon>

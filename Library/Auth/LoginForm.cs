@@ -1,7 +1,6 @@
 ﻿using Library.Auth;
 using System;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
@@ -22,7 +21,7 @@ namespace Library
             errorProvider2 = new ErrorProvider();
             Text_UserName.TextChanged += new EventHandler(Text_UserName_TextChanged);
             text_password.TextChanged += new EventHandler(text_password_TextChanged);
-           
+
         }
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -62,7 +61,7 @@ namespace Library
                                 text_password.Text = "Password";
                             }
                             con.Close();
-                           
+
                         }
                         // this logic for user login
                         else
@@ -75,7 +74,7 @@ namespace Library
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())
                             {
-                                
+
                                 this.Hide();
                                 Home hp = new Home();
                                 hp.Show();
@@ -97,13 +96,13 @@ namespace Library
 
             catch (Exception ex)
             {
-                MessageBox.Show("2",ex.Message);
-            }    
+                MessageBox.Show("2", ex.Message);
+            }
         }
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            bool hasErrors = false;         
-            if (string.IsNullOrEmpty(Text_UserName.Text)|| Text_UserName.Text == "User Name")
+            bool hasErrors = false;
+            if (string.IsNullOrEmpty(Text_UserName.Text) || Text_UserName.Text == "User Name")
             {
                 errorProvider1.SetError(Text_UserName, "Please fill the user name");
                 hasErrors = true;

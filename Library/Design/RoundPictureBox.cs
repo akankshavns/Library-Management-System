@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
 namespace Library.Design
@@ -32,7 +27,7 @@ namespace Library.Design
             //this.transactionBoard1.Name = "transactionBoard1";
             //this.transactionBoard1.Size = new System.Drawing.Size(1231, 667);
             //this.transactionBoard1.TabIndex = 0;
-       
+
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 

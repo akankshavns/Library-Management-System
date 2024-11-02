@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library.Auth
@@ -50,7 +43,7 @@ namespace Library.Auth
                     try
                     {
                         con.Open();
-                        if (isUserAccount==false)
+                        if (isUserAccount == false)
                         {
                             SqlCommand cmd = new SqlCommand(AdminDetail, con);
                             cmd.Parameters.AddWithValue("@id", EmpId.Text);
@@ -70,7 +63,7 @@ namespace Library.Auth
                             }
                             con.Close();
                         }
-                        if (isUserAccount==true)
+                        if (isUserAccount == true)
                         {
                             con.Open();
                             SqlCommand cmd = new SqlCommand(UserDetail, con);
@@ -93,7 +86,7 @@ namespace Library.Auth
                         }
                     }
                     catch (Exception ex)
-                    { 
+                    {
                         MessageBox.Show(ex.Message);
                     }
                 }

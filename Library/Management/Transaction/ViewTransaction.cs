@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library.TransactionManagement
@@ -43,11 +37,11 @@ namespace Library.TransactionManagement
                         SqlCommand cmd = new SqlCommand(showData, con);
                         SqlDataReader reader = cmd.ExecuteReader();
                         bookTable.Load(reader);
-                        dataGridView1.DataSource= bookTable;
+                        dataGridView1.DataSource = bookTable;
                     }
-                    catch (Exception ex) 
+                    catch (Exception ex)
                     {
-                        MessageBox.Show("I am from load page",ex.Message);
+                        MessageBox.Show("I am from load page", ex.Message);
                     }
                 }
             }
