@@ -28,8 +28,8 @@ namespace Library.FrontScreen
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string TBook = "SELECT count(*)from AddBooks";
-                    string TStudent = "SELECT count(*)from StudentInformation";
+                    string TBook = "SELECT count(*)from AddBooks where BookStatus='Retained'";
+                    string TStudent = "SELECT count(*)from StudentInformation where StudentStatus='Retained'";
                     string IssueBook = "Select count (*) from IssueBookList where issueDate = CAST(GETDATE() AS DATE)";
                     string ReturnBook = "Select count (*) from IssueBookList where ReturnDate = CAST(GETDATE() AS DATE)";
                     try

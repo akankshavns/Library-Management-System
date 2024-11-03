@@ -373,6 +373,7 @@
             this.StudentDetailView.Size = new System.Drawing.Size(1142, 287);
             this.StudentDetailView.TabIndex = 21;
             this.StudentDetailView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDetailView_CellClick);
+            this.StudentDetailView.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentDetailView_CellDoubleClick);
             // 
             // panel3
             // 

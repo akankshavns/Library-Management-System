@@ -9,9 +9,10 @@ namespace Library.Auth
         {
             InitializeComponent();
         }
-
+        
         private void Admin_Click(object sender, EventArgs e)
         {
+            
             LoginForm loginPage = new LoginForm();
             loginPage.ForgotPassword.Visible = true;
             loginPage.CreateNewAccount.Visible = true;

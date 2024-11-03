@@ -50,7 +50,7 @@ namespace Library.StudentManagement
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string AddStudent = "INSERT INTO STUDENTINFORMATION VALUES(@Enrollment, @StudentName, @FatherName, @MotherName, @StudentImage, @Department, @Contact, @Email, @Address)";
+                        string AddStudent = "INSERT INTO STUDENTINFORMATION VALUES(@Enrollment, @StudentName, @FatherName, @MotherName, @StudentImage, @Department, @Contact, @Email, @Address, @StudentStatus)";
                         try
                         {
                             con.Open();
@@ -79,6 +79,7 @@ namespace Library.StudentManagement
                             cmd.Parameters.AddWithValue("@Contact", Contact.Text);
                             cmd.Parameters.AddWithValue("@Email", Email.Text);
                             cmd.Parameters.AddWithValue("@Address", Address.Text);
+                            cmd.Parameters.AddWithValue("@StudentStatus", "Retained");
                             int isValueInsert = cmd.ExecuteNonQuery();
                             if (isValueInsert >= 1)
                             {

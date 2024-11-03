@@ -39,11 +39,19 @@
             // 
             // BookGridView1
             // 
+            this.BookGridView1.AllowUserToAddRows = false;
+            this.BookGridView1.AllowUserToDeleteRows = false;
+            this.BookGridView1.AllowUserToOrderColumns = true;
+            this.BookGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BookGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.BookGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.BookGridView1.Location = new System.Drawing.Point(61, 54);
             this.BookGridView1.Name = "BookGridView1";
             this.BookGridView1.Size = new System.Drawing.Size(993, 276);
             this.BookGridView1.TabIndex = 5;
+            this.BookGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookGridView1_CellDoubleClick);
             // 
             // label1
             // 
@@ -78,11 +86,20 @@
             // 
             // StudentGridView2
             // 
+            this.StudentGridView2.AllowUserToAddRows = false;
+            this.StudentGridView2.AllowUserToDeleteRows = false;
+            this.StudentGridView2.AllowUserToOrderColumns = true;
+            this.StudentGridView2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.StudentGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.StudentGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.StudentGridView2.Location = new System.Drawing.Point(61, 372);
+            this.StudentGridView2.Location = new System.Drawing.Point(61, 408);
             this.StudentGridView2.Name = "StudentGridView2";
+            this.StudentGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.StudentGridView2.Size = new System.Drawing.Size(993, 276);
             this.StudentGridView2.TabIndex = 5;
+            this.StudentGridView2.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StudentGridView2_CellDoubleClick);
             // 
             // Bin
             // 
@@ -94,7 +111,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Bin";
-            this.Size = new System.Drawing.Size(1292, 702);
+            this.Size = new System.Drawing.Size(1122, 702);
             this.Load += new System.EventHandler(this.Bin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BookGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StudentGridView2)).EndInit();

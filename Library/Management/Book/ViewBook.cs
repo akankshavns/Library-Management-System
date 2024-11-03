@@ -40,7 +40,7 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT sno ,Accession_No,BookName,AuthorName,Publication,volume,pages,Language,BookDate,Price,Quantity,catagory  FROM ADDBOOKS";
+                    string viewdata = "SELECT sno ,Accession_No,BookName,AuthorName,Publication,volume,pages,Language,BookDate,Price,Quantity,catagory  FROM ADDBOOKS where BookStatus = 'Retained'";
                     try
                     {
                         con.Open();
@@ -187,68 +187,48 @@ namespace Library.BookManagement
         }
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-                sno = selectedRow.Cells[0].Value.ToString();
-                dbID = selectedRow.Cells[1].Value.ToString();
-                BName = selectedRow.Cells[2].Value.ToString();
-                Author = selectedRow.Cells[3].Value.ToString();
-                Publication = selectedRow.Cells[4].Value.ToString();
-                dateBox = selectedRow.Cells[8].Value.ToString();
-                price = selectedRow.Cells[9].Value.ToString();
-                Quantity = selectedRow.Cells[10].Value.ToString();
-                Language = selectedRow.Cells[7].Value.ToString();
-                volume = selectedRow.Cells[5].Value.ToString();
-                catagory.Text = selectedRow.Cells[11].Value.ToString();
-                pages = selectedRow.Cells[6].Value.ToString();
-
-            }
-            DialogResult result = MessageBox.Show("Are you sure?,Do you want to delete this record from Library Book  Recods", "Confirmation", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("Are you sure? Do you want to delete this record?", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
+                // Assume that `sno` is fetched from the selected cell in DataGridView
+                int sno = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SNO"].Value);
+
                 string connectionString = GetConnectionString();
                 if (connectionString != null)
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
+                        string updateBookStatus = "UPDATE ADDBOOKS SET BookStatus = @BookStatus WHERE SNO = @SNO";
 
-                        string BookDeletedItem = "DELETE FROM AddBooks WHERE SNO = @sno";
-                        string BookInBin = "INSERT INTO BOOKDELETEDITEMS VALUES(@id,@name,@author, @Publication,@volume,@pages,@language,@dateBox,@price, @quantity, @availableBook)";
-                        try
+                        using (SqlCommand cmd = new SqlCommand(updateBookStatus, con))
                         {
-                            con.Open();
-                            SqlCommand cmd = new SqlCommand(BookInBin, con);
-                            cmd.Parameters.AddWithValue("@id", dbID);
-                            cmd.Parameters.AddWithValue("@name", BName);
-                            cmd.Parameters.AddWithValue("@author", Author);
-                            cmd.Parameters.AddWithValue("@publication", Publication);
-                            cmd.Parameters.AddWithValue("@volume", volume);
-                            cmd.Parameters.AddWithValue("@pages", pages);
-                            cmd.Parameters.AddWithValue("@language", Language);
-                            cmd.Parameters.AddWithValue("@dateBox", dateBox);
-                            cmd.Parameters.AddWithValue("@price", price);
-                            cmd.Parameters.AddWithValue("@quantity", Quantity);
-                            cmd.Parameters.AddWithValue("@availableBook", AvailableBook);
-                            int i = cmd.ExecuteNonQuery();
-                            if (i >= 1)
+                            cmd.Parameters.AddWithValue("@BookStatus", "Deleted");
+                            cmd.Parameters.AddWithValue("@SNO", sno);
+
+                            try
                             {
-                                SqlCommand command = new SqlCommand(BookDeletedItem, con);
-                                command.Parameters.AddWithValue("@sno", sno);
-                                int deleted = command.ExecuteNonQuery();
-                                if (deleted >= 1)
+                                con.Open();
+                                int updated = cmd.ExecuteNonQuery();
+                                if (updated >= 1)
                                 {
-                                    MessageBox.Show("This record deleted successfully");
+                                    LoadBooks();
+                                    MessageBox.Show("Book deleted successfully.");
 
                                 }
-
+                                else
+                                {
+                                    MessageBox.Show("No record found with the specified SNO.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error: " + ex.Message);
                             }
                         }
-                        catch (Exception ex) { MessageBox.Show(ex.Message); }
                     }
                 }
-
             }
         }
+
     }
 }

@@ -33,11 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
+            this.Bin = new System.Windows.Forms.Button();
             this.Settingpanel = new System.Windows.Forms.Panel();
             this.Setting = new System.Windows.Forms.Button();
             this.Logoutpanel = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.Logout = new System.Windows.Forms.Button();
             this.BookBoard = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.update = new System.Windows.Forms.Button();
@@ -82,6 +82,7 @@
             this.viewBook1 = new Library.BookManagement.ViewBook();
             this.addStudent1 = new Library.StudentManagement.AddStudent();
             this.viewStudent1 = new Library.StudentManagement.viewStudent();
+            this.bin1 = new Library.Boards.Bin();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,32 +131,34 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.Controls.Add(this.button11);
+            this.panel3.Controls.Add(this.Logout);
             this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(174, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(77, 54);
             this.panel3.TabIndex = 10;
             // 
-            // button11
+            // Bin
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.Location = new System.Drawing.Point(4, 3);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(70, 49);
-            this.button11.TabIndex = 11;
-            this.button11.Text = " Bin";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button11.UseVisualStyleBackColor = false;
+            this.Bin.BackColor = System.Drawing.Color.Transparent;
+            this.Bin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bin.FlatAppearance.BorderSize = 0;
+            this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin.ForeColor = System.Drawing.Color.White;
+            this.Bin.Image = ((System.Drawing.Image)(resources.GetObject("Bin.Image")));
+            this.Bin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Bin.Location = new System.Drawing.Point(4, 2);
+            this.Bin.Name = "Bin";
+            this.Bin.Size = new System.Drawing.Size(70, 49);
+            this.Bin.TabIndex = 11;
+            this.Bin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Bin.UseVisualStyleBackColor = false;
+            this.Bin.Click += new System.EventHandler(this.Bin_Click_1);
+            this.Bin.MouseLeave += new System.EventHandler(this.Bin_MouseLeave);
+            this.Bin.MouseHover += new System.EventHandler(this.Bin_MouseHover);
             // 
             // Settingpanel
             // 
@@ -179,44 +182,47 @@
             this.Setting.ForeColor = System.Drawing.Color.White;
             this.Setting.Image = ((System.Drawing.Image)(resources.GetObject("Setting.Image")));
             this.Setting.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Setting.Location = new System.Drawing.Point(4, 3);
+            this.Setting.Location = new System.Drawing.Point(4, 6);
             this.Setting.Name = "Setting";
             this.Setting.Size = new System.Drawing.Size(70, 49);
             this.Setting.TabIndex = 11;
-            this.Setting.Text = "  Setting";
             this.Setting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Setting.UseVisualStyleBackColor = false;
             this.Setting.Click += new System.EventHandler(this.Setting_Click);
+            this.Setting.MouseLeave += new System.EventHandler(this.Setting_MouseLeave);
+            this.Setting.MouseHover += new System.EventHandler(this.Setting_MouseHover);
             // 
             // Logoutpanel
             // 
             this.Logoutpanel.BackColor = System.Drawing.Color.Transparent;
-            this.Logoutpanel.Controls.Add(this.button10);
+            this.Logoutpanel.Controls.Add(this.Bin);
             this.Logoutpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logoutpanel.Location = new System.Drawing.Point(89, 5);
             this.Logoutpanel.Name = "Logoutpanel";
             this.Logoutpanel.Size = new System.Drawing.Size(77, 54);
             this.Logoutpanel.TabIndex = 10;
             // 
-            // button10
+            // Logout
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button10.Location = new System.Drawing.Point(3, 1);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(70, 49);
-            this.button10.TabIndex = 11;
-            this.button10.Text = "   Logout";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseVisualStyleBackColor = false;
+            this.Logout.BackColor = System.Drawing.Color.Transparent;
+            this.Logout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Logout.FlatAppearance.BorderSize = 0;
+            this.Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.Color.White;
+            this.Logout.Image = ((System.Drawing.Image)(resources.GetObject("Logout.Image")));
+            this.Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Logout.Location = new System.Drawing.Point(3, 3);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(70, 49);
+            this.Logout.TabIndex = 11;
+            this.Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Logout.UseVisualStyleBackColor = false;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            this.Logout.MouseLeave += new System.EventHandler(this.Logout_MouseLeave);
+            this.Logout.MouseHover += new System.EventHandler(this.Logout_MouseHover);
             // 
             // BookBoard
             // 
@@ -395,11 +401,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.viewStudent1);
             this.panel5.Controls.Add(this.dashboard1);
             this.panel5.Controls.Add(this.addBook1);
             this.panel5.Controls.Add(this.viewBook1);
             this.panel5.Controls.Add(this.addStudent1);
+            this.panel5.Controls.Add(this.viewStudent1);
+            this.panel5.Controls.Add(this.bin1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
@@ -442,7 +449,6 @@
             this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
-            this.menuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menuButton.Location = new System.Drawing.Point(7, 4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(39, 38);
@@ -783,6 +789,14 @@
             this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
             this.viewStudent1.TabIndex = 4;
             // 
+            // bin1
+            // 
+            this.bin1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bin1.Location = new System.Drawing.Point(0, 0);
+            this.bin1.Name = "bin1";
+            this.bin1.Size = new System.Drawing.Size(1141, 679);
+            this.bin1.TabIndex = 5;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -835,11 +849,11 @@
         private System.Windows.Forms.Timer TransactionManagementMenuSlider;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button Bin;
         private System.Windows.Forms.Panel Settingpanel;
         private System.Windows.Forms.Button Setting;
         private System.Windows.Forms.Panel Logoutpanel;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button Logout;
         private System.Windows.Forms.Panel BookBoard;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button update;
@@ -876,5 +890,6 @@
         private BookManagement.ViewBook viewBook1;
         private StudentManagement.AddStudent addStudent1;
         private StudentManagement.viewStudent viewStudent1;
+        private Boards.Bin bin1;
     }
 }

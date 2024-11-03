@@ -150,12 +150,6 @@ namespace Library
             }
         }
 
-        private void Bin_Click(object sender, EventArgs e)
-        {
-            //bin1.Show();
-            //bin1.BringToFront();
-        }
-
         bool MenuButtonExpand = false;
 
         private void BookManagementMenuSlider_Tick_1(object sender, EventArgs e)
@@ -249,12 +243,6 @@ namespace Library
             viewBook1.BringToFront();
         }
 
-        private void updateBookPageOpen_Click(object sender, EventArgs e)
-        {
-            //update1.Show();
-            //update1.BringToFront();
-        }
-
         private void AddStudentPageOpen_Click(object sender, EventArgs e)
         {
             addStudent1.Show();
@@ -263,6 +251,7 @@ namespace Library
 
         private void ViewStudentPageOpen_Click(object sender, EventArgs e)
         {
+            viewStudent1.viewStudentDetail();
             viewStudent1.Show();
             viewStudent1.BringToFront();
 
@@ -287,6 +276,60 @@ namespace Library
             //showBookDetail1.BringToFront();
         }
 
+        private void Setting_MouseHover(object sender, EventArgs e)
+        {
+            Setting.Text = "  Setting";
+        }
 
+        private void Setting_MouseLeave(object sender, EventArgs e)
+        {
+            Setting.Text = "";
+        }
+
+        private void Logout_MouseHover(object sender, EventArgs e)
+        {
+            Logout.Text = "Logout";
+        }
+
+        private void Logout_MouseLeave(object sender, EventArgs e)
+        {
+            Logout.Text = "";
+        }
+
+        private void Bin_MouseHover(object sender, EventArgs e)
+        {
+            Bin.Text = " Bin";
+        }
+
+        private void Bin_MouseLeave(object sender, EventArgs e)
+        {
+            Bin.Text = "";
+        }
+
+        private void Bin_Click_1(object sender, EventArgs e)
+        {
+            bin1.showBookRelatedDeletedItem();
+            bin1.showStudentRelatedDeletedItem();
+            bin1.Show();
+            bin1.BringToFront();
+        }
+
+        private void Logout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm login = new LoginForm();
+            if (LoginForm.Names == "Userlogin")
+            {
+                login.Show();
+            }
+            else
+            {
+
+                login.ForgotPassword.Visible = true;
+                login.CreateNewAccount.Visible = true;
+                login.Show();
+            }
+           
+        }
     }
 }

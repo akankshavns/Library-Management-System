@@ -27,6 +27,7 @@ namespace Library
         {
             loginpanel.BackColor = Color.FromArgb(40, 0, 0, 0);
         }
+       public static string Names;
         private void LoginLogic()
         {
             try
@@ -47,9 +48,12 @@ namespace Library
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())
                             {
+                                Names = "AdminLogin";
                                 this.Hide();
                                 Home hp = new Home();
                                 hp.Show();
+                              
+
                             }
                             else
                             {
@@ -66,6 +70,7 @@ namespace Library
                         // this logic for user login
                         else
                         {
+                            
                             string login = "Select * From Librarian where UserName=@username and Password = @password";
                             SqlCommand cmd = new SqlCommand(login, con);
                             cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
@@ -74,7 +79,7 @@ namespace Library
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())
                             {
-
+                                Names = "Userlogin";
                                 this.Hide();
                                 Home hp = new Home();
                                 hp.Show();
@@ -88,6 +93,7 @@ namespace Library
                                 text_password.UseSystemPasswordChar = isPasswordVisible;
                                 text_password.Text = "Password";
                             }
+                           
                             con.Close();
                         }
                     }
@@ -185,5 +191,6 @@ namespace Library
             Account.Show();
 
         }
+        
     }
 }

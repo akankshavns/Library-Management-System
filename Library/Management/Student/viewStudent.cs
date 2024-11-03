@@ -20,32 +20,38 @@ namespace Library.StudentManagement
         {
             InitializeComponent();
         }
-        DataTable booksTable = new DataTable();
 
+        DataTable StudentTable = new DataTable();
         private void viewStudent_Load(object sender, EventArgs e)
         {
+            viewStudentDetail();
+        }
+       //logic of showing database data in the dataGridview.
+        public void viewStudentDetail()
+        {
+            StudentTable.Clear();
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT ID,EnrollmentNumber, StudentName, FatherName, MotherName, Department, Contact,Email, Address FROM STUDENTINFORMATION;";
+                    string viewdata = "SELECT ID,EnrollmentNumber, StudentName, FatherName, MotherName, Department, Contact,Email, Address FROM STUDENTINFORMATION where StudentStatus = 'Retained'";
                     try
                     {
                         con.Open();
                         SqlCommand cmd = new SqlCommand(viewdata, con);
                         SqlDataReader reader = cmd.ExecuteReader();
-                        booksTable.Load(reader);
-                        StudentDetailView.DataSource = booksTable;
+                        StudentTable.Load(reader);
+                        StudentDetailView.DataSource = StudentTable;
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("2", ex.Message);
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
         }
-       
+        //This piece of code help in showing the selected student detail in the text field with Student image.
         private void StudentDetailView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -100,7 +106,7 @@ namespace Library.StudentManagement
             }
 
         }
-
+        // This  piece of code Enable all the textBoxes for update the student data,when user click the 'yes' button of dialogBox.
         private void updateSectionButton_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to update this student's records?",
@@ -124,10 +130,10 @@ namespace Library.StudentManagement
             }
             else
             {
-                // Optional: Code if the update is canceled
                 MessageBox.Show("Update canceled.");
             }
         }
+        //This function is used to update the reords in the database.
        public void UpdateStudentRecords()
         {
             int sno = 0;
@@ -150,10 +156,10 @@ namespace Library.StudentManagement
                         cmd.Parameters.AddWithValue("@Contact", contact.Text);
                         cmd.Parameters.AddWithValue("@Email", mail.Text);
                         cmd.Parameters.AddWithValue("@Address", Address.Text);
-
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
                         {
+                            // this is used for update only selected cell of the datagridview.
                             foreach (DataGridViewRow row in StudentDetailView.Rows)
                             {
                             if (Convert.ToInt32(row.Cells["Id"].Value) ==sno)
@@ -189,19 +195,19 @@ namespace Library.StudentManagement
         {
             UpdateStudentRecords();
         }
-
+        // search the data according to Enrollment number and student name.
         private void SearchBox_KeyUp(object sender, KeyEventArgs e)
         {
+            DataTable booksTable = new DataTable();
             DataView dv = booksTable.DefaultView;
             dv.RowFilter = $"EnrollmentNumber LIKE '%{SearchBox.Text}%' OR StudentName LIKE '%{SearchBox.Text}%'";
             StudentDetailView.DataSource = dv.ToTable();
         }
-
+        //check condition for Email inputBox
         private void mail_Validating(object sender, System.ComponentModel.CancelEventArgs e)
         {
             // Regular expression pattern for a valid email address
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
             // Check if the email matches the pattern
             if (!Regex.IsMatch(mail.Text, pattern))
             {
@@ -211,6 +217,51 @@ namespace Library.StudentManagement
             else
             {
                 MailCheck.SetError(mail, "");
+            }
+        }
+        // This is used to delete the single row  data from data Base.
+        private void StudentDetailView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure? Do you want to delete this record?", "Confirmation", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                // Assume that `sno` is fetched from the selected cell in DataGridView
+                int sno = Convert.ToInt32(StudentDetailView.Rows[e.RowIndex].Cells["ID"].Value);
+
+                string connectionString = GetConnectionString();
+                if (connectionString != null)
+                {
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        string updateBookStatus = "UPDATE StudentInformation SET StudentStatus = @StudentStatus WHERE ID = @SNO";
+
+                        using (SqlCommand cmd = new SqlCommand(updateBookStatus, con))
+                        {
+                            cmd.Parameters.AddWithValue("@StudentStatus", "Deleted");
+                            cmd.Parameters.AddWithValue("@SNO", sno);
+
+                            try
+                            {
+                                con.Open();
+                                int updated = cmd.ExecuteNonQuery();
+                                if (updated >= 1)
+                                {
+                                    viewStudentDetail();
+                                    MessageBox.Show("Book deleted successfully.");
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("No record found with the specified SNO.");
+                                }
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Error: " + ex.Message);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

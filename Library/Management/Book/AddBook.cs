@@ -60,7 +60,7 @@ namespace Library.BookManagement
                         cmd.Parameters.AddWithValue("@quantity", Quantity.Text);
                         cmd.Parameters.AddWithValue("@availableBook", Quantity.Text);
                         cmd.Parameters.AddWithValue("@catagory", catagory.Text);
-                        cmd.Parameters.AddWithValue("@status", "fRetained");
+                        cmd.Parameters.AddWithValue("@status", "Retained");
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
                         {
