@@ -22,6 +22,7 @@ namespace Library.TransactionManagement
         {
             if (e.KeyCode == Keys.Enter)
             {
+                IssueButton.Visible=true;
                 newupdatedreturndays();
                 ReturnDate.Value = issueDate.Value.AddDays(returnDays);
                 if (string.IsNullOrEmpty(EnrollBox.Text))
@@ -96,8 +97,9 @@ namespace Library.TransactionManagement
         }
         private void IssueButton_Click_1(object sender, EventArgs e)
         {
-            string issueQuerry = "Insert into IssueBookList values(@BookId, @BookName,  @AuthorName, @EnrollBox, @StudentName, @Dep, @Semester, @Cont,@mail, @Addre, @issueDate, @ReturnDate,'No')";
-
+            string checkIssueQuery = "SELECT COUNT(*) FROM IssueBookList WHERE studentEnrollment = @EnrollBox AND BookId = @BookId";
+            string issueQuerry = "INSERT INTO IssueBookList (BookId, BookName, AuthorName, StudentEnrollment, StudentName, Deparment, Semester, Contact, Email, Address, issueDate, ReturnDate,fine, isReturnBook) VALUES (@BookId, @BookName, @AuthorName, @EnrollBox, @StudentName, @Dep, @Semester, @Cont, @mail, @Addre, @issueDate, @ReturnDate, @fine,@isReturn)";
+            string updateAvailableBook = "UPDATE AddBooks SET AvailableBook = @Available WHERE sno = @sno";
             try
             {
                 string connectionString = GetConnectionString();
@@ -106,9 +108,19 @@ namespace Library.TransactionManagement
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
                         con.Open();
+                        SqlCommand checkCmd = new SqlCommand(checkIssueQuery, con);
+                        checkCmd.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
+                        checkCmd.Parameters.AddWithValue("@BookId", BookId.Text);
+
+                        int count = (int)checkCmd.ExecuteScalar();
+                        if (count > 0)
+                        {
+                            MessageBox.Show("This book has already been issued to this student.");
+                            return; 
+                        }
                         SqlCommand cmd = new SqlCommand(issueQuerry, con);
                         cmd.Parameters.AddWithValue("@BookId", BookId.Text);
-                        cmd.Parameters.AddWithValue("BookName", BookName.Text);
+                        cmd.Parameters.AddWithValue("@BookName", BookName.Text);
                         cmd.Parameters.AddWithValue("@AuthorName", AuthorName.Text);
                         cmd.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
                         cmd.Parameters.AddWithValue("@StudentName", StudentName.Text);
@@ -119,20 +131,43 @@ namespace Library.TransactionManagement
                         cmd.Parameters.AddWithValue("@issueDate", issueDate.Text);
                         cmd.Parameters.AddWithValue("@mail", mail.Text);
                         cmd.Parameters.AddWithValue("@Addre", Addre.Text);
+                        cmd.Parameters.AddWithValue("@isReturn", "Hold");
+                        cmd.Parameters.AddWithValue("@fine", "0");
+
                         int isInsert = cmd.ExecuteNonQuery();
                         if (isInsert >= 1)
                         {
-                            MessageBox.Show("Book Issue successfully");
+                            // Update AvailableBook count
+                            int updatedAvailableBook = SearchBooks.num - 1;
+
+                            SqlCommand updateCmd = new SqlCommand(updateAvailableBook, con);
+                            updateCmd.Parameters.AddWithValue("@Available", updatedAvailableBook);
+                            updateCmd.Parameters.AddWithValue("@sno", SearchBooks.sno); // Assuming sno is the same as BookId; adjust if necessary
+
+                            int isUpdate = updateCmd.ExecuteNonQuery();
+                            if (isUpdate >= 1)
+                            {
+                                MessageBox.Show("Book issued successfully and AvailableBook count updated.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Book issued, but failed to update AvailableBook count.");
+                            }
                         }
-                        else { MessageBox.Show("Something went wrong."); }
+                        else
+                        {
+                            MessageBox.Show("Something went wrong with book issuance.");
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
+            
 
+            IssueButton.Visible= false;
             BookId.Clear();
             BookName.Clear();
             AuthorName.Clear();
@@ -148,6 +183,7 @@ namespace Library.TransactionManagement
         {
             if (e.KeyCode == Keys.Enter)
             {
+                IssueButton.Visible = true;
                 newupdatedreturndays();
                 if (string.IsNullOrEmpty(EnrollBox.Text))
                 {
@@ -182,7 +218,7 @@ namespace Library.TransactionManagement
 
         private void ShowBookDetail_Load(object sender, EventArgs e)
         {
-            issueDate.MaxDate = DateTime.Now;
+            issueDate.MaxDate = DateTime.Now.AddSeconds(1);
             issueDate.Value = DateTime.Now;
             newupdatedreturndays();
         }

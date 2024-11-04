@@ -191,6 +191,14 @@ namespace Library
             Account.Show();
 
         }
-        
+
+        private void ForgotPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ForgotPassword.Checked) 
+            { 
+                Reset_Password Reset = new Reset_Password();
+                Reset.Show();
+            }
+        }
     }
 }

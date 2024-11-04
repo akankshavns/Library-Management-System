@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Email = new System.Windows.Forms.TextBox();
             this.MobileNumber = new System.Windows.Forms.TextBox();
             this.Password = new System.Windows.Forms.TextBox();
@@ -55,8 +56,10 @@
             this.roundPictureBox1 = new Library.Design.RoundPictureBox();
             this.CreateAdminAccount = new System.Windows.Forms.Button();
             this.DateOfJoining = new System.Windows.Forms.DateTimePicker();
+            this.emailCheck = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).BeginInit();
             this.SuspendLayout();
             // 
             // Email
@@ -70,6 +73,7 @@
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(316, 35);
             this.Email.TabIndex = 0;
+            this.Email.Validating += new System.ComponentModel.CancelEventHandler(this.Email_Validating);
             // 
             // MobileNumber
             // 
@@ -365,6 +369,10 @@
             this.DateOfJoining.Size = new System.Drawing.Size(314, 23);
             this.DateOfJoining.TabIndex = 16;
             // 
+            // emailCheck
+            // 
+            this.emailCheck.ContainerControl = this;
+            // 
             // CreateAnAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -407,6 +415,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -441,5 +450,6 @@
         private Design.RoundPictureBox roundPictureBox1;
         private System.Windows.Forms.Button CreateAdminAccount;
         private System.Windows.Forms.DateTimePicker DateOfJoining;
+        private System.Windows.Forms.ErrorProvider emailCheck;
     }
 }

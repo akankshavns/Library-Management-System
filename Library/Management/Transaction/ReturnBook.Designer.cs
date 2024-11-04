@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.issuePage = new System.Windows.Forms.Panel();
-            this.BackButton = new System.Windows.Forms.Button();
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.issueDate = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.ActualReturnDate = new System.Windows.Forms.DateTimePicker();
-            this.Return = new System.Windows.Forms.Button();
+            Return = new System.Windows.Forms.Button();
             this.mail = new System.Windows.Forms.TextBox();
             this.Dep = new System.Windows.Forms.TextBox();
             this.StudentName = new System.Windows.Forms.TextBox();
@@ -54,43 +52,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.issuePage.SuspendLayout();
+            this.issuePage = new System.Windows.Forms.Panel();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
-            // issuePage
-            // 
-            this.issuePage.BackColor = System.Drawing.Color.White;
-            this.issuePage.Controls.Add(this.BackButton);
-            this.issuePage.Controls.Add(this.InfoPanel);
-            this.issuePage.Controls.Add(this.panel5);
-            this.issuePage.Location = new System.Drawing.Point(45, 41);
-            this.issuePage.Name = "issuePage";
-            this.issuePage.Size = new System.Drawing.Size(1186, 626);
-            this.issuePage.TabIndex = 16;
-         
-            // 
-            // BackButton
-            // 
-            this.BackButton.BackColor = System.Drawing.Color.Transparent;
-            this.BackButton.FlatAppearance.BorderSize = 0;
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.Image = global::Library.Properties.Resources.Left_Arrow;
-            this.BackButton.Location = new System.Drawing.Point(0, 3);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(41, 16);
-            this.BackButton.TabIndex = 6;
-            this.BackButton.UseVisualStyleBackColor = false;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
-            // 
             // InfoPanel
             // 
+            this.InfoPanel.BackColor = System.Drawing.Color.Silver;
             this.InfoPanel.Controls.Add(this.issueDate);
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
             this.InfoPanel.Controls.Add(this.ActualReturnDate);
-            this.InfoPanel.Controls.Add(this.Return);
+            this.InfoPanel.Controls.Add(Return);
             this.InfoPanel.Controls.Add(this.mail);
             this.InfoPanel.Controls.Add(this.Dep);
             this.InfoPanel.Controls.Add(this.StudentName);
@@ -103,7 +77,7 @@
             this.InfoPanel.Controls.Add(this.label10);
             this.InfoPanel.Controls.Add(this.label7);
             this.InfoPanel.Controls.Add(this.label6);
-            this.InfoPanel.Location = new System.Drawing.Point(487, 67);
+            this.InfoPanel.Location = new System.Drawing.Point(509, 19);
             this.InfoPanel.Name = "InfoPanel";
             this.InfoPanel.Size = new System.Drawing.Size(492, 499);
             this.InfoPanel.TabIndex = 1;
@@ -151,14 +125,15 @@
             // 
             // Return
             // 
-            this.Return.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Return.Location = new System.Drawing.Point(151, 426);
-            this.Return.Name = "Return";
-            this.Return.Size = new System.Drawing.Size(113, 46);
-            this.Return.TabIndex = 21;
-            this.Return.Text = "Return";
-            this.Return.UseVisualStyleBackColor = true;
-            this.Return.Click += new System.EventHandler(this.Return_Click);
+            Return.BackColor = System.Drawing.Color.ForestGreen;
+            Return.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Return.Location = new System.Drawing.Point(151, 426);
+            Return.Name = "Return";
+            Return.Size = new System.Drawing.Size(113, 46);
+            Return.TabIndex = 21;
+            Return.Text = "Return";
+            Return.UseVisualStyleBackColor = false;
+            Return.Click += new System.EventHandler(Return_Click);
             // 
             // mail
             // 
@@ -279,25 +254,27 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
             this.panel5.Controls.Add(this.Search);
             this.panel5.Controls.Add(this.BookID);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.EnrollBox);
             this.panel5.Controls.Add(this.label4);
-            this.panel5.Location = new System.Drawing.Point(153, 67);
+            this.panel5.Location = new System.Drawing.Point(36, 36);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(297, 257);
             this.panel5.TabIndex = 0;
             // 
             // Search
             // 
+            this.Search.BackColor = System.Drawing.Color.ForestGreen;
             this.Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.Location = new System.Drawing.Point(75, 201);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(128, 43);
             this.Search.TabIndex = 22;
             this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = true;
+            this.Search.UseVisualStyleBackColor = false;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
             // BookID
@@ -339,15 +316,27 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Enter Student Enrollmentno.";
             // 
+            // issuePage
+            // 
+            this.issuePage.BackColor = System.Drawing.Color.Gainsboro;
+            this.issuePage.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
+            this.issuePage.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.issuePage.Location = new System.Drawing.Point(0, 534);
+            this.issuePage.Name = "issuePage";
+            this.issuePage.Size = new System.Drawing.Size(1231, 133);
+            this.issuePage.TabIndex = 16;
+            // 
             // ReturnBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.InfoPanel);
             this.Controls.Add(this.issuePage);
+            this.Controls.Add(this.panel5);
             this.Name = "ReturnBook";
             this.Size = new System.Drawing.Size(1231, 667);
-            this.Load += new System.EventHandler(this.ReturnBook_Load);
-            this.issuePage.ResumeLayout(false);
+            this.Load += new System.EventHandler(ReturnBook_Load);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -357,14 +346,12 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel issuePage;
         private System.Windows.Forms.Panel InfoPanel;
         private System.Windows.Forms.TextBox issueDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker ActualReturnDate;
-        private System.Windows.Forms.Button Return;
+        public static System.Windows.Forms.Button Return;
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox Dep;
         private System.Windows.Forms.TextBox StudentName;
@@ -383,6 +370,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Panel issuePage;
     }
 }

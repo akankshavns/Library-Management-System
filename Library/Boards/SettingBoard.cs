@@ -25,21 +25,21 @@ namespace Library.Board
         private void Transaction_Click(object sender, EventArgs e)
         {
             // library1.Visible = false;
-            //transaction1.getValueFromDB();
-            // transaction1.Visible = true;
-            // transaction1.BringToFront();
+            transaction1.getValueFromDB();
+            transaction1.Visible = true;
+            transaction1.BringToFront();
         }
 
         private void TransactionDetail_Click(object sender, EventArgs e)
         {
             //library1.Visible = false;
-            //transaction1.Visible = true;
-            //transaction1.BringToFront();
+            transaction1.Visible = true;
+            transaction1.BringToFront();
         }
 
         private void LibraryDetail_Click(object sender, EventArgs e)
         {
-            //transaction1.Visible=false;
+            //transaction1.Visible = false;
             //library1.Visible = true;
             //library1.BringToFront();
         }

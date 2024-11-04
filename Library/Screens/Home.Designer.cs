@@ -33,11 +33,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Bin = new System.Windows.Forms.Button();
+            this.Logout = new System.Windows.Forms.Button();
             this.Settingpanel = new System.Windows.Forms.Panel();
             this.Setting = new System.Windows.Forms.Button();
             this.Logoutpanel = new System.Windows.Forms.Panel();
-            this.Logout = new System.Windows.Forms.Button();
+            this.Bin = new System.Windows.Forms.Button();
             this.BookBoard = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.update = new System.Windows.Forms.Button();
@@ -57,6 +57,16 @@
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.viewTransaction1 = new Library.TransactionManagement.ViewTransaction();
+            this.dashboard1 = new Library.FrontScreen.Dashboard();
+            this.addBook1 = new Library.BookManagement.AddBook();
+            this.viewBook1 = new Library.BookManagement.ViewBook();
+            this.addStudent1 = new Library.StudentManagement.AddStudent();
+            this.viewStudent1 = new Library.StudentManagement.viewStudent();
+            this.bin1 = new Library.Boards.Bin();
+            this.searchBooks1 = new Library.TransactionManagement.SearchBooks();
+            this.returnBook1 = new Library.TransactionManagement.ReturnBook();
+            this.settingBoard1 = new Library.Board.SettingBoard();
             this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
@@ -77,12 +87,6 @@
             this.issuePageopen = new System.Windows.Forms.Button();
             this.StudentManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.TransactionManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
-            this.dashboard1 = new Library.FrontScreen.Dashboard();
-            this.addBook1 = new Library.BookManagement.AddBook();
-            this.viewBook1 = new Library.BookManagement.ViewBook();
-            this.addStudent1 = new Library.StudentManagement.AddStudent();
-            this.viewStudent1 = new Library.StudentManagement.viewStudent();
-            this.bin1 = new Library.Boards.Bin();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -138,27 +142,27 @@
             this.panel3.Size = new System.Drawing.Size(77, 54);
             this.panel3.TabIndex = 10;
             // 
-            // Bin
+            // Logout
             // 
-            this.Bin.BackColor = System.Drawing.Color.Transparent;
-            this.Bin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Bin.FlatAppearance.BorderSize = 0;
-            this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bin.ForeColor = System.Drawing.Color.White;
-            this.Bin.Image = ((System.Drawing.Image)(resources.GetObject("Bin.Image")));
-            this.Bin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Bin.Location = new System.Drawing.Point(4, 2);
-            this.Bin.Name = "Bin";
-            this.Bin.Size = new System.Drawing.Size(70, 49);
-            this.Bin.TabIndex = 11;
-            this.Bin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Bin.UseVisualStyleBackColor = false;
-            this.Bin.Click += new System.EventHandler(this.Bin_Click_1);
-            this.Bin.MouseLeave += new System.EventHandler(this.Bin_MouseLeave);
-            this.Bin.MouseHover += new System.EventHandler(this.Bin_MouseHover);
+            this.Logout.BackColor = System.Drawing.Color.Transparent;
+            this.Logout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Logout.FlatAppearance.BorderSize = 0;
+            this.Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.ForeColor = System.Drawing.Color.White;
+            this.Logout.Image = ((System.Drawing.Image)(resources.GetObject("Logout.Image")));
+            this.Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Logout.Location = new System.Drawing.Point(3, 3);
+            this.Logout.Name = "Logout";
+            this.Logout.Size = new System.Drawing.Size(70, 49);
+            this.Logout.TabIndex = 11;
+            this.Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Logout.UseVisualStyleBackColor = false;
+            this.Logout.Click += new System.EventHandler(this.Logout_Click);
+            this.Logout.MouseLeave += new System.EventHandler(this.Logout_MouseLeave);
+            this.Logout.MouseHover += new System.EventHandler(this.Logout_MouseHover);
             // 
             // Settingpanel
             // 
@@ -202,27 +206,27 @@
             this.Logoutpanel.Size = new System.Drawing.Size(77, 54);
             this.Logoutpanel.TabIndex = 10;
             // 
-            // Logout
+            // Bin
             // 
-            this.Logout.BackColor = System.Drawing.Color.Transparent;
-            this.Logout.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.Logout.FlatAppearance.BorderSize = 0;
-            this.Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
-            this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Logout.ForeColor = System.Drawing.Color.White;
-            this.Logout.Image = ((System.Drawing.Image)(resources.GetObject("Logout.Image")));
-            this.Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Logout.Location = new System.Drawing.Point(3, 3);
-            this.Logout.Name = "Logout";
-            this.Logout.Size = new System.Drawing.Size(70, 49);
-            this.Logout.TabIndex = 11;
-            this.Logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Logout.UseVisualStyleBackColor = false;
-            this.Logout.Click += new System.EventHandler(this.Logout_Click);
-            this.Logout.MouseLeave += new System.EventHandler(this.Logout_MouseLeave);
-            this.Logout.MouseHover += new System.EventHandler(this.Logout_MouseHover);
+            this.Bin.BackColor = System.Drawing.Color.Transparent;
+            this.Bin.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Bin.FlatAppearance.BorderSize = 0;
+            this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin.ForeColor = System.Drawing.Color.White;
+            this.Bin.Image = ((System.Drawing.Image)(resources.GetObject("Bin.Image")));
+            this.Bin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Bin.Location = new System.Drawing.Point(4, 2);
+            this.Bin.Name = "Bin";
+            this.Bin.Size = new System.Drawing.Size(70, 49);
+            this.Bin.TabIndex = 11;
+            this.Bin.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Bin.UseVisualStyleBackColor = false;
+            this.Bin.Click += new System.EventHandler(this.Bin_Click_1);
+            this.Bin.MouseLeave += new System.EventHandler(this.Bin_MouseLeave);
+            this.Bin.MouseHover += new System.EventHandler(this.Bin_MouseHover);
             // 
             // BookBoard
             // 
@@ -407,11 +411,104 @@
             this.panel5.Controls.Add(this.addStudent1);
             this.panel5.Controls.Add(this.viewStudent1);
             this.panel5.Controls.Add(this.bin1);
+            this.panel5.Controls.Add(this.searchBooks1);
+            this.panel5.Controls.Add(this.returnBook1);
+            this.panel5.Controls.Add(this.settingBoard1);
+            this.panel5.Controls.Add(this.viewTransaction1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1141, 679);
             this.panel5.TabIndex = 10;
+            // 
+            // viewTransaction1
+            // 
+            this.viewTransaction1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewTransaction1.Location = new System.Drawing.Point(0, 0);
+            this.viewTransaction1.Name = "viewTransaction1";
+            this.viewTransaction1.Size = new System.Drawing.Size(1141, 679);
+            this.viewTransaction1.TabIndex = 9;
+            // 
+            // dashboard1
+            // 
+            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
+            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.dashboard1.Name = "dashboard1";
+            this.dashboard1.Size = new System.Drawing.Size(1141, 679);
+            this.dashboard1.TabIndex = 0;
+            // 
+            // addBook1
+            // 
+            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addBook1.Location = new System.Drawing.Point(0, 0);
+            this.addBook1.Name = "addBook1";
+            this.addBook1.Size = new System.Drawing.Size(1141, 679);
+            this.addBook1.TabIndex = 1;
+            // 
+            // viewBook1
+            // 
+            this.viewBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewBook1.Location = new System.Drawing.Point(0, 0);
+            this.viewBook1.Name = "viewBook1";
+            this.viewBook1.Size = new System.Drawing.Size(1141, 679);
+            this.viewBook1.TabIndex = 2;
+            // 
+            // addStudent1
+            // 
+            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addStudent1.Location = new System.Drawing.Point(0, 0);
+            this.addStudent1.Name = "addStudent1";
+            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.addStudent1.TabIndex = 3;
+            // 
+            // viewStudent1
+            // 
+            this.viewStudent1.BackColor = System.Drawing.Color.Gainsboro;
+            this.viewStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewStudent1.Location = new System.Drawing.Point(0, 0);
+            this.viewStudent1.Name = "viewStudent1";
+            this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
+            this.viewStudent1.TabIndex = 4;
+            // 
+            // bin1
+            // 
+            this.bin1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bin1.Location = new System.Drawing.Point(0, 0);
+            this.bin1.Name = "bin1";
+            this.bin1.Size = new System.Drawing.Size(1141, 679);
+            this.bin1.TabIndex = 5;
+            // 
+            // searchBooks1
+            // 
+            this.searchBooks1.availableBookId_issueBook = null;
+            this.searchBooks1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.searchBooks1.Location = new System.Drawing.Point(0, 0);
+            this.searchBooks1.Name = "searchBooks1";
+            this.searchBooks1.Size = new System.Drawing.Size(1141, 679);
+            this.searchBooks1.TabIndex = 6;
+            // 
+            // returnBook1
+            // 
+            this.returnBook1.BackColor = System.Drawing.Color.Gainsboro;
+            this.returnBook1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.returnBook1.Location = new System.Drawing.Point(0, 0);
+            this.returnBook1.Name = "returnBook1";
+            this.returnBook1.Size = new System.Drawing.Size(1141, 679);
+            this.returnBook1.TabIndex = 7;
+            // 
+            // settingBoard1
+            // 
+            this.settingBoard1.BackColor = System.Drawing.Color.LightSlateGray;
+            this.settingBoard1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.settingBoard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.settingBoard1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingBoard1.Location = new System.Drawing.Point(0, 0);
+            this.settingBoard1.Name = "settingBoard1";
+            this.settingBoard1.Size = new System.Drawing.Size(1141, 679);
+            this.settingBoard1.TabIndex = 8;
             // 
             // menuBar
             // 
@@ -448,7 +545,7 @@
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.menuButton.Image = ((System.Drawing.Image)(resources.GetObject("menuButton.Image")));
+            this.menuButton.Image = global::Library.Properties.Resources.Menu;
             this.menuButton.Location = new System.Drawing.Point(7, 4);
             this.menuButton.Name = "menuButton";
             this.menuButton.Size = new System.Drawing.Size(39, 38);
@@ -745,58 +842,6 @@
             this.TransactionManagementMenuSlider.Interval = 1;
             this.TransactionManagementMenuSlider.Tick += new System.EventHandler(this.TransactionManagementMenuSlider_Tick);
             // 
-            // dashboard1
-            // 
-            this.dashboard1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dashboard1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.dashboard1.Name = "dashboard1";
-            this.dashboard1.Size = new System.Drawing.Size(1141, 679);
-            this.dashboard1.TabIndex = 0;
-            // 
-            // addBook1
-            // 
-            this.addBook1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addBook1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addBook1.Location = new System.Drawing.Point(0, 0);
-            this.addBook1.Name = "addBook1";
-            this.addBook1.Size = new System.Drawing.Size(1141, 679);
-            this.addBook1.TabIndex = 1;
-            // 
-            // viewBook1
-            // 
-            this.viewBook1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewBook1.Location = new System.Drawing.Point(0, 0);
-            this.viewBook1.Name = "viewBook1";
-            this.viewBook1.Size = new System.Drawing.Size(1141, 679);
-            this.viewBook1.TabIndex = 2;
-            // 
-            // addStudent1
-            // 
-            this.addStudent1.BackColor = System.Drawing.Color.Gainsboro;
-            this.addStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.addStudent1.Location = new System.Drawing.Point(0, 0);
-            this.addStudent1.Name = "addStudent1";
-            this.addStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.addStudent1.TabIndex = 3;
-            // 
-            // viewStudent1
-            // 
-            this.viewStudent1.BackColor = System.Drawing.Color.Gainsboro;
-            this.viewStudent1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewStudent1.Location = new System.Drawing.Point(0, 0);
-            this.viewStudent1.Name = "viewStudent1";
-            this.viewStudent1.Size = new System.Drawing.Size(1141, 679);
-            this.viewStudent1.TabIndex = 4;
-            // 
-            // bin1
-            // 
-            this.bin1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bin1.Location = new System.Drawing.Point(0, 0);
-            this.bin1.Name = "bin1";
-            this.bin1.Size = new System.Drawing.Size(1141, 679);
-            this.bin1.TabIndex = 5;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,5 +936,9 @@
         private StudentManagement.AddStudent addStudent1;
         private StudentManagement.viewStudent viewStudent1;
         private Boards.Bin bin1;
+        private TransactionManagement.SearchBooks searchBooks1;
+        private TransactionManagement.ReturnBook returnBook1;
+        private Board.SettingBoard settingBoard1;
+        private TransactionManagement.ViewTransaction viewTransaction1;
     }
 }

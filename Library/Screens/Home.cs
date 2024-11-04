@@ -100,9 +100,9 @@ namespace Library
         private void Setting_Click(object sender, EventArgs e)
         {
 
-            //settingBoard1.notshow();
-            //settingBoard1.Show();
-            //settingBoard1.BringToFront();
+            settingBoard1.notshow();
+            settingBoard1.Show();
+            settingBoard1.BringToFront();
         }
 
         private void Home_Load(object sender, EventArgs e)
@@ -260,20 +260,22 @@ namespace Library
 
         private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
         {
-            //viewTransaction1.Show();
-            //viewTransaction1.BringToFront();
+            viewTransaction1.Show();
+            viewTransaction1.BringToFront();
         }
 
         private void ReturnPageOpen_Click(object sender, EventArgs e)
         {
-            //returnBook1.Show();
-            //returnBook1.BringToFront();
+            returnBook1.Show();
+            returnBook1.BringToFront();
         }
 
         private void issuePageopen_Click(object sender, EventArgs e)
         {
-            //showBookDetail1.Show();
-            //showBookDetail1.BringToFront();
+            searchBooks1.viewfunction();
+            searchBooks1.showBookDetail1.Hide();
+            searchBooks1.Show();
+            searchBooks1.BringToFront();
         }
 
         private void Setting_MouseHover(object sender, EventArgs e)

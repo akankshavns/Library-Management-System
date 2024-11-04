@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace Library.Auth
@@ -90,6 +91,22 @@ namespace Library.Auth
                         MessageBox.Show(ex.Message);
                     }
                 }
+            }
+        }
+
+        private void Email_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+
+            // Check if the email matches the pattern
+            if (!Regex.IsMatch(Email.Text, pattern))
+            {
+                emailCheck.SetError(Email, "Invalid email format");
+                e.Cancel = true;
+            }
+            else
+            {
+                emailCheck.SetError(Email, "");
             }
         }
     }

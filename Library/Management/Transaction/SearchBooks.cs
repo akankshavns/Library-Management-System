@@ -32,12 +32,18 @@ namespace Library.TransactionManagement
         DataTable booksTable = new DataTable();
         private void issueBook_Load(object sender, EventArgs e)
         {
+
+            viewfunction();
+        }
+        public void viewfunction()
+        {
+            booksTable.Clear();
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT SNO, Accession_No, BookName, AUTHORNAME, VOLUME FROM AddBooks";
+                    string viewdata = "SELECT SNO, Accession_No, BookName, AUTHORNAME, VOLUME FROM AddBooks where BookStatus = 'Retained'";
                     try
                     {
                         con.Open();
@@ -52,7 +58,6 @@ namespace Library.TransactionManagement
                     }
                 }
             }
-
         }
         private void searchBox_KeyUp(object sender, KeyEventArgs e)
         {
@@ -61,13 +66,16 @@ namespace Library.TransactionManagement
             dataGridView.DataSource = dv.ToTable();
 
         }
+        public static int num = 0;
+        public static int sno;
         private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
+                sno = Convert.ToInt32(dataGridView.SelectedCells[0].Value.ToString());
                 string id = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
                 string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
-                int num = 0;
+                
                 try
                 {
                     string connectionString = GetConnectionString();
@@ -107,18 +115,15 @@ namespace Library.TransactionManagement
                     DialogResult result = MessageBox.Show("This Book is Available in the library,do you want to issue this book ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes)
                     {
-                        issueFormDetails1.newupdatedreturndays();
-                        issueFormDetails1.availableBookId = availableBookId_issueBook;
-                        issueFormDetails1.Show();
-                        issueFormDetails1.BringToFront();
+                        showBookDetail1.newupdatedreturndays();
+                        showBookDetail1.availableBookId = availableBookId_issueBook;
+                        showBookDetail1.Show();
+                        showBookDetail1.BringToFront();
                     }
                 }
             }
         }
-
-
     }
-
 
 }
 

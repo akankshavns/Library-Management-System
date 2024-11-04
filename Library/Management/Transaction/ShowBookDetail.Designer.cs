@@ -62,6 +62,7 @@
             this.CheckEnrollBox = new System.Windows.Forms.ErrorProvider(this.components);
             this.checkSemesterBox = new System.Windows.Forms.ErrorProvider(this.components);
             this.BackButton = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.BookInfo.SuspendLayout();
@@ -71,6 +72,7 @@
             // 
             // InfoPanel
             // 
+            this.InfoPanel.BackColor = System.Drawing.Color.Silver;
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
             this.InfoPanel.Controls.Add(this.ReturnDate);
@@ -88,11 +90,10 @@
             this.InfoPanel.Controls.Add(this.label12);
             this.InfoPanel.Controls.Add(this.label7);
             this.InfoPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoPanel.Location = new System.Drawing.Point(526, 204);
+            this.InfoPanel.Location = new System.Drawing.Point(526, 170);
             this.InfoPanel.Name = "InfoPanel";
-            this.InfoPanel.Size = new System.Drawing.Size(498, 366);
+            this.InfoPanel.Size = new System.Drawing.Size(498, 399);
             this.InfoPanel.TabIndex = 3;
-            this.InfoPanel.Visible = false;
             // 
             // label14
             // 
@@ -118,6 +119,7 @@
             // 
             // ReturnDate
             // 
+            this.ReturnDate.Enabled = false;
             this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnDate.Location = new System.Drawing.Point(209, 267);
             this.ReturnDate.Name = "ReturnDate";
@@ -137,13 +139,15 @@
             // 
             // IssueButton
             // 
+            this.IssueButton.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.IssueButton.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IssueButton.Location = new System.Drawing.Point(173, 311);
+            this.IssueButton.Location = new System.Drawing.Point(198, 319);
             this.IssueButton.Name = "IssueButton";
             this.IssueButton.Size = new System.Drawing.Size(113, 46);
             this.IssueButton.TabIndex = 21;
             this.IssueButton.Text = "Issue";
-            this.IssueButton.UseVisualStyleBackColor = true;
+            this.IssueButton.UseVisualStyleBackColor = false;
+            this.IssueButton.Visible = false;
             this.IssueButton.Click += new System.EventHandler(this.IssueButton_Click_1);
             // 
             // Addre
@@ -322,13 +326,14 @@
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
             this.panel5.Controls.Add(this.Semester);
             this.panel5.Controls.Add(this.EnrollBox);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Location = new System.Drawing.Point(3, 40);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(376, 171);
+            this.panel5.Size = new System.Drawing.Size(319, 171);
             this.panel5.TabIndex = 2;
             // 
             // Semester
@@ -384,6 +389,7 @@
             // 
             // BookInfo
             // 
+            this.BookInfo.BackColor = System.Drawing.Color.Silver;
             this.BookInfo.Controls.Add(this.label6);
             this.BookInfo.Controls.Add(this.AuthorName);
             this.BookInfo.Controls.Add(this.BookName);
@@ -393,9 +399,8 @@
             this.BookInfo.Controls.Add(this.label10);
             this.BookInfo.Location = new System.Drawing.Point(526, 14);
             this.BookInfo.Name = "BookInfo";
-            this.BookInfo.Size = new System.Drawing.Size(498, 184);
+            this.BookInfo.Size = new System.Drawing.Size(498, 158);
             this.BookInfo.TabIndex = 11;
-            this.BookInfo.Visible = false;
             // 
             // CheckEnrollBox
             // 
@@ -418,17 +423,27 @@
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 609);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1130, 133);
+            this.panel1.TabIndex = 13;
+            // 
             // ShowBookDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.BookInfo);
             this.Controls.Add(this.InfoPanel);
             this.Controls.Add(this.panel5);
             this.Name = "ShowBookDetail";
-            this.Size = new System.Drawing.Size(1066, 618);
+            this.Size = new System.Drawing.Size(1130, 742);
             this.Load += new System.EventHandler(this.ShowBookDetail_Load);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
@@ -477,5 +492,6 @@
         private System.Windows.Forms.ErrorProvider CheckEnrollBox;
         private System.Windows.Forms.ErrorProvider checkSemesterBox;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Panel panel1;
     }
 }

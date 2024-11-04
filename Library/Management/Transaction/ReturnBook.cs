@@ -17,11 +17,6 @@ namespace Library.TransactionManagement
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Visible = false;
-        }
         private void Search_Click(object sender, EventArgs e)
         {
             string connectionString = GetConnectionString();
@@ -29,13 +24,28 @@ namespace Library.TransactionManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string query = "SELECT BookName, AuthorName, StudentName,Deparment,Email,issueDate FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId =  @BookID";
+                    string checkQuery = "SELECT COUNT(*) FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID";
+                    string query = "SELECT BookName, AuthorName, StudentName, Deparment, Email, issueDate FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and IsReturnBook = @ReturnStatus";
                     try
                     {
                         con.Open();
+
+                        // Check if any record exists for given StudentEnrollment and BookID
+                        SqlCommand checkCommand = new SqlCommand(checkQuery, con);
+                        checkCommand.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
+                        checkCommand.Parameters.AddWithValue("@BookID", BookID.Text);
+                        int recordCount = (int)checkCommand.ExecuteScalar();
+
+                        if (recordCount == 0)
+                        {
+                            MessageBox.Show("No records found for the given enrollment and book ID.");
+                            return;
+                        }
+
                         SqlCommand command = new SqlCommand(query, con);
                         command.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
                         command.Parameters.AddWithValue("@BookID", BookID.Text);
+                        command.Parameters.AddWithValue("@ReturnStatus", "Hold");
                         SqlDataReader reader = command.ExecuteReader();
 
                         if (reader.Read())
@@ -50,7 +60,7 @@ namespace Library.TransactionManagement
                         }
                         else
                         {
-                            MessageBox.Show("No data found.");
+                            MessageBox.Show("This Book is already return by the student.");
                         }
                         reader.Close();
                     }
@@ -62,52 +72,91 @@ namespace Library.TransactionManagement
             }
         }
 
+
         private void Return_Click(object sender, EventArgs e)
         {
-
-
             DateTime actualReturnDate = ActualReturnDate.Value;
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string finequerry = "select ReturnDate from IssueBookList where BookId= @BookID ";
-                    string updateAvalable = "update AddBooks set AvailableBook = AvailableBook + 1 Where Accession_No = @BookID";
-                    string changeReturn = "update IssueBookList set isReturnBook='yes'";
+                    string fineQuery = "SELECT ReturnDate FROM IssueBookList WHERE BookId = @BookID AND StudentEnrollment = @enroll";
+                    string updateAvailable = "UPDATE AddBooks SET AvailableBook = AvailableBook + 1 WHERE Accession_No = @BookID";
+                    string changeReturn = "UPDATE IssueBookList SET isReturnBook = @Return WHERE BookId = @BookId AND StudentEnrollment = @enroll";
                     try
                     {
                         con.Open();
-                        SqlCommand finecmd = new SqlCommand(finequerry, con);
-                        finecmd.Parameters.AddWithValue("@BookID", BookID.Text);
-                        SqlDataReader reader = finecmd.ExecuteReader();
+                        // Check for Return Date and Calculate Fine if Late
+                        SqlCommand fineCmd = new SqlCommand(fineQuery, con);
+                        fineCmd.Parameters.AddWithValue("@BookID", BookID.Text);
+                        fineCmd.Parameters.AddWithValue("@enroll", EnrollBox.Text);
+                        SqlDataReader reader = fineCmd.ExecuteReader();
                         DateTime returnDate = DateTime.MinValue;
                         if (reader.Read())
                         {
                             returnDate = reader.GetDateTime(0);
                         }
                         reader.Close();
+                        // calculate the fine
                         if (actualReturnDate > returnDate)
                         {
+                            Return.Enabled= false;
                             TimeSpan difference = actualReturnDate - returnDate;
                             int daysLate = difference.Days;
-                            double fine = daysLate * fineCharge;  // $5 fine per day
-                            MessageBox.Show($"Book is returned late. You have to pay a fine of ${fine}.");
-                            //How to collect fine.
-                        }
-                        else
-                        {
-                            SqlCommand cmd = new SqlCommand(updateAvalable, con);
-                            cmd.Parameters.AddWithValue("@BookID", BookID.Text);
-                            SqlCommand comm = new SqlCommand(changeReturn, con);
-                            int i = cmd.ExecuteNonQuery();
-                            if (i == 0)
+                            MessageBox.Show(fineCharge.ToString());
+                            double fine = daysLate * fineCharge;
+                            MessageBox.Show($"Book is returned late. You have to pay a fine of ₹{fine}.");
+                            scanner scan = new scanner();
+                            scan.Show();
+                            if (Return.Enabled == true)
                             {
-                                MessageBox.Show("Book not Return succesfully");
+                                SqlCommand cmd = new SqlCommand(updateAvailable, con);
+                                cmd.Parameters.AddWithValue("@BookID", BookID.Text);
+                                SqlCommand comm = new SqlCommand(changeReturn, con);
+                                comm.Parameters.AddWithValue("@enroll", EnrollBox.Text);
+                                comm.Parameters.AddWithValue("@BookId", BookID.Text);
+                                comm.Parameters.AddWithValue("@Return", "Return");
+                                int availableUpdateResult = cmd.ExecuteNonQuery();
+                                int returnUpdateResult = comm.ExecuteNonQuery();
+                                if (availableUpdateResult > 0 && returnUpdateResult > 0)
+                                {
+                                    MessageBox.Show("Book returned successfully and inventory updated.");
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Book return process failed.");
+                                }
+                                BookName.Clear();
+                                AuthorName.Clear();
+                                EnrollBox.Clear();
+                                StudentName.Clear();
+                                mail.Clear();
+                                issueDate.Clear();
+                                Dep.Clear();
                             }
                             else
                             {
-                                MessageBox.Show("Book Return succesfully");
+                                MessageBox.Show("Please deposite your fine!");
+                            }
+                        }
+                        else
+                        {
+                            SqlCommand cmd = new SqlCommand(updateAvailable, con);
+                            cmd.Parameters.AddWithValue("@BookID", BookID.Text);
+                            SqlCommand comm = new SqlCommand(changeReturn, con);
+                            comm.Parameters.AddWithValue("@enroll", EnrollBox.Text);
+                            comm.Parameters.AddWithValue("@BookId", BookID.Text);
+                            comm.Parameters.AddWithValue("@Return", "Return");
+                            int availableUpdateResult = cmd.ExecuteNonQuery();
+                            int returnUpdateResult = comm.ExecuteNonQuery();
+                            if (availableUpdateResult > 0 && returnUpdateResult > 0)
+                            {
+                                MessageBox.Show("Book returned successfully and inventory updated.");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Book return process failed.");
                             }
                             BookName.Clear();
                             AuthorName.Clear();
@@ -116,7 +165,6 @@ namespace Library.TransactionManagement
                             mail.Clear();
                             issueDate.Clear();
                             Dep.Clear();
-
                         }
                     }
                     catch (Exception ex)
@@ -151,9 +199,6 @@ namespace Library.TransactionManagement
                             returnDays = Convert.ToInt32(rdr.GetValue(3));
                             ActualReturnDate.MaxDate = DateTime.Today.AddDays(returnDays);
                             fineCharge = Fine;
-
-
-
                         }
                     }
                     catch (Exception ex)

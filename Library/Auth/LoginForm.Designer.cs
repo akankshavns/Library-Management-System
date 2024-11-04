@@ -123,6 +123,7 @@
             this.ForgotPassword.Text = "Forgot Password";
             this.ForgotPassword.UseVisualStyleBackColor = false;
             this.ForgotPassword.Visible = false;
+            this.ForgotPassword.CheckedChanged += new System.EventHandler(this.ForgotPassword_CheckedChanged);
             // 
             // pictureBox2
             // 
