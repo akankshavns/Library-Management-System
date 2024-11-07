@@ -57,7 +57,6 @@
             this.BookManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.BookManagementMenuContainer = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.viewTransaction1 = new Library.TransactionManagement.ViewTransaction();
             this.dashboard1 = new Library.FrontScreen.Dashboard();
             this.addBook1 = new Library.BookManagement.AddBook();
             this.viewBook1 = new Library.BookManagement.ViewBook();
@@ -67,6 +66,7 @@
             this.searchBooks1 = new Library.TransactionManagement.SearchBooks();
             this.returnBook1 = new Library.TransactionManagement.ReturnBook();
             this.settingBoard1 = new Library.Board.SettingBoard();
+            this.viewTransaction1 = new Library.TransactionManagement.ViewTransaction();
             this.menuBar = new System.Windows.Forms.FlowLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.menuButton = new System.Windows.Forms.Button();
@@ -368,23 +368,22 @@
             // HomeLogo
             // 
             this.HomeLogo.BackColor = System.Drawing.Color.Transparent;
-            this.HomeLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomeLogo.BackgroundImage")));
-            this.HomeLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.HomeLogo.BackgroundImage = global::Library.Properties.Resources.vikansha_logo_removebg_preview;
+            this.HomeLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.HomeLogo.Location = new System.Drawing.Point(3, 0);
             this.HomeLogo.Name = "HomeLogo";
-            this.HomeLogo.Size = new System.Drawing.Size(69, 65);
+            this.HomeLogo.Size = new System.Drawing.Size(76, 65);
             this.HomeLogo.TabIndex = 1;
             this.HomeLogo.TabStop = false;
             // 
             // MenuSlider
             // 
             this.MenuSlider.Interval = 1;
-            this.MenuSlider.Tick += new System.EventHandler(this.MenuSlider_Tick_1);
             // 
             // close
             // 
             this.close.Interval = 1;
-            this.close.Tick += new System.EventHandler(this.close_Tick_1);
+            this.close.Tick += new System.EventHandler(this.close_Tick);
             // 
             // BookManagementMenuSlider
             // 
@@ -420,14 +419,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1141, 679);
             this.panel5.TabIndex = 10;
-            // 
-            // viewTransaction1
-            // 
-            this.viewTransaction1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.viewTransaction1.Location = new System.Drawing.Point(0, 0);
-            this.viewTransaction1.Name = "viewTransaction1";
-            this.viewTransaction1.Size = new System.Drawing.Size(1141, 679);
-            this.viewTransaction1.TabIndex = 9;
             // 
             // dashboard1
             // 
@@ -509,6 +500,14 @@
             this.settingBoard1.Name = "settingBoard1";
             this.settingBoard1.Size = new System.Drawing.Size(1141, 679);
             this.settingBoard1.TabIndex = 8;
+            // 
+            // viewTransaction1
+            // 
+            this.viewTransaction1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.viewTransaction1.Location = new System.Drawing.Point(0, 0);
+            this.viewTransaction1.Name = "viewTransaction1";
+            this.viewTransaction1.Size = new System.Drawing.Size(1141, 679);
+            this.viewTransaction1.TabIndex = 9;
             // 
             // menuBar
             // 
@@ -855,7 +854,6 @@
             this.Name = "Home";
             this.Text = "Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Home_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);

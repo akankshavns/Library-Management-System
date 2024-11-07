@@ -50,8 +50,8 @@ namespace Library.Auth
                             RandomCode = (random.Next(999999).ToString());
                             MailMessage message = new MailMessage();
                             to=(mailAddress.Text).ToString();
-                            From = "makanksha@gmail.com";
-                            pass = "";
+                            From = "libraryemailproject@gmail.com";
+                            pass = "Library@777";
                             MessageBody = "your Reset OTP is " + RandomCode;
                             message.To.Add(to);
                             message.From = new MailAddress(From);
@@ -82,6 +82,52 @@ namespace Library.Auth
                         MessageBox.Show(ex.Message);
                     }
                 }
+            }
+        }
+
+        private void OTPverifyButton_Click(object sender, EventArgs e)
+        {
+            if (RandomCode == (OTPcheck.Text).ToString())
+            {
+                to = mailAddress.Text;
+                ResetPssword.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Wrong Code");
+            }
+        }
+        string userName = to;
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            if (NewPassword.Text == verifyNewPassword.Text)
+            {
+                string connectionString = GetConnectionString();
+                if (connectionString != null)
+                {
+                    using (SqlConnection con = new SqlConnection(connectionString))
+                    {
+                        string ResetPasswordQuery = "update AdminTable set  password=@newPassword where Email=@mail";
+                        try
+                        {
+                            con.Open();
+                            SqlCommand cmd = new SqlCommand(ResetPasswordQuery, con);
+                            cmd.Parameters.AddWithValue("@newPassword", verifyNewPassword.Text);
+                            cmd.Parameters.AddWithValue("@mail", mailAddress.Text);
+                            int reset=cmd.ExecuteNonQuery();
+                            if (reset > 0)
+                            {
+                                MessageBox.Show("Reset successfully");
+                            }
+                        }
+                        catch (Exception ex) { MessageBox.Show(ex.Message); }
+                        
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Password not matched");
             }
         }
     }

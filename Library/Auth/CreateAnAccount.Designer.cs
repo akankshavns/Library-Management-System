@@ -51,20 +51,22 @@
             this.label10 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CreateUserAccount = new System.Windows.Forms.LinkLabel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.roundPictureBox1 = new Library.Design.RoundPictureBox();
             this.CreateAdminAccount = new System.Windows.Forms.Button();
             this.DateOfJoining = new System.Windows.Forms.DateTimePicker();
             this.emailCheck = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.roundPictureBox1 = new Library.Design.RoundPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).BeginInit();
             this.SuspendLayout();
             // 
             // Email
             // 
-            this.Email.BackColor = System.Drawing.Color.OldLace;
+            this.Email.BackColor = System.Drawing.Color.Gainsboro;
             this.Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(421, 392);
@@ -77,7 +79,7 @@
             // 
             // MobileNumber
             // 
-            this.MobileNumber.BackColor = System.Drawing.Color.OldLace;
+            this.MobileNumber.BackColor = System.Drawing.Color.Gainsboro;
             this.MobileNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MobileNumber.Location = new System.Drawing.Point(422, 273);
@@ -89,7 +91,7 @@
             // 
             // Password
             // 
-            this.Password.BackColor = System.Drawing.Color.OldLace;
+            this.Password.BackColor = System.Drawing.Color.Gainsboro;
             this.Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(422, 216);
@@ -101,7 +103,7 @@
             // 
             // UserName
             // 
-            this.UserName.BackColor = System.Drawing.Color.OldLace;
+            this.UserName.BackColor = System.Drawing.Color.Gainsboro;
             this.UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserName.Location = new System.Drawing.Point(422, 155);
@@ -113,7 +115,7 @@
             // 
             // lastName
             // 
-            this.lastName.BackColor = System.Drawing.Color.OldLace;
+            this.lastName.BackColor = System.Drawing.Color.Gainsboro;
             this.lastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName.Location = new System.Drawing.Point(16, 273);
@@ -125,7 +127,7 @@
             // 
             // Adhar
             // 
-            this.Adhar.BackColor = System.Drawing.Color.OldLace;
+            this.Adhar.BackColor = System.Drawing.Color.Gainsboro;
             this.Adhar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Adhar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Adhar.Location = new System.Drawing.Point(16, 392);
@@ -137,7 +139,7 @@
             // 
             // FirstName
             // 
-            this.FirstName.BackColor = System.Drawing.Color.OldLace;
+            this.FirstName.BackColor = System.Drawing.Color.Gainsboro;
             this.FirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(16, 216);
@@ -149,7 +151,7 @@
             // 
             // FName
             // 
-            this.FName.BackColor = System.Drawing.Color.OldLace;
+            this.FName.BackColor = System.Drawing.Color.Gainsboro;
             this.FName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FName.Location = new System.Drawing.Point(16, 330);
@@ -161,7 +163,7 @@
             // 
             // EmpId
             // 
-            this.EmpId.BackColor = System.Drawing.Color.OldLace;
+            this.EmpId.BackColor = System.Drawing.Color.Gainsboro;
             this.EmpId.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.EmpId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpId.Location = new System.Drawing.Point(16, 155);
@@ -189,9 +191,9 @@
             this.heading.Location = new System.Drawing.Point(7, 60);
             this.heading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heading.Name = "heading";
-            this.heading.Size = new System.Drawing.Size(198, 25);
+            this.heading.Size = new System.Drawing.Size(209, 25);
             this.heading.TabIndex = 1;
-            this.heading.Text = "Creat Admin Account";
+            this.heading.Text = "Create Admin Account";
             // 
             // label1
             // 
@@ -317,42 +319,11 @@
             this.CreateUserAccount.UseCompatibleTextRendering = true;
             this.CreateUserAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.CreateUserAccount_LinkClicked);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Monotype Corsiva", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DarkRed;
-            this.label11.Location = new System.Drawing.Point(415, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(168, 43);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Pustakalay";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.photu;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(772, 155);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(292, 378);
-            this.pictureBox1.TabIndex = 12;
-            this.pictureBox1.TabStop = false;
-            // 
-            // roundPictureBox1
-            // 
-            this.roundPictureBox1.BackgroundImage = global::Library.Properties.Resources.User1;
-            this.roundPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.roundPictureBox1.Location = new System.Drawing.Point(882, 25);
-            this.roundPictureBox1.Name = "roundPictureBox1";
-            this.roundPictureBox1.Size = new System.Drawing.Size(35, 32);
-            this.roundPictureBox1.TabIndex = 15;
-            this.roundPictureBox1.TabStop = false;
-            // 
             // CreateAdminAccount
             // 
-            this.CreateAdminAccount.BackColor = System.Drawing.Color.Turquoise;
+            this.CreateAdminAccount.BackColor = System.Drawing.Color.LightSkyBlue;
             this.CreateAdminAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CreateAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAdminAccount.Location = new System.Drawing.Point(287, 467);
             this.CreateAdminAccount.Name = "CreateAdminAccount";
             this.CreateAdminAccount.Size = new System.Drawing.Size(172, 40);
@@ -373,13 +344,57 @@
             // 
             this.emailCheck.ContainerControl = this;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Modern No. 20", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DarkRed;
+            this.label11.Location = new System.Drawing.Point(415, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(287, 36);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Vikansha Library";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox3.BackgroundImage = global::Library.Properties.Resources.vikansha_logo_removebg_preview1;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(84, 54);
+            this.pictureBox3.TabIndex = 17;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.photu_removebg_preview;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(772, 155);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(292, 378);
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
+            // roundPictureBox1
+            // 
+            this.roundPictureBox1.BackgroundImage = global::Library.Properties.Resources.User1;
+            this.roundPictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.roundPictureBox1.Location = new System.Drawing.Point(882, 25);
+            this.roundPictureBox1.Name = "roundPictureBox1";
+            this.roundPictureBox1.Size = new System.Drawing.Size(35, 32);
+            this.roundPictureBox1.TabIndex = 15;
+            this.roundPictureBox1.TabStop = false;
+            // 
             // CreateAnAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1069, 534);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.DateOfJoining);
             this.Controls.Add(this.roundPictureBox1);
             this.Controls.Add(this.CreateUserAccount);
@@ -413,9 +428,10 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAnAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.roundPictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emailCheck)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -446,10 +462,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel CreateUserAccount;
-        private System.Windows.Forms.Label label11;
         private Design.RoundPictureBox roundPictureBox1;
         private System.Windows.Forms.Button CreateAdminAccount;
         private System.Windows.Forms.DateTimePicker DateOfJoining;
         private System.Windows.Forms.ErrorProvider emailCheck;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

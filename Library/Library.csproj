@@ -501,5 +501,32 @@
   <ItemGroup>
     <None Include="Resources\readylogo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_858981268_FacnWi9tRtIxH8UCSsFoKe6tzQXzWwaN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_858981268_FacnWi9tRtIxH8UCSsFoKe6tzQXzWwaN-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikansha_logo-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_processing20220207-786-j68tnb1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\il_300x300.3203683596_be2g-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled design.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled_design-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vikansha_logo-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photu-removebg-preview.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

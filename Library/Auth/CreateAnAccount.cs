@@ -57,6 +57,7 @@ namespace Library.Auth
                             cmd.Parameters.AddWithValue("@userName", UserName.Text);
                             cmd.Parameters.AddWithValue("@password", Password.Text);
                             cmd.Parameters.AddWithValue("@joinDate", DateOfJoining.Value);
+                            
                             int isInsert = cmd.ExecuteNonQuery();
                             if (isInsert >= 1)
                             {
@@ -66,7 +67,8 @@ namespace Library.Auth
                         }
                         if (isUserAccount == true)
                         {
-                            con.Open();
+                            con.Close();
+
                             SqlCommand cmd = new SqlCommand(UserDetail, con);
                             cmd.Parameters.AddWithValue("@id", EmpId.Text);
                             cmd.Parameters.AddWithValue("@Name", FirstName.Text);
@@ -78,6 +80,7 @@ namespace Library.Auth
                             cmd.Parameters.AddWithValue("@userName", UserName.Text);
                             cmd.Parameters.AddWithValue("@password", Password.Text);
                             cmd.Parameters.AddWithValue("@joinDate", DateOfJoining.Value);
+                            con.Open();
                             int isInsert = cmd.ExecuteNonQuery();
                             if (isInsert >= 1)
                             {
