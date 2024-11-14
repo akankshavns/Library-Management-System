@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Library
@@ -13,7 +15,17 @@ namespace Library
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Home());
+
+            CreateDatabase();
+
+            Application.Run(new  Home());
+        }
+
+        private static void CreateDatabase()
+        {
+            string filePath = "C:\\Users\\HP\\Desktop\\LibraryDB.sql";
+            File.Create(filePath);
         }
     }
+    
 }

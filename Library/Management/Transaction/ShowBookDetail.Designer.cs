@@ -119,12 +119,12 @@
             // 
             // ReturnDate
             // 
-            this.ReturnDate.Enabled = false;
             this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReturnDate.Location = new System.Drawing.Point(209, 267);
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(224, 26);
             this.ReturnDate.TabIndex = 22;
+            this.ReturnDate.ValueChanged += new System.EventHandler(this.ReturnDate_ValueChanged);
             // 
             // issueDate
             // 
@@ -136,6 +136,7 @@
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
             this.issueDate.Value = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
+            this.issueDate.ValueChanged += new System.EventHandler(this.issueDate_ValueChanged);
             // 
             // IssueButton
             // 

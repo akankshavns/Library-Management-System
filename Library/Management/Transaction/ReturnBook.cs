@@ -24,7 +24,7 @@ namespace Library.TransactionManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string checkQuery = "SELECT COUNT(*) FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID";
+                    string checkQuery = "SELECT COUNT(*) FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and isReturnBook=@status";
                     string query = "SELECT BookName, AuthorName, StudentName, Deparment, Email, issueDate FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and IsReturnBook = @ReturnStatus";
                     try
                     {
@@ -32,6 +32,7 @@ namespace Library.TransactionManagement
 
                         // Check if any record exists for given StudentEnrollment and BookID
                         SqlCommand checkCommand = new SqlCommand(checkQuery, con);
+                        checkCommand.Parameters.AddWithValue("@status", "Hold");
                         checkCommand.Parameters.AddWithValue("@EnrollBox", EnrollBox.Text);
                         checkCommand.Parameters.AddWithValue("@BookID", BookID.Text);
                         int recordCount = (int)checkCommand.ExecuteScalar();

@@ -83,12 +83,12 @@ namespace Library.StudentManagement
                                 string absPath = Path.GetFullPath(photoPath);
                                 if (!string.IsNullOrEmpty(photoPath) && System.IO.File.Exists(photoPath))
                                 {
-                                    image.Image = Image.FromFile(photoPath);
-                                    image.SizeMode = PictureBoxSizeMode.StretchImage;
+                                    updatedimage.Image = Image.FromFile(photoPath);
+                                    updatedimage.SizeMode = PictureBoxSizeMode.StretchImage;
                                 }
                                 else
                                 {
-                                    image.Image = null;
+                                    updatedimage.Image = null;
                                 }
                             }
                             else
@@ -143,10 +143,22 @@ namespace Library.StudentManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string updateStudentDetail = "UPDATE StudentInformation SET EnrollmentNumber = @Enrollment, StudentName = @name, FatherName = @Father, MotherName = @Mother, Department = @Department,Contact = @Contact, Email = @Email,Address = @Address Where Id = " + sno + " ";
+                    string updateStudentDetail = "UPDATE StudentInformation SET EnrollmentNumber = @Enrollment, StudentName = @name, FatherName = @Father, MotherName = @Mother, Department = @Department,Contact = @Contact, Email = @Email,Address = @Address,StudentPhoto =  @StudentImage Where Id = " + sno + " ";
                     try
                     {
                         con.Open();
+                        string path = Path.Combine("Uploads", "Student", Enroll.Text + "_" + SName.Text.Replace(" ", "_") + "_" + ".jpg");
+
+                        string directoryPath = Path.GetDirectoryName(path);
+                        if (!Directory.Exists(directoryPath))
+                        {
+                            Directory.CreateDirectory(directoryPath);
+                        }
+
+                        if (studentImgPath != string.Empty)
+                        {
+                            File.Copy(studentImgPath, path, true);
+                        }
                         SqlCommand cmd = new SqlCommand(updateStudentDetail, con);
                         cmd.Parameters.AddWithValue("@Enrollment", Enroll.Text);
                         cmd.Parameters.AddWithValue("@name", SName.Text);
@@ -155,6 +167,7 @@ namespace Library.StudentManagement
                         cmd.Parameters.AddWithValue("@Department", Department.Text);
                         cmd.Parameters.AddWithValue("@Contact", contact.Text);
                         cmd.Parameters.AddWithValue("@Email", mail.Text);
+                        cmd.Parameters.AddWithValue("@StudentImage", path);
                         cmd.Parameters.AddWithValue("@Address", Address.Text);
                         int i = cmd.ExecuteNonQuery();
                         if (i >= 1)
@@ -262,6 +275,24 @@ namespace Library.StudentManagement
                         }
                     }
                 }
+            }
+        }
+        public string studentImgPath = string.Empty;
+        private void UpdateImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                OpenFileDialog fileDilog = new OpenFileDialog();
+                fileDilog.Filter = "Image Files(*.jpg;*.png)|*.jpg;*.png";
+                if (fileDilog.ShowDialog() == DialogResult.OK)
+                {
+                    studentImgPath = fileDilog.FileName;
+                    updatedimage.ImageLocation = studentImgPath;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("1", ex.Message);
             }
         }
     }

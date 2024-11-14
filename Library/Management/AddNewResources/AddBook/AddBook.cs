@@ -345,6 +345,7 @@ namespace Library.BookManagement
         {
             BookDate.MaxDate = DateTime.Now.AddSeconds(1);
             BookDate.Value = DateTime.Now;
+            ItemAdd.SelectedIndex = 0;
         }
 
 

@@ -24,7 +24,7 @@ namespace Library.TransactionManagement
             {
                 IssueButton.Visible=true;
                 newupdatedreturndays();
-                ReturnDate.Value = issueDate.Value.AddDays(returnDays);
+               
                 if (string.IsNullOrEmpty(EnrollBox.Text))
                 {
                     CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
@@ -127,7 +127,7 @@ namespace Library.TransactionManagement
                         cmd.Parameters.AddWithValue("@Dep", Dep.Text);
                         cmd.Parameters.AddWithValue("@Semester", Semester.Text);
                         cmd.Parameters.AddWithValue("@Cont", Cont.Text);
-                        cmd.Parameters.AddWithValue("@ReturnDate", ReturnDate.Text);
+                        cmd.Parameters.AddWithValue("@ReturnDate", ReturnDate.Value);
                         cmd.Parameters.AddWithValue("@issueDate", issueDate.Text);
                         cmd.Parameters.AddWithValue("@mail", mail.Text);
                         cmd.Parameters.AddWithValue("@Addre", Addre.Text);
@@ -247,6 +247,16 @@ namespace Library.TransactionManagement
                     }
                 }
             }
+        }
+
+        private void ReturnDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void issueDate_ValueChanged(object sender, EventArgs e)
+        {
+            ReturnDate.Value = issueDate.Value.AddDays(returnDays);
         }
     }
 }

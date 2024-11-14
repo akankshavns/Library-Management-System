@@ -25,16 +25,22 @@ namespace Library.TransactionManagement
 
         private void ViewTransaction_Load(object sender, EventArgs e)
         {
+            viewIssuedBook();
+        }
+        public void viewIssuedBook()
+        {
+            bookTable.Clear();
             string connectionString = GetConnectionString();
             if (connectionString != null)
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string showData = "SELECT * FROM ISSUEBOOKLIST";
+                    string showData = "SELECT * FROM ISSUEBOOKLIST where isReturnBook=@status";
                     try
                     {
                         con.Open();
                         SqlCommand cmd = new SqlCommand(showData, con);
+                        cmd.Parameters.AddWithValue("@status", "Hold");
                         SqlDataReader reader = cmd.ExecuteReader();
                         bookTable.Load(reader);
                         dataGridView1.DataSource = bookTable;

@@ -255,6 +255,7 @@ namespace Library
 
         private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
         {
+            viewTransaction1.viewIssuedBook();
             viewTransaction1.Show();
             viewTransaction1.BringToFront();
         }

@@ -33,10 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.updateSectionButton = new Library.Design.RoundPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.SearchBox = new System.Windows.Forms.TextBox();
-            this.image = new System.Windows.Forms.PictureBox();
+            this.updatedimage = new System.Windows.Forms.PictureBox();
             this.SName = new System.Windows.Forms.TextBox();
             this.Department = new System.Windows.Forms.TextBox();
             this.mail = new System.Windows.Forms.TextBox();
@@ -49,6 +50,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.UpdateImage = new System.Windows.Forms.Button();
             this.UpdateDetails = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,15 +60,13 @@
             this.StudentDetailView = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.MailCheck = new System.Windows.Forms.ErrorProvider(this.components);
-            this.UpdateImage = new System.Windows.Forms.Button();
-            this.updateSectionButton = new Library.Design.RoundPictureBox();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updatedimage)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDetailView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MailCheck)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -84,6 +84,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1231, 55);
             this.panel2.TabIndex = 15;
+            // 
+            // updateSectionButton
+            // 
+            this.updateSectionButton.BackgroundImage = global::Library.Properties.Resources.updatebutton;
+            this.updateSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updateSectionButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.updateSectionButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.updateSectionButton.Location = new System.Drawing.Point(1133, 0);
+            this.updateSectionButton.Name = "updateSectionButton";
+            this.updateSectionButton.Size = new System.Drawing.Size(98, 55);
+            this.updateSectionButton.TabIndex = 29;
+            this.updateSectionButton.TabStop = false;
+            this.updateSectionButton.Click += new System.EventHandler(this.updateSectionButton_Click);
             // 
             // label1
             // 
@@ -120,15 +133,15 @@
             this.SearchBox.Text = "Search.....";
             this.SearchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.SearchBox_KeyUp);
             // 
-            // image
+            // updatedimage
             // 
-            this.image.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.image.Location = new System.Drawing.Point(813, 21);
-            this.image.Name = "image";
-            this.image.Size = new System.Drawing.Size(115, 130);
-            this.image.TabIndex = 20;
-            this.image.TabStop = false;
+            this.updatedimage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.updatedimage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.updatedimage.Location = new System.Drawing.Point(813, 21);
+            this.updatedimage.Name = "updatedimage";
+            this.updatedimage.Size = new System.Drawing.Size(115, 130);
+            this.updatedimage.TabIndex = 20;
+            this.updatedimage.TabStop = false;
             // 
             // SName
             // 
@@ -244,7 +257,7 @@
             this.panel1.BackColor = System.Drawing.Color.Silver;
             this.panel1.Controls.Add(this.UpdateImage);
             this.panel1.Controls.Add(this.UpdateDetails);
-            this.panel1.Controls.Add(this.image);
+            this.panel1.Controls.Add(this.updatedimage);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label6);
@@ -267,6 +280,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1187, 455);
             this.panel1.TabIndex = 14;
+            // 
+            // UpdateImage
+            // 
+            this.UpdateImage.BackColor = System.Drawing.Color.LimeGreen;
+            this.UpdateImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdateImage.Location = new System.Drawing.Point(934, 56);
+            this.UpdateImage.Name = "UpdateImage";
+            this.UpdateImage.Size = new System.Drawing.Size(149, 42);
+            this.UpdateImage.TabIndex = 22;
+            this.UpdateImage.Text = "change Image";
+            this.UpdateImage.UseVisualStyleBackColor = false;
+            this.UpdateImage.Visible = false;
+            this.UpdateImage.Click += new System.EventHandler(this.UpdateImage_Click);
             // 
             // UpdateDetails
             // 
@@ -388,32 +414,6 @@
             // 
             this.MailCheck.ContainerControl = this;
             // 
-            // UpdateImage
-            // 
-            this.UpdateImage.BackColor = System.Drawing.Color.LimeGreen;
-            this.UpdateImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateImage.Location = new System.Drawing.Point(934, 56);
-            this.UpdateImage.Name = "UpdateImage";
-            this.UpdateImage.Size = new System.Drawing.Size(149, 42);
-            this.UpdateImage.TabIndex = 22;
-            this.UpdateImage.Text = "change Image";
-            this.UpdateImage.UseVisualStyleBackColor = false;
-            this.UpdateImage.Visible = false;
-            this.UpdateImage.Click += new System.EventHandler(this.UpdateDetails_Click);
-            // 
-            // updateSectionButton
-            // 
-            this.updateSectionButton.BackgroundImage = global::Library.Properties.Resources.updatebutton;
-            this.updateSectionButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.updateSectionButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.updateSectionButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.updateSectionButton.Location = new System.Drawing.Point(1133, 0);
-            this.updateSectionButton.Name = "updateSectionButton";
-            this.updateSectionButton.Size = new System.Drawing.Size(98, 55);
-            this.updateSectionButton.TabIndex = 29;
-            this.updateSectionButton.TabStop = false;
-            this.updateSectionButton.Click += new System.EventHandler(this.updateSectionButton_Click);
-            // 
             // viewStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -427,13 +427,13 @@
             this.Load += new System.EventHandler(this.viewStudent_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.updatedimage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.StudentDetailView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MailCheck)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,7 +441,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox image;
+        private System.Windows.Forms.PictureBox updatedimage;
         private System.Windows.Forms.TextBox SName;
         private System.Windows.Forms.TextBox Department;
         private System.Windows.Forms.TextBox mail;
