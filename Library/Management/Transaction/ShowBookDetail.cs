@@ -17,7 +17,7 @@ namespace Library.TransactionManagement
         {
             InitializeComponent();
         }
-
+        //get the student enrollment no. for issuing the book
         private void EnrollBox_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
@@ -40,6 +40,28 @@ namespace Library.TransactionManagement
                 }
             }
         }
+        private void Semester_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                IssueButton.Visible = true;
+                newupdatedreturndays();
+                if (string.IsNullOrEmpty(EnrollBox.Text))
+                {
+                    CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
+
+                }
+                else if (string.IsNullOrEmpty(Semester.Text))
+                {
+                    checkSemesterBox.SetError(Semester, "This field is required");
+                }
+                else
+                {
+                    ShowDetailInTextBox();
+                }
+            }
+        }
+        //search student by enrollmentno. and show the details of student and book in the textbox for issue the selected book.
         public void ShowDetailInTextBox()
         {
             InfoPanel.Visible = true;
@@ -60,7 +82,7 @@ namespace Library.TransactionManagement
                         command.Parameters.AddWithValue("@Enrollment", EnrollBox.Text);
                         SqlDataReader reader = cmd.ExecuteReader();
 
-                        if (reader.Read()) // If there is data
+                        if (reader.Read()) 
                         {
                             BookId.Text = reader["Accession_No"].ToString();
                             BookName.Text = reader["BookName"].ToString();
@@ -95,6 +117,7 @@ namespace Library.TransactionManagement
                 MessageBox.Show(ex.Message);
             }
         }
+        //issue a book and save the data in the database .
         private void IssueButton_Click_1(object sender, EventArgs e)
         {
             string checkIssueQuery = "SELECT COUNT(*) FROM IssueBookList WHERE studentEnrollment = @EnrollBox AND BookId = @BookId";
@@ -179,27 +202,7 @@ namespace Library.TransactionManagement
             Dep.Clear();
             Cont.Clear();
         }
-        private void Semester_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                IssueButton.Visible = true;
-                newupdatedreturndays();
-                if (string.IsNullOrEmpty(EnrollBox.Text))
-                {
-                    CheckEnrollBox.SetError(EnrollBox, "This Field is required.");
-
-                }
-                else if (string.IsNullOrEmpty(Semester.Text))
-                {
-                    checkSemesterBox.SetError(Semester, "This field is required");
-                }
-                else
-                {
-                    ShowDetailInTextBox();
-                }
-            }
-        }
+        
         private void EnrollBox_TextChanged(object sender, EventArgs e)
         {
             CheckEnrollBox.SetError(EnrollBox, "");
@@ -214,6 +217,16 @@ namespace Library.TransactionManagement
         {
             this.Hide();
             this.Visible = false;
+            BookId.Clear();
+            BookName.Clear();
+            AuthorName.Clear();
+            EnrollBox.Clear();
+            StudentName.Clear();
+            Semester.Text = "";
+            mail.Clear();
+            Addre.Clear();
+            Dep.Clear();
+            Cont.Clear();
         }
 
         private void ShowBookDetail_Load(object sender, EventArgs e)
@@ -248,12 +261,6 @@ namespace Library.TransactionManagement
                 }
             }
         }
-
-        private void ReturnDate_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void issueDate_ValueChanged(object sender, EventArgs e)
         {
             ReturnDate.Value = issueDate.Value.AddDays(returnDays);

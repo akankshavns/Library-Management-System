@@ -40,7 +40,7 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT sno ,Accession_No,BookName,AuthorName,Publication,volume,pages,Language,BookDate,Price,Quantity,catagory  FROM ADDBOOKS where BookStatus = 'Retained'";
+                    string viewdata = "SELECT ISBNNumber ,Accession_No,BookName,AuthorName,Publication,volume,pages,Language,BookDate,Price,Quantity,catagory  FROM ADDBOOKS where BookStatus = 'Retained'";
                     try
                     {
                         con.Open();
@@ -48,7 +48,7 @@ namespace Library.BookManagement
                         SqlDataReader reader = cmd.ExecuteReader();
                         booksTable.Load(reader);
                         dataGridView1.DataSource = booksTable;
-                        dataGridView1.Columns["sno"].HeaderText = "Serial No";
+                        dataGridView1.Columns["ISBNNumber"].HeaderText = "Serial No";
                         dataGridView1.Columns["Accession_No"].HeaderText = "Accession Number";
                         dataGridView1.Columns["BookName"].HeaderText = "Book Title";
                         dataGridView1.Columns["AuthorName"].HeaderText = "Author";
@@ -68,9 +68,12 @@ namespace Library.BookManagement
                 }
             }
         }
-        public string pages, AvailableBook, volume, Language, Quantity, price, dateBox, Publication, Author, BName, dbID, sno;
+        public string pages, AvailableBook, volume, Language, Quantity, price, dateBox, Publication, Author, BName, dbID, ISBNNumber;
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -118,11 +121,12 @@ namespace Library.BookManagement
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string updateBookDetail = "UPDATE ADDBOOKS SET ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, Catagory=@catagory WHERE SNO =" + sno + "";
+                        string updateBookDetail = "UPDATE ADDBOOKS SET ISBNNumber = @isbn, ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, Catagory=@catagory WHERE ISBNNumber =" + sno + "";
                         try
                         {
                             con.Open();
                             SqlCommand cmd = new SqlCommand(updateBookDetail, con);
+                            cmd.Parameters.AddWithValue("@isbn", ISBNNum.Text);
                             cmd.Parameters.AddWithValue("@id", AcccessionID.Text);
                             cmd.Parameters.AddWithValue("@name", BookName.Text);
                             cmd.Parameters.AddWithValue("@author", AuthorName.Text);
@@ -140,7 +144,7 @@ namespace Library.BookManagement
                             {
                                 foreach (DataGridViewRow row in dataGridView1.Rows)
                                 {
-                                    if (Convert.ToInt32(row.Cells["SNO"].Value) == sno)
+                                    if (Convert.ToInt32(row.Cells["ISBNNumber"].Value) == sno)
                                     {
                                         // Update the corresponding cells in the selected row
                                         row.Cells["Accession_No"].Value = AcccessionID.Text;
@@ -190,20 +194,20 @@ namespace Library.BookManagement
             DialogResult result = MessageBox.Show("Are you sure? Do you want to delete this record?", "Confirmation", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
-                // Assume that `sno` is fetched from the selected cell in DataGridView
-                int sno = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["SNO"].Value);
+                // Assume that `ISBNNumber` is fetched from the selected cell in DataGridView
+                int ISBNNumber = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["ISBNNumber"].Value);
 
                 string connectionString = GetConnectionString();
                 if (connectionString != null)
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string updateBookStatus = "UPDATE ADDBOOKS SET BookStatus = @BookStatus WHERE SNO = @SNO";
+                        string updateBookStatus = "UPDATE ADDBOOKS SET BookStatus = @BookStatus WHERE ISBNNumber = @ISBNNumber";
 
                         using (SqlCommand cmd = new SqlCommand(updateBookStatus, con))
                         {
                             cmd.Parameters.AddWithValue("@BookStatus", "Deleted");
-                            cmd.Parameters.AddWithValue("@SNO", sno);
+                            cmd.Parameters.AddWithValue("@ISBNNumber", ISBNNumber);
 
                             try
                             {
@@ -217,7 +221,7 @@ namespace Library.BookManagement
                                 }
                                 else
                                 {
-                                    MessageBox.Show("No record found with the specified SNO.");
+                                    MessageBox.Show("No record found with the specified ISBNNumber.");
                                 }
                             }
                             catch (Exception ex)

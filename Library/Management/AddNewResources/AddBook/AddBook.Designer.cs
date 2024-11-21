@@ -75,6 +75,9 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.ItemAdd = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ISBN = new System.Windows.Forms.TextBox();
+            this.errorInISBN = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
@@ -90,6 +93,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderPrice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInISBN)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -110,11 +114,13 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Controls.Add(this.Author);
+            this.panel1.Controls.Add(this.ISBN);
             this.panel1.Controls.Add(this.ID);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.price);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label5);
@@ -149,10 +155,10 @@
             "",
             "",
             ""});
-            this.catagory.Location = new System.Drawing.Point(439, 233);
+            this.catagory.Location = new System.Drawing.Point(455, 250);
             this.catagory.Name = "catagory";
             this.catagory.Size = new System.Drawing.Size(300, 28);
-            this.catagory.TabIndex = 6;
+            this.catagory.TabIndex = 7;
             this.catagory.SelectedIndexChanged += new System.EventHandler(this.catagory_SelectedIndexChanged);
             // 
             // AddButton
@@ -160,7 +166,7 @@
             this.AddButton.BackColor = System.Drawing.Color.Teal;
             this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(337, 419);
+            this.AddButton.Location = new System.Drawing.Point(334, 440);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(114, 43);
             this.AddButton.TabIndex = 11;
@@ -172,10 +178,10 @@
             // 
             this.Publication.BackColor = System.Drawing.Color.White;
             this.Publication.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Publication.Location = new System.Drawing.Point(440, 134);
+            this.Publication.Location = new System.Drawing.Point(456, 151);
             this.Publication.Name = "Publication";
             this.Publication.Size = new System.Drawing.Size(299, 26);
-            this.Publication.TabIndex = 3;
+            this.Publication.TabIndex = 4;
             this.Publication.TextChanged += new System.EventHandler(this.Publication_TextChanged);
             // 
             // label14
@@ -184,7 +190,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label14.Location = new System.Drawing.Point(159, 261);
+            this.label14.Location = new System.Drawing.Point(175, 278);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(120, 29);
             this.label14.TabIndex = 76;
@@ -196,7 +202,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label3.Location = new System.Drawing.Point(159, 128);
+            this.label3.Location = new System.Drawing.Point(175, 145);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(132, 29);
             this.label3.TabIndex = 51;
@@ -206,7 +212,7 @@
             // 
             this.Quantity.BackColor = System.Drawing.Color.White;
             this.Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Quantity.Location = new System.Drawing.Point(441, 369);
+            this.Quantity.Location = new System.Drawing.Point(457, 386);
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(299, 26);
             this.Quantity.TabIndex = 10;
@@ -219,7 +225,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label4.Location = new System.Drawing.Point(159, 294);
+            this.label4.Location = new System.Drawing.Point(175, 311);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(109, 29);
             this.label4.TabIndex = 52;
@@ -229,10 +235,10 @@
             // 
             this.pages.BackColor = System.Drawing.Color.White;
             this.pages.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pages.Location = new System.Drawing.Point(440, 198);
+            this.pages.Location = new System.Drawing.Point(456, 215);
             this.pages.Name = "pages";
             this.pages.Size = new System.Drawing.Size(299, 26);
-            this.pages.TabIndex = 5;
+            this.pages.TabIndex = 6;
             this.pages.TextChanged += new System.EventHandler(this.pages_TextChanged);
             this.pages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.pages_KeyPress);
             // 
@@ -240,10 +246,10 @@
             // 
             this.volume.BackColor = System.Drawing.Color.White;
             this.volume.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.volume.Location = new System.Drawing.Point(440, 166);
+            this.volume.Location = new System.Drawing.Point(456, 183);
             this.volume.Name = "volume";
             this.volume.Size = new System.Drawing.Size(299, 26);
-            this.volume.TabIndex = 4;
+            this.volume.TabIndex = 5;
             this.volume.TextChanged += new System.EventHandler(this.volume_TextChanged);
             this.volume.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.volume_KeyPress);
             // 
@@ -253,7 +259,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label7.Location = new System.Drawing.Point(160, 229);
+            this.label7.Location = new System.Drawing.Point(176, 246);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(171, 29);
             this.label7.TabIndex = 72;
@@ -265,7 +271,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label10.Location = new System.Drawing.Point(159, 192);
+            this.label10.Location = new System.Drawing.Point(175, 209);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 29);
             this.label10.TabIndex = 72;
@@ -275,20 +281,20 @@
             // 
             this.Author.BackColor = System.Drawing.Color.White;
             this.Author.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Author.Location = new System.Drawing.Point(440, 102);
+            this.Author.Location = new System.Drawing.Point(456, 119);
             this.Author.Name = "Author";
             this.Author.Size = new System.Drawing.Size(299, 26);
-            this.Author.TabIndex = 2;
+            this.Author.TabIndex = 3;
             this.Author.TextChanged += new System.EventHandler(this.Author_TextChanged);
             // 
             // ID
             // 
             this.ID.BackColor = System.Drawing.Color.White;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(440, 38);
+            this.ID.Location = new System.Drawing.Point(456, 55);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(299, 26);
-            this.ID.TabIndex = 0;
+            this.ID.TabIndex = 1;
             this.ID.TextChanged += new System.EventHandler(this.ID_TextChanged);
             this.ID.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ID_KeyUp);
             // 
@@ -298,7 +304,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label2.Location = new System.Drawing.Point(158, 96);
+            this.label2.Location = new System.Drawing.Point(174, 113);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 29);
             this.label2.TabIndex = 1;
@@ -310,7 +316,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label9.Location = new System.Drawing.Point(159, 160);
+            this.label9.Location = new System.Drawing.Point(175, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 29);
             this.label9.TabIndex = 71;
@@ -320,7 +326,7 @@
             // 
             this.price.BackColor = System.Drawing.Color.White;
             this.price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.price.Location = new System.Drawing.Point(441, 332);
+            this.price.Location = new System.Drawing.Point(457, 349);
             this.price.Name = "price";
             this.price.Size = new System.Drawing.Size(299, 26);
             this.price.TabIndex = 9;
@@ -333,7 +339,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label6.Location = new System.Drawing.Point(160, 365);
+            this.label6.Location = new System.Drawing.Point(176, 382);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 29);
             this.label6.TabIndex = 54;
@@ -345,7 +351,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label1.Location = new System.Drawing.Point(159, 64);
+            this.label1.Location = new System.Drawing.Point(175, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(140, 29);
             this.label1.TabIndex = 16;
@@ -357,7 +363,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label8.Location = new System.Drawing.Point(159, 32);
+            this.label8.Location = new System.Drawing.Point(175, 49);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(255, 29);
             this.label8.TabIndex = 7;
@@ -369,7 +375,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label5.Location = new System.Drawing.Point(160, 331);
+            this.label5.Location = new System.Drawing.Point(176, 348);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(69, 29);
             this.label5.TabIndex = 53;
@@ -381,7 +387,7 @@
             this.BookDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(233)))), ((int)(((byte)(228)))));
             this.BookDate.CalendarTrailingForeColor = System.Drawing.SystemColors.ControlText;
             this.BookDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BookDate.Location = new System.Drawing.Point(441, 302);
+            this.BookDate.Location = new System.Drawing.Point(457, 319);
             this.BookDate.MaxDate = new System.DateTime(2024, 10, 16, 0, 0, 0, 0);
             this.BookDate.Name = "BookDate";
             this.BookDate.Size = new System.Drawing.Size(299, 26);
@@ -392,10 +398,10 @@
             // 
             this.BName.BackColor = System.Drawing.Color.White;
             this.BName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BName.Location = new System.Drawing.Point(440, 70);
+            this.BName.Location = new System.Drawing.Point(456, 87);
             this.BName.Name = "BName";
             this.BName.Size = new System.Drawing.Size(299, 26);
-            this.BName.TabIndex = 1;
+            this.BName.TabIndex = 2;
             this.BName.TextChanged += new System.EventHandler(this.BName_TextChanged);
             // 
             // Return
@@ -404,7 +410,7 @@
             this.Return.FlatAppearance.BorderSize = 0;
             this.Return.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.Return.Image = global::Library.Properties.Resources.Undo;
-            this.Return.Location = new System.Drawing.Point(739, 270);
+            this.Return.Location = new System.Drawing.Point(755, 287);
             this.Return.Name = "Return";
             this.Return.Size = new System.Drawing.Size(23, 26);
             this.Return.TabIndex = 82;
@@ -419,7 +425,7 @@
             this.OPTION.Controls.Add(this.English);
             this.OPTION.Controls.Add(this.other);
             this.OPTION.Controls.Add(this.Hindi);
-            this.OPTION.Location = new System.Drawing.Point(441, 270);
+            this.OPTION.Location = new System.Drawing.Point(457, 287);
             this.OPTION.Name = "OPTION";
             this.OPTION.Size = new System.Drawing.Size(299, 26);
             this.OPTION.TabIndex = 7;
@@ -466,7 +472,7 @@
             this.OtherLanguage.BackColor = System.Drawing.Color.White;
             this.OtherLanguage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OtherLanguage.ForeColor = System.Drawing.Color.Silver;
-            this.OtherLanguage.Location = new System.Drawing.Point(441, 270);
+            this.OtherLanguage.Location = new System.Drawing.Point(457, 287);
             this.OtherLanguage.Name = "OtherLanguage";
             this.OtherLanguage.Size = new System.Drawing.Size(299, 26);
             this.OtherLanguage.TabIndex = 55;
@@ -572,6 +578,33 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Add New Resources";
             // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
+            this.label12.Location = new System.Drawing.Point(176, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(162, 29);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "ISBN Number";
+            // 
+            // ISBN
+            // 
+            this.ISBN.BackColor = System.Drawing.Color.White;
+            this.ISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBN.Location = new System.Drawing.Point(457, 23);
+            this.ISBN.Name = "ISBN";
+            this.ISBN.Size = new System.Drawing.Size(299, 26);
+            this.ISBN.TabIndex = 0;
+            this.ISBN.TextChanged += new System.EventHandler(this.ISBN_TextChanged);
+            this.ISBN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ID_KeyUp);
+            // 
+            // errorInISBN
+            // 
+            this.errorInISBN.ContainerControl = this;
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -601,6 +634,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorInISBN)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -652,5 +686,8 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox ItemAdd;
+        private System.Windows.Forms.TextBox ISBN;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ErrorProvider errorInISBN;
     }
 }

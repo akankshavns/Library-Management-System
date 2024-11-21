@@ -124,7 +124,6 @@
             this.ReturnDate.Name = "ReturnDate";
             this.ReturnDate.Size = new System.Drawing.Size(224, 26);
             this.ReturnDate.TabIndex = 22;
-            this.ReturnDate.ValueChanged += new System.EventHandler(this.ReturnDate_ValueChanged);
             // 
             // issueDate
             // 
@@ -153,6 +152,7 @@
             // 
             // Addre
             // 
+            this.Addre.Enabled = false;
             this.Addre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Addre.Location = new System.Drawing.Point(209, 196);
             this.Addre.Name = "Addre";
@@ -161,6 +161,7 @@
             // 
             // mail
             // 
+            this.mail.Enabled = false;
             this.mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mail.Location = new System.Drawing.Point(209, 156);
             this.mail.Name = "mail";
@@ -169,6 +170,7 @@
             // 
             // Cont
             // 
+            this.Cont.Enabled = false;
             this.Cont.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cont.Location = new System.Drawing.Point(209, 117);
             this.Cont.Name = "Cont";
@@ -177,6 +179,7 @@
             // 
             // Dep
             // 
+            this.Dep.Enabled = false;
             this.Dep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dep.Location = new System.Drawing.Point(209, 82);
             this.Dep.Name = "Dep";
@@ -185,6 +188,7 @@
             // 
             // StudentName
             // 
+            this.StudentName.Enabled = false;
             this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentName.Location = new System.Drawing.Point(209, 46);
             this.StudentName.Name = "StudentName";
@@ -259,6 +263,7 @@
             // 
             // AuthorName
             // 
+            this.AuthorName.Enabled = false;
             this.AuthorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AuthorName.Location = new System.Drawing.Point(214, 124);
             this.AuthorName.Name = "AuthorName";
@@ -267,6 +272,7 @@
             // 
             // BookName
             // 
+            this.BookName.Enabled = false;
             this.BookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookName.Location = new System.Drawing.Point(214, 86);
             this.BookName.Name = "BookName";
@@ -275,6 +281,7 @@
             // 
             // BookId
             // 
+            this.BookId.Enabled = false;
             this.BookId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookId.Location = new System.Drawing.Point(214, 49);
             this.BookId.Name = "BookId";

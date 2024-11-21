@@ -13,11 +13,46 @@ namespace Library
         {
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
+        private Timer inactivityTimer;
+        private const int InactivityPeriod = 30000;
         public Home()
         {
             InitializeComponent();
+            InitializeInactivityTimer();
+        }
+        private void InitializeInactivityTimer()
+        {
+            inactivityTimer = new Timer();
+            inactivityTimer.Interval = InactivityPeriod;
+            inactivityTimer.Tick += InactivityTimer_Tick;
+            inactivityTimer.Start();
+            this.MouseMove += new MouseEventHandler(ResetInactivityTimer);
+            this.KeyPress += new KeyPressEventHandler(ResetInactivityTimer);
+        }
+        private void InactivityTimer_Tick(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            if (LoginForm.Names == "Userlogin")
+            {
+                login.Show();
+            }
+            else
+            {
+
+                login.ForgotPassword.Visible = true;
+                login.CreateNewAccount.Visible = true;
+                login.Show();
+            }
+
+            //MessageBox.Show("You have been logged out due to inactivity.");
+            this.Close();
         }
 
+        private void ResetInactivityTimer(object sender, EventArgs e)
+        {
+            inactivityTimer.Stop();
+            inactivityTimer.Start();
+        }
         //bool sidebarExpand = true;
         void slider()
         {
@@ -96,7 +131,7 @@ namespace Library
         private void Setting_Click(object sender, EventArgs e)
         {
 
-            settingBoard1.notshow();
+            //settingBoard1.notshow();
             settingBoard1.Show();
             settingBoard1.BringToFront();
         }

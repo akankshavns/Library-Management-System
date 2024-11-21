@@ -24,8 +24,9 @@ namespace Library.BookManagement
         {
             Error();
             if (hasErrors == false)
+            {
                 AddBookDetailInDB();
-
+            }
         }
         public void AddBookDetailInDB()
         {
@@ -43,11 +44,12 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string addBook = "Insert into AddBooks values(@Id,@Name,@Author,@Publication,@Valume,@page,@Language,@BookDate,@Price,@quantity,@availableBook, @catagory,@status)";
+                    string addBook = "Insert into AddBooks values(@ISBN,@Id,@Name,@Author,@Publication,@Valume,@page,@Language,@BookDate,@Price,@quantity,@availableBook, @catagory,@status)";
                     try
                     {
                         con.Open();
                         SqlCommand cmd = new SqlCommand(addBook, con);
+                        cmd.Parameters.AddWithValue("@ISBN",ISBN.Text);
                         cmd.Parameters.AddWithValue("@Id", ID.Text);
                         cmd.Parameters.AddWithValue("@Name", BName.Text);
                         cmd.Parameters.AddWithValue("@Author", Author.Text);
@@ -75,7 +77,7 @@ namespace Library.BookManagement
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("1.Please fill the Information properly.");
+                        MessageBox.Show("1. call the software engineer.");
                         //MessageBox.Show(ex.Message);
                     }
                 }
@@ -84,6 +86,11 @@ namespace Library.BookManagement
         }
         void Error()
         {
+            if (string.IsNullOrEmpty(ISBN.Text))
+            {
+                errorInISBN.SetError(ID, "This Field is required.");
+                hasErrors = true;
+            }
             if (string.IsNullOrEmpty(ID.Text))
             {
                 errorInID.SetError(ID, "This Field is required.");
@@ -131,6 +138,11 @@ namespace Library.BookManagement
                 hasErrors = true;
             }
 
+        }
+        private void ISBN_TextChanged(object sender, EventArgs e)
+        {
+            errorInISBN.SetError(ISBN, "");
+            hasErrors = false;
         }
         private void ID_TextChanged(object sender, EventArgs e)
         {
@@ -359,6 +371,8 @@ namespace Library.BookManagement
                 hasErrors = false;
             }
         }
+
+        
     }
 
 }

@@ -29,134 +29,131 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingBoard));
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.TransactionDetail = new System.Windows.Forms.Label();
-            this.LibraryDetail = new System.Windows.Forms.Label();
-            this.Transaction = new System.Windows.Forms.Button();
-            this.Library = new System.Windows.Forms.Button();
-            this.transaction1 = new Library.Management.Setting.Transaction();
-            this.panel1.SuspendLayout();
+            this.ReturnDays = new System.Windows.Forms.TextBox();
+            this.IssuedBook = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.EnterFine = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SetButton = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(39, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Library Setting";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(176, 37);
-            this.panel1.TabIndex = 1;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(31, 32);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // TransactionDetail
+            // ReturnDays
             // 
-            this.TransactionDetail.AutoSize = true;
-            this.TransactionDetail.BackColor = System.Drawing.Color.LightSlateGray;
-            this.TransactionDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TransactionDetail.Location = new System.Drawing.Point(71, 256);
-            this.TransactionDetail.Name = "TransactionDetail";
-            this.TransactionDetail.Size = new System.Drawing.Size(220, 17);
-            this.TransactionDetail.TabIndex = 11;
-            this.TransactionDetail.Text = "Fine, Book Return, Student Issue.";
-            this.TransactionDetail.Click += new System.EventHandler(this.TransactionDetail_Click);
+            this.ReturnDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReturnDays.Location = new System.Drawing.Point(251, 206);
+            this.ReturnDays.Name = "ReturnDays";
+            this.ReturnDays.Size = new System.Drawing.Size(382, 26);
+            this.ReturnDays.TabIndex = 2;
             // 
-            // LibraryDetail
+            // IssuedBook
             // 
-            this.LibraryDetail.AutoSize = true;
-            this.LibraryDetail.BackColor = System.Drawing.Color.LightSlateGray;
-            this.LibraryDetail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LibraryDetail.Location = new System.Drawing.Point(67, 136);
-            this.LibraryDetail.Name = "LibraryDetail";
-            this.LibraryDetail.Size = new System.Drawing.Size(133, 17);
-            this.LibraryDetail.TabIndex = 12;
-            this.LibraryDetail.Text = "Logo, Library Name";
-            this.LibraryDetail.Click += new System.EventHandler(this.LibraryDetail_Click);
+            this.IssuedBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssuedBook.Location = new System.Drawing.Point(512, 165);
+            this.IssuedBook.Name = "IssuedBook";
+            this.IssuedBook.Size = new System.Drawing.Size(121, 26);
+            this.IssuedBook.TabIndex = 1;
             // 
-            // Transaction
+            // label3
             // 
-            this.Transaction.BackColor = System.Drawing.Color.LightSlateGray;
-            this.Transaction.FlatAppearance.BorderSize = 0;
-            this.Transaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Transaction.Font = new System.Drawing.Font("Mongolian Baiti", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Transaction.Image = global::Library.Properties.Resources.Bill;
-            this.Transaction.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Transaction.Location = new System.Drawing.Point(13, 224);
-            this.Transaction.Name = "Transaction";
-            this.Transaction.Size = new System.Drawing.Size(287, 85);
-            this.Transaction.TabIndex = 6;
-            this.Transaction.Text = "Transaction";
-            this.Transaction.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Transaction.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Transaction.UseMnemonic = false;
-            this.Transaction.UseVisualStyleBackColor = false;
-            this.Transaction.Click += new System.EventHandler(this.Transaction_Click);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(49, 205);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 26);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Book return days.";
             // 
-            // Library
+            // EnterFine
             // 
-            this.Library.BackColor = System.Drawing.Color.LightSlateGray;
-            this.Library.FlatAppearance.BorderSize = 0;
-            this.Library.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Library.Font = new System.Drawing.Font("Mongolian Baiti", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Library.Image = global::Library.Properties.Resources.Homework1;
-            this.Library.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.Library.Location = new System.Drawing.Point(13, 108);
-            this.Library.Name = "Library";
-            this.Library.Size = new System.Drawing.Size(287, 81);
-            this.Library.TabIndex = 7;
-            this.Library.Text = "Library";
-            this.Library.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Library.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.Library.UseMnemonic = false;
-            this.Library.UseVisualStyleBackColor = false;
-            this.Library.Click += new System.EventHandler(this.Library_Click);
+            this.EnterFine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnterFine.Location = new System.Drawing.Point(293, 106);
+            this.EnterFine.Name = "EnterFine";
+            this.EnterFine.Size = new System.Drawing.Size(340, 26);
+            this.EnterFine.TabIndex = 0;
             // 
-            // transaction1
+            // label2
             // 
-            this.transaction1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.transaction1.Location = new System.Drawing.Point(474, 0);
-            this.transaction1.Name = "transaction1";
-            this.transaction1.Size = new System.Drawing.Size(838, 651);
-            this.transaction1.TabIndex = 13;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(49, 164);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(457, 26);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Books that can be issued to a student at once.\r\n";
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(533, 316);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 40);
+            this.button2.TabIndex = 4;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(49, 105);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(211, 26);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Per Day Library Fine\r\n";
+            // 
+            // SetButton
+            // 
+            this.SetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetButton.Location = new System.Drawing.Point(412, 316);
+            this.SetButton.Name = "SetButton";
+            this.SetButton.Size = new System.Drawing.Size(94, 40);
+            this.SetButton.TabIndex = 3;
+            this.SetButton.Text = "Done";
+            this.SetButton.UseVisualStyleBackColor = true;
+            this.SetButton.Click += new System.EventHandler(this.SetButton_Click);
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "ReportViewer";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 0;
             // 
             // SettingBoard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSlateGray;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.transaction1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.TransactionDetail);
-            this.Controls.Add(this.LibraryDetail);
-            this.Controls.Add(this.Library);
-            this.Controls.Add(this.Transaction);
+            this.Controls.Add(this.ReturnDays);
+            this.Controls.Add(this.IssuedBook);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.SetButton);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.EnterFine);
             this.Name = "SettingBoard";
             this.Size = new System.Drawing.Size(1312, 651);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.SettingBoard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -164,14 +161,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label TransactionDetail;
-        private System.Windows.Forms.Label LibraryDetail;
-        private System.Windows.Forms.Button Transaction;
-        private System.Windows.Forms.Button Library;
-        private Management.Setting.Transaction transaction1;
+        private System.Windows.Forms.TextBox ReturnDays;
+        private System.Windows.Forms.TextBox IssuedBook;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox EnterFine;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button SetButton;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

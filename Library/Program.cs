@@ -18,7 +18,7 @@ namespace Library
 
             CreateDatabase();
 
-            Application.Run(new  Home());
+            Application.Run(new Welcome());
         }
 
         private static void CreateDatabase()

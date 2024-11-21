@@ -39,8 +39,8 @@ namespace Library.Auth
                     try
                     {
                         con.Open();
-                        SqlCommand cmd= new SqlCommand(SearchEmail, con);
-                        cmd.Parameters.AddWithValue("@mail",mailAddress.Text);
+                        SqlCommand cmd = new SqlCommand(SearchEmail, con);
+                        cmd.Parameters.AddWithValue("@mail", mailAddress.Text);
                         int count = (int)cmd.ExecuteScalar();
 
                         if (count > 0)
@@ -49,15 +49,16 @@ namespace Library.Auth
                             Random random = new Random();
                             RandomCode = (random.Next(999999).ToString());
                             MailMessage message = new MailMessage();
-                            to=(mailAddress.Text).ToString();
-                            From = "libraryemailproject@gmail.com";
-                            pass = "Library@777";
+                            to = (mailAddress.Text).ToString();
+                            From = "libraryemailProject@gmail.com";
+                            pass = "rrab risa fjcv reqh";
                             MessageBody = "your Reset OTP is " + RandomCode;
                             message.To.Add(to);
                             message.From = new MailAddress(From);
-                            message.Body= MessageBody;
+                            message.Body = MessageBody;
                             message.Subject = "Password Reseting Code";
                             SmtpClient smtp = new SmtpClient("smtp.gmail.com");
+
                             smtp.EnableSsl = true;
                             smtp.Port = 587;
                             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
@@ -66,19 +67,20 @@ namespace Library.Auth
                             {
                                 smtp.Send(message);
                                 MessageBox.Show("OTP send successfully");
+                                panel1.Visible = true;
                             }
-                            catch (Exception ex) 
-                            { 
+                            catch (Exception ex)
+                            {
                                 MessageBox.Show(ex.Message);
                             }
                         }
                         else
-                        { 
+                        {
                             MessageBox.Show("no record found.");
                         }
                     }
                     catch (Exception ex)
-                    { 
+                    {
                         MessageBox.Show(ex.Message);
                     }
                 }
@@ -90,11 +92,12 @@ namespace Library.Auth
             if (RandomCode == (OTPcheck.Text).ToString())
             {
                 to = mailAddress.Text;
-                ResetPssword.Visible = true;
+                MessageBox.Show("OTP verified, reset your password");
+                ResetPsswordpanel.Visible = true;
             }
             else
             {
-                MessageBox.Show("Wrong Code");
+                MessageBox.Show("Invalide OTP");
             }
         }
         string userName = to;
@@ -114,14 +117,14 @@ namespace Library.Auth
                             SqlCommand cmd = new SqlCommand(ResetPasswordQuery, con);
                             cmd.Parameters.AddWithValue("@newPassword", verifyNewPassword.Text);
                             cmd.Parameters.AddWithValue("@mail", mailAddress.Text);
-                            int reset=cmd.ExecuteNonQuery();
+                            int reset = cmd.ExecuteNonQuery();
                             if (reset > 0)
                             {
                                 MessageBox.Show("Reset successfully");
                             }
                         }
                         catch (Exception ex) { MessageBox.Show(ex.Message); }
-                        
+
                     }
                 }
             }
@@ -131,4 +134,4 @@ namespace Library.Auth
             }
         }
     }
-}
+ }

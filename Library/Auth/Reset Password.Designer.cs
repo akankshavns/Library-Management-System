@@ -34,11 +34,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.OTPcheck = new System.Windows.Forms.TextBox();
             this.OTPverifyButton = new System.Windows.Forms.Button();
-            this.ResetPssword = new System.Windows.Forms.Panel();
-            this.NewPassword = new System.Windows.Forms.TextBox();
-            this.verifyNewPassword = new System.Windows.Forms.TextBox();
+            this.ResetPsswordpanel = new System.Windows.Forms.Panel();
             this.ResetButton = new System.Windows.Forms.Button();
-            this.ResetPssword.SuspendLayout();
+            this.verifyNewPassword = new System.Windows.Forms.TextBox();
+            this.NewPassword = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ResetPsswordpanel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -74,7 +78,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(52, 163);
+            this.label2.Location = new System.Drawing.Point(42, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 25);
             this.label2.TabIndex = 3;
@@ -83,7 +87,7 @@
             // OTPcheck
             // 
             this.OTPcheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OTPcheck.Location = new System.Drawing.Point(235, 163);
+            this.OTPcheck.Location = new System.Drawing.Point(180, 39);
             this.OTPcheck.Name = "OTPcheck";
             this.OTPcheck.Size = new System.Drawing.Size(375, 30);
             this.OTPcheck.TabIndex = 1;
@@ -91,7 +95,7 @@
             // OTPverifyButton
             // 
             this.OTPverifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OTPverifyButton.Location = new System.Drawing.Point(484, 219);
+            this.OTPverifyButton.Location = new System.Drawing.Point(458, 87);
             this.OTPverifyButton.Name = "OTPverifyButton";
             this.OTPverifyButton.Size = new System.Drawing.Size(116, 37);
             this.OTPverifyButton.TabIndex = 2;
@@ -99,57 +103,90 @@
             this.OTPverifyButton.UseVisualStyleBackColor = true;
             this.OTPverifyButton.Click += new System.EventHandler(this.OTPverifyButton_Click);
             // 
-            // ResetPssword
+            // ResetPsswordpanel
             // 
-            this.ResetPssword.Controls.Add(this.ResetButton);
-            this.ResetPssword.Controls.Add(this.verifyNewPassword);
-            this.ResetPssword.Controls.Add(this.NewPassword);
-            this.ResetPssword.Location = new System.Drawing.Point(73, 293);
-            this.ResetPssword.Name = "ResetPssword";
-            this.ResetPssword.Size = new System.Drawing.Size(547, 190);
-            this.ResetPssword.TabIndex = 4;
-            this.ResetPssword.Visible = false;
-            // 
-            // NewPassword
-            // 
-            this.NewPassword.Location = new System.Drawing.Point(142, 37);
-            this.NewPassword.Name = "NewPassword";
-            this.NewPassword.Size = new System.Drawing.Size(296, 20);
-            this.NewPassword.TabIndex = 0;
-            // 
-            // verifyNewPassword
-            // 
-            this.verifyNewPassword.Location = new System.Drawing.Point(142, 95);
-            this.verifyNewPassword.Name = "verifyNewPassword";
-            this.verifyNewPassword.Size = new System.Drawing.Size(296, 20);
-            this.verifyNewPassword.TabIndex = 0;
+            this.ResetPsswordpanel.Controls.Add(this.ResetButton);
+            this.ResetPsswordpanel.Controls.Add(this.label4);
+            this.ResetPsswordpanel.Controls.Add(this.label3);
+            this.ResetPsswordpanel.Controls.Add(this.verifyNewPassword);
+            this.ResetPsswordpanel.Controls.Add(this.NewPassword);
+            this.ResetPsswordpanel.Location = new System.Drawing.Point(73, 293);
+            this.ResetPsswordpanel.Name = "ResetPsswordpanel";
+            this.ResetPsswordpanel.Size = new System.Drawing.Size(547, 190);
+            this.ResetPsswordpanel.TabIndex = 4;
+            this.ResetPsswordpanel.Visible = false;
             // 
             // ResetButton
             // 
-            this.ResetButton.Location = new System.Drawing.Point(354, 138);
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(422, 131);
             this.ResetButton.Name = "ResetButton";
-            this.ResetButton.Size = new System.Drawing.Size(75, 23);
+            this.ResetButton.Size = new System.Drawing.Size(95, 43);
             this.ResetButton.TabIndex = 1;
             this.ResetButton.Text = "Reset";
             this.ResetButton.UseVisualStyleBackColor = true;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
+            // verifyNewPassword
+            // 
+            this.verifyNewPassword.Location = new System.Drawing.Point(240, 95);
+            this.verifyNewPassword.Name = "verifyNewPassword";
+            this.verifyNewPassword.Size = new System.Drawing.Size(296, 20);
+            this.verifyNewPassword.TabIndex = 0;
+            // 
+            // NewPassword
+            // 
+            this.NewPassword.Location = new System.Drawing.Point(241, 38);
+            this.NewPassword.Name = "NewPassword";
+            this.NewPassword.Size = new System.Drawing.Size(296, 20);
+            this.NewPassword.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Enter your password";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(207, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "confirm your password";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.OTPcheck);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.OTPverifyButton);
+            this.panel1.Location = new System.Drawing.Point(35, 128);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(585, 140);
+            this.panel1.TabIndex = 5;
+            // 
             // Reset_Password
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 554);
-            this.Controls.Add(this.ResetPssword);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.OTPverifyButton);
+            this.ClientSize = new System.Drawing.Size(726, 554);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ResetPsswordpanel);
             this.Controls.Add(this.Continue);
-            this.Controls.Add(this.OTPcheck);
             this.Controls.Add(this.mailAddress);
             this.Controls.Add(this.label1);
             this.Name = "Reset_Password";
             this.Text = "Reset_Password";
-            this.ResetPssword.ResumeLayout(false);
-            this.ResetPssword.PerformLayout();
+            this.ResetPsswordpanel.ResumeLayout(false);
+            this.ResetPsswordpanel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -163,9 +200,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox OTPcheck;
         private System.Windows.Forms.Button OTPverifyButton;
-        private System.Windows.Forms.Panel ResetPssword;
+        private System.Windows.Forms.Panel ResetPsswordpanel;
         private System.Windows.Forms.Button ResetButton;
         private System.Windows.Forms.TextBox verifyNewPassword;
         private System.Windows.Forms.TextBox NewPassword;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
     }
 }
