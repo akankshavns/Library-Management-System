@@ -14,7 +14,7 @@ namespace Library
             return ConfigurationManager.ConnectionStrings["ConnectionString"]?.ConnectionString;
         }
         private Timer inactivityTimer;
-        private const int InactivityPeriod = 30000;
+        private const int InactivityPeriod = 300;
         public Home()
         {
             InitializeComponent();
