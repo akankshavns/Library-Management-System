@@ -19,11 +19,7 @@ namespace Library.TransactionManagement
         {
             InitializeComponent();
         }
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            this.Visible = false;
-        }
+    
         private void searchBox_Click_1(object sender, EventArgs e)
         {
             searchBox.Clear();
@@ -32,7 +28,6 @@ namespace Library.TransactionManagement
         DataTable booksTable = new DataTable();
         private void issueBook_Load(object sender, EventArgs e)
         {
-
             viewfunction();
         }
         public void viewfunction()
@@ -43,7 +38,7 @@ namespace Library.TransactionManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string viewdata = "SELECT SNO, Accession_No, BookName, AUTHORNAME, VOLUME FROM AddBooks where BookStatus = 'Retained'";
+                    string viewdata = "SELECT ISBNnumber, BookName, AUTHORNAME, VOLUME FROM AddBooks where BookStatus = 'Retained'";
                     try
                     {
                         con.Open();
@@ -73,8 +68,8 @@ namespace Library.TransactionManagement
             if (e.RowIndex >= 0)
             {
                 sno = Convert.ToInt32(dataGridView.SelectedCells[0].Value.ToString());
-                string id = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
-                string query = "SELECT AvailableBook FROM AddBooks WHERE Accession_No = @BookId";
+                //string id = dataGridView.Rows[e.RowIndex].Cells[1].Value.ToString();
+                string query = "SELECT AvailableBook FROM AddBooks WHERE ISBNNumber = @BookId";
                 
                 try
                 {
@@ -84,7 +79,7 @@ namespace Library.TransactionManagement
                         using (SqlConnection con = new SqlConnection(connectionString))
                         {
                             SqlCommand cmd = new SqlCommand(query, con);
-                            cmd.Parameters.AddWithValue("@BookId", id);
+                            cmd.Parameters.AddWithValue("@BookId",sno);
                             con.Open();
                             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -111,12 +106,14 @@ namespace Library.TransactionManagement
                 }
                 else
                 {
-                    availableBookId_issueBook = id;
+                    availableBookId_issueBook = sno.ToString();
                     DialogResult result = MessageBox.Show("This Book is Available in the library,do you want to issue this book ? ", "Confirmation", MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes)
                     {
                         showBookDetail1.newupdatedreturndays();
-                        showBookDetail1.availableBookId = availableBookId_issueBook;
+                        ShowBookDetail bookDetail = new ShowBookDetail();
+                        bookDetail .getNoOfIssueBookPerStudent();
+                        showBookDetail1.availableBookId =Convert.ToInt32( availableBookId_issueBook);
                         showBookDetail1.Show();
                         showBookDetail1.BringToFront();
                     }

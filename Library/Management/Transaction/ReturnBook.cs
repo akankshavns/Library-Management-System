@@ -24,7 +24,7 @@ namespace Library.TransactionManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string checkQuery = "SELECT COUNT(*) FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and isReturnBook=@status";
+                    string checkQuery = "SELECT COUNT(*) FROM IssueBookDetail WHERE EnrollmentNumber = @EnrollBox and ISBNNumber = @BookID and isReturnBook=@status";
                     string query = "SELECT BookName, AuthorName, StudentName, Deparment, Email, issueDate FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and IsReturnBook = @ReturnStatus";
                     try
                     {

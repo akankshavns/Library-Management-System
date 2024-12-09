@@ -43,11 +43,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Author = new System.Windows.Forms.TextBox();
+            this.ISBN = new System.Windows.Forms.TextBox();
             this.ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.price = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -75,8 +77,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.ItemAdd = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ISBN = new System.Windows.Forms.TextBox();
             this.errorInISBN = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1.SuspendLayout();
             this.OPTION.SuspendLayout();
@@ -287,11 +287,23 @@
             this.Author.TabIndex = 3;
             this.Author.TextChanged += new System.EventHandler(this.Author_TextChanged);
             // 
+            // ISBN
+            // 
+            this.ISBN.BackColor = System.Drawing.Color.White;
+            this.ISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBN.Location = new System.Drawing.Point(456, 17);
+            this.ISBN.Name = "ISBN";
+            this.ISBN.Size = new System.Drawing.Size(299, 26);
+            this.ISBN.TabIndex = 0;
+            this.ISBN.TextChanged += new System.EventHandler(this.ISBN_TextChanged);
+            this.ISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ISBN_KeyPress);
+            this.ISBN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ID_KeyUp);
+            // 
             // ID
             // 
             this.ID.BackColor = System.Drawing.Color.White;
             this.ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ID.Location = new System.Drawing.Point(456, 55);
+            this.ID.Location = new System.Drawing.Point(456, 53);
             this.ID.Name = "ID";
             this.ID.Size = new System.Drawing.Size(299, 26);
             this.ID.TabIndex = 1;
@@ -344,6 +356,18 @@
             this.label6.Size = new System.Drawing.Size(100, 29);
             this.label6.TabIndex = 54;
             this.label6.Text = "Quantity";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
+            this.label12.Location = new System.Drawing.Point(176, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(162, 29);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "ISBN Number";
             // 
             // label1
             // 
@@ -561,7 +585,7 @@
             "Magazine",
             "NewsPaper",
             "PDF"});
-            this.ItemAdd.Location = new System.Drawing.Point(291, 8);
+            this.ItemAdd.Location = new System.Drawing.Point(336, 11);
             this.ItemAdd.MaxDropDownItems = 6;
             this.ItemAdd.Name = "ItemAdd";
             this.ItemAdd.Size = new System.Drawing.Size(134, 24);
@@ -570,36 +594,13 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
             this.label11.Location = new System.Drawing.Point(3, 2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(282, 35);
+            this.label11.Size = new System.Drawing.Size(328, 39);
             this.label11.TabIndex = 0;
             this.label11.Text = "Add New Resources";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.label12.Location = new System.Drawing.Point(176, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 29);
-            this.label12.TabIndex = 7;
-            this.label12.Text = "ISBN Number";
-            // 
-            // ISBN
-            // 
-            this.ISBN.BackColor = System.Drawing.Color.White;
-            this.ISBN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ISBN.Location = new System.Drawing.Point(457, 23);
-            this.ISBN.Name = "ISBN";
-            this.ISBN.Size = new System.Drawing.Size(299, 26);
-            this.ISBN.TabIndex = 0;
-            this.ISBN.TextChanged += new System.EventHandler(this.ISBN_TextChanged);
-            this.ISBN.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ID_KeyUp);
             // 
             // errorInISBN
             // 

@@ -16,16 +16,12 @@ namespace Library
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            CreateDatabase();
+           
 
-            Application.Run(new Welcome());
+            Application.Run(new Home());
         }
 
-        private static void CreateDatabase()
-        {
-            string filePath = "C:\\Users\\HP\\Desktop\\LibraryDB.sql";
-            File.Create(filePath);
-        }
+      
     }
     
 }

@@ -60,9 +60,9 @@
             // SetButton
             // 
             this.SetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SetButton.Location = new System.Drawing.Point(443, 431);
+            this.SetButton.Location = new System.Drawing.Point(434, 400);
             this.SetButton.Name = "SetButton";
-            this.SetButton.Size = new System.Drawing.Size(94, 61);
+            this.SetButton.Size = new System.Drawing.Size(94, 32);
             this.SetButton.TabIndex = 4;
             this.SetButton.Text = "Done";
             this.SetButton.UseVisualStyleBackColor = true;
@@ -117,9 +117,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(553, 431);
+            this.button2.Location = new System.Drawing.Point(544, 400);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 61);
+            this.button2.Size = new System.Drawing.Size(95, 32);
             this.button2.TabIndex = 4;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = true;

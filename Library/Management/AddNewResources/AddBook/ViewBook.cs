@@ -32,6 +32,7 @@ namespace Library.BookManagement
             dv.RowFilter = $"BookName LIKE '%{SearchBox.Text}%' OR AuthorName LIKE '%{SearchBox.Text}%'";
             dataGridView1.DataSource = dv.ToTable();
         }
+        //show the data in grid view.
         public void LoadBooks()
         {
             booksTable.Clear();
@@ -48,7 +49,7 @@ namespace Library.BookManagement
                         SqlDataReader reader = cmd.ExecuteReader();
                         booksTable.Load(reader);
                         dataGridView1.DataSource = booksTable;
-                        dataGridView1.Columns["ISBNNumber"].HeaderText = "Serial No";
+                        dataGridView1.Columns["ISBNNumber"].HeaderText = "ISBN Number";
                         dataGridView1.Columns["Accession_No"].HeaderText = "Accession Number";
                         dataGridView1.Columns["BookName"].HeaderText = "Book Title";
                         dataGridView1.Columns["AuthorName"].HeaderText = "Author";
@@ -68,13 +69,8 @@ namespace Library.BookManagement
                 }
             }
         }
-        public string pages, AvailableBook, volume, Language, Quantity, price, dateBox, Publication, Author, BName, dbID, ISBNNumber;
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        int getId = 0;
+        //this code for retrive the data in the textBox from database for updation
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
@@ -90,6 +86,8 @@ namespace Library.BookManagement
 
                 AuthorName.Enabled = true;
                 DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                getId = Convert.ToInt32(selectedRow.Cells[0].Value);
+                ISBNNum.Text = getId.ToString();
                 AcccessionID.Text = selectedRow.Cells[1].Value.ToString();
                 BookName.Text = selectedRow.Cells[2].Value.ToString();
                 AuthorName.Text = selectedRow.Cells[3].Value.ToString();
@@ -108,20 +106,17 @@ namespace Library.BookManagement
         {
             LoadBooks();
         }
-
+        //this  code for update the data in the database  in the  Book table.
         private void Updatebutton_Click(object sender, EventArgs e)
         {
-            int sno = 0;
             if (dataGridView1.SelectedCells.Count > 0 && dataGridView1.SelectedCells[0].Value != null)
             {
-                sno = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
-
                 string connectionString = GetConnectionString();
                 if (connectionString != null)
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string updateBookDetail = "UPDATE ADDBOOKS SET ISBNNumber = @isbn, ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, Catagory=@catagory WHERE ISBNNumber =" + sno + "";
+                        string updateBookDetail = "UPDATE ADDBOOKS SET ISBNNumber = @isbn, ACCESSION_NO = @id, BOOKNAME = @name, AUTHORNAME = @author, PUBLICATION = @publication, VOLUME = @volume, PAGES = @pages, LANGUAGE = @language, BOOKDATE = @bookdate, PRICE = @price, QUANTITY = @quantity, Catagory=@catagory WHERE ISBNNumber =" +getId+ "";
                         try
                         {
                             con.Open();
@@ -144,9 +139,10 @@ namespace Library.BookManagement
                             {
                                 foreach (DataGridViewRow row in dataGridView1.Rows)
                                 {
-                                    if (Convert.ToInt32(row.Cells["ISBNNumber"].Value) == sno)
+                                    if (Convert.ToInt32(row.Cells["ISBNNumber"].Value) == getId)
                                     {
                                         // Update the corresponding cells in the selected row
+                                        row.Cells["ISBNNumber"].Value = ISBNNum.Text;
                                         row.Cells["Accession_No"].Value = AcccessionID.Text;
                                         row.Cells["BookName"].Value = BookName.Text;
                                         row.Cells["AuthorName"].Value = AuthorName.Text;

@@ -73,7 +73,7 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(542, 323);
+            this.dataGridView.Size = new System.Drawing.Size(542, 380);
             this.dataGridView.TabIndex = 0;
             this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
             // 
@@ -93,11 +93,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Modern No. 20", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DarkRed;
             this.label4.Location = new System.Drawing.Point(383, 6);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(293, 34);
+            this.label4.Size = new System.Drawing.Size(320, 38);
             this.label4.TabIndex = 2;
             this.label4.Text = "View Book Status...";
             // 
@@ -111,7 +111,7 @@
             this.searchBox.TabIndex = 1;
             this.searchBox.Text = "Search Book...";
             this.searchBox.Click += new System.EventHandler(this.searchBox_Click_1);
-           
+            
             this.searchBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.searchBox_KeyUp);
             // 
             // pictureBox1

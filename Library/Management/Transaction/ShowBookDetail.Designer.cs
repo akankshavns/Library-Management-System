@@ -32,7 +32,7 @@
             this.InfoPanel = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.ReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.DueDate = new System.Windows.Forms.DateTimePicker();
             this.issueDate = new System.Windows.Forms.DateTimePicker();
             this.IssueButton = new System.Windows.Forms.Button();
             this.Addre = new System.Windows.Forms.TextBox();
@@ -75,7 +75,7 @@
             this.InfoPanel.BackColor = System.Drawing.Color.Silver;
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
-            this.InfoPanel.Controls.Add(this.ReturnDate);
+            this.InfoPanel.Controls.Add(this.DueDate);
             this.InfoPanel.Controls.Add(this.issueDate);
             this.InfoPanel.Controls.Add(this.IssueButton);
             this.InfoPanel.Controls.Add(this.Addre);
@@ -117,13 +117,13 @@
             this.label13.TabIndex = 24;
             this.label13.Text = "Return Date";
             // 
-            // ReturnDate
+            // DueDate
             // 
-            this.ReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ReturnDate.Location = new System.Drawing.Point(209, 267);
-            this.ReturnDate.Name = "ReturnDate";
-            this.ReturnDate.Size = new System.Drawing.Size(224, 26);
-            this.ReturnDate.TabIndex = 22;
+            this.DueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DueDate.Location = new System.Drawing.Point(209, 267);
+            this.DueDate.Name = "DueDate";
+            this.DueDate.Size = new System.Drawing.Size(224, 26);
+            this.DueDate.TabIndex = 22;
             // 
             // issueDate
             // 
@@ -135,7 +135,7 @@
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
             this.issueDate.Value = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
-            this.issueDate.ValueChanged += new System.EventHandler(this.issueDate_ValueChanged);
+           
             // 
             // IssueButton
             // 
@@ -317,9 +317,9 @@
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(36, 50);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 25);
+            this.label9.Size = new System.Drawing.Size(132, 25);
             this.label9.TabIndex = 5;
-            this.label9.Text = "Book Id";
+            this.label9.Text = "ISBN Number";
             // 
             // label6
             // 
@@ -495,7 +495,7 @@
         private System.Windows.Forms.ComboBox Semester;
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker ReturnDate;
+        private System.Windows.Forms.DateTimePicker DueDate;
         private System.Windows.Forms.Panel BookInfo;
         private System.Windows.Forms.ErrorProvider CheckEnrollBox;
         private System.Windows.Forms.ErrorProvider checkSemesterBox;

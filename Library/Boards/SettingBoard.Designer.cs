@@ -38,7 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SetButton = new System.Windows.Forms.Button();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,11 +131,11 @@
             // 
             // reportViewer1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "ReportViewer";
-            this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 0;
+            //this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            //this.reportViewer1.Name = "ReportViewer";
+            //this.reportViewer1.ServerReport.BearerToken = null;
+            //this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            //this.reportViewer1.TabIndex = 0;
             // 
             // label4
             // 
@@ -192,7 +192,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button SetButton;
-        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        //private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
     }

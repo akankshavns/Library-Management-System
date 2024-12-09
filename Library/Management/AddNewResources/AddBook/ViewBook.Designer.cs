@@ -46,6 +46,7 @@
             this.BookPublication = new System.Windows.Forms.TextBox();
             this.AuthorName = new System.Windows.Forms.TextBox();
             this.BookName = new System.Windows.Forms.TextBox();
+            this.ISBNNum = new System.Windows.Forms.TextBox();
             this.AcccessionID = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,11 +58,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.isbn = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.isbn = new System.Windows.Forms.Label();
-            this.ISBNNum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.updateSectionButton)).BeginInit();
@@ -134,11 +134,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(420, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(363, 35);
+            this.label1.Size = new System.Drawing.Size(400, 39);
             this.label1.TabIndex = 27;
             this.label1.Text = "Library Books Recods...";
             // 
@@ -308,6 +308,14 @@
             this.BookName.Size = new System.Drawing.Size(171, 26);
             this.BookName.TabIndex = 55;
             // 
+            // ISBNNum
+            // 
+            this.ISBNNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ISBNNum.Location = new System.Drawing.Point(231, 11);
+            this.ISBNNum.Name = "ISBNNum";
+            this.ISBNNum.Size = new System.Drawing.Size(171, 26);
+            this.ISBNNum.TabIndex = 55;
+            // 
             // AcccessionID
             // 
             this.AcccessionID.Enabled = false;
@@ -437,6 +445,18 @@
             this.label4.TabIndex = 42;
             this.label4.Text = "Book Name";
             // 
+            // isbn
+            // 
+            this.isbn.AutoSize = true;
+            this.isbn.BackColor = System.Drawing.Color.Transparent;
+            this.isbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.isbn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
+            this.isbn.Location = new System.Drawing.Point(15, 12);
+            this.isbn.Name = "isbn";
+            this.isbn.Size = new System.Drawing.Size(132, 25);
+            this.isbn.TabIndex = 45;
+            this.isbn.Text = "ISBN Number";
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -470,28 +490,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1236, 471);
             this.panel3.TabIndex = 26;
-            // 
-            // isbn
-            // 
-            this.isbn.AutoSize = true;
-            this.isbn.BackColor = System.Drawing.Color.Transparent;
-            this.isbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.isbn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
-            this.isbn.Location = new System.Drawing.Point(15, 12);
-            this.isbn.Name = "isbn";
-            this.isbn.Size = new System.Drawing.Size(132, 25);
-            this.isbn.TabIndex = 45;
-            this.isbn.Text = "ISBN Number";
-            // 
-            // ISBNNum
-            // 
-            this.ISBNNum.Enabled = false;
-            this.ISBNNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ISBNNum.Location = new System.Drawing.Point(231, 11);
-            this.ISBNNum.Name = "ISBNNum";
-            this.ISBNNum.Size = new System.Drawing.Size(171, 26);
-            this.ISBNNum.TabIndex = 55;
-            this.ISBNNum.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ViewBook
             // 

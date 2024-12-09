@@ -44,7 +44,7 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string addBook = "Insert into AddBooks values(@ISBN,@Id,@Name,@Author,@Publication,@Valume,@page,@Language,@BookDate,@Price,@quantity,@availableBook, @catagory,@status)";
+                    string addBook = "Insert into AddBooks values(@ISBN, @Id, @Name, @Author, @Publication, @Valume, @page, @Language, @BookDate, @Price, @quantity, @availableBook, @catagory, @status)";
                     try
                     {
                         con.Open();
@@ -260,12 +260,12 @@ namespace Library.BookManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string idExist = "select Accession_No from AddBooks where Accession_No like @Id";
+                    string idExist = "select ISBNNumber from AddBooks where ISBNNumber like @Id";
                     try
                     {
                         con.Open();
                         SqlCommand comm = new SqlCommand(idExist, con);
-                        comm.Parameters.AddWithValue("@Id", ID.Text);
+                        comm.Parameters.AddWithValue("@Id", ISBN.Text);
                         SqlDataReader reader = comm.ExecuteReader();
                         if (reader.Read())
                         {
@@ -300,7 +300,18 @@ namespace Library.BookManagement
             }
         }
 
-
+        private void ISBN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+                errorInISBN.SetError(ISBN, "This text box only accepts numeric characters.");
+            }
+            else
+            {
+               errorInISBN.SetError(ISBN, "");
+            }
+        }
         private void pages_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
@@ -310,7 +321,7 @@ namespace Library.BookManagement
             }
             else
             {
-                errorProviderVolume.SetError(volume, "");
+                errorProviderPages.SetError(pages, "");
             }
         }
 
@@ -336,7 +347,7 @@ namespace Library.BookManagement
             }
             else
             {
-                errorProviderVolume.SetError(volume, "");
+                errorProviderQuantity.SetError(Quantity, "");
             }
         }
 
@@ -372,7 +383,7 @@ namespace Library.BookManagement
             }
         }
 
-        
+       
     }
 
 }

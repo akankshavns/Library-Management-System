@@ -18,17 +18,17 @@ namespace Library
         public Home()
         {
             InitializeComponent();
-            InitializeInactivityTimer();
+            //InitializeInactivityTimer();
         }
-        private void InitializeInactivityTimer()
-        {
-            inactivityTimer = new Timer();
-            inactivityTimer.Interval = InactivityPeriod;
-            inactivityTimer.Tick += InactivityTimer_Tick;
-            inactivityTimer.Start();
-            this.MouseMove += new MouseEventHandler(ResetInactivityTimer);
-            this.KeyPress += new KeyPressEventHandler(ResetInactivityTimer);
-        }
+        //private void InitializeInactivityTimer()
+        //{
+        //    inactivityTimer = new Timer();
+        //    inactivityTimer.Interval = InactivityPeriod;
+        //    inactivityTimer.Tick += InactivityTimer_Tick;
+        //    inactivityTimer.Start();
+        //    this.MouseMove += new MouseEventHandler(ResetInactivityTimer);
+        //    this.KeyPress += new KeyPressEventHandler(ResetInactivityTimer);
+        //}
         private void InactivityTimer_Tick(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
@@ -48,11 +48,11 @@ namespace Library
             this.Close();
         }
 
-        private void ResetInactivityTimer(object sender, EventArgs e)
-        {
-            inactivityTimer.Stop();
-            inactivityTimer.Start();
-        }
+        //private void ResetInactivityTimer(object sender, EventArgs e)
+        //{
+        //    inactivityTimer.Stop();
+        //    inactivityTimer.Start();
+        //}
         //bool sidebarExpand = true;
         void slider()
         {
