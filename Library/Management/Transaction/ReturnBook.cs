@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Windows.Forms;
+using Library.Management.Student;
+using Library.Management.Transaction;
 
 
 namespace Library.TransactionManagement
@@ -25,7 +28,7 @@ namespace Library.TransactionManagement
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     string checkQuery = "SELECT COUNT(*) FROM IssueBookDetail WHERE EnrollmentNumber = @EnrollBox and ISBNNumber = @BookID and isReturnBook=@status";
-                    string query = "SELECT BookName, AuthorName, StudentName, Deparment, Email, issueDate FROM IssueBookList WHERE StudentEnrollment = @EnrollBox and BookId = @BookID and IsReturnBook = @ReturnStatus";
+                    string query = "SELECT b.BookName, b.AuthorName, s.StudentName, s.Department, s.Email, i.issueDate FROM IssueBookDetail i JOIN AddBooks b ON i.ISBNNumber = b.ISBNNumber JOIN StudentInformation s ON i.EnrollmentNumber = s.EnrollmentNumber WHERE i.EnrollmentNumber = @EnrollBox and i.ISBNNumber = @BookID and IsReturnBook = @ReturnStatus";
                     try
                     {
                         con.Open();
@@ -39,7 +42,7 @@ namespace Library.TransactionManagement
 
                         if (recordCount == 0)
                         {
-                            MessageBox.Show("No records found for the given enrollment and book ID.");
+                            MessageBox.Show("This book is already retuned");
                             return;
                         }
 
@@ -54,14 +57,14 @@ namespace Library.TransactionManagement
                             BookName.Text = reader["BookName"].ToString();
                             AuthorName.Text = reader["AuthorName"].ToString();
                             StudentName.Text = reader["StudentName"].ToString();
-                            Dep.Text = reader["Deparment"].ToString();
+                            Dep.Text = reader["Department"].ToString();
                             mail.Text = reader["Email"].ToString();
                             issueDate.Text = reader["issueDate"].ToString();
                             InfoPanel.Visible = true;
                         }
                         else
                         {
-                            MessageBox.Show("This Book is already return by the student.");
+                            MessageBox.Show("This Book is already return by the student.No data data found in hold  book");
                         }
                         reader.Close();
                     }
@@ -82,9 +85,9 @@ namespace Library.TransactionManagement
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string fineQuery = "SELECT ReturnDate FROM IssueBookList WHERE BookId = @BookID AND StudentEnrollment = @enroll";
-                    string updateAvailable = "UPDATE AddBooks SET AvailableBook = AvailableBook + 1 WHERE Accession_No = @BookID";
-                    string changeReturn = "UPDATE IssueBookList SET isReturnBook = @Return WHERE BookId = @BookId AND StudentEnrollment = @enroll";
+                    string fineQuery = "SELECT DueDate FROM IssueBookDetail WHERE ISBNNUmber = @BookID AND EnrollmentNumber = @enroll";
+                    string updateBookAvailable = "UPDATE AddBooks SET AvailableBook = AvailableBook + 1 WHERE ISBNNumber = @BookID";
+                    string UpdateIssuedStatus = "UPDATE IssueBookDetail SET isReturnBook = @status,FineAmount=@fine,ReturnDate=@Todaydate WHERE ISBNNumber = @BookId AND EnrollmentNumber = @enroll";
                     try
                     {
                         con.Open();
@@ -105,23 +108,37 @@ namespace Library.TransactionManagement
                             Return.Enabled= false;
                             TimeSpan difference = actualReturnDate - returnDate;
                             int daysLate = difference.Days;
-                            MessageBox.Show(fineCharge.ToString());
                             double fine = daysLate * fineCharge;
                             MessageBox.Show($"Book is returned late. You have to pay a fine of ₹{fine}.");
-                            scanner scan = new scanner();
-                            scan.Show();
+                            Fine.Enabled = true;
+                            Form dialogForm = new Form
+                            {
+                                Text = "Scan me!",
+                                Size = new Size(643, 443), // Adjust the size to fit your UserControl
+                                StartPosition = FormStartPosition.CenterParent, // Center the dialog on the parent form
+                                FormBorderStyle = FormBorderStyle.FixedDialog, // Prevent resizing
+                                MaximizeBox = false,
+                                MinimizeBox = false
+                            };
+                            Scanner1 scan = new Scanner1();
+                            scan.Dock = DockStyle.Fill;
+                            dialogForm.Controls.Add(scan);
+                            dialogForm.ShowDialog();
                             if (Return.Enabled == true)
                             {
-                                SqlCommand cmd = new SqlCommand(updateAvailable, con);
+                                SqlCommand cmd = new SqlCommand(updateBookAvailable, con);
                                 cmd.Parameters.AddWithValue("@BookID", BookID.Text);
-                                SqlCommand comm = new SqlCommand(changeReturn, con);
+                                SqlCommand comm = new SqlCommand(UpdateIssuedStatus, con);
                                 comm.Parameters.AddWithValue("@enroll", EnrollBox.Text);
                                 comm.Parameters.AddWithValue("@BookId", BookID.Text);
-                                comm.Parameters.AddWithValue("@Return", "Return");
+                                comm.Parameters.AddWithValue("@status", "Return");
+                                comm.Parameters.AddWithValue("@Todaydate ", ActualReturnDate.Value);
+                                comm.Parameters.AddWithValue("@fine", fine);
                                 int availableUpdateResult = cmd.ExecuteNonQuery();
                                 int returnUpdateResult = comm.ExecuteNonQuery();
                                 if (availableUpdateResult > 0 && returnUpdateResult > 0)
                                 {
+                                    Fine.Enabled= true;
                                     MessageBox.Show("Book returned successfully and inventory updated.");
                                 }
                                 else
@@ -143,12 +160,14 @@ namespace Library.TransactionManagement
                         }
                         else
                         {
-                            SqlCommand cmd = new SqlCommand(updateAvailable, con);
+                            SqlCommand cmd = new SqlCommand(updateBookAvailable, con);
                             cmd.Parameters.AddWithValue("@BookID", BookID.Text);
-                            SqlCommand comm = new SqlCommand(changeReturn, con);
+                            SqlCommand comm = new SqlCommand(UpdateIssuedStatus, con);
                             comm.Parameters.AddWithValue("@enroll", EnrollBox.Text);
                             comm.Parameters.AddWithValue("@BookId", BookID.Text);
-                            comm.Parameters.AddWithValue("@Return", "Return");
+                            comm.Parameters.AddWithValue("@status", "Return");
+                            comm.Parameters.AddWithValue("@Todaydate ", ActualReturnDate.Value);
+                            comm.Parameters.AddWithValue("@fine", 0);
                             int availableUpdateResult = cmd.ExecuteNonQuery();
                             int returnUpdateResult = comm.ExecuteNonQuery();
                             if (availableUpdateResult > 0 && returnUpdateResult > 0)
@@ -210,6 +229,24 @@ namespace Library.TransactionManagement
 
 
             }
+
+        }
+
+        private void Fine_Click(object sender, EventArgs e)
+        {
+            Form dialogForm = new Form
+            {
+                Text = "Scan me!",
+                Size = new Size(688, 488), // Adjust the size to fit your UserControl
+                StartPosition = FormStartPosition.CenterParent, // Center the dialog on the parent form
+                FormBorderStyle = FormBorderStyle.FixedDialog, // Prevent resizing
+                MaximizeBox = false,
+                MinimizeBox = false
+            };
+            Scanner1 scan = new Scanner1();
+            scan.Dock = DockStyle.Fill;
+            dialogForm.Controls.Add(scan);
+            dialogForm.ShowDialog();
 
         }
     }

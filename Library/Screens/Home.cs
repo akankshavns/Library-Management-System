@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Library.Management.Report;
 
 namespace Library
 {
@@ -371,6 +372,12 @@ namespace Library
             {
 
             }
+        }
+
+        private void ReportManagementBtn_Click(object sender, EventArgs e)
+        {
+            reportShow1.Show();
+            reportShow1.BringToFront();
         }
     }
 }

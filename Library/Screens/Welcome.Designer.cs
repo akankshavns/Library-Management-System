@@ -97,7 +97,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources._360_F_858981268_FacnWi9tRtIxH8UCSsFoKe6tzQXzWwaN_removebg_preview;
+            this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.selvbook;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(598, 180);
             this.pictureBox1.Name = "pictureBox1";

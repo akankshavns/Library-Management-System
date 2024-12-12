@@ -33,7 +33,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.ActualReturnDate = new System.Windows.Forms.DateTimePicker();
-            Return = new System.Windows.Forms.Button();
+           Return = new System.Windows.Forms.Button();
             this.mail = new System.Windows.Forms.TextBox();
             this.Dep = new System.Windows.Forms.TextBox();
             this.StudentName = new System.Windows.Forms.TextBox();
@@ -53,6 +53,7 @@
             this.EnrollBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.issuePage = new System.Windows.Forms.Panel();
+            this.Fine = new System.Windows.Forms.Button();
             this.InfoPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +65,7 @@
             this.InfoPanel.Controls.Add(this.label14);
             this.InfoPanel.Controls.Add(this.label13);
             this.InfoPanel.Controls.Add(this.ActualReturnDate);
+            this.InfoPanel.Controls.Add(this.Fine);
             this.InfoPanel.Controls.Add(Return);
             this.InfoPanel.Controls.Add(this.mail);
             this.InfoPanel.Controls.Add(this.Dep);
@@ -85,6 +87,7 @@
             // 
             // issueDate
             // 
+            this.issueDate.Enabled = false;
             this.issueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.issueDate.Location = new System.Drawing.Point(161, 296);
             this.issueDate.Name = "issueDate";
@@ -116,6 +119,7 @@
             // ActualReturnDate
             // 
             this.ActualReturnDate.Checked = false;
+            this.ActualReturnDate.Enabled = false;
             this.ActualReturnDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActualReturnDate.Location = new System.Drawing.Point(161, 349);
             this.ActualReturnDate.MinDate = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
@@ -125,18 +129,19 @@
             // 
             // Return
             // 
-            Return.BackColor = System.Drawing.Color.ForestGreen;
-            Return.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Return.Location = new System.Drawing.Point(151, 426);
-            Return.Name = "Return";
-            Return.Size = new System.Drawing.Size(113, 46);
-            Return.TabIndex = 21;
-            Return.Text = "Return";
-            Return.UseVisualStyleBackColor = false;
-            Return.Click += new System.EventHandler(Return_Click);
+           Return.BackColor = System.Drawing.Color.ForestGreen;
+           Return.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+           Return.Location = new System.Drawing.Point(151, 426);
+           Return.Name = "Return";
+           Return.Size = new System.Drawing.Size(113, 46);
+           Return.TabIndex = 21;
+           Return.Text = "Return";
+           Return.UseVisualStyleBackColor = false;
+           Return.Click += new System.EventHandler(this.Return_Click);
             // 
             // mail
             // 
+            this.mail.Enabled = false;
             this.mail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mail.Location = new System.Drawing.Point(161, 245);
             this.mail.Name = "mail";
@@ -145,6 +150,7 @@
             // 
             // Dep
             // 
+            this.Dep.Enabled = false;
             this.Dep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dep.Location = new System.Drawing.Point(161, 200);
             this.Dep.Name = "Dep";
@@ -153,6 +159,7 @@
             // 
             // StudentName
             // 
+            this.StudentName.Enabled = false;
             this.StudentName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StudentName.Location = new System.Drawing.Point(161, 154);
             this.StudentName.Name = "StudentName";
@@ -194,6 +201,7 @@
             // 
             // AuthorName
             // 
+            this.AuthorName.Enabled = false;
             this.AuthorName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AuthorName.Location = new System.Drawing.Point(161, 77);
             this.AuthorName.Name = "AuthorName";
@@ -202,6 +210,7 @@
             // 
             // BookName
             // 
+            this.BookName.Enabled = false;
             this.BookName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BookName.Location = new System.Drawing.Point(161, 39);
             this.BookName.Name = "BookName";
@@ -292,9 +301,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(14, 11);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 20);
+            this.label5.Size = new System.Drawing.Size(209, 20);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Enter book Id";
+            this.label5.Text = "Enter book ISBN number";
             // 
             // EnrollBox
             // 
@@ -326,6 +335,18 @@
             this.issuePage.Size = new System.Drawing.Size(1231, 133);
             this.issuePage.TabIndex = 16;
             // 
+            // Fine
+            // 
+            this.Fine.BackColor = System.Drawing.Color.ForestGreen;
+            this.Fine.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fine.Location = new System.Drawing.Point(286, 426);
+            this.Fine.Name = "Fine";
+            this.Fine.Size = new System.Drawing.Size(113, 46);
+            this.Fine.TabIndex = 21;
+            this.Fine.Text = "Fine";
+            this.Fine.UseVisualStyleBackColor = false;
+            this.Fine.Click += new System.EventHandler(this.Fine_Click);
+            // 
             // ReturnBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,7 +357,7 @@
             this.Controls.Add(this.panel5);
             this.Name = "ReturnBook";
             this.Size = new System.Drawing.Size(1231, 667);
-            this.Load += new System.EventHandler(ReturnBook_Load);
+            this.Load += new System.EventHandler(this.ReturnBook_Load);
             this.InfoPanel.ResumeLayout(false);
             this.InfoPanel.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -351,7 +372,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.DateTimePicker ActualReturnDate;
-        public static System.Windows.Forms.Button Return;
         private System.Windows.Forms.TextBox mail;
         private System.Windows.Forms.TextBox Dep;
         private System.Windows.Forms.TextBox StudentName;
@@ -371,5 +391,7 @@
         private System.Windows.Forms.TextBox EnrollBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel issuePage;
+        public System.Windows.Forms.Button Fine;
+        public static System.Windows.Forms.Button Return;
     }
 }

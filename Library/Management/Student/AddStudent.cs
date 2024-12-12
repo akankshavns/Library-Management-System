@@ -2,9 +2,11 @@
 using System.ComponentModel;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using Library.Management.Student;
 
 
 namespace Library.StudentManagement
@@ -249,6 +251,28 @@ namespace Library.StudentManagement
             {
                 EmailCheck.SetError(Email, "");
             }
+        }
+
+        private void DataFromGooleForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form dialogForm = new Form
+            {
+                Text = "Scan me!",
+                Size = new Size(695, 500), // Adjust the size to fit your UserControl
+                StartPosition = FormStartPosition.CenterParent, // Center the dialog on the parent form
+                FormBorderStyle = FormBorderStyle.FixedDialog, // Prevent resizing
+                MaximizeBox = false,
+                MinimizeBox = false
+            };
+            GoogleFormData googleFormData = new GoogleFormData
+            {
+                Dock = DockStyle.Fill 
+            };
+            dialogForm.Controls.Add(googleFormData);
+
+            dialogForm.ShowDialog();
+
+
         }
     }
 }

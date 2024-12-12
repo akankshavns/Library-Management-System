@@ -135,7 +135,7 @@
             this.issueDate.Size = new System.Drawing.Size(224, 26);
             this.issueDate.TabIndex = 22;
             this.issueDate.Value = new System.DateTime(2024, 10, 9, 0, 0, 0, 0);
-           
+            this.issueDate.ValueChanged += new System.EventHandler(this.issueDate_ValueChanged);
             // 
             // IssueButton
             // 

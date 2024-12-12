@@ -85,8 +85,11 @@
             this.ReturnPageOpen = new System.Windows.Forms.Button();
             this.ViewIssuedPageOpen = new System.Windows.Forms.Button();
             this.issuePageopen = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.ReportManagementBtn = new System.Windows.Forms.Button();
             this.StudentManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
             this.TransactionManagementMenuSlider = new System.Windows.Forms.Timer(this.components);
+            this.reportShow1 = new Library.Management.Report.ReportShow();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -105,6 +108,7 @@
             this.Abc.SuspendLayout();
             this.StudentMenuPanel.SuspendLayout();
             this.TransactionMenuePanel.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -344,11 +348,11 @@
             // Heading
             // 
             this.Heading.AutoSize = true;
-            this.Heading.Font = new System.Drawing.Font("Monotype Corsiva", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Heading.ForeColor = System.Drawing.Color.Transparent;
             this.Heading.Location = new System.Drawing.Point(109, 8);
             this.Heading.Name = "Heading";
-            this.Heading.Size = new System.Drawing.Size(428, 56);
+            this.Heading.Size = new System.Drawing.Size(524, 54);
             this.Heading.TabIndex = 2;
             this.Heading.Text = "Welcome To the library";
             this.Heading.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -414,6 +418,7 @@
             this.panel5.Controls.Add(this.returnBook1);
             this.panel5.Controls.Add(this.settingBoard1);
             this.panel5.Controls.Add(this.viewTransaction1);
+            this.panel5.Controls.Add(this.reportShow1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(229, 0);
             this.panel5.Name = "panel5";
@@ -519,6 +524,7 @@
             this.menuBar.Controls.Add(this.Abc);
             this.menuBar.Controls.Add(this.StudentMenuPanel);
             this.menuBar.Controls.Add(this.TransactionMenuePanel);
+            this.menuBar.Controls.Add(this.panel8);
             this.menuBar.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
@@ -831,6 +837,38 @@
             this.issuePageopen.UseVisualStyleBackColor = false;
             this.issuePageopen.Click += new System.EventHandler(this.issuePageopen_Click);
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.ReportManagementBtn);
+            this.panel8.Font = new System.Drawing.Font("Sitka Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel8.Location = new System.Drawing.Point(3, 385);
+            this.panel8.Margin = new System.Windows.Forms.Padding(3, 15, 3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(215, 65);
+            this.panel8.TabIndex = 11;
+            // 
+            // ReportManagementBtn
+            // 
+            this.ReportManagementBtn.BackColor = System.Drawing.Color.Transparent;
+            this.ReportManagementBtn.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.ReportManagementBtn.FlatAppearance.BorderSize = 0;
+            this.ReportManagementBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
+            this.ReportManagementBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
+            this.ReportManagementBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReportManagementBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportManagementBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ReportManagementBtn.Image = ((System.Drawing.Image)(resources.GetObject("ReportManagementBtn.Image")));
+            this.ReportManagementBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportManagementBtn.Location = new System.Drawing.Point(6, 6);
+            this.ReportManagementBtn.Name = "ReportManagementBtn";
+            this.ReportManagementBtn.Size = new System.Drawing.Size(201, 51);
+            this.ReportManagementBtn.TabIndex = 9;
+            this.ReportManagementBtn.Text = "   Report  Management";
+            this.ReportManagementBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ReportManagementBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.ReportManagementBtn.UseVisualStyleBackColor = false;
+            this.ReportManagementBtn.Click += new System.EventHandler(this.ReportManagementBtn_Click);
+            // 
             // StudentManagementMenuSlider
             // 
             this.StudentManagementMenuSlider.Interval = 1;
@@ -840,6 +878,15 @@
             // 
             this.TransactionManagementMenuSlider.Interval = 1;
             this.TransactionManagementMenuSlider.Tick += new System.EventHandler(this.TransactionManagementMenuSlider_Tick);
+            // 
+            // reportShow1
+            // 
+            this.reportShow1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportShow1.Location = new System.Drawing.Point(0, 0);
+            this.reportShow1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportShow1.Name = "reportShow1";
+            this.reportShow1.Size = new System.Drawing.Size(1141, 679);
+            this.reportShow1.TabIndex = 10;
             // 
             // Home
             // 
@@ -876,6 +923,7 @@
             this.Abc.ResumeLayout(false);
             this.StudentMenuPanel.ResumeLayout(false);
             this.TransactionMenuePanel.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -938,5 +986,8 @@
         private TransactionManagement.ReturnBook returnBook1;
         private Board.SettingBoard settingBoard1;
         private TransactionManagement.ViewTransaction viewTransaction1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button ReportManagementBtn;
+        private Management.Report.ReportShow reportShow1;
     }
 }

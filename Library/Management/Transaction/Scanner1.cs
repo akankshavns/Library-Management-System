@@ -1,5 +1,4 @@
-﻿using Library.TransactionManagement;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Library.TransactionManagement;
 
-namespace Library
+namespace Library.Management.Transaction
 {
-    public partial class scanner : Form
+    public partial class Scanner1 : UserControl
     {
-        public scanner()
+        public Scanner1()
         {
             InitializeComponent();
         }
@@ -21,12 +21,13 @@ namespace Library
         private void donebutton_Click(object sender, EventArgs e)
         {
             ReturnBook.Return.Enabled = true;
-            this.Hide();
+            //To-do : how to close this contener dialog box of this control form
+            ((Form)ParentForm).Close();
         }
 
         private void Cancelbutton2_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            ((Form)ParentForm).Close();
         }
     }
 }

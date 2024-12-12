@@ -30,8 +30,8 @@ namespace Library.FrontScreen
                 {
                     string TBook = "SELECT count(*)from AddBooks where BookStatus='Retained'";
                     string TStudent = "SELECT count(*)from StudentInformation where StudentStatus='Retained'";
-                    string IssueBook = "Select count (*) from IssueBookList where issueDate = CAST(GETDATE() AS DATE)";
-                    string ReturnBook = "Select count (*) from IssueBookList where ReturnDate = CAST(GETDATE() AS DATE)";
+                    string IssueBook = "Select count (*) from IssueBookDetail where issueDate = CAST(GETDATE() AS DATE) and isReturnBook=@status";
+                    string ReturnBook = "Select count (*) from IssueBookDetail where ReturnDate = CAST(GETDATE() AS DATE) and isReturnBook=@status";
                     try
                     {
                         con.Open();
@@ -42,11 +42,13 @@ namespace Library.FrontScreen
                         int totalStudent = (int)TotalStudent.ExecuteScalar();
                         Studentlabel.Text = totalStudent.ToString();
                         SqlCommand todayIssue = new SqlCommand(IssueBook, con);
+                        todayIssue.Parameters.AddWithValue("@status", "Hold");
                         int issueBook = (int)todayIssue.ExecuteScalar();
                         issuedlabel.Text = issueBook.ToString();
                         SqlCommand todayReturn = new SqlCommand(ReturnBook, con);
+                        todayReturn.Parameters.AddWithValue("@status", "Return");
                         int returnBook = (int)todayReturn.ExecuteScalar();
-                        ReturnBooklabel.Text = issueBook.ToString();
+                        ReturnBooklabel.Text = returnBook.ToString();
 
 
                     }

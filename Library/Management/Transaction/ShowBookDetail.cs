@@ -189,7 +189,7 @@ namespace Library.TransactionManagement
                                 cmd.Parameters.AddWithValue("@Enroll", EnrollBox.Text);
                                 cmd.Parameters.AddWithValue("@DueDate", DueDate.Value);
                                 cmd.Parameters.AddWithValue("@issueDate", issueDate.Text);
-                                cmd.Parameters.AddWithValue("@ReturnDate", "");
+                                cmd.Parameters.AddWithValue("@ReturnDate", DBNull.Value);
                                 cmd.Parameters.AddWithValue("@isReturn", "Hold");
                                 cmd.Parameters.AddWithValue("@fine", "0");
                                 int isInsert = cmd.ExecuteNonQuery();
@@ -301,6 +301,10 @@ namespace Library.TransactionManagement
                 }
             }
         }
-      
+
+        private void issueDate_ValueChanged(object sender, EventArgs e)
+        {
+            DueDate.Value = issueDate.Value.AddDays(returnDays);
+        }
     }
 }

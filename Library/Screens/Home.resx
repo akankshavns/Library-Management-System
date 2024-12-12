@@ -300,6 +300,16 @@
         E9Tue2hPmOPLV0g7EXQ+7VD6GI9/TTEVJVSHa9IAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="ReportManagementBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAQdJREFUSEvt
+        l/0NgkAMxRnBERzBERzBERzBDXQDGcENdAPZwBXYwOMj4c/6Sh4JAgGONBdN+CUvZ5vSJ8cRa/RT5Hl+
+        cM7doaeV0PPI9sNkWXZBocMa62cLoV2qKy36VFW1RYEURbFnygQYJ6PG3OKUoRmTxtyWhGENcifo7Kuy
+        LHds4W+sFyMnmveR9mj38TbWZ42cMJxNt8//GOspR6yvlm63r25ss+xwichG79xXvLxmkbEFq3GP1diK
+        1bjHamzFbGMdzLBaDnvvSWNIUGg67Km6PxxfsEjaY0sQuMUvhuFoZqzgd6zAOOZhuEKDE+QSjT7jBp2v
+        UfzAF6inRQtN/oUJQxR9AMt06EauasKxAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="StudentManagementMenuSlider.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>424, 17</value>
   </metadata>

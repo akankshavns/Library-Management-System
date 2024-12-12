@@ -59,7 +59,11 @@
             this.EnrollmentCheck = new System.Windows.Forms.ErrorProvider(this.components);
             this.EmailCheck = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProviderimageUpload = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DataFromGooleForm = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).BeginInit();
@@ -73,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmailCheck)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderimageUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,9 +103,9 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.EnrollmentNo);
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(23, 63);
+            this.panel1.Location = new System.Drawing.Point(105, 63);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1135, 436);
+            this.panel1.Size = new System.Drawing.Size(996, 429);
             this.panel1.TabIndex = 1;
             // 
             // Email
@@ -341,6 +346,43 @@
             // 
             this.errorProviderimageUpload.ContainerControl = this;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Add New ";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Student Information",
+            "Staff Informtion"});
+            this.comboBox1.Location = new System.Drawing.Point(115, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 4;
+            // 
+            // DataFromGooleForm
+            // 
+            this.DataFromGooleForm.AutoSize = true;
+            this.DataFromGooleForm.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DataFromGooleForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DataFromGooleForm.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.DataFromGooleForm.LinkColor = System.Drawing.Color.DarkRed;
+            this.DataFromGooleForm.Location = new System.Drawing.Point(1016, 0);
+            this.DataFromGooleForm.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.DataFromGooleForm.Name = "DataFromGooleForm";
+            this.DataFromGooleForm.Size = new System.Drawing.Size(215, 17);
+            this.DataFromGooleForm.TabIndex = 5;
+            this.DataFromGooleForm.TabStop = true;
+            this.DataFromGooleForm.Text = "Get data Using Google Form";
+            this.DataFromGooleForm.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.DataFromGooleForm_LinkClicked);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
@@ -351,13 +393,25 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DataFromGooleForm);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.panel1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1231, 667);
+            this.panel2.TabIndex = 4;
+            // 
             // AddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(1231, 667);
             this.panel1.ResumeLayout(false);
@@ -374,6 +428,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EmailCheck)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderimageUpload)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -411,5 +467,9 @@
         private System.Windows.Forms.ErrorProvider EmailCheck;
         private System.Windows.Forms.ErrorProvider errorProviderimageUpload;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel DataFromGooleForm;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -33,8 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EPPlus, Version=7.5.0.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPPlus.7.5.0\lib\net462\EPPlus.dll</HintPath>
+    <Reference Include="EPPlus, Version=7.5.2.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.5.2\lib\net462\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="EPPlus.Interfaces, Version=7.5.0.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
       <HintPath>..\packages\EPPlus.Interfaces.7.5.0\lib\net462\EPPlus.Interfaces.dll</HintPath>
@@ -46,19 +46,19 @@
       <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.3.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Corrected.Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1358.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1652.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
@@ -142,6 +142,12 @@
     <Compile Include="Design\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management\AddNewResources\AddBook\AddBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,28 +190,39 @@
     <Compile Include="Management\AddNewResources\AddNewsPaper\ViewNewspaper.Designer.cs">
       <DependentUpon>ViewNewspaper.cs</DependentUpon>
     </Compile>
+    <Compile Include="Management\Report\ReportShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Report\ReportShow.Designer.cs">
+      <DependentUpon>ReportShow.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management\Setting\Transaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Management\Setting\Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Management\Student\GoogleFormData.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Student\GoogleFormData.Designer.cs">
+      <DependentUpon>GoogleFormData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\Transaction\Scanner1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Transaction\Scanner1.Designer.cs">
+      <DependentUpon>Scanner1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Reports\BookReport.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Reports\BookReport.Designer.cs">
-      <DependentUpon>BookReport.cs</DependentUpon>
-    </Compile>
-    <Compile Include="scanner.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="scanner.Designer.cs">
-      <DependentUpon>scanner.cs</DependentUpon>
+    <Compile Include="ReportViewer\DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Screens\Home.cs">
       <SubType>Form</SubType>
@@ -263,6 +280,7 @@
     <Compile Include="Management\Transaction\ViewTransaction.Designer.cs">
       <DependentUpon>ViewTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="Auth\Authentication.resx">
       <DependentUpon>Authentication.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +299,9 @@
     <EmbeddedResource Include="Design\RoundPictureBox.resx">
       <DependentUpon>RoundPictureBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management\AddNewResources\AddBook\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,15 +311,24 @@
     <EmbeddedResource Include="Boards\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management\Report\ReportShow.resx">
+      <DependentUpon>ReportShow.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\BookReport.resx">
-      <DependentUpon>BookReport.cs</DependentUpon>
+    <EmbeddedResource Include="Management\Student\GoogleFormData.resx">
+      <DependentUpon>GoogleFormData.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="scanner.resx">
-      <DependentUpon>scanner.cs</DependentUpon>
+    <EmbeddedResource Include="Management\Transaction\Scanner1.resx">
+      <DependentUpon>Scanner1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportViewer\BookReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\IssueBookReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\MagazineReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\NewspaperReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\StaffReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\StudentReport.rdlc" />
     <EmbeddedResource Include="Screens\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +376,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ReportViewer\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="ReportViewer\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportViewer\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Resources\Books Emoji.png" />
   </ItemGroup>
   <ItemGroup>
@@ -385,19 +426,10 @@
     <None Include="Resources\Left Arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image_processing20220207-786-j68tnb.gif" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Customer.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\User.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Bill.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\About1.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Homework1.png" />
@@ -469,9 +501,6 @@
     <None Include="Resources\Double-J-Design-Ravenna-3d-Books.48.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Student Exchange.png" />
   </ItemGroup>
   <ItemGroup>
@@ -481,34 +510,13 @@
     <None Include="Resources\Check Book.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Book Adaptation.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Settings1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\WhatsApp Image 2024-10-23 at 12.09.51_3e164d1b.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\abc.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\abcde.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\newOne.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m1.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Gemini_Generated_Image_r02mxtr02mxtr02m2.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Recent Celebrity.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Recent Celebrity1.png" />
@@ -520,19 +528,7 @@
     <None Include="Resources\User1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Gemini_Generated_Image_awtmg9awtmg9awtm.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lessopacityImage.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\photu.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\images-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\library image.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\shelve.png" />
@@ -550,28 +546,10 @@
     <None Include="Resources\updatebutton1.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\libraryWithBook.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\lesscolor.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\download.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\humanbeing.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\humanbeing1.jpeg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\imageslibrary.jpeg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Menu.png" />
@@ -583,19 +561,7 @@
     <None Include="Resources\readylogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\360_F_858981268_FacnWi9tRtIxH8UCSsFoKe6tzQXzWwaN.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\360_F_858981268_FacnWi9tRtIxH8UCSsFoKe6tzQXzWwaN-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\vikansha_logo-removebg-preview.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\image_processing20220207-786-j68tnb1.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\il_300x300.3203683596_be2g-removebg-preview.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Untitled design.jpg" />
@@ -608,6 +574,25 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photu-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StaffQR.png" />
+    <None Include="Resources\StudentQR.png" />
+    <None Include="Resources\studentQRCode.png" />
+    <None Include="Resources\selvbook.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
