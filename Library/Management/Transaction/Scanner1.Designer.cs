@@ -49,7 +49,7 @@
             // Cancelbutton2
             // 
             this.Cancelbutton2.BackColor = System.Drawing.Color.Teal;
-            this.Cancelbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelbutton2.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelbutton2.ForeColor = System.Drawing.Color.White;
             this.Cancelbutton2.Location = new System.Drawing.Point(491, 344);
             this.Cancelbutton2.Name = "Cancelbutton2";
@@ -62,7 +62,7 @@
             // donebutton
             // 
             this.donebutton.BackColor = System.Drawing.Color.Teal;
-            this.donebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.donebutton.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.donebutton.ForeColor = System.Drawing.Color.White;
             this.donebutton.Location = new System.Drawing.Point(382, 344);
             this.donebutton.Name = "donebutton";

@@ -48,7 +48,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(52, 52);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(152, 25);
@@ -57,7 +57,7 @@
             // 
             // mailAddress
             // 
-            this.mailAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mailAddress.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mailAddress.Location = new System.Drawing.Point(235, 49);
             this.mailAddress.Name = "mailAddress";
             this.mailAddress.Size = new System.Drawing.Size(375, 30);
@@ -66,7 +66,7 @@
             // Continue
             // 
             this.Continue.BackColor = System.Drawing.Color.Teal;
-            this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Continue.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Continue.ForeColor = System.Drawing.Color.White;
             this.Continue.Location = new System.Drawing.Point(484, 85);
             this.Continue.Name = "Continue";
@@ -79,7 +79,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(42, 44);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 25);
@@ -88,7 +88,7 @@
             // 
             // OTPcheck
             // 
-            this.OTPcheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OTPcheck.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OTPcheck.Location = new System.Drawing.Point(180, 39);
             this.OTPcheck.Name = "OTPcheck";
             this.OTPcheck.Size = new System.Drawing.Size(375, 30);
@@ -97,7 +97,7 @@
             // OTPverifyButton
             // 
             this.OTPverifyButton.BackColor = System.Drawing.Color.Teal;
-            this.OTPverifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OTPverifyButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OTPverifyButton.ForeColor = System.Drawing.Color.White;
             this.OTPverifyButton.Location = new System.Drawing.Point(476, 87);
             this.OTPverifyButton.Name = "OTPverifyButton";
@@ -123,7 +123,7 @@
             // ResetButton
             // 
             this.ResetButton.BackColor = System.Drawing.Color.Teal;
-            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.White;
             this.ResetButton.Location = new System.Drawing.Point(422, 131);
             this.ResetButton.Name = "ResetButton";
@@ -136,7 +136,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(27, 95);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(207, 25);
@@ -146,7 +146,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(27, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(190, 25);

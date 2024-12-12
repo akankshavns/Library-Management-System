@@ -72,7 +72,7 @@
             this.loginpanel.Controls.Add(this.Text_UserName);
             this.loginpanel.Controls.Add(this.LoginButton);
             this.loginpanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginpanel.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginpanel.Location = new System.Drawing.Point(206, 169);
             this.loginpanel.Name = "loginpanel";
             this.loginpanel.Size = new System.Drawing.Size(392, 291);
@@ -100,7 +100,7 @@
             // 
             this.CreateNewAccount.AutoSize = true;
             this.CreateNewAccount.BackColor = System.Drawing.Color.Transparent;
-            this.CreateNewAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateNewAccount.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateNewAccount.Location = new System.Drawing.Point(140, 236);
             this.CreateNewAccount.Name = "CreateNewAccount";
             this.CreateNewAccount.Size = new System.Drawing.Size(142, 17);
@@ -115,7 +115,7 @@
             // 
             this.ForgotPassword.AutoSize = true;
             this.ForgotPassword.BackColor = System.Drawing.Color.Transparent;
-            this.ForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForgotPassword.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForgotPassword.Location = new System.Drawing.Point(178, 160);
             this.ForgotPassword.Name = "ForgotPassword";
             this.ForgotPassword.Size = new System.Drawing.Size(148, 21);
@@ -151,7 +151,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel3.LinkColor = System.Drawing.Color.Yellow;
             this.linkLabel3.Location = new System.Drawing.Point(357, 337);
             this.linkLabel3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -176,7 +176,7 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Yellow;
             this.linkLabel1.Location = new System.Drawing.Point(199, 335);
             this.linkLabel1.Name = "linkLabel1";
@@ -190,7 +190,7 @@
             this.text_password.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
             this.text_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.text_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.text_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.text_password.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.text_password.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.text_password.Location = new System.Drawing.Point(116, 120);
             this.text_password.Name = "text_password";
@@ -206,7 +206,7 @@
             this.Text_UserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(135)))), ((int)(((byte)(135)))), ((int)(((byte)(135)))));
             this.Text_UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Text_UserName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Text_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Text_UserName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Text_UserName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.Text_UserName.Location = new System.Drawing.Point(114, 68);
             this.Text_UserName.Name = "Text_UserName";
@@ -220,7 +220,7 @@
             // 
             this.LoginButton.BackColor = System.Drawing.Color.Red;
             this.LoginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.LoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginButton.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginButton.ForeColor = System.Drawing.Color.White;
             this.LoginButton.Location = new System.Drawing.Point(149, 187);
             this.LoginButton.Name = "LoginButton";

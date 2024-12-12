@@ -68,7 +68,7 @@
             // 
             this.Email.BackColor = System.Drawing.Color.Gainsboro;
             this.Email.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Email.Location = new System.Drawing.Point(421, 392);
             this.Email.Margin = new System.Windows.Forms.Padding(4);
             this.Email.Multiline = true;
@@ -81,7 +81,7 @@
             // 
             this.MobileNumber.BackColor = System.Drawing.Color.Gainsboro;
             this.MobileNumber.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MobileNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MobileNumber.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MobileNumber.Location = new System.Drawing.Point(422, 273);
             this.MobileNumber.Margin = new System.Windows.Forms.Padding(4);
             this.MobileNumber.Multiline = true;
@@ -93,7 +93,7 @@
             // 
             this.Password.BackColor = System.Drawing.Color.Gainsboro;
             this.Password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Password.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Password.Location = new System.Drawing.Point(422, 216);
             this.Password.Margin = new System.Windows.Forms.Padding(4);
             this.Password.Multiline = true;
@@ -105,7 +105,7 @@
             // 
             this.UserName.BackColor = System.Drawing.Color.Gainsboro;
             this.UserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UserName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserName.Location = new System.Drawing.Point(422, 155);
             this.UserName.Margin = new System.Windows.Forms.Padding(4);
             this.UserName.Multiline = true;
@@ -117,7 +117,7 @@
             // 
             this.lastName.BackColor = System.Drawing.Color.Gainsboro;
             this.lastName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.lastName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lastName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lastName.Location = new System.Drawing.Point(16, 273);
             this.lastName.Margin = new System.Windows.Forms.Padding(4);
             this.lastName.Multiline = true;
@@ -129,7 +129,7 @@
             // 
             this.Adhar.BackColor = System.Drawing.Color.Gainsboro;
             this.Adhar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Adhar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Adhar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Adhar.Location = new System.Drawing.Point(16, 392);
             this.Adhar.Margin = new System.Windows.Forms.Padding(4);
             this.Adhar.Multiline = true;
@@ -141,7 +141,7 @@
             // 
             this.FirstName.BackColor = System.Drawing.Color.Gainsboro;
             this.FirstName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FirstName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstName.Location = new System.Drawing.Point(16, 216);
             this.FirstName.Margin = new System.Windows.Forms.Padding(4);
             this.FirstName.Multiline = true;
@@ -153,7 +153,7 @@
             // 
             this.FName.BackColor = System.Drawing.Color.Gainsboro;
             this.FName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FName.Location = new System.Drawing.Point(16, 330);
             this.FName.Margin = new System.Windows.Forms.Padding(4);
             this.FName.Multiline = true;
@@ -165,7 +165,7 @@
             // 
             this.EmpId.BackColor = System.Drawing.Color.Gainsboro;
             this.EmpId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.EmpId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmpId.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmpId.Location = new System.Drawing.Point(16, 155);
             this.EmpId.Margin = new System.Windows.Forms.Padding(4);
             this.EmpId.Multiline = true;
@@ -187,7 +187,7 @@
             // heading
             // 
             this.heading.AutoSize = true;
-            this.heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.heading.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.heading.Location = new System.Drawing.Point(7, 60);
             this.heading.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.heading.Name = "heading";
@@ -306,7 +306,7 @@
             // CreateUserAccount
             // 
             this.CreateUserAccount.AutoSize = true;
-            this.CreateUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateUserAccount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateUserAccount.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.CreateUserAccount.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.CreateUserAccount.Location = new System.Drawing.Point(908, 28);
@@ -323,7 +323,7 @@
             // 
             this.CreateAdminAccount.BackColor = System.Drawing.Color.LightSkyBlue;
             this.CreateAdminAccount.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.CreateAdminAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateAdminAccount.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateAdminAccount.Location = new System.Drawing.Point(287, 467);
             this.CreateAdminAccount.Name = "CreateAdminAccount";
             this.CreateAdminAccount.Size = new System.Drawing.Size(172, 40);
@@ -347,7 +347,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
             this.label11.Location = new System.Drawing.Point(415, 9);
             this.label11.Name = "label11";
@@ -423,7 +423,7 @@
             this.Controls.Add(this.MobileNumber);
             this.Controls.Add(this.Email);
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CreateAnAccount";

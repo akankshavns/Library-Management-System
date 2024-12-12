@@ -134,7 +134,7 @@
             // FilterButton
             // 
             this.FilterButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.FilterButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FilterButton.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FilterButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FilterButton.Location = new System.Drawing.Point(944, 3);
             this.FilterButton.Name = "FilterButton";

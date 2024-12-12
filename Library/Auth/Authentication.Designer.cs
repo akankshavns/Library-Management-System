@@ -53,7 +53,7 @@
             // Admin
             // 
             this.Admin.BackColor = System.Drawing.Color.DarkGray;
-            this.Admin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Admin.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Admin.ForeColor = System.Drawing.Color.DarkRed;
             this.Admin.Image = global::Library.Properties.Resources.Crown;
             this.Admin.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -83,7 +83,7 @@
             this.user.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.user.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.user.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Gray;
-            this.user.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.user.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.user.ForeColor = System.Drawing.Color.DarkRed;
             this.user.Image = global::Library.Properties.Resources.User1;
             this.user.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -110,7 +110,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 37F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(212, 9);
             this.label1.Name = "label1";

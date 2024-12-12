@@ -140,7 +140,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
             this.panel3.Controls.Add(this.Logout);
-            this.panel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel3.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel3.Location = new System.Drawing.Point(174, 5);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(77, 54);
@@ -154,7 +154,7 @@
             this.Logout.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Logout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logout.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logout.ForeColor = System.Drawing.Color.White;
             this.Logout.Image = ((System.Drawing.Image)(resources.GetObject("Logout.Image")));
             this.Logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -172,7 +172,7 @@
             // 
             this.Settingpanel.BackColor = System.Drawing.Color.Transparent;
             this.Settingpanel.Controls.Add(this.Setting);
-            this.Settingpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Settingpanel.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Settingpanel.Location = new System.Drawing.Point(3, 3);
             this.Settingpanel.Name = "Settingpanel";
             this.Settingpanel.Size = new System.Drawing.Size(77, 54);
@@ -186,7 +186,7 @@
             this.Setting.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Setting.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Setting.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Setting.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Setting.ForeColor = System.Drawing.Color.White;
             this.Setting.Image = ((System.Drawing.Image)(resources.GetObject("Setting.Image")));
             this.Setting.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -204,7 +204,7 @@
             // 
             this.Logoutpanel.BackColor = System.Drawing.Color.Transparent;
             this.Logoutpanel.Controls.Add(this.Bin);
-            this.Logoutpanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Logoutpanel.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Logoutpanel.Location = new System.Drawing.Point(89, 5);
             this.Logoutpanel.Name = "Logoutpanel";
             this.Logoutpanel.Size = new System.Drawing.Size(77, 54);
@@ -218,7 +218,7 @@
             this.Bin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Bin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Bin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Bin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bin.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bin.ForeColor = System.Drawing.Color.White;
             this.Bin.Image = ((System.Drawing.Image)(resources.GetObject("Bin.Image")));
             this.Bin.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -256,7 +256,7 @@
             // 
             // update
             // 
-            this.update.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(62, 105);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(78, 31);
@@ -267,7 +267,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(46, 30);
             this.label1.Name = "label1";
@@ -287,7 +287,7 @@
             // 
             // view
             // 
-            this.view.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.view.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.view.Location = new System.Drawing.Point(78, 105);
             this.view.Name = "view";
             this.view.Size = new System.Drawing.Size(78, 31);
@@ -298,7 +298,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label4.Location = new System.Drawing.Point(73, 30);
             this.label4.Name = "label4";
@@ -326,7 +326,7 @@
             // 
             // Add
             // 
-            this.Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Add.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.Location = new System.Drawing.Point(55, 105);
             this.Add.Name = "Add";
             this.Add.Size = new System.Drawing.Size(78, 31);
@@ -337,7 +337,7 @@
             // AddBook
             // 
             this.AddBook.AutoSize = true;
-            this.AddBook.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddBook.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddBook.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.AddBook.Location = new System.Drawing.Point(41, 23);
             this.AddBook.Name = "AddBook";
@@ -348,7 +348,7 @@
             // Heading
             // 
             this.Heading.AutoSize = true;
-            this.Heading.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Heading.Font = new System.Drawing.Font("Times New Roman", 35F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Heading.ForeColor = System.Drawing.Color.Transparent;
             this.Heading.Location = new System.Drawing.Point(109, 8);
             this.Heading.Name = "Heading";
@@ -548,7 +548,7 @@
             this.menuButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.menuButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.menuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.menuButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuButton.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.menuButton.Image = global::Library.Properties.Resources.Menu;
             this.menuButton.Location = new System.Drawing.Point(7, 4);
@@ -576,7 +576,7 @@
             this.Dashboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Dashboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Dashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Dashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dashboard.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Dashboard.ForeColor = System.Drawing.SystemColors.Control;
             this.Dashboard.Image = ((System.Drawing.Image)(resources.GetObject("Dashboard.Image")));
             this.Dashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -608,7 +608,7 @@
             this.Books.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Books.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Books.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Books.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Books.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Books.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Books.Image = ((System.Drawing.Image)(resources.GetObject("Books.Image")));
             this.Books.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -725,7 +725,7 @@
             this.Student.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Student.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Student.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Student.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Student.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Student.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Student.Image = ((System.Drawing.Image)(resources.GetObject("Student.Image")));
             this.Student.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -760,7 +760,7 @@
             this.Transaction.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.Transaction.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.Transaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Transaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Transaction.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Transaction.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Transaction.Image = ((System.Drawing.Image)(resources.GetObject("Transaction.Image")));
             this.Transaction.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -855,7 +855,7 @@
             this.ReportManagementBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
             this.ReportManagementBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.ReportManagementBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ReportManagementBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReportManagementBtn.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ReportManagementBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ReportManagementBtn.Image = ((System.Drawing.Image)(resources.GetObject("ReportManagementBtn.Image")));
             this.ReportManagementBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
