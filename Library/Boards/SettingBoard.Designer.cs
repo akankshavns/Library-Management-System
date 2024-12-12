@@ -38,7 +38,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SetButton = new System.Windows.Forms.Button();
-            //this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -99,13 +98,15 @@
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.BackColor = System.Drawing.Color.Teal;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(533, 316);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(95, 40);
             this.button2.TabIndex = 4;
             this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
@@ -120,22 +121,16 @@
             // 
             // SetButton
             // 
-            this.SetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetButton.BackColor = System.Drawing.Color.Teal;
+            this.SetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SetButton.ForeColor = System.Drawing.Color.White;
             this.SetButton.Location = new System.Drawing.Point(412, 316);
             this.SetButton.Name = "SetButton";
             this.SetButton.Size = new System.Drawing.Size(94, 40);
             this.SetButton.TabIndex = 3;
             this.SetButton.Text = "Done";
-            this.SetButton.UseVisualStyleBackColor = true;
+            this.SetButton.UseVisualStyleBackColor = false;
             this.SetButton.Click += new System.EventHandler(this.SetButton_Click);
-            // 
-            // reportViewer1
-            // 
-            //this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            //this.reportViewer1.Name = "ReportViewer";
-            //this.reportViewer1.ServerReport.BearerToken = null;
-            //this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            //this.reportViewer1.TabIndex = 0;
             // 
             // label4
             // 

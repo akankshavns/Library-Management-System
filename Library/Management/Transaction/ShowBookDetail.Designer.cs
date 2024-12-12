@@ -139,8 +139,9 @@
             // 
             // IssueButton
             // 
-            this.IssueButton.BackColor = System.Drawing.Color.MediumSpringGreen;
+            this.IssueButton.BackColor = System.Drawing.Color.Teal;
             this.IssueButton.Font = new System.Drawing.Font("Malgun Gothic", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.IssueButton.ForeColor = System.Drawing.Color.White;
             this.IssueButton.Location = new System.Drawing.Point(198, 319);
             this.IssueButton.Name = "IssueButton";
             this.IssueButton.Size = new System.Drawing.Size(113, 46);

@@ -36,10 +36,10 @@
             this.OTPverifyButton = new System.Windows.Forms.Button();
             this.ResetPsswordpanel = new System.Windows.Forms.Panel();
             this.ResetButton = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.verifyNewPassword = new System.Windows.Forms.TextBox();
             this.NewPassword = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ResetPsswordpanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -65,13 +65,15 @@
             // 
             // Continue
             // 
-            this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Continue.BackColor = System.Drawing.Color.Teal;
+            this.Continue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Continue.ForeColor = System.Drawing.Color.White;
             this.Continue.Location = new System.Drawing.Point(484, 85);
             this.Continue.Name = "Continue";
             this.Continue.Size = new System.Drawing.Size(116, 37);
             this.Continue.TabIndex = 2;
             this.Continue.Text = "Continue";
-            this.Continue.UseVisualStyleBackColor = true;
+            this.Continue.UseVisualStyleBackColor = false;
             this.Continue.Click += new System.EventHandler(this.Continue_Click);
             // 
             // label2
@@ -94,13 +96,15 @@
             // 
             // OTPverifyButton
             // 
-            this.OTPverifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OTPverifyButton.Location = new System.Drawing.Point(458, 87);
+            this.OTPverifyButton.BackColor = System.Drawing.Color.Teal;
+            this.OTPverifyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OTPverifyButton.ForeColor = System.Drawing.Color.White;
+            this.OTPverifyButton.Location = new System.Drawing.Point(476, 87);
             this.OTPverifyButton.Name = "OTPverifyButton";
-            this.OTPverifyButton.Size = new System.Drawing.Size(116, 37);
+            this.OTPverifyButton.Size = new System.Drawing.Size(98, 37);
             this.OTPverifyButton.TabIndex = 2;
-            this.OTPverifyButton.Text = "verify";
-            this.OTPverifyButton.UseVisualStyleBackColor = true;
+            this.OTPverifyButton.Text = "Verify";
+            this.OTPverifyButton.UseVisualStyleBackColor = false;
             this.OTPverifyButton.Click += new System.EventHandler(this.OTPverifyButton_Click);
             // 
             // ResetPsswordpanel
@@ -118,14 +122,36 @@
             // 
             // ResetButton
             // 
-            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.BackColor = System.Drawing.Color.Teal;
+            this.ResetButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.ForeColor = System.Drawing.Color.White;
             this.ResetButton.Location = new System.Drawing.Point(422, 131);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.Size = new System.Drawing.Size(95, 43);
             this.ResetButton.TabIndex = 1;
             this.ResetButton.Text = "Reset";
-            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.UseVisualStyleBackColor = false;
             this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 95);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(207, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "confirm your password";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 32);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(190, 25);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Enter your password";
             // 
             // verifyNewPassword
             // 
@@ -140,26 +166,6 @@
             this.NewPassword.Name = "NewPassword";
             this.NewPassword.Size = new System.Drawing.Size(296, 20);
             this.NewPassword.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 32);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(190, 25);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Enter your password";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 95);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(207, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "confirm your password";
             // 
             // panel1
             // 

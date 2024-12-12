@@ -110,13 +110,13 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.LightGray;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 37F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 37F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkRed;
             this.label1.Location = new System.Drawing.Point(212, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(390, 51);
+            this.label1.Size = new System.Drawing.Size(403, 58);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Vikansha Library";
+            this.label1.Text = "VikAnsha Library";
             // 
             // Authentication
             // 

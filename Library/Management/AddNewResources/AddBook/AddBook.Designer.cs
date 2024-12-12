@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBook));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.BookBoard = new System.Windows.Forms.Panel();
             this.catagory = new System.Windows.Forms.ComboBox();
             this.AddButton = new System.Windows.Forms.Button();
             this.Publication = new System.Windows.Forms.TextBox();
@@ -75,10 +75,13 @@
             this.errorProvider10 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.ItemAdd = new System.Windows.Forms.ComboBox();
+            this.SelectedItem = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.errorInISBN = new System.Windows.Forms.ErrorProvider(this.components);
-            this.panel1.SuspendLayout();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.MagazineBoard = new Library.Management.AddNewResources.AddNewMagazine.AddMagazine();
+            this.NewspaperBoard = new Library.Management.AddNewResources.AddNewsPaper.AddNewspaper();
+            this.BookBoard.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.block)).BeginInit();
@@ -94,45 +97,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider10)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInISBN)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // BookBoard
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.Silver;
-            this.panel1.Controls.Add(this.catagory);
-            this.panel1.Controls.Add(this.AddButton);
-            this.panel1.Controls.Add(this.Publication);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.Quantity);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.pages);
-            this.panel1.Controls.Add(this.volume);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.Author);
-            this.panel1.Controls.Add(this.ISBN);
-            this.panel1.Controls.Add(this.ID);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.price);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.BookDate);
-            this.panel1.Controls.Add(this.BName);
-            this.panel1.Controls.Add(this.Return);
-            this.panel1.Controls.Add(this.OPTION);
-            this.panel1.Controls.Add(this.OtherLanguage);
-            this.panel1.Location = new System.Drawing.Point(99, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(851, 502);
-            this.panel1.TabIndex = 0;
+            this.BookBoard.BackColor = System.Drawing.Color.Silver;
+            this.BookBoard.Controls.Add(this.catagory);
+            this.BookBoard.Controls.Add(this.AddButton);
+            this.BookBoard.Controls.Add(this.Publication);
+            this.BookBoard.Controls.Add(this.label14);
+            this.BookBoard.Controls.Add(this.label3);
+            this.BookBoard.Controls.Add(this.Quantity);
+            this.BookBoard.Controls.Add(this.label4);
+            this.BookBoard.Controls.Add(this.pages);
+            this.BookBoard.Controls.Add(this.volume);
+            this.BookBoard.Controls.Add(this.label7);
+            this.BookBoard.Controls.Add(this.label10);
+            this.BookBoard.Controls.Add(this.Author);
+            this.BookBoard.Controls.Add(this.ISBN);
+            this.BookBoard.Controls.Add(this.ID);
+            this.BookBoard.Controls.Add(this.label2);
+            this.BookBoard.Controls.Add(this.label9);
+            this.BookBoard.Controls.Add(this.price);
+            this.BookBoard.Controls.Add(this.label6);
+            this.BookBoard.Controls.Add(this.label12);
+            this.BookBoard.Controls.Add(this.label1);
+            this.BookBoard.Controls.Add(this.label8);
+            this.BookBoard.Controls.Add(this.label5);
+            this.BookBoard.Controls.Add(this.BookDate);
+            this.BookBoard.Controls.Add(this.BName);
+            this.BookBoard.Controls.Add(this.Return);
+            this.BookBoard.Controls.Add(this.OPTION);
+            this.BookBoard.Controls.Add(this.OtherLanguage);
+            this.BookBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.BookBoard.Location = new System.Drawing.Point(0, 0);
+            this.BookBoard.Name = "BookBoard";
+            this.BookBoard.Size = new System.Drawing.Size(781, 493);
+            this.BookBoard.TabIndex = 0;
+            this.BookBoard.Visible = false;
             // 
             // catagory
             // 
@@ -567,29 +570,30 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.ItemAdd);
+            this.panel2.Controls.Add(this.SelectedItem);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Location = new System.Drawing.Point(0, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1035, 42);
             this.panel2.TabIndex = 85;
             // 
-            // ItemAdd
+            // SelectedItem
             // 
-            this.ItemAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ItemAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemAdd.ForeColor = System.Drawing.Color.Black;
-            this.ItemAdd.FormattingEnabled = true;
-            this.ItemAdd.Items.AddRange(new object[] {
+            this.SelectedItem.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SelectedItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SelectedItem.ForeColor = System.Drawing.Color.Black;
+            this.SelectedItem.FormattingEnabled = true;
+            this.SelectedItem.Items.AddRange(new object[] {
             "Book",
             "Magazine",
             "NewsPaper",
             "PDF"});
-            this.ItemAdd.Location = new System.Drawing.Point(336, 11);
-            this.ItemAdd.MaxDropDownItems = 6;
-            this.ItemAdd.Name = "ItemAdd";
-            this.ItemAdd.Size = new System.Drawing.Size(134, 24);
-            this.ItemAdd.TabIndex = 1;
+            this.SelectedItem.Location = new System.Drawing.Point(336, 11);
+            this.SelectedItem.MaxDropDownItems = 6;
+            this.SelectedItem.Name = "SelectedItem";
+            this.SelectedItem.Size = new System.Drawing.Size(134, 24);
+            this.SelectedItem.TabIndex = 1;
+            this.SelectedItem.SelectedIndexChanged += new System.EventHandler(this.SelectedItem_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -606,19 +610,46 @@
             // 
             this.errorInISBN.ContainerControl = this;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.NewspaperBoard);
+            this.panel3.Controls.Add(this.BookBoard);
+            this.panel3.Controls.Add(this.MagazineBoard);
+            this.panel3.Location = new System.Drawing.Point(159, 55);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(781, 493);
+            this.panel3.TabIndex = 86;
+            // 
+            // MagazineBoard
+            // 
+            this.MagazineBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MagazineBoard.Location = new System.Drawing.Point(0, 0);
+            this.MagazineBoard.Name = "MagazineBoard";
+            this.MagazineBoard.Size = new System.Drawing.Size(781, 493);
+            this.MagazineBoard.TabIndex = 1;
+            this.MagazineBoard.Visible = false;
+            // 
+            // NewspaperBoard
+            // 
+            this.NewspaperBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NewspaperBoard.Location = new System.Drawing.Point(0, 0);
+            this.NewspaperBoard.Name = "NewspaperBoard";
+            this.NewspaperBoard.Size = new System.Drawing.Size(781, 493);
+            this.NewspaperBoard.TabIndex = 0;
+            // 
             // AddBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel1);
             this.Name = "AddBook";
             this.Size = new System.Drawing.Size(1039, 674);
             this.Load += new System.EventHandler(this.AddBook_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.BookBoard.ResumeLayout(false);
+            this.BookBoard.PerformLayout();
             this.OPTION.ResumeLayout(false);
             this.OPTION.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).EndInit();
@@ -636,13 +667,14 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInISBN)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel BookBoard;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.TextBox Publication;
         private System.Windows.Forms.Label label14;
@@ -686,9 +718,12 @@
         private System.Windows.Forms.ComboBox catagory;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox ItemAdd;
+        private System.Windows.Forms.ComboBox SelectedItem;
         private System.Windows.Forms.TextBox ISBN;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ErrorProvider errorInISBN;
+        private System.Windows.Forms.Panel panel3;
+        private Management.AddNewResources.AddNewsPaper.AddNewspaper NewspaperBoard;
+        private Management.AddNewResources.AddNewMagazine.AddMagazine MagazineBoard;
     }
 }

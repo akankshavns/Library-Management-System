@@ -48,8 +48,9 @@
             // 
             // Cancelbutton2
             // 
-            this.Cancelbutton2.BackColor = System.Drawing.Color.ForestGreen;
+            this.Cancelbutton2.BackColor = System.Drawing.Color.Teal;
             this.Cancelbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelbutton2.ForeColor = System.Drawing.Color.White;
             this.Cancelbutton2.Location = new System.Drawing.Point(491, 344);
             this.Cancelbutton2.Name = "Cancelbutton2";
             this.Cancelbutton2.Size = new System.Drawing.Size(100, 45);
@@ -60,11 +61,12 @@
             // 
             // donebutton
             // 
-            this.donebutton.BackColor = System.Drawing.Color.ForestGreen;
+            this.donebutton.BackColor = System.Drawing.Color.Teal;
             this.donebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.donebutton.Location = new System.Drawing.Point(386, 344);
+            this.donebutton.ForeColor = System.Drawing.Color.White;
+            this.donebutton.Location = new System.Drawing.Point(382, 344);
             this.donebutton.Name = "donebutton";
-            this.donebutton.Size = new System.Drawing.Size(99, 45);
+            this.donebutton.Size = new System.Drawing.Size(103, 45);
             this.donebutton.TabIndex = 4;
             this.donebutton.Text = "Successful";
             this.donebutton.UseVisualStyleBackColor = false;

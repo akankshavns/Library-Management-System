@@ -161,11 +161,12 @@
             // 
             // AddStudentInDBO
             // 
-            this.AddStudentInDBO.BackColor = System.Drawing.Color.DarkGreen;
+            this.AddStudentInDBO.BackColor = System.Drawing.Color.Teal;
             this.AddStudentInDBO.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddStudentInDBO.ForeColor = System.Drawing.Color.White;
             this.AddStudentInDBO.Location = new System.Drawing.Point(474, 377);
             this.AddStudentInDBO.Name = "AddStudentInDBO";
-            this.AddStudentInDBO.Size = new System.Drawing.Size(140, 46);
+            this.AddStudentInDBO.Size = new System.Drawing.Size(127, 46);
             this.AddStudentInDBO.TabIndex = 14;
             this.AddStudentInDBO.Text = "Add";
             this.AddStudentInDBO.UseVisualStyleBackColor = false;

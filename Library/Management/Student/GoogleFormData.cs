@@ -86,7 +86,7 @@ namespace Library.Management.Student
 
                             string fileId = StudentImageDriveLink.Split('=')[1];
                             string StudentImagePath = Path.Combine("Uploads", "Student", EnrollmentNumber + "_" + StudentName.Replace(" ", "_") + "_" + ".jpg");
-                            await RetrieveImageFromGoogleDrive(fileId, StudentImagePath);
+                            
                             string ContactNumber = dataList[8];
                             string Address = dataList[9];
 
@@ -110,26 +110,32 @@ namespace Library.Management.Student
                                             loopNumber++;
                                             continue;
                                         }
-                                        else
-                                        {
-                                            con.Open();
-                                            SqlCommand cmd = new SqlCommand(AddStudentInfo, con);
-                                            cmd.Parameters.AddWithValue("@Enrollment", EnrollmentNumber);
-                                            cmd.Parameters.AddWithValue("@StudentName", StudentName);
-                                            cmd.Parameters.AddWithValue("@FatherName", FatherName);
-                                            cmd.Parameters.AddWithValue("@MotherName", MotherName);
-                                            cmd.Parameters.AddWithValue("@StudentImage", StudentImagePath);
-                                            cmd.Parameters.AddWithValue("@Department", Department);
-                                            cmd.Parameters.AddWithValue("@Contact", ContactNumber);
-                                            cmd.Parameters.AddWithValue("@Email", Email);
-                                            cmd.Parameters.AddWithValue("@Address", Address);
-                                            cmd.Parameters.AddWithValue("@StudentStatus", "Retained");
-                                            int isValueInsert = cmd.ExecuteNonQuery();
-                                            if (isValueInsert >= 1)
-                                            {
-                                                MessageBox.Show("Student information added successfully");
 
-                                            }
+                                        try
+                                        {
+                                            await RetrieveImageFromGoogleDrive(fileId, StudentImagePath);
+                                        }
+                                        catch (Exception ex) { 
+                                            MessageBox.Show(ex.Message);
+                                        }
+
+                                        con.Open();
+                                        SqlCommand cmd = new SqlCommand(AddStudentInfo, con);
+                                        cmd.Parameters.AddWithValue("@Enrollment", EnrollmentNumber);
+                                        cmd.Parameters.AddWithValue("@StudentName", StudentName);
+                                        cmd.Parameters.AddWithValue("@FatherName", FatherName);
+                                        cmd.Parameters.AddWithValue("@MotherName", MotherName);
+                                        cmd.Parameters.AddWithValue("@StudentImage", StudentImagePath);
+                                        cmd.Parameters.AddWithValue("@Department", Department);
+                                        cmd.Parameters.AddWithValue("@Contact", ContactNumber);
+                                        cmd.Parameters.AddWithValue("@Email", Email);
+                                        cmd.Parameters.AddWithValue("@Address", Address);
+                                        cmd.Parameters.AddWithValue("@StudentStatus", "Retained");
+                                        int isValueInsert = cmd.ExecuteNonQuery();
+                                        if (isValueInsert >= 1)
+                                        {
+                                            MessageBox.Show("Student information added successfully");
+
                                         }
 
                                     }

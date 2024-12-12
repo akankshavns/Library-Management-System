@@ -142,12 +142,6 @@
     <Compile Include="Design\RoundPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="Management\AddNewResources\AddBook\AddBook.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -299,9 +293,6 @@
     <EmbeddedResource Include="Design\RoundPictureBox.resx">
       <DependentUpon>RoundPictureBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Management\AddNewResources\AddBook\AddBook.resx">
       <DependentUpon>AddBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +301,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Boards\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\AddNewResources\AddMagazine\AddMagazine.resx">
+      <DependentUpon>AddMagazine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\AddNewResources\AddMagazine\viewMagazine.resx">
+      <DependentUpon>viewMagazine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Report\ReportShow.resx">
       <DependentUpon>ReportShow.cs</DependentUpon>
@@ -324,9 +321,8 @@
       <DependentUpon>Scanner1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReportViewer\BookReport.rdlc" />
-    <EmbeddedResource Include="ReportViewer\IssueBookReport.rdlc" />
     <EmbeddedResource Include="ReportViewer\MagazineReport.rdlc" />
-    <EmbeddedResource Include="ReportViewer\NewspaperReport.rdlc" />
+    <EmbeddedResource Include="ReportViewer\NewsPaperReport.rdlc" />
     <EmbeddedResource Include="ReportViewer\StaffReport.rdlc" />
     <EmbeddedResource Include="ReportViewer\StudentReport.rdlc" />
     <EmbeddedResource Include="Screens\Home.resx">
@@ -433,9 +429,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Homework1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Сlockwise Vertical Arrows.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Refresh Shield.png" />

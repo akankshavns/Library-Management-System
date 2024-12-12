@@ -236,9 +236,9 @@
             this.label1.Font = new System.Drawing.Font("Mongolian Baiti", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(89, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(601, 50);
+            this.label1.Size = new System.Drawing.Size(385, 50);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Library Management System";
+            this.label1.Text = "VikAnsha Library";
             // 
             // panel1
             // 

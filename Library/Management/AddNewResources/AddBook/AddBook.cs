@@ -75,10 +75,10 @@ namespace Library.BookManagement
                         }
 
                     }
-                    catch (Exception)
+                    catch (Exception  ex)
                     {
-                        MessageBox.Show("1. call the software engineer.");
-                        //MessageBox.Show(ex.Message);
+                        //MessageBox.Show("1. call the software engineer.");
+                        MessageBox.Show(ex.Message);
                     }
                 }
             }
@@ -368,7 +368,7 @@ namespace Library.BookManagement
         {
             BookDate.MaxDate = DateTime.Now.AddSeconds(1);
             BookDate.Value = DateTime.Now;
-            ItemAdd.SelectedIndex = 0;
+            SelectedItem.SelectedIndex = 0;
         }
 
 
@@ -383,7 +383,33 @@ namespace Library.BookManagement
             }
         }
 
-       
+        private void SelectedItem_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (SelectedItem.SelectedItem.ToString() == "Book")
+            {
+                BookBoard.Visible = true;
+                BookBoard.BringToFront();
+                MagazineBoard.Visible = false;
+                NewspaperBoard.Visible = false;
+                
+            }
+            if (SelectedItem.SelectedItem.ToString() == "Magazine")
+            {
+                BookBoard.Visible = false;
+                MagazineBoard.Visible = true;
+                MagazineBoard.BringToFront();
+                NewspaperBoard.Visible = false;
+                
+            }
+            if (SelectedItem.SelectedItem.ToString() == "NewsPaper")
+            {
+                BookBoard.Visible = false;
+                MagazineBoard.Visible = false;
+                NewspaperBoard.Visible = true;
+                NewspaperBoard.BringToFront();
+               
+            }
+        }
     }
 
 }

@@ -347,13 +347,13 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 26.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
             this.label11.Location = new System.Drawing.Point(415, 9);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(287, 36);
+            this.label11.Size = new System.Drawing.Size(280, 39);
             this.label11.TabIndex = 14;
-            this.label11.Text = "Vikansha Library";
+            this.label11.Text = "VikAnsha Library";
             // 
             // pictureBox3
             // 
