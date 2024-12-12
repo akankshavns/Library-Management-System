@@ -314,6 +314,9 @@
     <EmbeddedResource Include="Management\AddNewResources\AddMagazine\viewMagazine.resx">
       <DependentUpon>viewMagazine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Management\AddNewResources\AddNewsPaper\AddNewspaper.resx">
+      <DependentUpon>AddNewspaper.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Management\Report\ReportShow.resx">
       <DependentUpon>ReportShow.cs</DependentUpon>
     </EmbeddedResource>

@@ -49,7 +49,7 @@ namespace Library.Management.AddNewResources.AddNewMagazine
                             command.Parameters.AddWithValue("@Language", Language.Text);
                             command.Parameters.AddWithValue("@cost", Cost.Text);
                             command.Parameters.AddWithValue("@Quantity", Quantity.Text);
-                            command.Parameters.AddWithValue("@ArticalList", ArticalList.Text);
+                            command.Parameters.AddWithValue("@ArticlesList", ArticalList.Text);
                             command.Parameters.AddWithValue("@PurchasedOn", PurchsedDate.Text);
                             command.Parameters.AddWithValue("@MagazineStatus", "Available");
                             command.Parameters.AddWithValue("@AvailableMagazine", Quantity.Text);
@@ -74,6 +74,106 @@ namespace Library.Management.AddNewResources.AddNewMagazine
                     }
                 }
             }
+        }
+
+        private void ArticalList_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Publishdate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PurchsedDate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cost_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Quantity_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MagazineName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frequency_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MagazineCatagory_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MagVolume_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Language_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
                 

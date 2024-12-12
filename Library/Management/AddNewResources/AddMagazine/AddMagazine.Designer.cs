@@ -73,6 +73,7 @@
             this.ArticalList.Size = new System.Drawing.Size(260, 61);
             this.ArticalList.TabIndex = 26;
             this.ArticalList.Text = "";
+            this.ArticalList.TextChanged += new System.EventHandler(this.ArticalList_TextChanged);
             // 
             // Publishdate
             // 
@@ -82,6 +83,7 @@
             this.Publishdate.Name = "Publishdate";
             this.Publishdate.Size = new System.Drawing.Size(260, 26);
             this.Publishdate.TabIndex = 25;
+            this.Publishdate.ValueChanged += new System.EventHandler(this.Publishdate_ValueChanged);
             // 
             // PurchsedDate
             // 
@@ -91,6 +93,7 @@
             this.PurchsedDate.Name = "PurchsedDate";
             this.PurchsedDate.Size = new System.Drawing.Size(260, 26);
             this.PurchsedDate.TabIndex = 24;
+            this.PurchsedDate.ValueChanged += new System.EventHandler(this.PurchsedDate_ValueChanged);
             // 
             // Quantity
             // 
@@ -100,6 +103,7 @@
             this.Quantity.Name = "Quantity";
             this.Quantity.Size = new System.Drawing.Size(260, 23);
             this.Quantity.TabIndex = 23;
+            this.Quantity.TextChanged += new System.EventHandler(this.Quantity_TextChanged);
             // 
             // MagVolume
             // 
@@ -109,6 +113,7 @@
             this.MagVolume.Name = "MagVolume";
             this.MagVolume.Size = new System.Drawing.Size(260, 23);
             this.MagVolume.TabIndex = 22;
+            this.MagVolume.TextChanged += new System.EventHandler(this.MagVolume_TextChanged);
             // 
             // Language
             // 
@@ -123,6 +128,7 @@
             this.Language.Name = "Language";
             this.Language.Size = new System.Drawing.Size(260, 24);
             this.Language.TabIndex = 18;
+            this.Language.SelectedIndexChanged += new System.EventHandler(this.Language_SelectedIndexChanged);
             // 
             // label10
             // 
@@ -134,6 +140,7 @@
             this.label10.Size = new System.Drawing.Size(72, 24);
             this.label10.TabIndex = 15;
             this.label10.Text = "volume";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 
@@ -145,6 +152,7 @@
             this.label9.Size = new System.Drawing.Size(132, 24);
             this.label9.TabIndex = 14;
             this.label9.Text = "Purchased On";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
@@ -156,6 +164,7 @@
             this.label8.Size = new System.Drawing.Size(94, 24);
             this.label8.TabIndex = 13;
             this.label8.Text = "Article List";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -167,6 +176,7 @@
             this.label7.Size = new System.Drawing.Size(78, 24);
             this.label7.TabIndex = 12;
             this.label7.Text = "Quantity";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -178,6 +188,7 @@
             this.label6.Size = new System.Drawing.Size(47, 24);
             this.label6.TabIndex = 11;
             this.label6.Text = "Cost";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -189,6 +200,7 @@
             this.label5.Size = new System.Drawing.Size(141, 24);
             this.label5.TabIndex = 10;
             this.label5.Text = "Publishing Date";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -200,6 +212,7 @@
             this.label4.Size = new System.Drawing.Size(95, 24);
             this.label4.TabIndex = 9;
             this.label4.Text = "Language";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -211,6 +224,7 @@
             this.label3.Size = new System.Drawing.Size(84, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "Catagory";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -222,6 +236,7 @@
             this.label2.Size = new System.Drawing.Size(102, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Frequency";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -233,6 +248,7 @@
             this.label1.Size = new System.Drawing.Size(148, 24);
             this.label1.TabIndex = 7;
             this.label1.Text = "Magazine Name";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // MagazineCatagory
             // 
@@ -242,6 +258,7 @@
             this.MagazineCatagory.Name = "MagazineCatagory";
             this.MagazineCatagory.Size = new System.Drawing.Size(260, 23);
             this.MagazineCatagory.TabIndex = 22;
+            this.MagazineCatagory.TextChanged += new System.EventHandler(this.MagazineCatagory_TextChanged);
             // 
             // frequency
             // 
@@ -251,6 +268,7 @@
             this.frequency.Name = "frequency";
             this.frequency.Size = new System.Drawing.Size(260, 23);
             this.frequency.TabIndex = 22;
+            this.frequency.TextChanged += new System.EventHandler(this.frequency_TextChanged);
             // 
             // MagazineName
             // 
@@ -260,6 +278,7 @@
             this.MagazineName.Name = "MagazineName";
             this.MagazineName.Size = new System.Drawing.Size(260, 23);
             this.MagazineName.TabIndex = 22;
+            this.MagazineName.TextChanged += new System.EventHandler(this.MagazineName_TextChanged);
             // 
             // Cost
             // 
@@ -269,6 +288,7 @@
             this.Cost.Name = "Cost";
             this.Cost.Size = new System.Drawing.Size(260, 23);
             this.Cost.TabIndex = 23;
+            this.Cost.TextChanged += new System.EventHandler(this.Cost_TextChanged);
             // 
             // AddMagazine
             // 
