@@ -132,11 +132,11 @@ namespace Library.Management.Student
                                         cmd.Parameters.AddWithValue("@Address", Address);
                                         cmd.Parameters.AddWithValue("@StudentStatus", "Retained");
                                         int isValueInsert = cmd.ExecuteNonQuery();
-                                        if (isValueInsert >= 1)
-                                        {
-                                            MessageBox.Show("Student information added successfully");
+                                        //if (isValueInsert >= 1)
+                                        //{
+                                        //    MessageBox.Show("Student information added successfully");
 
-                                        }
+                                        //}
 
                                     }
                                     catch (Exception ex)
@@ -149,7 +149,8 @@ namespace Library.Management.Student
                             loopNumber++;
                         }
 
-                        MessageBox.Show($"Google Sheet data downloaded successfully!\nSaved to: {csvContent}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Student information added successfully");
+                        //MessageBox.Show($"Google Sheet data downloaded successfully!\nSaved to: {csvContent}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 catch (Exception ex)

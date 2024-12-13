@@ -190,12 +190,6 @@
     <Compile Include="Management\Report\ReportShow.Designer.cs">
       <DependentUpon>ReportShow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Management\Report\SelectDate.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Management\Report\SelectDate.Designer.cs">
-      <DependentUpon>SelectDate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Management\Setting\Transaction.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,9 +319,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Report\ReportShow.resx">
       <DependentUpon>ReportShow.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Management\Report\SelectDate.resx">
-      <DependentUpon>SelectDate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>

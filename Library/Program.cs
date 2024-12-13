@@ -18,7 +18,7 @@ namespace Library
 
            
 
-            Application.Run(new Welcome());
+            Application.Run(new Home());
         }
 
       
