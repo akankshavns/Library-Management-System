@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.StudentBoard = new System.Windows.Forms.Panel();
             this.Email = new System.Windows.Forms.TextBox();
             this.Address = new System.Windows.Forms.TextBox();
             this.Contact = new System.Windows.Forms.TextBox();
@@ -64,7 +64,9 @@
             this.DataFromGooleForm = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1.SuspendLayout();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.StaffBoard = new Library.Management.Staff.AddStaff();
+            this.StudentBoard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).BeginInit();
@@ -78,40 +80,42 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderimageUpload)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // StudentBoard
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkGray;
-            this.panel1.Controls.Add(this.Email);
-            this.panel1.Controls.Add(this.Address);
-            this.panel1.Controls.Add(this.Contact);
-            this.panel1.Controls.Add(this.upload);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.AddStudentInDBO);
-            this.panel1.Controls.Add(this.AddStudent_picture);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.Department);
-            this.panel1.Controls.Add(this.MotherName);
-            this.panel1.Controls.Add(this.FatherName);
-            this.panel1.Controls.Add(this.StudentName);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.EnrollmentNo);
-            this.panel1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel1.Location = new System.Drawing.Point(105, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(996, 429);
-            this.panel1.TabIndex = 1;
+            this.StudentBoard.BackColor = System.Drawing.Color.DarkGray;
+            this.StudentBoard.Controls.Add(this.Email);
+            this.StudentBoard.Controls.Add(this.Address);
+            this.StudentBoard.Controls.Add(this.Contact);
+            this.StudentBoard.Controls.Add(this.upload);
+            this.StudentBoard.Controls.Add(this.label9);
+            this.StudentBoard.Controls.Add(this.AddStudentInDBO);
+            this.StudentBoard.Controls.Add(this.AddStudent_picture);
+            this.StudentBoard.Controls.Add(this.label4);
+            this.StudentBoard.Controls.Add(this.Department);
+            this.StudentBoard.Controls.Add(this.MotherName);
+            this.StudentBoard.Controls.Add(this.FatherName);
+            this.StudentBoard.Controls.Add(this.StudentName);
+            this.StudentBoard.Controls.Add(this.label8);
+            this.StudentBoard.Controls.Add(this.label7);
+            this.StudentBoard.Controls.Add(this.label6);
+            this.StudentBoard.Controls.Add(this.label11);
+            this.StudentBoard.Controls.Add(this.label2);
+            this.StudentBoard.Controls.Add(this.label1);
+            this.StudentBoard.Controls.Add(this.EnrollmentNo);
+            this.StudentBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StudentBoard.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StudentBoard.Location = new System.Drawing.Point(0, 0);
+            this.StudentBoard.Name = "StudentBoard";
+            this.StudentBoard.Size = new System.Drawing.Size(1061, 436);
+            this.StudentBoard.TabIndex = 1;
             // 
             // Email
             // 
             this.Email.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Email.Location = new System.Drawing.Point(428, 293);
+            this.Email.Location = new System.Drawing.Point(432, 264);
             this.Email.Name = "Email";
             this.Email.Size = new System.Drawing.Size(217, 23);
             this.Email.TabIndex = 17;
@@ -121,7 +125,7 @@
             // Address
             // 
             this.Address.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(428, 331);
+            this.Address.Location = new System.Drawing.Point(432, 302);
             this.Address.Name = "Address";
             this.Address.Size = new System.Drawing.Size(217, 23);
             this.Address.TabIndex = 17;
@@ -130,7 +134,7 @@
             // Contact
             // 
             this.Contact.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Contact.Location = new System.Drawing.Point(428, 257);
+            this.Contact.Location = new System.Drawing.Point(432, 228);
             this.Contact.Name = "Contact";
             this.Contact.Size = new System.Drawing.Size(217, 23);
             this.Contact.TabIndex = 17;
@@ -140,7 +144,7 @@
             // upload
             // 
             this.upload.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.upload.Location = new System.Drawing.Point(732, 257);
+            this.upload.Location = new System.Drawing.Point(736, 228);
             this.upload.Name = "upload";
             this.upload.Size = new System.Drawing.Size(179, 39);
             this.upload.TabIndex = 16;
@@ -153,9 +157,9 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(188, 101);
+            this.label9.Location = new System.Drawing.Point(192, 72);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(146, 26);
+            this.label9.Size = new System.Drawing.Size(130, 25);
             this.label9.TabIndex = 15;
             this.label9.Text = "StudentName";
             // 
@@ -164,7 +168,7 @@
             this.AddStudentInDBO.BackColor = System.Drawing.Color.Teal;
             this.AddStudentInDBO.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddStudentInDBO.ForeColor = System.Drawing.Color.White;
-            this.AddStudentInDBO.Location = new System.Drawing.Point(474, 377);
+            this.AddStudentInDBO.Location = new System.Drawing.Point(478, 348);
             this.AddStudentInDBO.Name = "AddStudentInDBO";
             this.AddStudentInDBO.Size = new System.Drawing.Size(127, 46);
             this.AddStudentInDBO.TabIndex = 14;
@@ -178,7 +182,7 @@
             this.AddStudent_picture.BackgroundImage = global::Library.Properties.Resources.humanbeing1;
             this.AddStudent_picture.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AddStudent_picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.AddStudent_picture.Location = new System.Drawing.Point(741, 67);
+            this.AddStudent_picture.Location = new System.Drawing.Point(745, 38);
             this.AddStudent_picture.Name = "AddStudent_picture";
             this.AddStudent_picture.Size = new System.Drawing.Size(159, 176);
             this.AddStudent_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,16 +194,16 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(188, 217);
+            this.label4.Location = new System.Drawing.Point(192, 188);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 26);
+            this.label4.Size = new System.Drawing.Size(114, 25);
             this.label4.TabIndex = 1;
             this.label4.Text = "Department";
             // 
             // Department
             // 
             this.Department.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Department.Location = new System.Drawing.Point(428, 220);
+            this.Department.Location = new System.Drawing.Point(432, 191);
             this.Department.Name = "Department";
             this.Department.Size = new System.Drawing.Size(217, 23);
             this.Department.TabIndex = 12;
@@ -208,7 +212,7 @@
             // MotherName
             // 
             this.MotherName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MotherName.Location = new System.Drawing.Point(428, 180);
+            this.MotherName.Location = new System.Drawing.Point(432, 151);
             this.MotherName.Name = "MotherName";
             this.MotherName.Size = new System.Drawing.Size(217, 23);
             this.MotherName.TabIndex = 10;
@@ -217,7 +221,7 @@
             // FatherName
             // 
             this.FatherName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FatherName.Location = new System.Drawing.Point(428, 143);
+            this.FatherName.Location = new System.Drawing.Point(432, 114);
             this.FatherName.Name = "FatherName";
             this.FatherName.Size = new System.Drawing.Size(217, 23);
             this.FatherName.TabIndex = 9;
@@ -226,7 +230,7 @@
             // StudentName
             // 
             this.StudentName.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StudentName.Location = new System.Drawing.Point(428, 107);
+            this.StudentName.Location = new System.Drawing.Point(432, 78);
             this.StudentName.Name = "StudentName";
             this.StudentName.Size = new System.Drawing.Size(217, 23);
             this.StudentName.TabIndex = 8;
@@ -237,9 +241,9 @@
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(188, 327);
+            this.label8.Location = new System.Drawing.Point(192, 298);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(92, 26);
+            this.label8.Size = new System.Drawing.Size(85, 25);
             this.label8.TabIndex = 7;
             this.label8.Text = "Address";
             // 
@@ -248,9 +252,9 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(188, 289);
+            this.label7.Location = new System.Drawing.Point(192, 260);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 26);
+            this.label7.Size = new System.Drawing.Size(63, 25);
             this.label7.TabIndex = 6;
             this.label7.Text = "Email";
             // 
@@ -259,9 +263,9 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(188, 253);
+            this.label6.Location = new System.Drawing.Point(192, 224);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 26);
+            this.label6.Size = new System.Drawing.Size(80, 25);
             this.label6.TabIndex = 5;
             this.label6.Text = "Contact";
             // 
@@ -270,9 +274,9 @@
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(188, 176);
+            this.label11.Location = new System.Drawing.Point(192, 147);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(144, 26);
+            this.label11.Size = new System.Drawing.Size(133, 25);
             this.label11.TabIndex = 2;
             this.label11.Text = "Mother Name";
             // 
@@ -281,9 +285,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(188, 139);
+            this.label2.Location = new System.Drawing.Point(192, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 26);
+            this.label2.Size = new System.Drawing.Size(125, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Father Name";
             // 
@@ -292,16 +296,16 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(188, 64);
+            this.label1.Location = new System.Drawing.Point(192, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 26);
+            this.label1.Size = new System.Drawing.Size(178, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "EnrollmentNumber";
             // 
             // EnrollmentNo
             // 
             this.EnrollmentNo.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EnrollmentNo.Location = new System.Drawing.Point(428, 68);
+            this.EnrollmentNo.Location = new System.Drawing.Point(432, 39);
             this.EnrollmentNo.Name = "EnrollmentNo";
             this.EnrollmentNo.Size = new System.Drawing.Size(217, 23);
             this.EnrollmentNo.TabIndex = 0;
@@ -353,7 +357,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 25);
+            this.label3.Size = new System.Drawing.Size(92, 22);
             this.label3.TabIndex = 3;
             this.label3.Text = "Add New ";
             // 
@@ -367,6 +371,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // DataFromGooleForm
             // 
@@ -375,10 +380,10 @@
             this.DataFromGooleForm.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DataFromGooleForm.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
             this.DataFromGooleForm.LinkColor = System.Drawing.Color.DarkRed;
-            this.DataFromGooleForm.Location = new System.Drawing.Point(1016, 0);
+            this.DataFromGooleForm.Location = new System.Drawing.Point(1050, 0);
             this.DataFromGooleForm.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
             this.DataFromGooleForm.Name = "DataFromGooleForm";
-            this.DataFromGooleForm.Size = new System.Drawing.Size(215, 17);
+            this.DataFromGooleForm.Size = new System.Drawing.Size(181, 17);
             this.DataFromGooleForm.TabIndex = 5;
             this.DataFromGooleForm.TabStop = true;
             this.DataFromGooleForm.Text = "Get data Using Google Form";
@@ -388,23 +393,41 @@
             // 
             this.pictureBox1.BackgroundImage = global::Library.Properties.Resources.thisIsFinal;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 492);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 509);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1231, 175);
+            this.pictureBox1.Size = new System.Drawing.Size(1231, 158);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.DataFromGooleForm);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.panel1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1231, 667);
             this.panel2.TabIndex = 4;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.StaffBoard);
+            this.panel3.Controls.Add(this.StudentBoard);
+            this.panel3.Location = new System.Drawing.Point(95, 67);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1061, 436);
+            this.panel3.TabIndex = 6;
+            // 
+            // StaffBoard
+            // 
+            this.StaffBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.StaffBoard.Location = new System.Drawing.Point(0, 0);
+            this.StaffBoard.Name = "StaffBoard";
+            this.StaffBoard.Size = new System.Drawing.Size(1061, 436);
+            this.StaffBoard.TabIndex = 0;
             // 
             // AddStudent
             // 
@@ -415,8 +438,9 @@
             this.Controls.Add(this.panel2);
             this.Name = "AddStudent";
             this.Size = new System.Drawing.Size(1231, 667);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.Load += new System.EventHandler(this.AddStudent_Load);
+            this.StudentBoard.ResumeLayout(false);
+            this.StudentBoard.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AddStudent_picture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CheckContact)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ContactNumbercheck)).EndInit();
@@ -431,13 +455,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel StudentBoard;
         private System.Windows.Forms.TextBox Contact;
         private System.Windows.Forms.Button upload;
         private System.Windows.Forms.Label label9;
@@ -472,5 +497,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.LinkLabel DataFromGooleForm;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private Management.Staff.AddStaff StaffBoard;
     }
 }

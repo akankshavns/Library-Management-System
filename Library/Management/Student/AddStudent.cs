@@ -274,6 +274,48 @@ namespace Library.StudentManagement
 
 
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.SelectedItem != null) // Ensure an item is selected
+            {
+                string selectedValue = comboBox1.SelectedItem.ToString();
+
+                if (selectedValue == "Student Information")
+                {
+                    StudentBoard.Show();
+                    StudentBoard.BringToFront();
+                    StaffBoard.SendToBack();
+                }
+                else if (selectedValue == "Staff Informtion")
+                {
+                    StaffBoard.Show();
+                    StaffBoard.BringToFront();
+                    StudentBoard.SendToBack();
+                }
+                else
+                {
+                    MessageBox.Show("Unknown selection: " + selectedValue, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please select an item from the dropdown.", "No Selection", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void AddStudent_Load(object sender, EventArgs e)
+        {
+            if (comboBox1.Items.Count > 0)
+            {
+                comboBox1.SelectedIndex = 0;  // Select the first item (index 0)
+            }
+        }
     }
 }
 

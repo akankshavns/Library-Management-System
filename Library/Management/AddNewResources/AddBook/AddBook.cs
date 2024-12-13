@@ -369,6 +369,10 @@ namespace Library.BookManagement
             BookDate.MaxDate = DateTime.Now.AddSeconds(1);
             BookDate.Value = DateTime.Now;
             SelectedItem.SelectedIndex = 0;
+            if (SelectedItem.Items.Count > 0)
+            {
+                SelectedItem.SelectedIndex = 0;  // Select the first item (index 0)
+            }
         }
 
 

@@ -79,8 +79,8 @@
             this.label11 = new System.Windows.Forms.Label();
             this.errorInISBN = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3 = new System.Windows.Forms.Panel();
-            this.MagazineBoard = new Library.Management.AddNewResources.AddNewMagazine.AddMagazine();
             this.NewspaperBoard = new Library.Management.AddNewResources.AddNewsPaper.AddNewspaper();
+            this.MagazineBoard = new Library.Management.AddNewResources.AddNewMagazine.AddMagazine();
             this.BookBoard.SuspendLayout();
             this.OPTION.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorInID)).BeginInit();
@@ -160,7 +160,7 @@
             ""});
             this.catagory.Location = new System.Drawing.Point(455, 250);
             this.catagory.Name = "catagory";
-            this.catagory.Size = new System.Drawing.Size(300, 28);
+            this.catagory.Size = new System.Drawing.Size(300, 27);
             this.catagory.TabIndex = 7;
             this.catagory.SelectedIndexChanged += new System.EventHandler(this.catagory_SelectedIndexChanged);
             // 
@@ -195,7 +195,7 @@
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label14.Location = new System.Drawing.Point(175, 278);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(120, 29);
+            this.label14.Size = new System.Drawing.Size(101, 26);
             this.label14.TabIndex = 76;
             this.label14.Text = "Language";
             // 
@@ -207,7 +207,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label3.Location = new System.Drawing.Point(175, 145);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 29);
+            this.label3.Size = new System.Drawing.Size(117, 26);
             this.label3.TabIndex = 51;
             this.label3.Text = "Publication";
             // 
@@ -230,7 +230,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label4.Location = new System.Drawing.Point(175, 311);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 29);
+            this.label4.Size = new System.Drawing.Size(97, 26);
             this.label4.TabIndex = 52;
             this.label4.Text = "Buy Date";
             // 
@@ -264,7 +264,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label7.Location = new System.Drawing.Point(176, 246);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 29);
+            this.label7.Size = new System.Drawing.Size(151, 26);
             this.label7.TabIndex = 72;
             this.label7.Text = "Book Catagory";
             // 
@@ -276,7 +276,7 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label10.Location = new System.Drawing.Point(175, 209);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 29);
+            this.label10.Size = new System.Drawing.Size(65, 26);
             this.label10.TabIndex = 72;
             this.label10.Text = "Pages";
             // 
@@ -321,7 +321,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label2.Location = new System.Drawing.Point(174, 113);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 29);
+            this.label2.Size = new System.Drawing.Size(138, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Author Name";
             // 
@@ -333,7 +333,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label9.Location = new System.Drawing.Point(175, 177);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(95, 29);
+            this.label9.Size = new System.Drawing.Size(83, 26);
             this.label9.TabIndex = 71;
             this.label9.Text = "Volume";
             // 
@@ -356,7 +356,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label6.Location = new System.Drawing.Point(176, 382);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(100, 29);
+            this.label6.Size = new System.Drawing.Size(92, 26);
             this.label6.TabIndex = 54;
             this.label6.Text = "Quantity";
             // 
@@ -368,7 +368,7 @@
             this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label12.Location = new System.Drawing.Point(176, 17);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 29);
+            this.label12.Size = new System.Drawing.Size(145, 26);
             this.label12.TabIndex = 7;
             this.label12.Text = "ISBN Number";
             // 
@@ -380,7 +380,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label1.Location = new System.Drawing.Point(175, 81);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 29);
+            this.label1.Size = new System.Drawing.Size(122, 26);
             this.label1.TabIndex = 16;
             this.label1.Text = "Book Name";
             // 
@@ -392,7 +392,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label8.Location = new System.Drawing.Point(175, 49);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(255, 29);
+            this.label8.Size = new System.Drawing.Size(228, 26);
             this.label8.TabIndex = 7;
             this.label8.Text = "Accession Number(ID)";
             // 
@@ -404,7 +404,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(59)))));
             this.label5.Location = new System.Drawing.Point(176, 348);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 29);
+            this.label5.Size = new System.Drawing.Size(59, 26);
             this.label5.TabIndex = 53;
             this.label5.Text = "Price";
             // 
@@ -463,7 +463,7 @@
             this.English.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.English.Location = new System.Drawing.Point(7, 3);
             this.English.Name = "English";
-            this.English.Size = new System.Drawing.Size(72, 21);
+            this.English.Size = new System.Drawing.Size(66, 20);
             this.English.TabIndex = 0;
             this.English.TabStop = true;
             this.English.Text = "English";
@@ -475,7 +475,7 @@
             this.other.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.other.Location = new System.Drawing.Point(217, 0);
             this.other.Name = "other";
-            this.other.Size = new System.Drawing.Size(62, 21);
+            this.other.Size = new System.Drawing.Size(57, 20);
             this.other.TabIndex = 2;
             this.other.TabStop = true;
             this.other.Text = "Other";
@@ -488,7 +488,7 @@
             this.Hindi.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Hindi.Location = new System.Drawing.Point(119, 3);
             this.Hindi.Name = "Hindi";
-            this.Hindi.Size = new System.Drawing.Size(58, 21);
+            this.Hindi.Size = new System.Drawing.Size(54, 20);
             this.Hindi.TabIndex = 1;
             this.Hindi.TabStop = true;
             this.Hindi.Text = "Hindi";
@@ -591,7 +591,7 @@
             this.SelectedItem.Location = new System.Drawing.Point(336, 11);
             this.SelectedItem.MaxDropDownItems = 6;
             this.SelectedItem.Name = "SelectedItem";
-            this.SelectedItem.Size = new System.Drawing.Size(134, 24);
+            this.SelectedItem.Size = new System.Drawing.Size(134, 23);
             this.SelectedItem.TabIndex = 1;
             this.SelectedItem.SelectedIndexChanged += new System.EventHandler(this.SelectedItem_SelectedIndexChanged);
             // 
@@ -602,7 +602,7 @@
             this.label11.ForeColor = System.Drawing.Color.DarkRed;
             this.label11.Location = new System.Drawing.Point(3, 2);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(328, 39);
+            this.label11.Size = new System.Drawing.Size(297, 39);
             this.label11.TabIndex = 0;
             this.label11.Text = "Add New Resources";
             // 
@@ -612,30 +612,32 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.NewspaperBoard);
             this.panel3.Controls.Add(this.BookBoard);
             this.panel3.Controls.Add(this.MagazineBoard);
+            this.panel3.Controls.Add(this.NewspaperBoard);
             this.panel3.Location = new System.Drawing.Point(159, 55);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(781, 493);
             this.panel3.TabIndex = 86;
             // 
+            // NewspaperBoard
+            // 
+            this.NewspaperBoard.BackColor = System.Drawing.Color.Silver;
+            this.NewspaperBoard.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NewspaperBoard.Location = new System.Drawing.Point(0, 0);
+            this.NewspaperBoard.Name = "NewspaperBoard";
+            this.NewspaperBoard.Size = new System.Drawing.Size(781, 493);
+            this.NewspaperBoard.TabIndex = 0;
+            // 
             // MagazineBoard
             // 
+            this.MagazineBoard.BackColor = System.Drawing.Color.Silver;
             this.MagazineBoard.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MagazineBoard.Location = new System.Drawing.Point(0, 0);
             this.MagazineBoard.Name = "MagazineBoard";
             this.MagazineBoard.Size = new System.Drawing.Size(781, 493);
             this.MagazineBoard.TabIndex = 1;
             this.MagazineBoard.Visible = false;
-            // 
-            // NewspaperBoard
-            // 
-            this.NewspaperBoard.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NewspaperBoard.Location = new System.Drawing.Point(0, 0);
-            this.NewspaperBoard.Name = "NewspaperBoard";
-            this.NewspaperBoard.Size = new System.Drawing.Size(781, 493);
-            this.NewspaperBoard.TabIndex = 0;
             // 
             // AddBook
             // 

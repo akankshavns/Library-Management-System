@@ -40,10 +40,11 @@ namespace Library
                         //this condition for Admin login form
                         if (ForgotPassword.Visible == true && CreateNewAccount.Visible == true)
                         {
-                            string login = "Select userName,Password From AdminTable  where UserName=@username and Password = @password";
+                            string login = "Select userName,Password From AdminTable  where UserName=@username and Password = @password and  Designation=@desig";
                             SqlCommand cmd = new SqlCommand(login, con);
                             cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
                             cmd.Parameters.AddWithValue("@password", text_password.Text);
+                            cmd.Parameters.AddWithValue("@Desig", "Admin Librarian");
                             con.Open();
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())
@@ -71,10 +72,11 @@ namespace Library
                         else
                         {
                             
-                            string login = "Select * From Librarian where UserName=@username and Password = @password";
+                            string login = "Select * From AdminTable where UserName=@username and Password = @password and  Designation=@desig";
                             SqlCommand cmd = new SqlCommand(login, con);
                             cmd.Parameters.AddWithValue("@username", Text_UserName.Text);
                             cmd.Parameters.AddWithValue("@password", text_password.Text);
+                            cmd.Parameters.AddWithValue("@Desig", "User Librarian");
                             con.Open();
                             SqlDataReader reader = cmd.ExecuteReader();
                             if (reader.Read())

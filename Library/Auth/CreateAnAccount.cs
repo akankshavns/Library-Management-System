@@ -39,8 +39,8 @@ namespace Library.Auth
             {
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    string AdminDetail = "Insert into AdminTable(EmployeeId, Name, LastName, fatherName, Email, Phone, AdharNo, UserName, Password,DateOfJoining)values(@id, @Name, @LastName, @fatherName, @Email, @phone, @Adhar, @userName, @password, @joinDate)";
-                    string UserDetail = "Insert into Librarian(EmployeeId, Name, LastName, fatherName, Email, Phone, AdharNo, UserName, Password,DateOfJoining)values(@id, @Name, @LastName, @fatherName, @Email, @phone, @Adhar, @userName, @password, @joinDate)";
+                    string AdminDetail = "Insert into AdminTable(EmployeeId, Name, LastName, fatherName, Email, Phone, AdharNo, UserName, Password,DateOfJoining,Designation)values(@id, @Name, @LastName, @fatherName, @Email, @phone, @Adhar, @userName, @password, @joinDate,@Desig)";
+                   
                     try
                     {
                         con.Open();
@@ -57,6 +57,7 @@ namespace Library.Auth
                             cmd.Parameters.AddWithValue("@userName", UserName.Text);
                             cmd.Parameters.AddWithValue("@password", Password.Text);
                             cmd.Parameters.AddWithValue("@joinDate", DateOfJoining.Value);
+                            cmd.Parameters.AddWithValue("@Desig", "Admin Librarian");
                             
                             int isInsert = cmd.ExecuteNonQuery();
                             if (isInsert >= 1)
@@ -69,7 +70,7 @@ namespace Library.Auth
                         {
                             con.Close();
 
-                            SqlCommand cmd = new SqlCommand(UserDetail, con);
+                            SqlCommand cmd = new SqlCommand(AdminDetail, con);
                             cmd.Parameters.AddWithValue("@id", EmpId.Text);
                             cmd.Parameters.AddWithValue("@Name", FirstName.Text);
                             cmd.Parameters.AddWithValue("@LastName", lastName.Text);
@@ -80,6 +81,7 @@ namespace Library.Auth
                             cmd.Parameters.AddWithValue("@userName", UserName.Text);
                             cmd.Parameters.AddWithValue("@password", Password.Text);
                             cmd.Parameters.AddWithValue("@joinDate", DateOfJoining.Value);
+                            cmd.Parameters.AddWithValue("@Desig", "User Librarian");
                             con.Open();
                             int isInsert = cmd.ExecuteNonQuery();
                             if (isInsert >= 1)

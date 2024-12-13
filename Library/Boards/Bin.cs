@@ -88,14 +88,14 @@ namespace Library.Boards
             if (result == DialogResult.Yes)
             {
                 // Assume that `sno` is fetched from the selected cell in DataGridView
-                int sno = Convert.ToInt32(BookGridView1.Rows[e.RowIndex].Cells["SNO"].Value);
+                int sno = Convert.ToInt32(BookGridView1.Rows[e.RowIndex].Cells["ISBNNumber"].Value);
 
                 string connectionString = GetConnectionString();
                 if (connectionString != null)
                 {
                     using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        string updateBookStatus = "UPDATE ADDBOOKS SET BookStatus = @BookStatus WHERE SNO = @SNO";
+                        string updateBookStatus = "UPDATE ADDBOOKS SET BookStatus = @BookStatus WHERE ISBNNumber = @SNO";
 
                         using (SqlCommand cmd = new SqlCommand(updateBookStatus, con))
                         {
@@ -172,6 +172,11 @@ namespace Library.Boards
                     }
                 }
             }
+
+        }
+
+        private void BookGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

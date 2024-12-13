@@ -202,6 +202,12 @@
     <Compile Include="Management\Setting\Transaction.Designer.cs">
       <DependentUpon>Transaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Management\Staff\AddStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Management\Staff\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
     <Compile Include="Management\Student\GoogleFormData.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -325,6 +331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Setting\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Management\Staff\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Management\Student\GoogleFormData.resx">
       <DependentUpon>GoogleFormData.cs</DependentUpon>

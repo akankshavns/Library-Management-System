@@ -556,7 +556,7 @@
             this.menuButton.Size = new System.Drawing.Size(39, 38);
             this.menuButton.TabIndex = 2;
             this.menuButton.UseVisualStyleBackColor = false;
-            this.menuButton.Click += new System.EventHandler(this.menuButton_Click);
+          
             // 
             // panel10
             // 

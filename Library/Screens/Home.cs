@@ -19,17 +19,9 @@ namespace Library
         public Home()
         {
             InitializeComponent();
-            //InitializeInactivityTimer();
+            
         }
-        //private void InitializeInactivityTimer()
-        //{
-        //    inactivityTimer = new Timer();
-        //    inactivityTimer.Interval = InactivityPeriod;
-        //    inactivityTimer.Tick += InactivityTimer_Tick;
-        //    inactivityTimer.Start();
-        //    this.MouseMove += new MouseEventHandler(ResetInactivityTimer);
-        //    this.KeyPress += new KeyPressEventHandler(ResetInactivityTimer);
-        //}
+        
         private void InactivityTimer_Tick(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
@@ -45,57 +37,15 @@ namespace Library
                 login.Show();
             }
 
-            //MessageBox.Show("You have been logged out due to inactivity.");
+         
             this.Close();
         }
-
-        //private void ResetInactivityTimer(object sender, EventArgs e)
-        //{
-        //    inactivityTimer.Stop();
-        //    inactivityTimer.Start();
-        //}
-        //bool sidebarExpand = true;
         void slider()
         {
             close.Start();
         }
-        //private void MenuSlider_Tick_1(object sender, EventArgs e)
-        //{
-        //    if (sidebarExpand)
-        //    {
-        //        menuBar.Width -= 10;
-        //        if (menuBar.Width <= 60)
-        //        {
-        //            sidebarExpand = false;
-        //            MenuSlider.Stop();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        menuBar.Width += 10;
-        //        if (menuBar.Width >= 229)
-        //        {
-        //            sidebarExpand = true;
-        //            MenuSlider.Stop();
-        //        }
-        //    }
-        //}
-        //private void close_Tick_1(object sender, EventArgs e)
-        //{
-        //    if (sidebarExpand)
-        //    {
-        //        menuBar.Width -= 10;
-        //        if (menuBar.Width <= 60)
-        //        {
-        //            sidebarExpand = false;
-        //            close.Stop();
-        //        }
-        //    }
-        //}
-        private void menuButton_Click(object sender, EventArgs e)
-        {
-            //MenuSlider.Start();
-        }
+       
+      
         private void logOut_Click_1(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
@@ -137,49 +87,7 @@ namespace Library
             settingBoard1.BringToFront();
         }
 
-        //private void Home_Load(object sender, EventArgs e)
-        //{
-        //    string connectionString = GetConnectionString();
-        //    if (connectionString != null)
-        //    {
-        //        using (SqlConnection con = new SqlConnection(connectionString))
-        //        {
-        //            string Homepagelogo = "select logo from librarysetting where  id=" + 2 + "";
-        //            try
-        //            {
-        //                con.Open();
-        //                SqlCommand cmd = new SqlCommand(Homepagelogo, con);
-        //                SqlDataReader reader = cmd.ExecuteReader();
-        //                if (reader.Read())
-        //                {
-        //                    string photoPath = reader["logo"].ToString();
-
-        //                    if (!string.IsNullOrEmpty(photoPath) && File.Exists(photoPath))
-        //                    {
-        //                        byte[] imageBytes = File.ReadAllBytes(photoPath);
-        //                        using (MemoryStream ms = new MemoryStream(imageBytes))
-        //                        {
-        //                            HomeLogo.BackgroundImage = Image.FromStream(ms);
-        //                            HomeLogo.SizeMode = PictureBoxSizeMode.StretchImage;
-        //                        }
-        //                    }
-        //                    else
-        //                    {
-        //                        HomeLogo.BackgroundImage = null;
-        //                    }
-        //                }
-
-
-        //            }
-        //            catch (Exception ex)
-        //            {
-        //                MessageBox.Show(ex.Message);
-
-        //            }
-        //        }
-
-        //    }
-        //}
+        
 
         bool subMenuButtonExpand = false;
 
@@ -291,6 +199,7 @@ namespace Library
 
         private void ViewIssuedPageOpen_Click(object sender, EventArgs e)
         {
+           
             viewTransaction1.viewIssuedBook();
             viewTransaction1.Show();
             viewTransaction1.BringToFront();

@@ -51,6 +51,7 @@
             this.BookGridView1.Name = "BookGridView1";
             this.BookGridView1.Size = new System.Drawing.Size(993, 276);
             this.BookGridView1.TabIndex = 5;
+            this.BookGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookGridView1_CellContentClick);
             this.BookGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BookGridView1_CellDoubleClick);
             // 
             // label1
@@ -60,7 +61,7 @@
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(480, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 31);
+            this.label1.Size = new System.Drawing.Size(190, 31);
             this.label1.TabIndex = 4;
             this.label1.Text = "Deleted Items...";
             // 
@@ -70,7 +71,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(13, 20);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 31);
+            this.label2.Size = new System.Drawing.Size(262, 31);
             this.label2.TabIndex = 4;
             this.label2.Text = "Book Deleted Items...";
             // 
@@ -80,7 +81,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(3, 338);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(331, 31);
+            this.label3.Size = new System.Drawing.Size(291, 31);
             this.label3.TabIndex = 4;
             this.label3.Text = "Student Deleted Items...";
             // 
